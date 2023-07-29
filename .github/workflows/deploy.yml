@@ -26,6 +26,10 @@ jobs:
       with:
         ruby-version: '3.2.2'
         bundler-cache: true
+    - name: Fix permissions:
+      run: |
+        chmod a+x bin/*
+        git commit -am "add execute premission to bin/deply"
     - name: Install and Build 🔧
       run: |
         pip3 install --upgrade jupyter
@@ -37,4 +41,3 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: _site
-
