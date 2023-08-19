@@ -1,6 +1,18 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Journals
+"JAIR":
+  url: https://www.jair.org/index.php/jair
+  color: "#B9770E"
 
-"PhysRev":
-  url: https://journals.aps.org/
+# Conferences
+"CP":
+    color: "#2874A6"
+
+"CMSB":
+    color: "#2874A6"
+
+"NeurIPS":
+    color: "#2874A6"
+
+# Workshops
+"WCB":
+    color: "#17A589"

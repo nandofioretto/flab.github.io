@@ -1,13 +1,21 @@
 ---
-layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+layout: default
+permalink: /group/
+title: group
+description:
 nav: true
-nav_order: 3
-display_categories: [work, fun]
+nav_order: 4
+display_categories: [Director, Postdocs and PhD Students, MS and BS Students, Visitors, Former Students]
 horizontal: false
 ---
+
+# **T**rustworthy and **Re**sponsible **L**earning and **O**ptimization (**TReLO**) Group
+
+I lead the TReLO group where I am fortunate to work with an amazing set of students and collaborators.
+We work on foundational topics relating to machine learning and optimization, privacy and fairness.
+We often ground our research in applications at the intersection of physical sciences and energy, as
+well as policy and decision making.
+
 
 <!-- pages/projects.md -->
 <div class="projects">

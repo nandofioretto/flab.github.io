@@ -134,6 +134,13 @@
           {{ entry.note | strip }}
         </div>
 
+        <div>
+          {%- if entry.award %}
+          <span class="badge danger-color-dark align-middle" style="min-width: 75px;">{{entry.award}}</span>
+          {%- endif %}
+
+        </div>
+
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}

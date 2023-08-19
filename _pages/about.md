@@ -2,34 +2,41 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Assistant Professor of Computer Science, University of Virginia
 
 profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+  align: left
+  image: head_syr.png
+  image_circular: true # crops the image to make it circular
+  address:
+    <p>222 Rice Hall</p>
+    <p>85 Engineer's Way</p>
+    <p>Charlottesville, VA 22904</p>
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+news: true  # includes a list of news items
 ---
 
-I am assistant professor in the [CS department](https://engineering.virginia.edu/departments/computer-science)
-at the [University of Virginia](https://virginia.edu).
+I am an assistant professor of Computer Science at [UVA](https://engineering.virginia.edu/departments/computer-science). I lead the [Trustworthy and Responsible Learning and Optimization](_pages/group.md) group where we make advances in artificial intelligence with focus on two key themes:\\
+  **AI for Science and Engineering**: We develop the foundations to blend deep learning and constrained optimization for complex scientific and engineering problems.\\
+  <!-- and  create ways to integrate knowledge, constraints, and physical principles into learning models. -->
+  **Trustworthy & Responsible AI**: We analyze the equity of AI systems in support of decision-making and learning tasks, focusing especially on privacy and fairness.
 
-My work makes advances in foundational Artificial Intelligence (AI) research with focus on two key themes:
+<!-- I approach these directions by applying the tools and perspectives of
+_optimization theory_, _differential privacy_, and _statistics_ to problems in
+decision-making and machine learning. For more details, please see my [publications](_pages/about.md). -->
 
-- **AI for Science and Engineering**. It develops the foundations to blend deep learning and combinatorial optimization to serve the resolution of complex scientific and engineering applications and creates novel ways to integrate knowledge, constraints, and physical principles into learning models.
-- **Responsible AI**. It analyzes the equity of AI systems in support of decision-making and learning tasks, and it designs practical algorithms to make AI systems more aligned with societal values, focusing especially on privacy and fairness.
-
-I approach these directions by applying the tools and perspectives of optimization theory, differential privacy, and statistics to problems in decision-making and machine learning. For more details, please see my publications.
-My research is generously supported by the National Science Foundation (NSF), Google, Amazon, and Syracuse University.
-I am a recipient of the 2022 AWS Amazon Research Award, the 2022 NSF CAREER award, the 2022 Google Research Scholar Award, the 2022 Caspar Bowden PET award, the 2021 ISSNAF Mario Gerla Young Investigator Award, the 2021 ACP Early Career Researcher Award, the 2018 AI*AI Best AI dissertation award, and several best paper awards. Before joining Syracuse University, I was a postdoctoral research associate at the Georgia Institute of Technology and a research fellow at the University of Michigan. For more details, please see my CV.
+My group is generously supported by the _National Science Foundation_, _Google_, _Amazon_,
+and the University of Virginia.\\
+<!-- I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
+the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, the
+_2021 ISSNAF Mario Gerla Young Investigator Award_, the _2021 ACP Early Career Researcher Award_,
+the _2018 AI*AI Best AI dissertation award_, and _several best paper awards_. -->
+Before joining the University of Virginia, I was an assistant professor at
+Syracuse University. Prior to that I was a postdoctoral research associate at the
+Georgia Institute of Technology and a research fellow at the University of Michigan.
+For more details, please see my [CV](cv/).
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
