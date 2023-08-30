@@ -5,7 +5,7 @@ title: group
 description:
 nav: true
 nav_order: 4
-display_categories: [Director, Postdocs and PhD Students, MS and BS Students, Visitors, Former Students]
+display_categories: [Postdocs and PhD Students, MS and BS Students, Former Students]
 horizontal: false
 ---
 
@@ -17,13 +17,14 @@ We often ground our research in applications at the intersection of physical sci
 well as policy and decision making.
 
 
+
 <!-- pages/projects.md -->
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {%- for category in page.display_categories %}
   <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
+  {%- assign categorized_projects = site.group | where: "category", category -%}
   {%- assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
@@ -37,7 +38,7 @@ well as policy and decision making.
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {% include group.html %}
     {%- endfor %}
   </div>
   {%- endif -%}
@@ -45,7 +46,7 @@ well as policy and decision making.
 
 {%- else -%}
 <!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
+  {%- assign sorted_projects = site.group | sort: "importance" -%}
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
@@ -58,9 +59,20 @@ well as policy and decision making.
   {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {% include group.html %}
     {%- endfor %}
   </div>
   {%- endif -%}
 {%- endif -%}
 </div>
+
+| Student Name     | Visit period| Next known position                      |
+|------------------|-------------|------------------------------------------|
+| [**St John Grimbly**](https://stjohngrimbly.com), MS	Visitor | Winter 2023 | PhD Student at  University of Cape Town |
+| **Jayanta Mandi**,      PhD Visitor | Summer 2023 | Postdoc at  Vrije Universiteit Brussel |
+| **Michele Marchiani**, MS	Visitor | Winter 2022 | |
+| **Rakshit Naidu**, MS	Visitor | Summer 2022 | PhD student at Georgia Tech |
+| **Saswat Das**, BS	Visitor  | Summer 2022  | PhD student at UVA |
+| **Kyle Beiter**, NSF REU Student |  Summer 2021	 | MS at Syracsue |
+| **Zhiyan Yao**, BS Visitor	| Summer 2020 | Software Engineer at Microsoft|
+| **Anudit Nagar**, BSVisitor	| Summer 2020 | Co-Founder of The Convo Space  |

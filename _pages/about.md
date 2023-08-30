@@ -13,9 +13,9 @@ profile:
     <p>85 Engineer's Way</p>
     <p>Charlottesville, VA 22904</p>
 latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 news: true  # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
 
 I am an assistant professor of Computer Science at [UVA](https://engineering.virginia.edu/departments/computer-science). I lead the [Trustworthy and Responsible Learning and Optimization](_pages/group.md) group where we make advances in artificial intelligence with focus on two key themes:\\

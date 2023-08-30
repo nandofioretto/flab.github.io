@@ -130,24 +130,30 @@
         <div class="periodical">
           {{ periodical | strip }}
         </div>
-        <div class="periodical">
+        <!-- <div class="periodical">
           {{ entry.note | strip }}
+        </div> -->
+
+        <div>
+          {%- if entry.alsoin %}
+          Also appeared in &nbsp;
+            {%- if site.data.venues[entry.alsoin] -%}
+              {%- assign venue_style = site.data.venues[entry.alsoin].color | prepend: 'style="color:' | append: ', left-margin:2px"' -%}
+            {%- endif -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.alsoin].url}}">{{entry.alsoin}} {{entry.alsoinyear}}</a></abbr>
+          {%- endif %}
         </div>
 
         <div>
           {%- if entry.award %}
           <span class="badge danger-color-dark align-middle" style="min-width: 75px;">{{entry.award}}</span>
           {%- endif %}
-
         </div>
 
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-          {%- endif %}
-          {%- if entry.arxiv %}
-            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
@@ -161,6 +167,12 @@
             {%- else -%}
             <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
             {%- endif %}
+          {%- endif %}
+          {%- if entry.url %}
+            <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Online</a>
+          {%- endif %}
+          {%- if entry.arxiv %}
+            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
           {%- if entry.supp %}
             {% if entry.supp contains '://' -%}
