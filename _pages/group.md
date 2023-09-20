@@ -9,9 +9,9 @@ display_categories: [Postdocs and PhD Students, MS and BS Students, Former Stude
 horizontal: false
 ---
 
-# **T**rustworthy and **Re**sponsible **L**earning and **O**ptimization (**TReLO**) Group
+# **R**esponsible **AI** for **S**cience and **E**ngineering (RAISE) Group
 
-I lead the TReLO group where I am fortunate to work with an amazing set of students and collaborators.
+I lead the RAISE group where I am fortunate to work with an amazing set of students and collaborators.
 We work on foundational topics relating to machine learning and optimization, privacy and fairness.
 We often ground our research in applications at the intersection of physical sciences and energy, as
 well as policy and decision making.

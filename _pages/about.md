@@ -18,7 +18,8 @@ news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
 
-I am an assistant professor of Computer Science at [UVA](https://engineering.virginia.edu/departments/computer-science). I lead the [Trustworthy and Responsible Learning and Optimization](_pages/group.md) group where we make advances in artificial intelligence with focus on two key themes:\\
+I am an assistant professor of Computer Science at [UVA](https://engineering.virginia.edu/departments/computer-science). I lead the 
+[Responsible AI for Science and Engineering (RAISE)](/group/) group where we make advances in artificial intelligence with focus on two key themes:\\
   **AI for Science and Engineering**: We develop the foundations to blend deep learning and constrained optimization for complex scientific and engineering problems.\\
   <!-- and  create ways to integrate knowledge, constraints, and physical principles into learning models. -->
   **Trustworthy & Responsible AI**: We analyze the equity of AI systems in support of decision-making and learning tasks, focusing especially on privacy and fairness.
@@ -36,7 +37,7 @@ the _2018 AI*AI Best AI dissertation award_, and _several best paper awards_. --
 Before joining the University of Virginia, I was an assistant professor at
 Syracuse University. Prior to that I was a postdoctoral research associate at the
 Georgia Institute of Technology and a research fellow at the University of Michigan.
-For more details, please see my [CV](cv/).
+For more details, please see my [CV](assets/cv/cvFioretto.pdf). 
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
