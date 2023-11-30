@@ -60,6 +60,7 @@
 # 2023
 #################
 
+
 @article{MBF:epsr23,
   author = {Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
   title = {Gradient-enhanced physics-informed neural networks for power systems operational support},
@@ -73,6 +74,38 @@
   abstract = {The application of deep learning methods to speed up the challenging power system problems has recently shown very encouraging results. However, power system dynamics are not snapshot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical constraints to avoid frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real-time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system and a three-bus power network for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications. The model exhibited high accuracy in predicting the variables, achieving a range of 0.533–4.092 and an average L2 relative error improvement of up to 13.30× compared to the PINN model. The computational performance of the proposed gPINN model was compared to a conventional solver, revealing a remarkable speed-up of 31 to 171 times faster in solving differential–algebraic systems of equations in power systems.},
   bibtex_show={true},
   abbr = {EPSR},
+}
+
+
+@inproceedings{TF:neurips23,
+  author       = {Cuong Tran and Ferdinando Fioretto},
+  title        = {Data Minimization at Inference Time},
+  booktitle   = NeurIPS,
+  year        = {2023},
+  volume      = {36},
+  pages       = {},
+  publisher   = {Curran Associates, Inc.},
+  arxiv        = {2305.17593},
+  abbr         = {NeurIPS},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {In domains with high stakes such as law, recruitment, and healthcare, learning models frequently rely on sensitive user data for inference, necessitating the complete set of features. This not only poses significant privacy risks for individuals but also demands substantial human effort from organizations to verify information accuracy. This paper asks whether it is necessary to use \emph{all} input features for accurate predictions at inference time. The paper demonstrates that, in a personalized setting, individuals may only need to disclose a small subset of their features without compromising decision-making accuracy. The paper also provides an efficient sequential algorithm to determine the appropriate attributes for each individual to provide. Evaluations across various learning tasks show that individuals can potentially report as little as 10\% of their information while maintaining the same accuracy level as a model that employs the full set of user information.}
+}
+
+
+@inproceedings{DF:ccai23,
+  author      = {Vladimir Dvorkin and Ferdinando Fioretto},
+  title       = {Price-Aware Deep Learning for Electricity Markets},
+  booktitle   = {NeurIPS 2023 Workshop: Tackling Climate Change with Machine Learning},
+  publisher   = {},
+  pages       = {},
+  year        = {2023},
+  url         = {https://www.climatechange.ai/events/neurips2023},
+  abbr        = {NeurIPS},
+  doi         = {10.48550/arXiv.2308.01436},
+  arxiv       = {2308.01436},
+  bibtex_show = {true},
+  abstract    = {While deep learning gradually penetrates operational planning, its inherent prediction errors may significantly affect electricity prices. This letter examines how prediction errors propagate into electricity prices, revealing notable pricing errors and their spatial disparity in congested power systems. To improve fairness, we propose to embed electricity market-clearing optimization as a deep learning layer. Differentiating through this layer allows for balancing between prediction and pricing errors, as oppose to minimizing prediction errors alone. This layer implicitly optimizes fairness and controls the spatial distribution of price errors across the system. We showcase the price-aware deep learning in the nexus of wind power forecasting and short-term electricity market clearing.}
 }
 
 @inproceedings{TZFvH:ijcai23,
@@ -168,6 +201,19 @@
   abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
 }
 
+@article{KdVCvHF:23,
+  title={Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
+  author={James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
+  journal      = {CoRR},
+  volume       = {abs/2311.13087},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2311.13087},
+  arxiv        = {2311.13087},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  abstract     = {Many real-world decision processes are modeled by optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. Recent works show that decision quality can be improved in this setting by solving and differentiating the optimization problem in the training loop, enabling end-to-end training with loss functions defined directly on the resulting decisions. However, this approach can be inefficient and requires handcrafted, problem-specific rules for backpropagation through the optimization step. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient, accurate, and flexible solutions to an array of challenging Predict-Then-Optimize problems.}
+}
+
 @article{ZFvHDT:23,
   author       = {Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck and Saswat Das and Christine Task},
   title        = {Privacy and Bias Analysis of Disclosure Avoidance Systems},
@@ -208,19 +254,6 @@
   abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
 }
 
-@article{TF:23,
-  author       = {Cuong Tran and Ferdinando Fioretto},
-  title        = {Data Minimization at Inference Time},
-  journal      = {CoRR},
-  volume       = {abs/2305.17593},
-  year         = {2023},
-  doi          = {10.48550/arXiv.2305.17593},
-  arxiv        = {2305.17593},
-  abbr         = {ArXiv},
-  bibtex_show  = {true},
-  selected     = {true},
-  abstract     = {In domains with high stakes such as law, recruitment, and healthcare, learning models frequently rely on sensitive user data for inference, necessitating the complete set of features. This not only poses significant privacy risks for individuals but also demands substantial human effort from organizations to verify information accuracy. This paper asks whether it is necessary to use \emph{all} input features for accurate predictions at inference time. The paper demonstrates that, in a personalized setting, individuals may only need to disclose a small subset of their features without compromising decision-making accuracy. The paper also provides an efficient sequential algorithm to determine the appropriate attributes for each individual to provide. Evaluations across various learning tasks show that individuals can potentially report as little as 10\% of their information while maintaining the same accuracy level as a model that employs the full set of user information.}
-}
 
 @article{MKBMBTF:23,
   author       = {Jayanta Mandi and James Kotary and Senne Berden and Maxime Mulamba and Victor Bucarey and Tias Guns and Ferdinando Fioretto},
@@ -236,18 +269,6 @@
   abstract     =  {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
 }
 
-@article{DF:23,
-  author      = {Vladimir Dvorkin and Ferdinando Fioretto},
-  title       = {Price-Aware Deep Learning for Electricity Markets},
-  journal     = {CoRR},
-  volume      = {abs/2308.01436},
-  year        = {2023},
-  doi         = {10.48550/arXiv.2308.01436},
-  arxiv       = {2308.01436},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  abstract    = {While deep learning gradually penetrates operational planning, its inherent prediction errors may significantly affect electricity prices. This letter examines how prediction errors propagate into electricity prices, revealing notable pricing errors and their spatial disparity in congested power systems. To improve fairness, we propose to embed electricity market-clearing optimization as a deep learning layer. Differentiating through this layer allows for balancing between prediction and pricing errors, as oppose to minimizing prediction errors alone. This layer implicitly optimizes fairness and controls the spatial distribution of price errors across the system. We showcase the price-aware deep learning in the nexus of wind power forecasting and short-term electricity market clearing.}
-}
 
 #################
 # 2022

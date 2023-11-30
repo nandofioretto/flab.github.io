@@ -6,10 +6,10 @@ subtitle: Assistant Professor of Computer Science, University of Virginia
 
 profile:
   align: left
-  image: head_syr.png
+  image: nando-pic.png
   image_circular: true # crops the image to make it circular
   address:
-    <p>222 Rice Hall</p>
+    <p>307 Rice Hall</p>
     <p>85 Engineer's Way</p>
     <p>Charlottesville, VA 22904</p>
 latest_posts: false  # includes a list of the newest posts
