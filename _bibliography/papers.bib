@@ -55,6 +55,36 @@
 
 @string{WCB = {Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics}}
 
+#################
+# 2024
+#################
+
+@article{FZvHDT:aaai24,
+  author       = {Ferdinando Fioretto and Keyu Zhu and Pascal Van Hentenryck and Saswat Das and Christine Task},
+  title        = {Finding $\epsilon$ and $\delta$ of Traditional Disclosure Control Systems},
+  booktitle    = AAAI,
+  publisher    = {{AAAI} Press},
+  pages        = {to appear},
+  year         = {2024},
+  arxiv        = {2301.12204},
+  abbr         = {AAAI},
+  bibtex_show  = {true},
+  abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
+}
+
+@article{KCDF:24,
+  title       = {Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization}, 
+  author      = {James Kotary and Jacob Christopher and My H Dinh and Ferdinando Fioretto},
+  journal     = {CoRR},
+  volume      = {abs/2312.17394},
+  doi         = {10.48550/arXiv.2312.17394},
+  year        = {2024},
+  arxiv       = {2312.17394},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {The integration of constrained optimization models as components in deep networks has led to promising advances on many specialized learning tasks. A central challenge in this setting is backpropagation through the solution of an optimization problem, which often lacks a closed form. One typical strategy is algorithm unrolling, which relies on automatic differentiation through the entire chain of operations executed by an iterative optimization solver. This paper provides theoretical insights into the backward pass of unrolled optimization, showing that it is asymptotically equivalent to the solution of a linear system by a particular iterative method. Several practical pitfalls of unrolling are demonstrated in light of these insights, and a system called Folded Optimization is proposed to construct more efficient backpropagation rules from unrolled solver implementations. Experiments over various end-to-end optimization and learning tasks demonstrate the advantages of this system both computationally, and in terms of flexibility over various optimization problem forms.}
+}
+
 
 #################
 # 2023
@@ -201,6 +231,19 @@
   abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
 }
 
+@article{NRTHF:23,
+  title       = {On The Fairness Impacts of Hardware Selection in Machine Learning}, 
+  author      = {Sree Harsha Nelaturu and Nishaanth Kanna Ravichandran and Cuong Tran and Sara Hooker and Ferdinando Fioretto},
+  journal     = {CoRR},
+  volume      = {abs/2312.03886},
+  doi         = {10.48550/arXiv.2312.03886},
+  year        = {2023},
+  arxiv       = {2312.03886},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {In the machine learning ecosystem, hardware selection is often regarded as a mere utility, overshadowed by the spotlight on algorithms and data. This oversight is particularly problematic in contexts like ML-as-a-service platforms, where users often lack control over the hardware used for model deployment. How does the choice of hardware impact generalization properties? This paper investigates the influence of hardware on the delicate balance between model performance and fairness. We demonstrate that hardware choices can exacerbate existing disparities, attributing these discrepancies to variations in gradient flows and loss surfaces across different demographic groups. Through both theoretical and empirical analysis, the paper not only identifies the underlying factors but also proposes an effective strategy for mitigating hardware-induced performance imbalances.}
+}
+
 @article{KdVCvHF:23,
   title={Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
   author={James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
@@ -212,19 +255,6 @@
   abbr         = {ArXiv},
   bibtex_show  = {true},
   abstract     = {Many real-world decision processes are modeled by optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. Recent works show that decision quality can be improved in this setting by solving and differentiating the optimization problem in the training loop, enabling end-to-end training with loss functions defined directly on the resulting decisions. However, this approach can be inefficient and requires handcrafted, problem-specific rules for backpropagation through the optimization step. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient, accurate, and flexible solutions to an array of challenging Predict-Then-Optimize problems.}
-}
-
-@article{ZFvHDT:23,
-  author       = {Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck and Saswat Das and Christine Task},
-  title        = {Privacy and Bias Analysis of Disclosure Avoidance Systems},
-  journal      = {CoRR},
-  volume       = {abs/2301.12204},
-  year         = {2023},
-  doi          = {10.48550/arXiv.2301.12204},
-  arxiv        = {2301.12204},
-  abbr         = {ArXiv},
-  bibtex_show  = {true},
-  abstract     = {Disclosure avoidance (DA) systems are used to safeguard the confidentiality of data while allowing it to be analyzed and disseminated for analytic purposes. These methods, e.g., cell suppression, swapping, and k-anonymity, are commonly applied and may have significant societal and economic implications. However, a formal analysis of their privacy and bias guarantees has been lacking. This paper presents a framework that addresses this gap: it proposes differentially private versions of these mechanisms and derives their privacy bounds. In addition, the paper compares their performance with traditional differential privacy mechanisms in terms of accuracy and fairness on US Census data release and classification tasks. The results show that, contrary to popular beliefs, traditional differential privacy techniques may be superior in terms of accuracy and fairness to differential private counterparts of widely used DA mechanisms.}
 }
 
 @article{DF:23,

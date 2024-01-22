@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  30 NOV 2023 10:22
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  3 JAN 2024 11:12
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1393,74 +1393,74 @@ Overfull \hbox (5.69046pt too wide) in paragraph at lines 15--16
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 24--27
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 25--26
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 36--37
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 34--37
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 46--47
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 47--56
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 57--66
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 63--64
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 73--74
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 72--73
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 87--88
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 86--87
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 97--98
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 96--97
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 113--114
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 112--113
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 124--125
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 123--124
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 132--133
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 131--132
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 139--140
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 138--139
 []|[]| 
  []
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 170--171
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 169--170
 []|[]| 
  []
 
 [2]) (./section_pubs_compact.tex
 
-Package hyperref Warning: Suppressing link with empty target on input line 834.
+Package hyperref Warning: Suppressing link with empty target on input line 859.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 834.
+Package hyperref Warning: Suppressing link with empty target on input line 859.
 
 
 [3] [4] [5] [6] [7] [8] [9] [10]) (./section_teaching_mentoring.tex
@@ -1468,7 +1468,7 @@ Overfull \hbox (5.28076pt too wide) in alignment at lines 24--49
  [][] 
  []
 
-[11]) [12] (./section_talks.tex
+[11] [12]) (./section_talks.tex
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
 (Font)              using `TU/FontAwesome(0)/m/n' instead on input line 95.
@@ -1483,7 +1483,7 @@ LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
 Package hyperref Warning: Suppressing link with empty target on input line 185.
 
 
-) [14] (./section_projects.tex
+[14]) (./section_projects.tex
 Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
@@ -1540,11 +1540,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 
  []
 
-) [15] (./section_service.tex [16] [17]) [18] (./cvFioretto.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+
+ []
+
+[15]) (./section_service.tex [16] [17]) [18] (./cvFioretto.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1553,14 +1558,14 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33252 strings out of 478285
- 596569,1977958 words of node,token memory allocated
- 4400 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 174 glue, 4 kern, 1 penalty, 2 glyph, 1131 attribut
-e, 76 glue_spec, 163 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:4,2:44707,3:2250,4:1244,5:6003,6:1056,7:40666,8:8,9:6407,10:12
-,11:3357
- 52099 multiletter control sequences out of 65536+600000
+ 33254 strings out of 478285
+ 596557,1977958 words of node,token memory allocated
+ 4469 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 177 glue, 4 kern, 1 penalty, 2 glyph, 1152 attribut
+e, 76 glue_spec, 166 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:6,2:46259,3:2322,4:1272,5:6158,6:1089,7:41810,8:8,9:6612,10:12
+,11:3443
+ 52100 multiletter control sequences out of 65536+600000
  54 fonts using 8319175 bytes
  115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1573,10 +1578,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (18 pages, 128797 bytes).
+Output written on cvFioretto.pdf (18 pages, 131126 bytes).
 
-PDF statistics: 494 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 39 named destinations out of 1000 (max. 131072)
+PDF statistics: 504 PDF objects out of 1000 (max. 8388607)
+ 464 compressed objects within 5 object streams
+ 40 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

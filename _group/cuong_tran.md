@@ -2,7 +2,7 @@
 layout: page
 title: Cuong Tran
 subtitle: Postdoc
-interests: Responsible AI, Differential Provacy
+interests: Responsible AI, Differential Privacy
 img: assets/img/group/cuong_tran.png
 redirect: https://cuongtran-syr.github.io
 importance: 1
