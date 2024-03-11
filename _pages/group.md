@@ -65,14 +65,3 @@ well as policy and decision making.
   {%- endif -%}
 {%- endif -%}
 </div>
-
-| Student Name     | Visit period| Next known position                      |
-|------------------|-------------|------------------------------------------|
-| [**St John Grimbly**](https://stjohngrimbly.com), MS	Visitor | Winter 2023 | PhD Student at  University of Cape Town |
-| **Jayanta Mandi**,      PhD Visitor | Summer 2023 | Postdoc at  Vrije Universiteit Brussel |
-| **Michele Marchiani**, MS	Visitor | Winter 2022 | |
-| **Rakshit Naidu**, MS	Visitor | Summer 2022 | PhD student at Georgia Tech |
-| **Saswat Das**, BS	Visitor  | Summer 2022  | PhD student at UVA |
-| **Kyle Beiter**, NSF REU Student |  Summer 2021	 | MS at Syracsue |
-| **Zhiyan Yao**, BS Visitor	| Summer 2020 | Software Engineer at Microsoft|
-| **Anudit Nagar**, BSVisitor	| Summer 2020 | Co-Founder of The Convo Space  |

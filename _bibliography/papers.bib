@@ -72,6 +72,33 @@
   abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
 }
 
+@article{KF:24,
+  title       = {Learning Constrained Optimization with Deep Augmented Lagrangian Methods}, 
+  author      = {James Kotary and Ferdinando Fioretto},
+  journal     = {CoRR},
+  volume      = {abs/2403.03454},
+  doi         = {10.48550/arXiv.2403.03454},
+  year        = {2024},
+  arxiv       = {2403.03454},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {Learning to Optimize (LtO) is a problem setting in which a machine learning (ML) model is trained to emulate a constrained optimization solver. Learning to produce optimal and feasible solutions subject to complex constraints is a difficult task, but is often made possible by restricting the input space to a limited distribution of related problems. Most LtO methods focus on directly learning solutions to the primal problem, and applying correction schemes or loss function penalties to encourage feasibility. This paper proposes an alternative approach, in which the ML model is trained instead to predict dual solution estimates directly, from which primal estimates are constructed to form dual-feasible solution pairs. This enables an end-to-end training scheme is which the dual objective is maximized as a loss function, and solution estimates iterate toward primal feasibility, emulating a Dual Ascent method. First it is shown that the poor convergence properties of classical Dual Ascent are reflected in poor convergence of the proposed training scheme. Then, by incorporating techniques from practical Augmented Lagrangian methods, we show how the training scheme can be improved to learn highly accurate constrained optimization solvers, for both convex and nonconvex problems.}
+}
+
+
+@article{DKF:24b,
+  title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
+  author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
+  journal     = {CoRR},
+  volume      = {abs/2402.07772},
+  doi         = {10.48550/arXiv.2402.07772},
+  year        = {2024},
+  arxiv       = {2402.07772},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {Many decision processes in artificial intelligence and operations research are modeled by parametric optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize (PtO) paradigm in machine learning aims to maximize downstream decision quality by training the parametric inference model end-to-end with the subsequent constrained optimization. This requires backpropagation through the optimization problem using approximation techniques specific to the problem's form, especially for nondifferentiable linear and mixed-integer programs. This paper extends the PtO methodology to optimization problems with nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure properties of fairness and robustness in decision models. Through a collection of training techniques and proposed application settings, it shows how optimization of OWA functions can be effectively integrated with parametric prediction for fair and robust optimization under uncertainty.}
+}
+
 @article{CBF:24,
   title       = {Projected Generative Diffusion Models for Constraint Satisfaction}, 
   author      = {Jacob K Christopher and Stephen Baek and Ferdinando Fioretto},
@@ -100,7 +127,7 @@
   abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
 }
 
-@article{DKF:24,
+@article{DKF:24a,
   title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   journal     = {CoRR},

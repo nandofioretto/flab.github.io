@@ -5,6 +5,6 @@ subtitle: PhD Student
 interests: Differentiable Optimization; Machine Learning for Optimization
 img: assets/img/group/james_kotary.png
 redirect: https://j-kota.github.io
-importance: 2
+importance: 1
 category: Postdocs and PhD Students
 ---
