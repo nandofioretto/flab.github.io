@@ -60,6 +60,12 @@ layout: default
             </div>
           {%- endif %}
 
+          <!-- Talks -->
+          {% if page.news and site.announcements.enabled -%}
+            <h2><a href="{{ '/talks/' | relative_url }}" style="color: inherit;">Selected Talks</a></h2>
+            {%- include talks.html limit=true %}
+          {%- endif %}
+
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>

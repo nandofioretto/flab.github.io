@@ -28,7 +28,8 @@ I am an assistant professor of Computer Science at [UVA](https://engineering.vir
 _optimization theory_, _differential privacy_, and _statistics_ to problems in
 decision-making and machine learning. For more details, please see my [publications](_pages/about.md). -->
 
-My group is generously supported by the _National Science Foundation_, _Google_, _Amazon_,
+My group is generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), [Google](https://research.google/outreach/research-scholar-program/recipients/), 
+[Amazon](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto),
 and the University of Virginia.\\
 <!-- I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
 the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, the
@@ -38,10 +39,3 @@ Before joining the University of Virginia, I was an assistant professor at
 Syracuse University. Prior to that I was a postdoctoral research associate at the
 Georgia Institute of Technology and a research fellow at the University of Michigan.
 For more details, please see my [CV](assets/cv/cvFioretto.pdf). 
-
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->

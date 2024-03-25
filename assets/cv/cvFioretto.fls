@@ -516,8 +516,8 @@ INPUT ./section_honors_awards.tex
 OUTPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua
 OUTPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./section_pubs_compact.tex
-INPUT ./section_pubs_compact.tex
+INPUT ./section_publications.tex
+INPUT ./section_publications.tex
 INPUT ./section_teaching_mentoring.tex
 INPUT ./section_teaching_mentoring.tex
 INPUT ./section_talks.tex

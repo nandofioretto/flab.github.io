@@ -47,9 +47,9 @@ This is a tentative calendar and it is subject to change.
 | Mon Mar 18 | Safety          | Adversarial Robustness             | [[35](#r35)] -- [[39](#r39)] | Group 4      |
 | Wed Mar 20 | Safety          | LLMs: Prompt injection             | [[40](#r40)] -- [[45](#r45)] | Group 5      |
 | Mon Mar 25 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 6      |
-| Wed Mar 27 | Privacy         | Differential Privacy 1             |                        	  | Group 1      |
-| Mon Apr 1  | Privacy         | Differential Privacy 2             |                        	  | Group 2      |
-| Wed Apr 3  | Privacy         |Auditing and Membership inference   |                        	  | Group 3      |
+| Wed Mar 27 | Privacy         | Differential Privacy 1             | [[51](#r51)] -- [[55](#r55)] | Group 1      |
+| Mon Apr 1  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 2      |
+| Wed Apr 3  | Privacy         | Auditing and Membership inference  |                        	  | Group 3      |
 | Mon Apr 8  | Privacy         | Privacy and Fairness               |                        	  | Group 4      |
 | Wed Apr 10 | Privacy         | LLMs: Private issues in LLMs       |                        	  | Group 5      |
 | Mon Apr 15 | Privacy         | LLMs: Privacy in LLMs              |                        	  | Group 6      |
@@ -141,6 +141,18 @@ This is a tentative calendar and it is subject to change.
 - <a id="r46">[49].</a> [Visual Adversarial Examples Jailbreak Aligned Large Language Models](https://arxiv.org/abs/2306.13213) Qi et al. 2023
 - <a id="r46">[50].</a> [Coercing LLMs to do and reveal (almost) anything](https://arxiv.org/abs/2402.14020) Geiping et al. 2024
 
+
+<!-- DP -->
+- <a id="51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath.
+- <a id="52">[52].</a> <a href="https://ecommons.cornell.edu/items/046034b9-9365-436b-88aa-e8c3fae94b7c" rel="external nofollow noopener" target="_blank">Understanding Database Reconstruction Attacks on Public Data</a> by S Garfinkel, JM Abowd, C Martindale.
+- <a id="53">[53].</a> <a href="https://www.pnas.org/doi/10.1073/pnas.2300976120" rel="external nofollow noopener" target="_blank">  Database reconstruction does compromise confidentiality</a> by SA Keller and JM Abowd.
+- <a id="54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
+- <a id="55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
+
+<!-- DP -->
+- <a id="51">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.
+- <a id="54">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
+- <a id="55">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
 
 <!-- Evaluation: https://fairmlbook.org/testing.html -->
