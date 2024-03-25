@@ -6,7 +6,7 @@ subtitle: Assistant Professor of Computer Science, University of Virginia
 
 profile:
   align: left
-  image: nando-pic.png
+  image: head_syr.png
   image_circular: true # crops the image to make it circular
   address:
     <p>307 Rice Hall</p>

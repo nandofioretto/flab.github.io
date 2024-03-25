@@ -49,9 +49,9 @@ This is a tentative calendar and it is subject to change.
 | Mon Mar 25 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 6      |
 | Wed Mar 27 | Privacy         | Differential Privacy 1             | [[51](#r51)] -- [[55](#r55)] | Group 1      |
 | Mon Apr 1  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 2      |
-| Wed Apr 3  | Privacy         | Auditing and Membership inference  |                        	  | Group 3      |
-| Mon Apr 8  | Privacy         | Privacy and Fairness               |                        	  | Group 4      |
-| Wed Apr 10 | Privacy         | LLMs: Private issues in LLMs       |                        	  | Group 5      |
+| Wed Apr 3  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 3      |
+| Mon Apr 8  | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 4      |
+| Wed Apr 10 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 5      |
 | Mon Apr 15 | Privacy         | LLMs: Privacy in LLMs              |                        	  | Group 6      |
 | Wed Apr 17 | Evaluation      | Model cards                        |                        	  | Group 1      |
 | Mon Apr 22 | Evaluation      | LLMs: evaluation                   |                        	  | Group 2      |
@@ -150,10 +150,25 @@ This is a tentative calendar and it is subject to change.
 - <a id="55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
 <!-- DP -->
-- <a id="51">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.
-- <a id="54">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
-- <a id="55">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
+- <a id="56">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.
+- <a id="57">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
+- <a id="58">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
+- <a id="59">[59].</a> [Differentially Private Empirical Risk Minimization](https://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf). Chaudhuri et al 2011.
+- <a id="60">[60].</a> [Deep Learning with Differential Privacy](https://arxiv.org/abs/1607.00133). Abadi et al, 2016
+- <a id="61">[61].</a> [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://arxiv.org/abs/1610.05755). Papernot et al, 2016
+
+<!-- Membership inference -->
+- <a id="62">[62].</a> [Membership Inference Attacks against Machine Learning Models](https://arxiv.org/abs/1610.05820) Shokri et al. 2017
+- <a id="63">[63].</a> [Membership Inference Attacks From First Principles](https://arxiv.org/abs/2112.03570) Carlini et al. 2021
+- <a id="64">[64].</a> [The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks](https://arxiv.org/abs/1802.08232) Carlini et al. 2018
+- <a id="65">[65].</a> [Auditing Differentially Private Machine Learning: How Private is Private SGD?](https://arxiv.org/abs/2006.07709)  Jagielski et al 2020
+
+
+- <a id="66">[66].</a> [Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey](https://arxiv.org/abs/2202.08187) Fioretto et al, 2022.
+- <a id="67">[67].</a> [On the Compatibility of Privacy and Fairness](https://rachelcummings.com/wp-c<a id="65">[65].</a> ontent/uploads/2019/03/FairPrivate.pdf) Cummings et al. 2019
+- <a id="68">[68].</a> [Differential Privacy Has Disparate Impact on Model Accuracy](https://arxiv.org/abs/1905.12101) Bagdasaryan 2019
+- <a id="69">[69].</a> [Differentially Private Empirical Risk Minimization under the Fairness Lens](https://arxiv.org/abs/2106.02674) Tran et al 2021
 
 <!-- Evaluation: https://fairmlbook.org/testing.html -->
 
