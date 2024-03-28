@@ -52,8 +52,8 @@ This is a tentative calendar and it is subject to change.
 | Wed Apr 3  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 3      |
 | Mon Apr 8  | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 4      |
 | Wed Apr 10 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 5      |
-| Mon Apr 15 | Privacy         | LLMs: Privacy in LLMs              |                        	  | Group 6      |
-| Wed Apr 17 | Evaluation      | Model cards                        |                        	  | Group 1      |
+| Mon Apr 15 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 6      |
+| Wed Apr 17 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 1      |
 | Mon Apr 22 | Evaluation      | LLMs: evaluation                   |                        	  | Group 2      |
 | Wed Apr 24 | Unlearning      | Unlearning 1                       |                        	  | Group 3      |
 | Mon Apr 29 | Unlearning      | LLMs: Targeted unlearning          |                        	  | Group 4          
@@ -170,7 +170,18 @@ This is a tentative calendar and it is subject to change.
 - <a id="68">[68].</a> [Differential Privacy Has Disparate Impact on Model Accuracy](https://arxiv.org/abs/1905.12101) Bagdasaryan 2019
 - <a id="69">[69].</a> [Differentially Private Empirical Risk Minimization under the Fairness Lens](https://arxiv.org/abs/2106.02674) Tran et al 2021
 
+- <a id="70">[70].</a> [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035) Nasar et al 2023.
+- <a id="71">[71].</a> [Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory](https://arxiv.org/abs/2310.17884?context=cs) Mireshghallah 2023
+- <a id="72">[72].</a> [Beyond Memorization: Violating Privacy Via Inference with Large Language Models](https://arxiv.org/abs/2310.07298v1) Staab et al 2023
+- <a id="73">[73].</a> [Privacy issues in Large Language Models: A Survey](https://arxiv.org/pdf/2312.06717.pdf). Sections 3,4, and 5. Neel 2024. 
+
+- <a id="74">[74]</a> [Model Cards for Model Reporting](1810.03993) Mitchell et al. 2018.
+- <a id="75">[75]</a> [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) Gebru et al. 2018.
+- <a id="76">[76]</a> [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) Birhane, 2021.
+- <a id="77">[77]</a> [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://dl.acm.org/doi/abs/10.1145/3531146.3533231) Pushkarna, 2022
+
 <!-- Evaluation: https://fairmlbook.org/testing.html -->
+- <a id="78">[78]</a> [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258) Bommasani et al. 2022.
 
 ## Assessment
 
