@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  27 MAR 2024 09:28
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  30 APR 2024 14:56
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1030,7 +1030,7 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \colbreak@box=\box125
 \mc@col@check@num=\count334
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 115.
+Package hyperref Info: Option `breaklinks' set `true' on input line 117.
 luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: File not foun
 d: "fonts/SourceSansPro-Light".
 luaotfload | aux : font no 24 (nil) does not define feature smcp for script latn
@@ -1341,15 +1341,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(61.42993pt, 491.43513pt, 61.42993pt)
-* v-part:(T,H,B)=(61.42993pt, 672.11012pt, 61.42993pt)
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=491.43513pt
-* \textheight=672.11012pt
-* \oddsidemargin=-10.84006pt
-* \evensidemargin=-10.84006pt
-* \topmargin=-10.84006pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-15.36449pt
 * \headheight=0.0pt
 * \headsep=0.0pt
 * \topskip=10.0pt
@@ -1377,124 +1377,150 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-(./section_experience.tex
-Overfull \hbox (5.28076pt too wide) in alignment at lines 5--36
- [][] 
- []
-
-
-Overfull \hbox (5.28076pt too wide) in alignment at lines 40--73
- [][] 
- []
-
-) (./section_honors_awards.tex [1
+(./section_experience.tex) (./section_honors_awards.tex [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./sec
-tion_publications.tex [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 675--675
+tion_publications.tex
+Underfull \hbox (badness 1354) in paragraph at lines 83--83
+[]|[]  \TU/SourceSansPro-Light(0)/m/n/10 Sree Har-sha Ne-la-turu, []  Ni-shaanth
+ Kanna Ra-vi-chan-dran, []  Cuong Tran, Sara Hoo-ker, and \TU/SourceSansPro-Lig
+ht(0)/b/n/10 Fer-di-
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 []|
  []
 
 
-Overfull \hbox (7.74097pt too wide) in paragraph at lines 675--675
-[]$\OMS/cmsy/m/n/10 $\TU/SourceSansPro-Light(0)/b/n/10 2014[]| 
+Overfull \hbox (4.69315pt too wide) in paragraph at lines 203--204
+\TU/SourceSansPro-Light(0)/m/n/10 27.0% 
  []
 
-
-Package hyperref Warning: Suppressing link with empty target on input line 733.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 733.
-
-
-[4] [5] [6] [7] [8] [9] [10]) (./section_teaching_mentoring.tex
-Overfull \hbox (5.28076pt too wide) in alignment at lines 24--49
- [][] 
- []
-
-[11]) (./section_talks.tex [12]
-
-LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 104.
-
-[13]
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
- 156.
+ 443.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 194.
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
+[]|
+ []
 
 
-[14]) (./section_projects.tex
+Overfull \hbox (6.34094pt too wide) in paragraph at lines 686--686
+[]$\OMS/cmsy/m/n/10 $\TU/SourceSansPro-Light(0)/m/it/10 2014[]| 
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 744.
+
+
+[3] [4] [5] [6] [7]
+Underfull \hbox (badness 3260) in paragraph at lines 963--963
+[]|[] \TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/
+b/it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . [][]\TU/Sourc
+eSansPro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage
+ Mo-de-ling''[][]\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(
+0)/b/it/10 CoRR
+ []
+
+) (./section_teaching_mentoring.tex [8] [9]) (./section_talks.tex
+
+Package hyperref Warning: Suppressing link with empty target on input line 12.
+
+[10]
+
+LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 83.
+
+[11]
+
+Package hyperref Warning: Suppressing link with empty target on input line 153.
+
+
+) (./section_projects.tex
+
+Package hyperref Warning: Suppressing link with empty target on input line 19.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 78.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 91.
+Package hyperref Warning: Suppressing link with empty target on input line 88.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Package hyperref Warning: Suppressing link with empty target on input line 110.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
 
  []
 
-[15]) (./section_service.tex [16] [17] [18]) [19] (./cvFioretto.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+) (./section_service.tex [13] [14] [15]) [16] (./cvFioretto.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1503,14 +1529,14 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33269 strings out of 478285
- 596577,1977958 words of node,token memory allocated
- 4423 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 175 glue, 4 kern, 1 penalty, 2 glyph, 1138 attribut
-e, 76 glue_spec, 164 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:6,2:25003,3:2155,4:1202,5:6177,6:932,7:40322,8:8,9:6339,10:27,
-11:3443
- 52109 multiletter control sequences out of 65536+600000
+ 33264 strings out of 478285
+ 477242,1977958 words of node,token memory allocated
+ 6675 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 183 glue, 4 kern, 1 penalty, 2 glyph, 1852 attribut
+e, 76 glue_spec, 266 attribute_list, 2 write, 95 pdf_action nodes
+   avail lists: 1:3,2:14627,3:1177,4:782,5:6688,6:335,7:39956,8:8,9:3045,10:11,1
+1:3770
+ 52108 multiletter control sequences out of 65536+600000
  54 fonts using 8319175 bytes
  115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1523,10 +1549,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (19 pages, 129909 bytes).
+Output written on cvFioretto.pdf (16 pages, 134366 bytes).
 
-PDF statistics: 514 PDF objects out of 1000 (max. 8388607)
- 473 compressed objects within 5 object streams
- 46 named destinations out of 1000 (max. 131072)
+PDF statistics: 473 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 42 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

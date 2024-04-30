@@ -26,6 +26,7 @@
 @String{CPAIOR = "Integration of Constraint Programming, Artificial Intelligence, and Operations Research"}
 @String{ECAI  = "European Conference on Artificial Intelligence" }
 @String{ECML  = "European Conference on Machine Learning" }
+@String{FAccT = "ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)"}
 @String{HCI   = "International Conference on Human Computer Interaction" }
 @String{IAT   = "International Conference on Intelligent Agent Technology" }
 @String{ICLP  = "International Conference on Logic Programming" }
@@ -37,6 +38,7 @@
 @String{NeurIPS  = "Advances in Neural Information Processing Systems" }
 @String{PRIMA = "Principles and Practice of Multi-Agent Systems" }
 @String{PAAMS = "Advances in Practical Applications of Heterogeneous Multi-Agent Systems" }
+@String{UAI = "Conference on Uncertainty in Artificial Intelligence" }
 @String{WWW   = "The {ACM} Web Conference"}
 @String{PMAPS =  "International Conference on Probabilistic Methods Applied to Power Systems"}
 
@@ -59,12 +61,43 @@
 # 2024
 #################
 
-@article{FZvHDT:aaai24,
+@inproceedings{DKF:24b,
+  title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
+  author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
+  booktitle   = UAI,
+  publisher   = {},
+  doi         = {10.48550/arXiv.2402.07772},
+  year        = {2024},
+  arxiv       = {2402.07772},
+  abbr        = {UAI},
+  bibtex_show = {true},
+  abstract    = {Many decision processes in artificial intelligence and operations research are modeled by parametric optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize (PtO) paradigm in machine learning aims to maximize downstream decision quality by training the parametric inference model end-to-end with the subsequent constrained optimization. This requires backpropagation through the optimization problem using approximation techniques specific to the problem's form, especially for nondifferentiable linear and mixed-integer programs. This paper extends the PtO methodology to optimization problems with nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure properties of fairness and robustness in decision models. Through a collection of training techniques and proposed application settings, it shows how optimization of OWA functions can be effectively integrated with parametric prediction for fair and robust optimization under uncertainty.}
+}
+
+@inproceedings{TZFvH:ijcai24,
+  author       = {Cuong Tran and Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Fairness Increases Adversarial Vulnerability},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {TBA},
+  year         = {2024},
+  abbr         = {IJCAI},
+  url          = {https://doi.org/10.48550/arXiv.2211.11835},
+  doi          = {10.48550/arXiv.2211.11835},
+  arxiv       = {2211.11835},
+  bibtex_show = {true},
+  selected     = {false},
+  abstract     = {The remarkable performance of deep learning models and their applications in consequential domains (e.g., facial recognition) introduces important challenges at the intersection of equity and security. Fairness and robustness are two desired notions often required in learning models. Fairness ensures that models do not disproportionately harm (or benefit) some groups over others, while robustness measures the models' resilience against small input perturbations.
+  This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.}
+}
+
+@inproceedings{FZvHDT:aaai24,
   author       = {Ferdinando Fioretto and Keyu Zhu and Pascal Van Hentenryck and Saswat Das and Christine Task},
   title        = {Finding $\epsilon\,$ and $\delta\,$ of Traditional Disclosure Control Systems},
   booktitle    = AAAI,
   publisher    = {{AAAI} Press},
-  pages        = {to appear},
+  volume       = {38},
+  pages        = {22013-22020},
   year         = {2024},
   arxiv        = {2301.12204},
   abbr         = {AAAI},
@@ -72,19 +105,45 @@
   abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
 }
 
-
-@article{DKF:24b,
-  title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
+@inproceedings{DKF:24a,
+  title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
-  journal     = {CoRR},
-  volume      = {abs/2402.07772},
-  doi         = {10.48550/arXiv.2402.07772},
+  booktitle   = FAccT,
   year        = {2024},
-  arxiv       = {2402.07772},
+  pages       = {to appear},
+  arxiv       = {2402.05252},
+  abbr        = {FAccT},
+  bibtex_show = {true},
+  abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
+}
+
+
+@article{KKFD:24,
+  title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
+  author      = {Ethan King, James Kotary, Ferdinando Fioretto, Jan Drgona},
+  journal     = {CoRR},
+  volume      = {abs/2404.00882},
+  doi         = {10.48550/arXiv.2404.00882},
+  year        = {2024},
+  arxiv       = {2404.00882},
   abbr        = {ArXiv},
   bibtex_show = {true},
-  abstract    = {Many decision processes in artificial intelligence and operations research are modeled by parametric optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize (PtO) paradigm in machine learning aims to maximize downstream decision quality by training the parametric inference model end-to-end with the subsequent constrained optimization. This requires backpropagation through the optimization problem using approximation techniques specific to the problem's form, especially for nondifferentiable linear and mixed-integer programs. This paper extends the PtO methodology to optimization problems with nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure properties of fairness and robustness in decision models. Through a collection of training techniques and proposed application settings, it shows how optimization of OWA functions can be effectively integrated with parametric prediction for fair and robust optimization under uncertainty.}
+  abstract    = {Recent work has shown a variety of ways in which machine learning can be used to accelerate the solution of constrained optimization problems. Increasing demand for real-time decision-making capabilities in applications such as artificial intelligence and optimal control has led to a variety of approaches, based on distinct strategies. This work proposes a novel approach to learning optimization, in which the underlying metric space of a proximal operator splitting algorithm is learned so as to maximize its convergence rate. While prior works in optimization theory have derived optimal metrics for limited classes of problems, the results do not extend to many practical problem forms including general Quadratic Programming (QP). This paper shows how differentiable optimization can enable the end-to-end learning of proximal metrics, enhancing the convergence of proximal algorithms for QP problems beyond what is possible based on known theory. Additionally, the results illustrate a strong connection between the learned proximal metrics and active constraints at the optima, leading to an interpretation in which the learning of proximal metrics can be viewed as a form of active set learning.}
 }
+
+@article{KF:24,
+  title       = {Learning Constrained Optimization with Deep Augmented Lagrangian Methods}, 
+  author      = {James Kotary and Ferdinando Fioretto},
+  journal     = {CoRR},
+  volume      = {abs/2403.03454},
+  doi         = {10.48550/arXiv.2403.03454},
+  year        = {2024},
+  arxiv       = {2403.03454},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {Learning to Optimize (LtO) is a problem setting in which a machine learning (ML) model is trained to emulate a constrained optimization solver. Learning to produce optimal and feasible solutions subject to complex constraints is a difficult task, but is often made possible by restricting the input space to a limited distribution of related problems. Most LtO methods focus on directly learning solutions to the primal problem, and applying correction schemes or loss function penalties to encourage feasibility. This paper proposes an alternative approach, in which the ML model is trained instead to predict dual solution estimates directly, from which primal estimates are constructed to form dual-feasible solution pairs. This enables an end-to-end training scheme is which the dual objective is maximized as a loss function, and solution estimates iterate toward primal feasibility, emulating a Dual Ascent method. First it is shown that the poor convergence properties of classical Dual Ascent are reflected in poor convergence of the proposed training scheme. Then, by incorporating techniques from practical Augmented Lagrangian methods, we show how the training scheme can be improved to learn highly accurate constrained optimization solvers, for both convex and nonconvex problems.}
+}
+
 
 @article{CBF:24,
   title       = {Projected Generative Diffusion Models for Constraint Satisfaction}, 
@@ -112,19 +171,6 @@
   abbr        = {ArXiv},
   bibtex_show = {true},
   abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
-}
-
-@article{DKF:24a,
-  title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
-  author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
-  journal     = {CoRR},
-  volume      = {abs/2402.05252},
-  doi         = {10.48550/arXiv.2402.05252},
-  year        = {2024},
-  arxiv       = {2402.05252},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
 }
 
 @article{KCDF:24,
@@ -492,22 +538,6 @@
   abstract     = {Learning mappings between system loading and optimal dispatch solutions has been a recent topic of interest in the power systems and machine learning communities. However, previous works have ignored practical power system constraints such as generator ramp limits and other intertemporal requirements. Additionally, optimal power flow runs are not performed independently of previous timesteps - in most cases, an OPF solution representing the current state of the system is heavily related to the OPF solution from previous timesteps. In this paper, we train a recurrent neural network, which embeds natural relationships between timesteps, to predict the optimal solution of convex power systems optimization problems with intertemporal constraints. In contrast to traditional forecasting methods, the computational benefits from this technique can allow operators to rapidly simulate forecasts of system operation and corresponding optimal solutions to provide a more comprehensive view of future system states.}
 }
 
-@article{TZFvH:22,
-  author       = {Cuong Tran and Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
-  title        = {Fairness Increases Adversarial Vulnerability},
-  journal      = {CoRR},
-  volume       = {abs/2211.11835},
-  year         = {2022},
-  url          = {https://doi.org/10.48550/arXiv.2211.11835},
-  doi          = {10.48550/arXiv.2211.11835},
-  arxiv       = {2211.11835},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  selected     = {false},
-  abstract     = {The remarkable performance of deep learning models and their applications in consequential domains (e.g., facial recognition) introduces important challenges at the intersection of equity and security. Fairness and robustness are two desired notions often required in learning models. Fairness ensures that models do not disproportionately harm (or benefit) some groups over others, while robustness measures the models' resilience against small input perturbations.
-This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.}
-}
-
 @article{DFvHPK:22,
   author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Pierre Pinson and Jalal Kazempour},
   title        = {Privacy-Preserving Convex Optimization: When Differential Privacy Meets Stochastic Programming},
@@ -519,20 +549,6 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   arxiv        = {2209.14152},
   bibtex_show = {true},
   abstract     = {Convex optimization finds many real-life applications, where - optimized on real data - optimization results may expose private data attributes (e.g., individual health records, commercial information, etc.), thus leading to privacy breaches. To avoid these breaches and formally guarantee privacy to optimization data owners, we develop a new privacy-preserving perturbation strategy for convex optimization programs by combining stochastic (chance-constrained) programming and differential privacy. Unlike standard noise-additive strategies, which perturb either optimization data or optimization results, we express the optimization variables as functions of the random perturbation using linear decision rules; we then optimize these rules to accommodate the perturbation within the problem's feasible region by enforcing chance constraints. This way, the perturbation is feasible and makes different, yet adjacent in the sense of a given distance function, optimization datasets statistically similar in randomized optimization results, thereby enabling probabilistic differential privacy guarantees. The chance-constrained optimization additionally internalizes the conditional value-at-risk measure to model the tolerance towards the worst-case realizations of the optimality loss with respect to the non-private solution. We demonstrate the privacy properties of our perturbation strategy analytically and through optimization and machine learning applications.}
-}
-
-@article{MBF:22,
-  author       = {Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
-  title        = {Gradient-Enhanced Physics-Informed Neural Networks for Power Systems Operational Support},
-  journal      = {CoRR},
-  volume       = {abs/2206.10579},
-  year         = {2022},
-  url          = {https://doi.org/10.48550/arXiv.2206.10579},
-  doi          = {10.48550/arXiv.2206.10579},
-  abbr        = {ArXiv},
-  arxiv       = {2206.10579},
-  bibtex_show = {true},
-  abstract    = {The application of deep learning methods to speed up the resolution of challenging power flow problems has recently shown very encouraging results. However, power system dynamics are not snap-shot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical dynamical constraints, avoiding frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications.}
 }
 
 @article{KFS:22,
@@ -582,12 +598,13 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   abbr         = {TPWRS},
   bibtex_show  = {true},
   selected     = {true},
+  arxiv       = {2004.03921},
   award        = {2022 TPWRS Best Paper Award},
   abstract     = {Although distribution grid customers are obliged to share their consumption data with distribution system operators (DSOs), a possible leakage of this data is often disregarded in operational routines of DSOs. This paper introduces a privacy-preserving optimal power flow (OPF) mechanism for distribution grids that secures customer privacy from unauthorised access to OPF solutions, e.g., current and voltage measurements. The mechanism is based on the framework of differential privacy that allows to control the participation risks of individuals in a dataset by applying a carefully calibrated noise to the output of a computation. Unlike existing private mechanisms, this mechanism does not apply the noise to the optimization parameters or its result. Instead, it optimizes OPF variables as affine functions of the random noise, which weakens the correlation between the grid loads and OPF variables. To ensure feasibility of the randomized OPF solution, the mechanism makes use of chance constraints enforced on the grid limits. The mechanism is further extended to control the optimality loss induced by the random noise, as well as the variance of OPF variables. The paper shows that the differentially private OPF solution does not leak customer loads up to specified parameters.}
 }
 
 @inproceedings{TMF:neurips21,
-  author      = {Cuong Tran and My Dinh and Ferdinando Fioretto},
+  author      = {Cuong Tran and My H.~Dinh and Ferdinando Fioretto},
   title       = {Differentially Private Empirical Risk Minimization under the Fairness Lens},
   booktitle   = NeurIPS,
   publisher   = {Curran Associates, Inc.},
@@ -727,33 +744,6 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   abstract     = {The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.}
 }
 
-@article{TDBF:21,
-  author       = {Cuong Tran and My H. Dinh and Kyle Beiter and Ferdinando Fioretto},
-  title        = {A Fairness Analysis on Private Aggregation of Teacher Ensembles},
-  journal      = {CoRR},
-  volume       = {abs/2109.08630},
-  year         = {2021},
-  url          = {https://arxiv.org/abs/2109.08630},
-  abbr         = {ArXiv},
-  arxiv       = {2109.08630},
-  bibtex_show  = {true},
-  abstract     = {The Private Aggregation of Teacher Ensembles (PATE) is an important private machine learning framework. It combines multiple learning models used as teachers for a student model that learns to predict an output chosen by noisy voting among the teachers. The resulting model satisfies differential privacy and has been shown effective in learning high-quality private models in semisupervised settings or when one wishes to protect the data labels.
-  This paper asks whether this privacy-preserving framework introduces or exacerbates bias and unfairness and shows that PATE can introduce accuracy disparity among individuals and groups of individuals. The paper analyzes which algorithmic and data properties are responsible for the disproportionate impacts, why these aspects are affecting different groups disproportionately, and proposes guidelines to mitigate these effects. The proposed approach is evaluated on several datasets and settings.}
-}
-
-@article{DBLP:journals/corr/abs-2111-11168,
-  author       = {My H. Dinh and Ferdinando Fioretto and Mostafa Mohammadian and Kyri Baker},
-  title        = {Towards Understanding the Unreasonable Effectiveness of Learning {AC-OPF} Solutions},
-  journal      = {CoRR},
-  volume       = {abs/2111.11168},
-  year         = {2021},
-  url          = {https://arxiv.org/abs/2111.11168},
-  abbr         = {ArXiv},
-  arxiv       = {2111.11168},
-  bibtex_show  = {true},
-  abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
-}
-
 
 #################
 # 2020
@@ -842,6 +832,7 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   doi 			= {10.1109/TPWRS.2019.2945069},
   abbr      = {TPWRS},
   award     = {2021 TPWRS Best Paper Award},
+  arxiv        = {2001.09508},
   selected     = {true},
   abstract  = {This paper considers the problem of releasing optimal power flow (OPF) test cases that preserve the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential privacy algorithms are not suitable for releasing privacy preserving OPF test cases: The added noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solutions. To remedy this limitation, the paper introduces the OPF Load Indistinguishability (OLI) problem, which guarantees load privacy while satisfying the OPF constraints and remaining close to the optimal dispatch cost. The paper introduces an exact mechanism, based on bilevel optimization, as well as three mechanisms that approximate the OLI problem accurately. These mechanisms enjoy desirable theoretical properties, and the computational experiments show that they produce orders of magnitude improvements over standard approaches on an extensive collection of test cases.}
 }
@@ -939,30 +930,6 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   bibtex_show  = {true},
   abbr         = {PRIMA},
   abstract     = {Daily energy demand peaks induce high greenhouse gas emissions and are deleterious to the power grid operations. The autonomous and coordinated control of smart appliances in residential buildings represents an effective solution to reduce peak demands. This coordination problem is challenging as it involves, not only, scheduling devices to minimize energy peaks, but also to comply with user’ preferences. Prior work assumed these preferences to be fully specified and known a priori, which is, however, unrealistic. To remedy this limitation, this paper introduces a Bayesian optimization approach for smart appliance scheduling when the users’ satisfaction with a schedule must be elicited, and thus considered expensive to evaluate. The paper presents a set of ad-hoc energy-cost based acquisition functions to drive the Bayesian optimization problem to find schedules that maximize the user’s satisfaction. The experimental results demonstrate the effectiveness of the proposed energy-cost based acquisition functions which improve the algorithm’s performance up to 26%.}
-}
-
-@article{FMvH:20,
-  author       = {Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
-  title        = {Bilevel Optimization for Differentially Private Optimization},
-  journal      = {CoRR},
-  volume       = {abs/2001.09508},
-  year         = {2020},
-  abbr         = {ArXiv},
-  arxiv        = {2001.09508},
-  bibtex_show  = {true},
-  abstract    = {This paper studies how to apply differential privacy to constrained optimization problems whose inputs are sensitive. This task raises significant challenges since random perturbations of the input data often render the constrained optimization problem infeasible or change significantly the nature of its optimal solutions. To address this difficulty, this paper proposes a bilevel optimization model that can be used as a post-processing step: It redistributes the noise introduced by a differentially private mechanism optimally while restoring feasibility and near-optimality. The paper shows that, under a natural assumption, this bilevel model can be solved efficiently for real-life large-scale nonlinear nonconvex optimization problems with sensitive customer data. The experimental results demonstrate the accuracy of the privacy-preserving mechanism and showcases significant benefits compared to standard approaches.}
-}
-
-@article{DFvHKP:20a,
-  author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
-  title        = {Differentially Private Optimal Power Flow for Distribution Grids},
-  journal      = {CoRR},
-  volume       = {abs/2004.03921},
-  year         = {2020},
-  abbr         = {ArXiv},
-  arxiv       = {2004.03921},
-  bibtex_show  = {true},
-  abstract     = {Although distribution grid customers are obliged to share their consumption data with distribution system operators (DSOs), a possible leakage of this data is often disregarded in operational routines of DSOs. This paper introduces a privacy-preserving optimal power flow (OPF) mechanism for distribution grids that secures customer privacy from unauthorised access to OPF solutions, e.g., current and voltage measurements. The mechanism is based on the framework of differential privacy that allows to control the participation risks of individuals in a dataset by applying a carefully calibrated noise to the output of a computation. Unlike existing private mechanisms, this mechanism does not apply the noise to the optimization parameters or its result. Instead, it optimizes OPF variables as affine functions of the random noise, which weakens the correlation between the grid loads and OPF variables. To ensure feasibility of the randomized OPF solution, the mechanism makes use of chance constraints enforced on the grid limits. The mechanism is further extended to control the optimality loss induced by the random noise, as well as the variance of OPF variables. The paper shows that the differentially private OPF solution does not leak customer loads up to specified parameters.}
 }
 
 @article{DFvHKP:20b,
@@ -1077,19 +1044,6 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   abstract     = {The paper studies how to release data about a critical infrastructure network (e.g., a power network or a transportation network) without disclosing sensitive information that can be exploited by malevolent agents, while preserving the realism of the network. It proposes a novel obfuscation mechanism that combines several privacy-preserving building blocks with a bi-level optimization model to significantly improve accuracy. The obfuscation is evaluated for both realism and privacy properties on real energy and transportation networks. Experimental results show the obfuscation mechanism substantially reduces the potential damage of an attack exploiting the released data to harm the real network.}
 }
 
-@article{FLvH:19,
-  author       = {Ferdinando Fioretto and Lesia Mitridati and Pascal Van Hentenryck},
-  title        = {{PPSM:} {A} Privacy-Preserving Stackelberg Mechanism: Privacy Guarantees for the Coordination of Sequential Electricity and Gas Markets},
-  journal      = {CoRR},
-  volume       = {abs/1911.10178},
-  year         = {2019},
-  url          = {http://arxiv.org/abs/1911.10178},
-  abbr         = {ArXiv},
-  arxiv        = {1911.10178},
-  bibtex_show  = {true},
-  abstract     = {This paper introduces a differentially private mechanism to protect the information exchanged during the coordination of the sequential market-clearing of electricity and natural gas systems. The coordination between these sequential and interdependent markets represents a classic Stackelberg game and relies on the exchange of sensitive information between the system agents, including the supply and demand bids in each market or the characteristics of the systems. The paper is motivated by the observation that traditional differential privacy mechanisms are unsuitable for the problem of interest: The perturbation introduced by these mechanisms fundamentally changes the underlying optimization problem and even leads to unsatisfiable instances. To remedy such limitation, the paper introduces the Privacy-Preserving Stackelberg Mechanism (PPSM), a framework that enforces the notions of consistency and fidelity of the privacy-preserving information to the original problem objective. The PPSM has strong properties: It complies with the notion of differential privacy and ensures that the outcomes of the privacy-preserving coordination mechanisms are close-to-optimality for each agent. The fidelity property is analyzed by providing theoretical guarantees on the cost of privacy of PPSM and experimental results on several gas and electricity market benchmarks based on a real case study demonstrate the effectiveness of the approach.}
-}
-
 
 #################
 # 2018
@@ -1180,6 +1134,7 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   url          = {https://doi.org/10.1007/978-3-319-98334-9\_44},
   doi          = {10.1007/978-3-319-98334-9\_44},
   bibtex_show  = {true},
+  arxiv        = {1702.06915},
   abbr         = {CP},
   abstract     = {The Distributed Constraint Optimization Problem (DCOP) is an elegant paradigm for modeling and solving multi-agent problems which are distributed in nature, and where agents cooperate to optimize a global objective within the confines of localized communication. Since solving DCOPs optimally is NP-hard, recent effort in the development of DCOP algorithms has focused on incomplete methods. Unfortunately, many of such proposals do not provide quality guarantees or provide a loose quality assessment. Thus, this paper proposes the Distributed Large Neighborhood Search (DLNS), a novel iterative local search framework to solve DCOPs, which provides guarantees on solution quality refining lower and upper bounds in an iterative process. Our experimental analysis of DCOP benchmarks on several important classes of graphs illustrates the effectiveness of DLNS in finding good solutions and tight upper bounds in both problems with and without hard constraints.}
 }
@@ -1319,21 +1274,6 @@ This paper shows the existence of a dichotomy between fairness and robustness, a
   abbr         = {CP},
   abstract     = {Distributed Constraint Optimization Problems (DCOPs) offer a powerful approach for the description and resolution of cooperative multi-agent problems. In this model, a group of agents coordinate their actions to optimize a global objective function, taking into account their preferences or constraints. A core limitation of this model is the assumption that the preferences of all agents or the costs of all constraints are specified a priori. Unfortunately, this assumption does not hold in a number of application domains where preferences or constraints must be elicited from the users. One of such domains is the Smart Home Device Scheduling (SHDS) problem. Motivated by this limitation, we make the following contributions in this paper: (1) We propose a general model for preference elicitation in DCOPs; (2) We propose several heuristics to elicit preferences in DCOPs; and (3) We empirically evaluate the effect of these heuristics on random binary DCOPs as well as SHDS problems.}
 }
-
-@article{FDP0Z:17,
-  author       = {Ferdinando Fioretto and Agostino Dovier and Enrico Pontelli and William Yeoh and Roie Zivan},
-  title        = {Solving DCOPs with Distributed Large Neighborhood Search},
-  journal      = {CoRR},
-  volume       = {abs/1702.06915},
-  year         = {2017},
-  url          = {http://arxiv.org/abs/1702.06915},
-  abbr         = {ArXiv},
-  arxiv        = {1702.06915},
-  bibtex_show  = {true},
-  abstract     = {The field of Distributed Constraint Optimization has gained momentum in recent years, thanks to its ability to address various applications related to multi-agent cooperation. Nevertheless, solving Distributed Constraint Optimization Problems (DCOPs) optimally is NP-hard. Therefore, in large-scale, complex applications, incomplete DCOP algorithms are necessary. Current incomplete DCOP algorithms suffer of one or more of the following limitations: they (a) find local minima without providing quality guarantees; (b) provide loose quality assessment; or (c) are unable to benefit from the structure of the problem, such as domain-dependent knowledge and hard constraints. Therefore, capitalizing on strategies from the centralized constraint solving community, we propose a Distributed Large Neighborhood Search (D-LNS) framework to solve DCOPs. The proposed framework (with its novel repair phase) provides guarantees on solution quality, refining upper and lower bounds during the iterative process, and can exploit domain-dependent structures. Our experimental results show that D-LNS outperforms other incomplete DCOP algorithms on both structured and unstructured problem instances.}
-}
-
-
 
 #################
 # 2016

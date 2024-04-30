@@ -35,7 +35,7 @@
   url: https://content.iospress.com/journals/intelligenza-artificiale/17/1
   color: "#B9770E"
 
-TOMACS:
+"TOMACS":
   url: https://dl.acm.org/journal/tomacs
   color: "#B9770E"
   
@@ -59,6 +59,9 @@ TOMACS:
     color: "#2874A6"
 
 "ECML":
+    color: "#2874A6"
+
+"FAccT":
     color: "#2874A6"
 
 "IJCAI":
@@ -85,11 +88,17 @@ TOMACS:
 "PSCC":
   color: "#2874A6"
 
+"UAI":
+  color: "#2874A6"
+
 "WWW":
   color: "#2874A6"
 
 
 # Workshops
+"ArXiv":
+    color: "#808080"
+
 "WCB":
     color: "#17A589"
 

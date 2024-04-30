@@ -54,9 +54,9 @@ This is a tentative calendar and it is subject to change.
 | Wed Apr 10 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 5      |
 | Mon Apr 15 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 6      |
 | Wed Apr 17 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 1      |
-| Mon Apr 22 | Evaluation      | LLMs: evaluation                   |                        	  | Group 2      |
-| Wed Apr 24 | Unlearning      | Unlearning 1                       |                        	  | Group 3      |
-| Mon Apr 29 | Unlearning      | LLMs: Targeted unlearning          |                        	  | Group 4          
+| Mon Apr 22 | Evaluation      | LLMs: evaluation                   | [[78](#r78)] -- [[82](#r82)] | Group 2      |
+| Wed Apr 24 | Unlearning      | Unlearning 1                       | [[83](#r83)] -- [[86](#r86)] | Group 3      |
+| Mon Apr 29 | Unlearning      | LLMs: Targeted unlearning          | [[87](#r87)] -- [[90](#r90)] | Group 4          
 
 <br>
 ### Bibliography
@@ -143,45 +143,65 @@ This is a tentative calendar and it is subject to change.
 
 
 <!-- DP -->
-- <a id="51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath.
-- <a id="52">[52].</a> <a href="https://ecommons.cornell.edu/items/046034b9-9365-436b-88aa-e8c3fae94b7c" rel="external nofollow noopener" target="_blank">Understanding Database Reconstruction Attacks on Public Data</a> by S Garfinkel, JM Abowd, C Martindale.
-- <a id="53">[53].</a> <a href="https://www.pnas.org/doi/10.1073/pnas.2300976120" rel="external nofollow noopener" target="_blank">  Database reconstruction does compromise confidentiality</a> by SA Keller and JM Abowd.
-- <a id="54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
-- <a id="55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
+- <a id="r51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath.
+- <a id="r52">[52].</a> <a href="https://ecommons.cornell.edu/items/046034b9-9365-436b-88aa-e8c3fae94b7c" rel="external nofollow noopener" target="_blank">Understanding Database Reconstruction Attacks on Public Data</a> by S Garfinkel, JM Abowd, C Martindale.
+- <a id="r53">[53].</a> <a href="https://www.pnas.org/doi/10.1073/pnas.2300976120" rel="external nofollow noopener" target="_blank">  Database reconstruction does compromise confidentiality</a> by SA Keller and JM Abowd.
+- <a id="r54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
+- <a id="r55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
 <!-- DP -->
-- <a id="56">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.
-- <a id="57">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
-- <a id="58">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
+- <a id="r56">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.
+- <a id="r57">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
+- <a id="r58">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
-- <a id="59">[59].</a> [Differentially Private Empirical Risk Minimization](https://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf). Chaudhuri et al 2011.
-- <a id="60">[60].</a> [Deep Learning with Differential Privacy](https://arxiv.org/abs/1607.00133). Abadi et al, 2016
-- <a id="61">[61].</a> [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://arxiv.org/abs/1610.05755). Papernot et al, 2016
+- <a id="r59">[59].</a> [Differentially Private Empirical Risk Minimization](https://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf). Chaudhuri et al 2011.
+- <a id="r60">[60].</a> [Deep Learning with Differential Privacy](https://arxiv.org/abs/1607.00133). Abadi et al, 2016
+- <a id="r61">[61].</a> [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://arxiv.org/abs/1610.05755). Papernot et al, 2016
 
 <!-- Membership inference -->
-- <a id="62">[62].</a> [Membership Inference Attacks against Machine Learning Models](https://arxiv.org/abs/1610.05820) Shokri et al. 2017
-- <a id="63">[63].</a> [Membership Inference Attacks From First Principles](https://arxiv.org/abs/2112.03570) Carlini et al. 2021
-- <a id="64">[64].</a> [The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks](https://arxiv.org/abs/1802.08232) Carlini et al. 2018
-- <a id="65">[65].</a> [Auditing Differentially Private Machine Learning: How Private is Private SGD?](https://arxiv.org/abs/2006.07709)  Jagielski et al 2020
+- <a id="r62">[62].</a> [Membership Inference Attacks against Machine Learning Models](https://arxiv.org/abs/1610.05820) Shokri et al. 2017
+- <a id="r63">[63].</a> [Membership Inference Attacks From First Principles](https://arxiv.org/abs/2112.03570) Carlini et al. 2021
+- <a id="r64">[64].</a> [The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks](https://arxiv.org/abs/1802.08232) Carlini et al. 2018
+- <a id="r65">[65].</a> [Auditing Differentially Private Machine Learning: How Private is Private SGD?](https://arxiv.org/abs/2006.07709)  Jagielski et al 2020
 
 
-- <a id="66">[66].</a> [Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey](https://arxiv.org/abs/2202.08187) Fioretto et al, 2022.
-- <a id="67">[67].</a> [On the Compatibility of Privacy and Fairness](https://rachelcummings.com/wp-c<a id="65">[65].</a> ontent/uploads/2019/03/FairPrivate.pdf) Cummings et al. 2019
-- <a id="68">[68].</a> [Differential Privacy Has Disparate Impact on Model Accuracy](https://arxiv.org/abs/1905.12101) Bagdasaryan 2019
-- <a id="69">[69].</a> [Differentially Private Empirical Risk Minimization under the Fairness Lens](https://arxiv.org/abs/2106.02674) Tran et al 2021
+- <a id="r66">[66].</a> [Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey](https://arxiv.org/abs/2202.08187) Fioretto et al, 2022.
+- <a id="r67">[67].</a> [On the Compatibility of Privacy and Fairness](https://rachelcummings.com/wp-c<a id="r65">[65].</a> ontent/uploads/2019/03/FairPrivate.pdf) Cummings et al. 2019
+- <a id="r68">[68].</a> [Differential Privacy Has Disparate Impact on Model Accuracy](https://arxiv.org/abs/1905.12101) Bagdasaryan 2019
+- <a id="r69">[69].</a> [Differentially Private Empirical Risk Minimization under the Fairness Lens](https://arxiv.org/abs/2106.02674) Tran et al 2021
 
-- <a id="70">[70].</a> [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035) Nasar et al 2023.
-- <a id="71">[71].</a> [Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory](https://arxiv.org/abs/2310.17884?context=cs) Mireshghallah 2023
-- <a id="72">[72].</a> [Beyond Memorization: Violating Privacy Via Inference with Large Language Models](https://arxiv.org/abs/2310.07298v1) Staab et al 2023
-- <a id="73">[73].</a> [Privacy issues in Large Language Models: A Survey](https://arxiv.org/pdf/2312.06717.pdf). Sections 3,4, and 5. Neel 2024. 
+- <a id="r70">[70].</a> [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035) Nasar et al 2023.
+- <a id="r71">[71].</a> [Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory](https://arxiv.org/abs/2310.17884?context=cs) Mireshghallah 2023
+- <a id="r72">[72].</a> [Beyond Memorization: Violating Privacy Via Inference with Large Language Models](https://arxiv.org/abs/2310.07298v1) Staab et al 2023
+- <a id="r73">[73].</a> [Privacy issues in Large Language Models: A Survey](https://arxiv.org/pdf/2312.06717.pdf). Sections 3,4, and 5. Neel 2024. 
 
-- <a id="74">[74]</a> [Model Cards for Model Reporting](1810.03993) Mitchell et al. 2018.
-- <a id="75">[75]</a> [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) Gebru et al. 2018.
-- <a id="76">[76]</a> [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) Birhane, 2021.
-- <a id="77">[77]</a> [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://dl.acm.org/doi/abs/10.1145/3531146.3533231) Pushkarna, 2022
+- <a id="r74">[74]</a> [Model Cards for Model Reporting](1810.03993) Mitchell et al. 2018.
+- <a id="r75">[75]</a> [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) Gebru et al. 2018.
+- <a id="r76">[76]</a> [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) Birhane, 2021.
+- <a id="r77">[77]</a> [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://dl.acm.org/doi/abs/10.1145/3531146.3533231) Pushkarna, 2022
 
 <!-- Evaluation: https://fairmlbook.org/testing.html -->
-- <a id="78">[78]</a> [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258) Bommasani et al. 2022.
+- <a id="r78">[78]</a> [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258) Bommasani et al. 2022.
+- <a id="r79">[79]</a> [A Survey on Evaluation of Large Language Models](https://arxiv.org/abs/2307.03109) Chang et al, 2024.
+- <a id="r80">[80]</a> [Defining and understanding LLM evaluation metrics
+](https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/working-with-llms/eval-metrics) Microsoft Blog, 2024.
+- <a id="r81">[81]</a> [DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models](https://arxiv.org/abs/2306.11698) Wang et al, 2023.
+- <a id="r82">[82]</a> [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](https://arxiv.org/pdf/2403.15447.pdf) Hong et al, 2024
+
+- <a id="r83">[83]</a> [Algorithms that remember: model inversion attacks and data protection law](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2018.0083) Veale et al. 2018
+- <a id="r84">[84]</a> [Machine Unlearning](https://arxiv.org/abs/1912.03817) Bourtoule et al. 2019
+- <a id="r85">[85]</a> [Certified Data Removal from Machine Learning Models](https://arxiv.org/abs/1911.03030) Guo et al. 2019
+- <a id="r86">[86]</a> [Machine Unlearning: A Survey](https://dl.acm.org/doi/10.1145/3603620) Xu et al. 2023.
+
+- <a id="r87">[87]</a> [Knowledge Unlearning for Mitigating Privacy Risks in Language Models](https://aclanthology.org/2023.acl-long.805/) Jang et al. 2023
+- <a id="r88">[88]</a> [Rethinking Machine Unlearning for Large Language Models](https://arxiv.org/pdf/2402.08787v2.pdf) Liu et al. 2024
+- <a id="r89">[89]</a> [TOFU: A Task of Fictitious Unlearning for LLMs](https://locuslab.github.io/tofu/) Maini et al. 2024
+- <a id="r90">[90]</a> [The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning](https://arxiv.org/abs/2403.03218) Li et al. 2024
+<!-- - <a id="r87">[]</a>[Who's Harry Potter? Approximate Unlearning in LLMs](https://arxiv.org/pdf/2310.02238.pdf) -->
+
+
+
+
 
 ## Assessment
 
