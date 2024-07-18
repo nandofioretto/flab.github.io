@@ -30,6 +30,7 @@
 @String{HCI   = "International Conference on Human Computer Interaction" }
 @String{IAT   = "International Conference on Intelligent Agent Technology" }
 @String{ICLP  = "International Conference on Logic Programming" }
+@String{ICML  = "International Conference on Machine Learning" }
 @String{ICMAS = "International Conference on Multi-Agent Systems" }
 @String{ICAART= "International Conference on Agents and Artificial Intelligence" }
 @String{IJCAI = "International Joint Conference on Artificial Intelligence" }
@@ -61,7 +62,92 @@
 # 2024
 #################
 
-@inproceedings{DKF:24b,
+@article{MKBMBTF:jair24,
+  author       = {Jayanta Mandi and James Kotary and Senne Berden and Maxime Mulamba and Victor Bucarey and Tias Guns and Ferdinando Fioretto},
+  title        = {Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities},
+  journal      = JAIR,
+  volume       = {TBA},
+  pages        = {TBA},
+  year         = {2024},
+  doi          = {10.48550/arXiv.2307.13565},
+  arxiv        = {2307.13565},
+  abbr         = {JAIR},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
+}
+
+@inproceedings{KdVCvHF:ecai24,
+  title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
+  author       = {James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
+  booktitle    = ECAI,
+  publisher    = {},
+  pages        = {},
+  year         = {2024},
+  doi          = {10.48550/arXiv.2311.13087},
+  arxiv        = {2311.13087},
+  abbr         = {ECAI},
+  bibtex_show  = {true},
+  abstract     = {The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. While this traditional setting is common to many real-world decision processes, recently it has been shown that decision quality can be substantially improved by solving and differentiating the optimization problem in the training loop. However, this approach requires solving optimization in the loop along with handcrafted, problem-specific rules for backpropagation through the optimization step, challenging its applicability to a broad class of optimization problems. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by joint predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient and accurate solutions to an array of challenging Predict-Then-Optimize problems}
+}
+
+@inproceedings{NRTHF:icml24,
+  title       = {On The Fairness Impacts of Hardware Selection in Machine Learning}, 
+  author      = {Sree Harsha Nelaturu and Nishaanth Kanna Ravichandran and Cuong Tran and Sara Hooker and Ferdinando Fioretto},
+  booktitle   = ICML,
+  publisher   = {},
+  doi         = {10.48550/arXiv.2312.03886},
+  year        = {2024},
+  arxiv       = {2312.03886},
+  abbr        = {ICML},
+  bibtex_show = {true},
+  abstract    = {In the machine learning ecosystem, hardware selection is often regarded as a mere utility, overshadowed by the spotlight on algorithms and data. This oversight is particularly problematic in contexts like ML-as-a-service platforms, where users often lack control over the hardware used for model deployment. How does the choice of hardware impact generalization properties? This paper investigates the influence of hardware on the delicate balance between model performance and fairness. We demonstrate that hardware choices can exacerbate existing disparities, attributing these discrepancies to variations in gradient flows and loss surfaces across different demographic groups. Through both theoretical and empirical analysis, the paper not only identifies the underlying factors but also proposes an effective strategy for mitigating hardware-induced performance imbalances.}
+}
+
+@inproceedings{DRF:icml24,
+  title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference}, 
+  author      = {Saswat Das and Marco Romanelli and Ferdinando Fioretto},
+  year        = {2024},
+  booktitle   = ICML,
+  publisher   =   {},
+  doi         = {10.48550/arXiv.2402.03629},
+  year        = {2024},
+  arxiv       = {2402.03629},
+  abbr        = {ICML},
+  bibtex_show = {true},
+  abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
+}
+
+
+@inproceedings{Fioretto:icml_w24a,
+  title     = {The Data Minimization Principle in Machine Learning},
+  author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
+  booktitle = {ICML 2024 Workshop on Generative AI and Law},
+  year      = {2024},
+  abbr        = {ICML},
+  bibtex_show = {true},
+  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage. 
+  However, despite its legal significance and endorsement by global data protection regulations, 
+  the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy. 
+
+  To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy. 
+  In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection. 
+
+  With this work, we aim to lay down a path for future research for developing ML systems that comply with the legal requirements of data minimization.}
+}
+
+@inproceedings{Fioretto:icml_w24b,
+  title       = {Differentiable Approximations of Fair OWA Optimization}, 
+  author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
+  booktitle   = {ICML 2024 Workshop on Differentiable Almost Everything},
+  doi         = {https://openreview.net/forum?id=NBt4ZBOFth},
+  year        = {2024},
+  abbr        = {ICML},
+  bibtex_show = {true},
+  abstract    = {Decision processes in AI and operations research often involve parametric optimization problems, whose unknown parameters must be inferred from data. The Predict-Then-Optimize (PtO) paradigm maximizes decision quality by training parametric prediction models end-to-end with subsequent constrained optimization. This paper extends PtO to handle the optimization of nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure fair and robust solutions with respect to multiple objectives. By proposing efficient differentiable approximations of OWA optimization, it provides a framework for integrating fair optimization concepts with parametric prediction under uncertainty.}
+}
+
+@inproceedings{DKF:uai24,
   title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = UAI,
@@ -75,7 +161,7 @@
 }
 
 @inproceedings{TZFvH:ijcai24,
-  author       = {Cuong Tran and Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+  author       = {Cuong Tran and Keyu Zhu and Pascal Van Hentenryck and Ferdinando Fioretto},
   title        = {Fairness Increases Adversarial Vulnerability},
   booktitle    = IJCAI,
   publisher    = {ijcai.org},
@@ -93,34 +179,62 @@
 
 @inproceedings{FZvHDT:aaai24,
   author       = {Ferdinando Fioretto and Keyu Zhu and Pascal Van Hentenryck and Saswat Das and Christine Task},
-  title        = {Finding $\epsilon\,$ and $\delta\,$ of Traditional Disclosure Control Systems},
+  title        = {Finding epsilon and delta of Traditional Disclosure Control Systems},
   booktitle    = AAAI,
   publisher    = {{AAAI} Press},
   volume       = {38},
-  pages        = {22013-22020},
+  pages        = {22013--22020},
   year         = {2024},
+  url          = {https://ojs.aaai.org/index.php/AAAI/article/view/30204},
   arxiv        = {2301.12204},
   abbr         = {AAAI},
   bibtex_show  = {true},
   abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
 }
 
-@inproceedings{DKF:24a,
+@inproceedings{DKF:facct24a,
   title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = FAccT,
   year        = {2024},
-  pages       = {to appear},
+  pages       = {2508--2517},
+  url         = {doi.acm.org?doi=3630106.3661932},
   arxiv       = {2402.05252},
   abbr        = {FAccT},
   bibtex_show = {true},
   abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
 }
 
+@article{GTSF:24,
+      title={The Data Minimization Principle in Machine Learning}, 
+      author={Prakhar Ganesh and Cuong Tran and Reza Shokri and Ferdinando Fioretto},
+      year={2024},
+      journal     = {CoRR},
+      volume      = {abs/2405.19471},
+      doi         = {10.48550/arXiv.2405.19471},
+      year        = {2024},
+      arxiv       = {2405.19471},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {The principle of data minimization aims to reduce the amount of data collected, processed or retained to minimize the potential for misuse, unauthorized access, or data breaches. Rooted in privacy-by-design principles, data minimization has been endorsed by various global data protection regulations. However, its practical implementation remains a challenge due to the lack of a rigorous formulation. This paper addresses this gap and introduces an optimization framework for data minimization based on its legal definitions. It then adapts several optimization algorithms to perform data minimization and conducts a comprehensive evaluation in terms of their compliance with minimization objectives as well as their impact on user privacy. Our analysis underscores the mismatch between the privacy expectations of data minimization and the actual privacy benefits, emphasizing the need for approaches that account for multiple facets of real-world privacy risks.}
+}
+
+@article{DRTRKF:24,
+      title={Low-rank finetuning for LLMs: A fairness perspective}, 
+      author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
+      journal     = {CoRR},
+      volume      = {abs/2405.18572},
+      doi         = {10.48550/arXiv.2405.18572},
+      year        = {2024},
+      arxiv       = {2405.18572},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
+}
 
 @article{KKFD:24,
   title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
-  author      = {Ethan King, James Kotary, Ferdinando Fioretto, Jan Drgona},
+  author      = {Ethan King and James Kotary and Ferdinando Fioretto and Jan Drgona},
   journal     = {CoRR},
   volume      = {abs/2404.00882},
   doi         = {10.48550/arXiv.2404.00882},
@@ -157,20 +271,6 @@
   abbr        = {ArXiv},
   bibtex_show = {true},
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
-}
-
-@article{DRF:24,
-  title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference}, 
-  author      = {Saswat Das and Marco Romanelli and Ferdinando Fioretto},
-  year        = {2024},
-  journal     = {CoRR},
-  volume      = {abs/2402.03629},
-  doi         = {10.48550/arXiv.2402.03629},
-  year        = {2024},
-  arxiv       = {2402.03629},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
 }
 
 @article{KCDF:24,
@@ -215,6 +315,7 @@
   year        = {2023},
   volume      = {36},
   pages       = {},
+  url         = {https://openreview.net/pdf?id=cZS5X3PLOR},
   publisher   = {Curran Associates, Inc.},
   arxiv        = {2305.17593},
   abbr         = {NeurIPS},
@@ -332,32 +433,6 @@
   abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
 }
 
-@article{NRTHF:23,
-  title       = {On The Fairness Impacts of Hardware Selection in Machine Learning}, 
-  author      = {Sree Harsha Nelaturu and Nishaanth Kanna Ravichandran and Cuong Tran and Sara Hooker and Ferdinando Fioretto},
-  journal     = {CoRR},
-  volume      = {abs/2312.03886},
-  doi         = {10.48550/arXiv.2312.03886},
-  year        = {2023},
-  arxiv       = {2312.03886},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  abstract    = {In the machine learning ecosystem, hardware selection is often regarded as a mere utility, overshadowed by the spotlight on algorithms and data. This oversight is particularly problematic in contexts like ML-as-a-service platforms, where users often lack control over the hardware used for model deployment. How does the choice of hardware impact generalization properties? This paper investigates the influence of hardware on the delicate balance between model performance and fairness. We demonstrate that hardware choices can exacerbate existing disparities, attributing these discrepancies to variations in gradient flows and loss surfaces across different demographic groups. Through both theoretical and empirical analysis, the paper not only identifies the underlying factors but also proposes an effective strategy for mitigating hardware-induced performance imbalances.}
-}
-
-@article{KdVCvHF:23,
-  title={Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
-  author={James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
-  journal      = {CoRR},
-  volume       = {abs/2311.13087},
-  year         = {2023},
-  doi          = {10.48550/arXiv.2311.13087},
-  arxiv        = {2311.13087},
-  abbr         = {ArXiv},
-  bibtex_show  = {true},
-  abstract     = {Many real-world decision processes are modeled by optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. Recent works show that decision quality can be improved in this setting by solving and differentiating the optimization problem in the training loop, enabling end-to-end training with loss functions defined directly on the resulting decisions. However, this approach can be inefficient and requires handcrafted, problem-specific rules for backpropagation through the optimization step. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient, accurate, and flexible solutions to an array of challenging Predict-Then-Optimize problems.}
-}
-
 @article{DF:23,
   author       = {My H. Dinh and Ferdinando Fioretto},
   title        = {Context-Aware Differential Privacy for Language Modeling},
@@ -383,21 +458,6 @@
   abbr         = {ArXiv},
   bibtex_show  = {true},
   abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
-}
-
-
-@article{MKBMBTF:23,
-  author       = {Jayanta Mandi and James Kotary and Senne Berden and Maxime Mulamba and Victor Bucarey and Tias Guns and Ferdinando Fioretto},
-  title        = {Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities},
-  journal      = {CoRR},
-  volume       = {abs/2307.13565},
-  year         = {2023},
-  doi          = {10.48550/arXiv.2307.13565},
-  arxiv        = {2307.13565},
-  abbr         = {ArXiv},
-  bibtex_show  = {true},
-  selected     = {true},
-  abstract     =  {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
 }
 
 
