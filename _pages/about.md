@@ -34,8 +34,7 @@ the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, th
 _2021 ISSNAF Mario Gerla Young Investigator Award_, the _2021 ACP Early Career Researcher Award_,
 the _2017 AI*AI Best AI dissertation award_, and _several best paper awards_. 
 My group is generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), [Google](https://research.google/outreach/research-scholar-program/recipients/), 
-[Amazon](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto),
-and the University of Virginia.
+[Amazon](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto), and the University of Virginia.
 
 <!-- Before joining the University of Virginia, I was an assistant professor at
 Syracuse University. Prior to that I was a postdoctoral research associate at the

@@ -77,6 +77,18 @@
   abstract     = {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
 }
 
+@inproceedings{KKFD:CCD24,
+  title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
+  author      = {Ethan King and James Kotary and Ferdinando Fioretto and Jan Drgona},
+  booktitle   = {IEEE Conference on Decision and Control (CDC)},
+  year        = {2024},
+  doi         = {10.48550/arXiv.2404.00882},
+  arxiv       = {2404.00882},
+  abbr        = {CDC},
+  bibtex_show = {true},
+  abstract    = {Recent work has shown a variety of ways in which machine learning can be used to accelerate the solution of constrained optimization problems. Increasing demand for real-time decision-making capabilities in applications such as artificial intelligence and optimal control has led to a variety of approaches, based on distinct strategies. This work proposes a novel approach to learning optimization, in which the underlying metric space of a proximal operator splitting algorithm is learned so as to maximize its convergence rate. While prior works in optimization theory have derived optimal metrics for limited classes of problems, the results do not extend to many practical problem forms including general Quadratic Programming (QP). This paper shows how differentiable optimization can enable the end-to-end learning of proximal metrics, enhancing the convergence of proximal algorithms for QP problems beyond what is possible based on known theory. Additionally, the results illustrate a strong connection between the learned proximal metrics and active constraints at the optima, leading to an interpretation in which the learning of proximal metrics can be viewed as a form of active set learning.}
+}
+
 @inproceedings{KdVCvHF:ecai24,
   title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
   author       = {James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
@@ -230,19 +242,6 @@
       abbr        = {ArXiv},
       bibtex_show = {true},
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
-}
-
-@article{KKFD:24,
-  title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
-  author      = {Ethan King and James Kotary and Ferdinando Fioretto and Jan Drgona},
-  journal     = {CoRR},
-  volume      = {abs/2404.00882},
-  doi         = {10.48550/arXiv.2404.00882},
-  year        = {2024},
-  arxiv       = {2404.00882},
-  abbr        = {ArXiv},
-  bibtex_show = {true},
-  abstract    = {Recent work has shown a variety of ways in which machine learning can be used to accelerate the solution of constrained optimization problems. Increasing demand for real-time decision-making capabilities in applications such as artificial intelligence and optimal control has led to a variety of approaches, based on distinct strategies. This work proposes a novel approach to learning optimization, in which the underlying metric space of a proximal operator splitting algorithm is learned so as to maximize its convergence rate. While prior works in optimization theory have derived optimal metrics for limited classes of problems, the results do not extend to many practical problem forms including general Quadratic Programming (QP). This paper shows how differentiable optimization can enable the end-to-end learning of proximal metrics, enhancing the convergence of proximal algorithms for QP problems beyond what is possible based on known theory. Additionally, the results illustrate a strong connection between the learned proximal metrics and active constraints at the optima, leading to an interpretation in which the learning of proximal metrics can be viewed as a form of active set learning.}
 }
 
 @article{KF:24,
