@@ -42,11 +42,12 @@ Georgia Institute of Technology and a research fellow at the University of Michi
 For more details, please see my [CV](assets/cv/cvFioretto.pdf). 
  -->
 
-Please follow [this link](bio/) for my **short Bio**.
+<!-- Please follow [this link](bio.html) for my **short Bio**. -->
 
 
 ##### Opportunities for Undergaduates and Graduate Students
 
 I regularly accept undergaduates and graduates interns who are willing to work on Responsible AI or Differentiable Optimization topics. 
-<!-- See [this page](projects/projects-Fall24) for current projects available.  -->
+See [this page](projects/projects-Fall24) for current projects available. 
+
 If you are interested in working with us, send me your CV and interests and make sure you check our latest work!

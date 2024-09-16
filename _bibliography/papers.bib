@@ -62,12 +62,12 @@
 # 2024
 #################
 
-@article{MKBMBTF:jair24,
+@article{Fioretto:jair24,
   author       = {Jayanta Mandi and James Kotary and Senne Berden and Maxime Mulamba and Victor Bucarey and Tias Guns and Ferdinando Fioretto},
   title        = {Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities},
   journal      = JAIR,
-  volume       = {TBA},
-  pages        = {TBA},
+  volume       = {81},
+  pages        = {1623--1701},
   year         = {2024},
   doi          = {10.48550/arXiv.2307.13565},
   arxiv        = {2307.13565},
@@ -77,7 +77,7 @@
   abstract     = {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
 }
 
-@inproceedings{KKFD:CCD24,
+@inproceedings{Fioretto:CCD24,
   title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
   author      = {Ethan King and James Kotary and Ferdinando Fioretto and Jan Drgona},
   booktitle   = {IEEE Conference on Decision and Control (CDC)},
@@ -89,7 +89,7 @@
   abstract    = {Recent work has shown a variety of ways in which machine learning can be used to accelerate the solution of constrained optimization problems. Increasing demand for real-time decision-making capabilities in applications such as artificial intelligence and optimal control has led to a variety of approaches, based on distinct strategies. This work proposes a novel approach to learning optimization, in which the underlying metric space of a proximal operator splitting algorithm is learned so as to maximize its convergence rate. While prior works in optimization theory have derived optimal metrics for limited classes of problems, the results do not extend to many practical problem forms including general Quadratic Programming (QP). This paper shows how differentiable optimization can enable the end-to-end learning of proximal metrics, enhancing the convergence of proximal algorithms for QP problems beyond what is possible based on known theory. Additionally, the results illustrate a strong connection between the learned proximal metrics and active constraints at the optima, leading to an interpretation in which the learning of proximal metrics can be viewed as a form of active set learning.}
 }
 
-@inproceedings{KdVCvHF:ecai24,
+@inproceedings{Fioretto:ecai24,
   title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
   author       = {James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
   booktitle    = ECAI,
@@ -103,7 +103,7 @@
   abstract     = {The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. While this traditional setting is common to many real-world decision processes, recently it has been shown that decision quality can be substantially improved by solving and differentiating the optimization problem in the training loop. However, this approach requires solving optimization in the loop along with handcrafted, problem-specific rules for backpropagation through the optimization step, challenging its applicability to a broad class of optimization problems. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by joint predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient and accurate solutions to an array of challenging Predict-Then-Optimize problems}
 }
 
-@inproceedings{NRTHF:icml24,
+@inproceedings{Fioretto:icml24a,
   title       = {On The Fairness Impacts of Hardware Selection in Machine Learning}, 
   author      = {Sree Harsha Nelaturu and Nishaanth Kanna Ravichandran and Cuong Tran and Sara Hooker and Ferdinando Fioretto},
   booktitle   = ICML,
@@ -116,7 +116,7 @@
   abstract    = {In the machine learning ecosystem, hardware selection is often regarded as a mere utility, overshadowed by the spotlight on algorithms and data. This oversight is particularly problematic in contexts like ML-as-a-service platforms, where users often lack control over the hardware used for model deployment. How does the choice of hardware impact generalization properties? This paper investigates the influence of hardware on the delicate balance between model performance and fairness. We demonstrate that hardware choices can exacerbate existing disparities, attributing these discrepancies to variations in gradient flows and loss surfaces across different demographic groups. Through both theoretical and empirical analysis, the paper not only identifies the underlying factors but also proposes an effective strategy for mitigating hardware-induced performance imbalances.}
 }
 
-@inproceedings{DRF:icml24,
+@inproceedings{Fioretto:icml24b,
   title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference}, 
   author      = {Saswat Das and Marco Romanelli and Ferdinando Fioretto},
   year        = {2024},
@@ -159,7 +159,7 @@
   abstract    = {Decision processes in AI and operations research often involve parametric optimization problems, whose unknown parameters must be inferred from data. The Predict-Then-Optimize (PtO) paradigm maximizes decision quality by training parametric prediction models end-to-end with subsequent constrained optimization. This paper extends PtO to handle the optimization of nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure fair and robust solutions with respect to multiple objectives. By proposing efficient differentiable approximations of OWA optimization, it provides a framework for integrating fair optimization concepts with parametric prediction under uncertainty.}
 }
 
-@inproceedings{DKF:uai24,
+@inproceedings{Fioretto:uai24,
   title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = UAI,
@@ -172,7 +172,7 @@
   abstract    = {Many decision processes in artificial intelligence and operations research are modeled by parametric optimization problems whose defining parameters are unknown and must be inferred from observable data. The Predict-Then-Optimize (PtO) paradigm in machine learning aims to maximize downstream decision quality by training the parametric inference model end-to-end with the subsequent constrained optimization. This requires backpropagation through the optimization problem using approximation techniques specific to the problem's form, especially for nondifferentiable linear and mixed-integer programs. This paper extends the PtO methodology to optimization problems with nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure properties of fairness and robustness in decision models. Through a collection of training techniques and proposed application settings, it shows how optimization of OWA functions can be effectively integrated with parametric prediction for fair and robust optimization under uncertainty.}
 }
 
-@inproceedings{TZFvH:ijcai24,
+@inproceedings{Fioretto:ijcai24,
   author       = {Cuong Tran and Keyu Zhu and Pascal Van Hentenryck and Ferdinando Fioretto},
   title        = {Fairness Increases Adversarial Vulnerability},
   booktitle    = IJCAI,
@@ -189,7 +189,7 @@
   This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.}
 }
 
-@inproceedings{FZvHDT:aaai24,
+@inproceedings{Fioretto:aaai24,
   author       = {Ferdinando Fioretto and Keyu Zhu and Pascal Van Hentenryck and Saswat Das and Christine Task},
   title        = {Finding epsilon and delta of Traditional Disclosure Control Systems},
   booktitle    = AAAI,
@@ -204,7 +204,7 @@
   abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
 }
 
-@inproceedings{DKF:facct24a,
+@inproceedings{Fioretto:facct24a,
   title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = FAccT,
@@ -217,7 +217,50 @@
   abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
 }
 
-@article{GTSF:24,
+@article{Fioretto:24h,
+      title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes}, 
+      author      = {Joonhyuk Ko and Juba Ziani and Saswat Das and Matt Williams and Ferdinando Fioretto},
+      year        = {2024},
+      journal     = {CoRR},
+      volume      = {abs/2408.08471},
+      doi         = {10.48550/arXiv.2408.08471},
+      year        = {2024},
+      arxiv       = {2408.08471},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Statistical agencies rely on sampling techniques to collect socio-demographic data crucial for policy-making and resource allocation. This paper shows that surveys of important societal relevance introduce sampling errors that unevenly impact group-level estimates, thereby compromising fairness in downstream decisions. To address these issues, this paper introduces an optimization approach modeled on real-world survey design processes, ensuring sampling costs are optimized while maintaining error margins within prescribed tolerances. Additionally, privacy-preserving methods used to determine sampling rates can further impact these fairness issues. The paper explores the impact of differential privacy on the statistics informing the sampling process, revealing a surprising effect: not only the expected negative effect from the addition of noise for differential privacy is negligible, but also this privacy noise can in fact reduce unfairness as it positively biases smaller counts. These findings are validated over an extensive analysis using datasets commonly applied in census statistics.}
+}
+
+
+@article{Fioretto:24g,
+      title       = {Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}, 
+      author      = {Jacob K Christopher and Brian R Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
+      year        = {2024},
+      journal     = {CoRR},
+      volume      = {abs/2408.05636},
+      doi         = {10.48550/arXiv.2408.05636},
+      year        = {2024},
+      arxiv       = {2408.05636},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
+}
+
+@article{Fioretto:24f,
+      title       = {Differentially Private Data Release on Graphs: Inefficiencies and Unfairness}, 
+      author      = {Ferdinando Fioretto and Diptangshu Sen and Juba Ziani},
+      year        = {2024},
+      journal     = {CoRR},
+      volume      = {abs/2408.05246},
+      doi         = {10.48550/arXiv.2408.05246},
+      year        = {2024},
+      arxiv       = {2408.05246},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Networks are crucial components of many sectors, including telecommunications, healthcare, finance, energy, and transportation.The information carried in such networks often contains sensitive user data, like location data for commuters and packet data for online users. Therefore, when considering data release for networks, one must ensure that data release mechanisms do not leak information about individuals, quantified in a precise mathematical sense. Differential Privacy (DP) is the widely accepted, formal, state-of-the-art technique, which has found use in a variety of real-life settings including the 2020 U.S. Census, Apple users' device data, or Google's location data. Yet, the use of DP comes with new challenges, as the noise added for privacy introduces inaccuracies or biases and further, DP techniques can also distribute these biases disproportionately across different populations, inducing fairness issues. The goal of this paper is to characterize the impact of DP on bias and unfairness in the context of releasing information about networks, taking a departure from previous work which has studied these effects in the context of private population counts release (such as in the U.S. Census). To this end, we consider a network release problem where the network structure is known to all, but the weights on edges must be released privately. We consider the impact of this private release on a simple downstream decision-making task run by a third-party, which is to find the shortest path between any two pairs of nodes and recommend the best route to users. This setting is of highly practical relevance, mirroring scenarios in transportation networks, where preserving privacy while providing accurate routing information is crucial. Our work provides theoretical foundations and empirical evidence into the bias and unfairness arising due to privacy in these networked decision problems.}
+}
+
+@article{Fioretto:24e,
       title={The Data Minimization Principle in Machine Learning}, 
       author={Prakhar Ganesh and Cuong Tran and Reza Shokri and Ferdinando Fioretto},
       year={2024},
@@ -231,7 +274,7 @@
       abstract    = {The principle of data minimization aims to reduce the amount of data collected, processed or retained to minimize the potential for misuse, unauthorized access, or data breaches. Rooted in privacy-by-design principles, data minimization has been endorsed by various global data protection regulations. However, its practical implementation remains a challenge due to the lack of a rigorous formulation. This paper addresses this gap and introduces an optimization framework for data minimization based on its legal definitions. It then adapts several optimization algorithms to perform data minimization and conducts a comprehensive evaluation in terms of their compliance with minimization objectives as well as their impact on user privacy. Our analysis underscores the mismatch between the privacy expectations of data minimization and the actual privacy benefits, emphasizing the need for approaches that account for multiple facets of real-world privacy risks.}
 }
 
-@article{DRTRKF:24,
+@article{Fioretto:24d,
       title={Low-rank finetuning for LLMs: A fairness perspective}, 
       author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
       journal     = {CoRR},
@@ -244,7 +287,7 @@
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
 
-@article{KF:24,
+@article{Fioretto:24c,
   title       = {Learning Constrained Optimization with Deep Augmented Lagrangian Methods}, 
   author      = {James Kotary and Ferdinando Fioretto},
   journal     = {CoRR},
@@ -258,7 +301,7 @@
 }
 
 
-@article{CBF:24,
+@article{Fioretto:24b,
   title       = {Projected Generative Diffusion Models for Constraint Satisfaction}, 
   author      = {Jacob K Christopher and Stephen Baek and Ferdinando Fioretto},
   year        = {2024},
@@ -272,7 +315,7 @@
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
 }
 
-@article{KCDF:24,
+@article{Fioretto:24a,
   title       = {Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization}, 
   author      = {James Kotary and Jacob Christopher and My H Dinh and Ferdinando Fioretto},
   journal     = {CoRR},
