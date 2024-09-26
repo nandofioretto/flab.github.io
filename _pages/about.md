@@ -24,25 +24,15 @@ I lead the [Responsible AI for Science and Engineering (RAISE)](/group/) group w
   <!-- and  create ways to integrate knowledge, constraints, and physical principles into learning models. -->
   **Trustworthy & Responsible AI**: We analyze the equity of AI systems in support of decision-making and learning tasks, focusing especially on privacy and fairness.
 
-<!-- I approach these directions by applying the tools and perspectives of
-_optimization theory_, _differential privacy_, and _statistics_ to problems in
-decision-making and machine learning. For more details, please see my [publications](_pages/about.md). -->
 
-
-I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
+<!-- I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
 the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, the
 _2021 ISSNAF Mario Gerla Young Investigator Award_, the _2021 ACP Early Career Researcher Award_,
 the _2017 AI*AI Best AI dissertation award_, and _several best paper awards_. 
-My group is generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), [Google](https://research.google/outreach/research-scholar-program/recipients/), 
-[Amazon](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto), and the University of Virginia.
-
-<!-- Before joining the University of Virginia, I was an assistant professor at
-Syracuse University. Prior to that I was a postdoctoral research associate at the
-Georgia Institute of Technology and a research fellow at the University of Michigan.
-For more details, please see my [CV](assets/cv/cvFioretto.pdf). 
  -->
+ My research has been generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), a [Google Faculty Research Award](https://research.google/outreach/research-scholar-program/recipients/), an [Amazon Research Award](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto), and the University of Virginia.
 
-<!-- Please follow [this link](bio.html) for my **short Bio**. -->
+For more details, please see my [papers](publications/) and [short bio](bio/)
 
 
 ##### Opportunities for Undergaduates and Graduate Students
