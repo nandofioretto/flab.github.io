@@ -78,7 +78,7 @@
 }
 
 @inproceedings{Fioretto:NeurIPS24,
-  title       = {Constrained Synthesis with Projected Diffusion Models}, 
+  title       = {Constrained Synthesis with Projected Diffusion Models},
   author      = {Jacob K Christopher and Stephen Baek and Ferdinando Fioretto},
   booktitle   = NeurIPS,
   year        = {2024},
@@ -86,6 +86,7 @@
   pages       = {},
   url         = {TBA},
   publisher   = {Curran Associates, Inc.},
+  alsoin       = {Machine Learning and the Physical Sciences Workshop},
   arxiv        = {2402.03559},
   abbr         = {NeurIPS},
   bibtex_show  = {true},
@@ -93,8 +94,39 @@
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
 }
 
+@article{Fioretto:24g,
+      title       = {Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion},
+      author      = {Jacob K Christopher and Michael Cardei and Brian R Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
+      journal     = {Efficient Natural Language and Speech Processing},
+      year        = {2024},
+      volume      = {abs/2408.05636},
+      doi         = {10.48550/arXiv.2408.05636},
+      year        = {2024},
+      arxiv       = {2408.05636},
+      abbr         = {NeurIPS},
+      bibtex_show = {true},
+      abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
+}
+
+@article{Fioretto:NeurIPS24b,
+  title       = {Physics-Aware Generative Diffusion Models for Micro-structure Material Design},
+  author      = {Jacob K Christopher and Stephen Baek and Ferdinando Fioretto},
+  journal     = {AI 4 Material Science workshop, at NeurIPS},
+  year        = {2024},
+  volume      = {37},
+  pages       = {},
+  url         = {TBA},
+  arxiv        = {2402.03559},
+  abbr         = {NeurIPS},
+  award       = {Spotlight Presentation},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
+}
+
+
 @inproceedings{Fioretto:CCD24,
-  title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}, 
+  title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming},
   author      = {Ethan King and James Kotary and Ferdinando Fioretto and Jan Drgona},
   booktitle   = {IEEE Conference on Decision and Control (CDC)},
   year        = {2024},
@@ -106,7 +138,7 @@
 }
 
 @inproceedings{Fioretto:ecai24,
-  title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}, 
+  title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization},
   author       = {James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
   booktitle    = ECAI,
   publisher    = {},
@@ -120,7 +152,7 @@
 }
 
 @inproceedings{Fioretto:icml24a,
-  title       = {On The Fairness Impacts of Hardware Selection in Machine Learning}, 
+  title       = {On The Fairness Impacts of Hardware Selection in Machine Learning},
   author      = {Sree Harsha Nelaturu and Nishaanth Kanna Ravichandran and Cuong Tran and Sara Hooker and Ferdinando Fioretto},
   booktitle   = ICML,
   publisher   = {},
@@ -133,7 +165,7 @@
 }
 
 @inproceedings{Fioretto:icml24b,
-  title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference}, 
+  title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference},
   author      = {Saswat Das and Marco Romanelli and Ferdinando Fioretto},
   year        = {2024},
   booktitle   = ICML,
@@ -146,26 +178,26 @@
   abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
 }
 
-
 @inproceedings{Fioretto:icml_w24a,
   title     = {The Data Minimization Principle in Machine Learning},
   author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
   booktitle = {ICML 2024 Workshop on Generative AI and Law},
   year      = {2024},
   abbr        = {ICML},
+  alsoin    = {Workshop on Regulatory ML},
   bibtex_show = {true},
-  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage. 
-  However, despite its legal significance and endorsement by global data protection regulations, 
-  the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy. 
+  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage.
+  However, despite its legal significance and endorsement by global data protection regulations,
+  the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy.
 
-  To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy. 
-  In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection. 
+  To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy.
+  In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection.
 
   With this work, we aim to lay down a path for future research for developing ML systems that comply with the legal requirements of data minimization.}
 }
 
 @inproceedings{Fioretto:icml_w24b,
-  title       = {Differentiable Approximations of Fair OWA Optimization}, 
+  title       = {Differentiable Approximations of Fair OWA Optimization},
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = {ICML 2024 Workshop on Differentiable Almost Everything},
   doi         = {https://openreview.net/forum?id=NBt4ZBOFth},
@@ -176,7 +208,7 @@
 }
 
 @inproceedings{Fioretto:uai24,
-  title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty}, 
+  title       = {End-to-End Learning for Fair Multiobjective Optimization Under Uncertainty},
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = UAI,
   publisher   = {},
@@ -221,7 +253,7 @@
 }
 
 @inproceedings{Fioretto:facct24a,
-  title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages}, 
+  title       = {Learning Fair Ranking Policies via Differentiable Optimization of Ordered Weighted Averages},
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = FAccT,
   year        = {2024},
@@ -233,8 +265,51 @@
   abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
 }
 
+@article{Fioretto:24k,
+      title={Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF}, 
+      author={Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+      year={2024},
+      journal     = {CoRR},
+      volume      = {abs/2410.19157},
+      doi         = {10.48550/arXiv.2410.19157},
+      year        = {2024},
+      arxiv       = {2410.19157},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF's physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
+}
+
+@article{Fioretto:24j,
+      title       = {End-to-End Optimization and Learning of Fair Court Schedules},
+      author      = {My H. Dinh and James Kotary and Lauryn P. Gouldin and William Yeoh and Ferdinando Fioretto},
+      year        = {2024},
+      journal     = {CoRR},
+      volume      = {abs/2410.17415},
+      doi         = {10.48550/arXiv.2410.17415},
+      year        = {2024},
+      arxiv       = {2410.17415},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Criminal courts across the United States handle millions of cases every year, and the scheduling of those cases must accommodate a diverse set of constraints, including the preferences and availability of courts, prosecutors, and defense teams. When criminal court schedules are formed, defendants' scheduling preferences often take the least priority, although defendants may face significant consequences (including arrest or detention) for missed court dates. Additionally, studies indicate that defendants' nonappearances impose costs on the courts and other system stakeholders. To address these issues, courts and commentators have begun to recognize that pretrial outcomes for defendants and for the system would be improved with greater attention to court processes, including \emph{court scheduling practices}. There is thus a need for fair criminal court pretrial scheduling systems that account for defendants' preferences and availability, but the collection of such data poses logistical challenges. Furthermore, optimizing schedules fairly across various parties' preferences is a complex optimization problem, even when such data is available. In an effort to construct such a fair scheduling system under data uncertainty, this paper proposes a joint optimization and learning framework that combines machine learning models trained end-to-end with efficient matching algorithms. This framework aims to produce court scheduling schedules that optimize a principled measure of fairness, balancing the availability and preferences of all parties.}
+}
+
+@article{Fioretto:24i,
+      title       = {Learning To Solve Differential Equation Constrained Optimization Problems},
+      author      = {Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+      year        = {2024},
+      journal     = {CoRR},
+      volume      = {abs/2410.01786},
+      doi         = {10.48550/arXiv.2410.01786},
+      year        = {2024},
+      arxiv       = {2410.01786},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Differential equations (DE) constrained optimization plays a critical role in numerous scientific and engineering fields, including energy systems, aerospace engineering, ecology, and finance, where optimal configurations or control strategies must be determined for systems governed by ordinary or stochastic differential equations. Despite its significance, the computational challenges associated with these problems have limited their practical use. To address these limitations, this paper introduces a learning-based approach to DE-constrained optimization that combines techniques from proxy optimization and neural differential equations. The proposed approach uses a dual-network architecture, with one approximating the control strategies, focusing on steady-state constraints, and another solving the associated DEs. This combination enables the approximation of optimal strategies while accounting for dynamic constraints in near real-time. Experiments across problems in energy optimization and finance modeling show that this method provides full compliance with dynamic constraints and it produces results up to 25 times more precise than other methods which do not explicitly model the system's dynamic equations.}
+}
+
+
 @article{Fioretto:24h,
-      title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes}, 
+      title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes},
       author      = {Joonhyuk Ko and Juba Ziani and Saswat Das and Matt Williams and Ferdinando Fioretto},
       year        = {2024},
       journal     = {CoRR},
@@ -248,22 +323,8 @@
 }
 
 
-@article{Fioretto:24g,
-      title       = {Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}, 
-      author      = {Jacob K Christopher and Brian R Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
-      year        = {2024},
-      journal     = {CoRR},
-      volume      = {abs/2408.05636},
-      doi         = {10.48550/arXiv.2408.05636},
-      year        = {2024},
-      arxiv       = {2408.05636},
-      abbr        = {ArXiv},
-      bibtex_show = {true},
-      abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
-}
-
 @article{Fioretto:24f,
-      title       = {Differentially Private Data Release on Graphs: Inefficiencies and Unfairness}, 
+      title       = {Differentially Private Data Release on Graphs: Inefficiencies and Unfairness},
       author      = {Ferdinando Fioretto and Diptangshu Sen and Juba Ziani},
       year        = {2024},
       journal     = {CoRR},
@@ -277,7 +338,7 @@
 }
 
 @article{Fioretto:24e,
-      title={The Data Minimization Principle in Machine Learning}, 
+      title={The Data Minimization Principle in Machine Learning},
       author={Prakhar Ganesh and Cuong Tran and Reza Shokri and Ferdinando Fioretto},
       year={2024},
       journal     = {CoRR},
@@ -291,7 +352,7 @@
 }
 
 @article{Fioretto:24d,
-      title={Low-rank finetuning for LLMs: A fairness perspective}, 
+      title={Low-rank finetuning for LLMs: A fairness perspective},
       author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
       journal     = {CoRR},
       volume      = {abs/2405.18572},
@@ -304,7 +365,7 @@
 }
 
 @article{Fioretto:24c,
-  title       = {Learning Constrained Optimization with Deep Augmented Lagrangian Methods}, 
+  title       = {Learning Constrained Optimization with Deep Augmented Lagrangian Methods},
   author      = {James Kotary and Ferdinando Fioretto},
   journal     = {CoRR},
   volume      = {abs/2403.03454},
@@ -317,7 +378,7 @@
 }
 
 @article{Fioretto:24a,
-  title       = {Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization}, 
+  title       = {Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization},
   author      = {James Kotary and Jacob Christopher and My H Dinh and Ferdinando Fioretto},
   journal     = {CoRR},
   volume      = {abs/2312.17394},

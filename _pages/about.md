@@ -35,9 +35,9 @@ the _2017 AI*AI Best AI dissertation award_, and _several best paper awards_.
 For more details, please see my [papers](publications/) and [short bio](bio/)
 
 
-##### Opportunities for Undergaduates and Graduate Students
+##### Opportunities for Undergaduates Students
 
 I regularly accept undergaduates and graduates interns who are willing to work on Responsible AI or Differentiable Optimization topics. 
-See [this page](projects/projects-Fall24) for current projects available. 
+<!-- See [this page](projects/projects-Fall24) for current projects available.  -->
 
 If you are interested in working with us, send me your CV and interests and make sure you check our latest work!

@@ -38,7 +38,7 @@
 "TOMACS":
   url: https://dl.acm.org/journal/tomacs
   color: "#B9770E"
-  
+
 # Conferences
 "AAMAS":
     color: "#2874A6"
@@ -51,7 +51,7 @@
 
 "CDC":
     color: "#2874A6"
-    
+
 "CPAIOR":
     color: "#2874A6"
 
@@ -109,7 +109,20 @@
     color: "#17A589"
 
 "PPAI":
+    url: https://ppai-workshop.github.io/
     color: "#17A589"
 
 "TPDP":
+    color: "#17A589"
+
+"Machine Learning and the Physical Sciences Workshop":
+    url: https://ml4physicalsciences.github.io/2024/
+    color: "#17A589"
+
+"Efficient Natural Language and Speech Processing":
+    url: https://neurips2024-enlsp.github.io/
+    color: "#17A589"
+
+"Workshop on Regulatory ML":
+    url: https://regulatableml.github.io/
     color: "#17A589"

@@ -35,10 +35,10 @@ the Google Research Scholar Award,
 the Amazon Research Award, 
 the ISSNAF Mario Gerla Young Investigator Award, and 
 the ACP Early Career Researcher Award in Constraint Programming. 
-He has been a board member of the Artificial Intelligence Journal (AIJ) 
-and of the organizing committee of several workshops, tutorials, and 
-events with focus on privacy, fairness, and optimization at premier AI 
-and ML venues. 
+He is a board member of the Artificial Intelligence Journal (AIJ) 
+and has been a member of the organizing committee of several workshops, 
+tutorials, and events with focus on privacy, fairness, and optimization 
+at premier AI and ML venues. 
 
 He holds a dual PhD degree in Computer Science from the University of 
 Udine and the New Mexico State Universty. Before joining the University 
