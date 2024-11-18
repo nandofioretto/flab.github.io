@@ -124,6 +124,24 @@
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
 }
 
+@inproceedings{Fioretto:neurIPS_w24a,
+  title     = {The Data Minimization Principle in Machine Learning},
+  author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
+  booktitle = {NeurIPS 2024 Workshop on Regulatory ML},
+  year      = {2024},
+  abbr        = {NeurIPS},
+  alsoin    = {Workshop on Generative AI and Law (ICML-24)},
+  bibtex_show = {true},
+  award       = {Oral Presentation},
+  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage.
+  However, despite its legal significance and endorsement by global data protection regulations,
+  the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy.
+
+  To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy.
+  In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection.
+
+  With this work, we aim to lay down a path for future research for developing ML systems that comply with the legal requirements of data minimization.}
+}
 
 @inproceedings{Fioretto:CCD24,
   title       = {Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming},
@@ -176,24 +194,6 @@
   abbr        = {ICML},
   bibtex_show = {true},
   abstract    = {Ensuring privacy-preserving inference on cryptographically secure data is a well-known computational challenge. To alleviate the bottleneck of costly cryptographic computations in non-linear activations, recent methods have suggested linearizing a targeted portion of these activations in neural networks. This technique results in significantly reduced runtimes with often negligible impacts on accuracy. In this paper, we demonstrate that such computational benefits may lead to increased fairness costs. Specifically, we find that reducing the number of ReLU activations disproportionately decreases the accuracy for minority groups compared to majority groups. To explain these observations, we provide a mathematical interpretation under restricted assumptions about the nature of the decision boundary, while also showing the prevalence of this problem across widely used datasets and architectures. Finally, we show how a simple procedure altering the fine-tuning step for linearized models can serve as an effective mitigation strategy.}
-}
-
-@inproceedings{Fioretto:icml_w24a,
-  title     = {The Data Minimization Principle in Machine Learning},
-  author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
-  booktitle = {ICML 2024 Workshop on Generative AI and Law},
-  year      = {2024},
-  abbr        = {ICML},
-  alsoin    = {Workshop on Regulatory ML},
-  bibtex_show = {true},
-  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage.
-  However, despite its legal significance and endorsement by global data protection regulations,
-  the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy.
-
-  To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy.
-  In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection.
-
-  With this work, we aim to lay down a path for future research for developing ML systems that comply with the legal requirements of data minimization.}
 }
 
 @inproceedings{Fioretto:icml_w24b,
@@ -263,6 +263,20 @@
   abbr        = {FAccT},
   bibtex_show = {true},
   abstract    = {Learning to Rank (LTR) is one of the most widely used machine learning applications. It is a key component in platforms with profound societal impacts, including job search, healthcare information retrieval, and social media content feeds. Conventional LTR models have been shown to produce biases results, stimulating a discourse on how to address the disparities introduced by ranking systems that solely prioritize user relevance. However, while several models of fair learning to rank have been proposed, they suffer from deficiencies either in accuracy or efficiency, thus limiting their applicability to real-world ranking platforms. This paper shows how efficiently-solvable fair ranking models, based on the optimization of Ordered Weighted Average (OWA) functions, can be integrated into the training loop of an LTR model to achieve favorable balances between fairness, user utility, and runtime efficiency. In particular, this paper is the first to show how to backpropagate through constrained optimizations of OWA objectives, enabling their use in integrated prediction and decision models.}
+}
+
+@article{Fioretto:24l,
+      title={Differential Privacy Overview and Fundamental Techniques}, 
+      author={Ferdinando Fioretto and Pascal Van Hentenryck and Juba Ziani},
+      year={2024},
+      journal     = {CoRR},
+      volume      = {abs/2411.04710},
+      doi         = {10.48550/arXiv.2411.04710},
+      year        = {2024},
+      arxiv       = {2411.04710},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {This chapter is meant to be part of the book "Differential Privacy in Artificial Intelligence: From Theory to Practice" and provides an introduction to Differential Privacy. It starts by illustrating various attempts to protect data privacy, emphasizing where and why they failed, and providing the key desiderata of a robust privacy definition. It then defines the key actors, tasks, and scopes that make up the domain of privacy-preserving data analysis. Following that, it formalizes the definition of Differential Privacy and its inherent properties, including composition, post-processing immunity, and group privacy. The chapter also reviews the basic techniques and mechanisms commonly used to implement Differential Privacy in its pure and approximate forms.}
 }
 
 @article{Fioretto:24k,
