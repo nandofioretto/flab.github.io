@@ -59,6 +59,38 @@
 @string{WCB = {Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics}}
 
 #################
+# 2025
+#################
+
+@inproceedings{Fioretto:AAAI25,
+      title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes},
+      author      = {Joonhyuk Ko and Juba Ziani and Saswat Das and Matt Williams and Ferdinando Fioretto},
+      year        = {2025},
+      booktitle   = AAAI,
+      volume      = {39},
+      doi         = {10.48550/arXiv.2408.08471},
+      arxiv       = {2408.08471},
+      abbr        = {AAAI},
+      bibtex_show = {true},
+      abstract    = {Statistical agencies rely on sampling techniques to collect socio-demographic data crucial for policy-making and resource allocation. This paper shows that surveys of important societal relevance introduce sampling errors that unevenly impact group-level estimates, thereby compromising fairness in downstream decisions. To address these issues, this paper introduces an optimization approach modeled on real-world survey design processes, ensuring sampling costs are optimized while maintaining error margins within prescribed tolerances. Additionally, privacy-preserving methods used to determine sampling rates can further impact these fairness issues. The paper explores the impact of differential privacy on the statistics informing the sampling process, revealing a surprising effect: not only the expected negative effect from the addition of noise for differential privacy is negligible, but also this privacy noise can in fact reduce unfairness as it positively biases smaller counts. These findings are validated over an extensive analysis using datasets commonly applied in census statistics.}
+}
+
+@inproceedings{Fioretto:CoLoRAI25,
+      title={Low-rank finetuning for LLMs: A fairness perspective},
+      author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
+      year        = {2025},
+      volume      = {39},
+      booktitle   = {AAAI CoLoRAI Workshop},
+      volume      = {abs/2405.18572},
+      doi         = {10.48550/arXiv.2405.18572},
+      arxiv       = {2405.18572},
+      abbr        = {AAAI},
+      bibtex_show = {true},
+      abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
+}
+
+
+#################
 # 2024
 #################
 
@@ -321,22 +353,6 @@
       abstract    = {Differential equations (DE) constrained optimization plays a critical role in numerous scientific and engineering fields, including energy systems, aerospace engineering, ecology, and finance, where optimal configurations or control strategies must be determined for systems governed by ordinary or stochastic differential equations. Despite its significance, the computational challenges associated with these problems have limited their practical use. To address these limitations, this paper introduces a learning-based approach to DE-constrained optimization that combines techniques from proxy optimization and neural differential equations. The proposed approach uses a dual-network architecture, with one approximating the control strategies, focusing on steady-state constraints, and another solving the associated DEs. This combination enables the approximation of optimal strategies while accounting for dynamic constraints in near real-time. Experiments across problems in energy optimization and finance modeling show that this method provides full compliance with dynamic constraints and it produces results up to 25 times more precise than other methods which do not explicitly model the system's dynamic equations.}
 }
 
-
-@article{Fioretto:24h,
-      title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes},
-      author      = {Joonhyuk Ko and Juba Ziani and Saswat Das and Matt Williams and Ferdinando Fioretto},
-      year        = {2024},
-      journal     = {CoRR},
-      volume      = {abs/2408.08471},
-      doi         = {10.48550/arXiv.2408.08471},
-      year        = {2024},
-      arxiv       = {2408.08471},
-      abbr        = {ArXiv},
-      bibtex_show = {true},
-      abstract    = {Statistical agencies rely on sampling techniques to collect socio-demographic data crucial for policy-making and resource allocation. This paper shows that surveys of important societal relevance introduce sampling errors that unevenly impact group-level estimates, thereby compromising fairness in downstream decisions. To address these issues, this paper introduces an optimization approach modeled on real-world survey design processes, ensuring sampling costs are optimized while maintaining error margins within prescribed tolerances. Additionally, privacy-preserving methods used to determine sampling rates can further impact these fairness issues. The paper explores the impact of differential privacy on the statistics informing the sampling process, revealing a surprising effect: not only the expected negative effect from the addition of noise for differential privacy is negligible, but also this privacy noise can in fact reduce unfairness as it positively biases smaller counts. These findings are validated over an extensive analysis using datasets commonly applied in census statistics.}
-}
-
-
 @article{Fioretto:24f,
       title       = {Differentially Private Data Release on Graphs: Inefficiencies and Unfairness},
       author      = {Ferdinando Fioretto and Diptangshu Sen and Juba Ziani},
@@ -363,19 +379,6 @@
       abbr        = {ArXiv},
       bibtex_show = {true},
       abstract    = {The principle of data minimization aims to reduce the amount of data collected, processed or retained to minimize the potential for misuse, unauthorized access, or data breaches. Rooted in privacy-by-design principles, data minimization has been endorsed by various global data protection regulations. However, its practical implementation remains a challenge due to the lack of a rigorous formulation. This paper addresses this gap and introduces an optimization framework for data minimization based on its legal definitions. It then adapts several optimization algorithms to perform data minimization and conducts a comprehensive evaluation in terms of their compliance with minimization objectives as well as their impact on user privacy. Our analysis underscores the mismatch between the privacy expectations of data minimization and the actual privacy benefits, emphasizing the need for approaches that account for multiple facets of real-world privacy risks.}
-}
-
-@article{Fioretto:24d,
-      title={Low-rank finetuning for LLMs: A fairness perspective},
-      author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
-      journal     = {CoRR},
-      volume      = {abs/2405.18572},
-      doi         = {10.48550/arXiv.2405.18572},
-      year        = {2024},
-      arxiv       = {2405.18572},
-      abbr        = {ArXiv},
-      bibtex_show = {true},
-      abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
 
 @article{Fioretto:24c,
