@@ -89,6 +89,29 @@
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
 
+@inproceedings{Fioretto:MAPF25,
+      title={Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models},
+      author={Jinhao Liang and Jacob Christopher and Sven Koenig and Ferdinando Fioretto},
+      year        = {2025},
+      volume      = {39},
+      booktitle   = {The 6th International Workshop on Multi-Agent Path Finding, at AAAI},
+      abbr        = {AAAI},
+      bibtex_show = {true},
+      abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of feasible multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.}
+}
+
+@inproceedings{TFKTP:SatML25,
+  author       = {Khang Tran and Ferdinando Fioretto and Issa Khalil and My T. Thai and NhatHai Phan},
+  title        = {FairDP: Certified Fairness with Differential Privacy},
+  booktitle    = {IEEE Secure and Trustworthy Machine Learning Conference (SaTML 2025)},
+  volume       = {3},
+  year         = {2025},
+  doi          = {10.48550/arXiv.2305.16474},
+  arxiv       = {2305.16474},
+  abbr         = {SatML},
+  bibtex_show  = {true},
+  abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
+} % acceptance rate 53/180
 
 #################
 # 2024
@@ -565,20 +588,6 @@
   abbr         = {ArXiv},
   bibtex_show  = {true},
   abstract     = {The remarkable ability of language models (LMs) has also brought challenges at the interface of AI and security. A critical challenge pertains to how much information these models retain and leak about the training data. This is particularly urgent as the typical development of LMs relies on huge, often highly sensitive data, such as emails and chat logs. To contrast this shortcoming, this paper introduces Context-Aware Differentially Private Language Model (CADP-LM) , a privacy-preserving LM framework that relies on two key insights: First, it utilizes the notion of \emph{context} to define and audit the potentially sensitive information. Second, it adopts the notion of Differential Privacy to protect sensitive information and characterize the privacy leakage. A unique characteristic of CADP-LM is its ability to target the protection of sensitive sentences and contexts only, providing a highly accurate private model. Experiments on a variety of datasets and settings demonstrate these strengths of CADP-LM.}
-}
-
-@article{TFKTP:23,
-  author       = {Khang Tran and Ferdinando Fioretto and Issa Khalil and My T. Thai and NhatHai Phan},
-  title        = {FairDP: Certified Fairness with Differential Privacy},
-  journal      = {CoRR},
-  volume       = {abs/2305.16474},
-  year         = {2023},
-  doi          = {10.48550/arXiv.2305.16474},
-  eprinttype    = {arXiv},
-  arxiv       = {2305.16474},
-  abbr         = {ArXiv},
-  bibtex_show  = {true},
-  abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
 }
 
 
