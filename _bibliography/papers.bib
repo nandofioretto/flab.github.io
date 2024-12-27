@@ -34,7 +34,6 @@
 @String{ICMAS = "International Conference on Multi-Agent Systems" }
 @String{ICAART= "International Conference on Agents and Artificial Intelligence" }
 @String{IJCAI = "International Joint Conference on Artificial Intelligence" }
-@String{ICML =  "International Conference on Machine Learning" }
 @String{ISIAM = "International Symposium on Artificial Intelligence and Mathematics"}
 @String{NeurIPS  = "Advances in Neural Information Processing Systems" }
 @String{PRIMA = "Principles and Practice of Multi-Agent Systems" }
@@ -84,7 +83,7 @@
       volume      = {abs/2405.18572},
       doi         = {10.48550/arXiv.2405.18572},
       arxiv       = {2405.18572},
-      abbr        = {AAAI},
+      abbr        = {AAAI-ws},
       bibtex_show = {true},
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
@@ -95,8 +94,10 @@
       year        = {2025},
       volume      = {39},
       booktitle   = {The 6th International Workshop on Multi-Agent Path Finding, at AAAI},
-      abbr        = {AAAI},
+      abbr        = {AAAI-ws},
       bibtex_show = {true},
+      arxiv       = {2412.17993},
+      award       = {Oral},
       abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of feasible multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.}
 }
 
@@ -112,6 +113,50 @@
   bibtex_show  = {true},
   abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
 } % acceptance rate 53/180
+
+@inproceedings{Fioretto:AIORBridge25,
+  author       = {Jinhao Liang, Jacob Christopher, Sven Koenig, Ferdinando Fioretto},
+  title        = {Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models},
+  booktitle    = {AAAI 2025 Bridge on Combining AI and OR/MS for Better Trustworthy Decision Making},
+  volume       = {1},
+  year         = {2025},
+  doi          = {},
+  abbr         = {AIORMS},
+  bibtex_show  = {true},
+  abstract     = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of \emph{feasible} multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.},
+  award       = {Oral},
+} % acceptance rate 53/180
+
+  % Also appeared in the AI+ORMS 2025 Bridge program as an oral!
+
+@inproceedings{Fioretto:AIAIbridge25b,
+ author       = {Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, Ferdinando Fioretto},
+  title        = {OPF-Net: Real-Time Stability Constrained AC Optimal Power Flow},
+  booktitle    = {AAAI 2025 Bridge on Explainable AI, Energy and Critical Infrastructure Systems},
+  volume       = {1},
+  year         = {2025},
+  doi          = {},
+  abbr         = {AIORMS},
+  bibtex_show  = {true},
+  arxiv   =     {https://arxiv.org/abs/2410.19157},
+  abstract    = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF's physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
+  }
+  
+  
+@article{Fioretto:25a,
+      title={Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion
+ Models}, 
+      author={Jinhao Liang, Jacob K. Christopher, Sven Koenig, Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2412.17993},
+      doi         = {10.48550/arXiv.2412.17993},
+      arxiv       = {2412.17993},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. Coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms struggle with scalability. Moreover, these algorithms often depend on discretized representations of the environment, which can be impractical in image-based or high-dimensional settings. Recently, diffusion models have shown promise in single-agent path planning, capturing complex trajectory distributions and generating smooth paths that navigate continuous, high-dimensional spaces. However, directly extending diffusion models to MAPF introduces new challenges since these models struggle to ensure constraint feasibility, such as inter-agent collision avoidance. To overcome this limitation, this work proposes a novel approach that integrates constrained optimization with diffusion models for MAPF in continuous spaces. This unique combination directly produces feasible multi-agent trajectories that respect collision avoidance and kinematic constraints. The effectiveness of our approach is demonstrated across various challenging simulated scenarios of varying dimensionality.}
+}
+
 
 #################
 # 2024
@@ -158,7 +203,7 @@
       doi         = {10.48550/arXiv.2408.05636},
       year        = {2024},
       arxiv       = {2408.05636},
-      abbr         = {NeurIPS},
+      abbr         = {NeurIPS-ws},
       bibtex_show = {true},
       abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
 }
@@ -172,7 +217,7 @@
   pages       = {},
   url         = {TBA},
   arxiv        = {2402.03559},
-  abbr         = {NeurIPS},
+  abbr         = {NeurIPS-ws},
   award       = {Spotlight Presentation},
   bibtex_show  = {true},
   selected     = {true},
@@ -184,7 +229,7 @@
   author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
   booktitle = {NeurIPS 2024 Workshop on Regulatory ML},
   year      = {2024},
-  abbr        = {NeurIPS},
+  abbr        = {NeurIPS-ws},
   alsoin    = {Workshop on Generative AI and Law (ICML-24)},
   bibtex_show = {true},
   award       = {Oral Presentation},
@@ -257,7 +302,7 @@
   booktitle   = {ICML 2024 Workshop on Differentiable Almost Everything},
   doi         = {https://openreview.net/forum?id=NBt4ZBOFth},
   year        = {2024},
-  abbr        = {ICML},
+  abbr        = {ICML-ws},
   bibtex_show = {true},
   abstract    = {Decision processes in AI and operations research often involve parametric optimization problems, whose unknown parameters must be inferred from data. The Predict-Then-Optimize (PtO) paradigm maximizes decision quality by training parametric prediction models end-to-end with subsequent constrained optimization. This paper extends PtO to handle the optimization of nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure fair and robust solutions with respect to multiple objectives. By proposing efficient differentiable approximations of OWA optimization, it provides a framework for integrating fair optimization concepts with parametric prediction under uncertainty.}
 }
