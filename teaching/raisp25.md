@@ -277,14 +277,13 @@ Each group will be assessed through the following activities:
 
 | Group     |  Members                                                                                |
 |-----------|-----------------------------------------------------------------------------------------|
-| Group 1   | | 
-| Group 2   | | 
-| Group 3   | |
-| Group 4   | |
-| Group 5   | |
-| Group 6   | |
-| Group 7   | |
-
+| Group 1   | Dolatpour Fathkouhi, Amirreza (PhD),Soga, Patrick (PhD),Gregoire, Jade (MCS),Nanduru, Ganesh (MCS),Bai, Cheryl (BS) | 
+| Group 2   | Gihlstorf, Caroline (PhD),Arslan, Alip (MCS),Gyllenhoff, Anders (MS),Panguluri, Yagnik (MCS),Xie, Eric (MCS) | 
+| Group 3   | Lei, Zhenyu (PhD),Bacha, Leena (MCS),Hewitt, Brooke (MCS),Rao, Mihika (MCS),Yan, Jett (ME) |
+| Group 4   | Liang, Jinhao (PhD),Cheng, Szu-Yuan (ME),Kim, Ji Hyun (MS),Reddy, Rahul (MS),Okeno-Storms, Joseph (MCS) |
+| Group 5   | Noshin, Kazi (PhD),Chinnam, Nina (MCS),Liu, Yanxi (MCS),Shahane, Chaitanya (MS),Chang, Emily (BS) |
+| Group 6   | Rao, Uttam (PhD),Feng, Shiyu (MCS),Lopez, Sabrina (MS),Slyepichev, Daniel (ME),Nguyen, Eric (BA) |
+| Group 7   | Shahnewaz, Shafat (PhD),Gampa, Dhriti (MCS),Miskill, Jackson (MCS),Su, Jing-Ning (MCS),Sosnkowski, Alexander (BA) |
  
 
 ## Instructor
@@ -292,6 +291,10 @@ Each group will be assessed through the following activities:
 Ferdinando Fioretto
 Assistant Professor in Computer Science
 University of Virgina
+
+## TA
+
+Saswat Das
 
 ---
 
