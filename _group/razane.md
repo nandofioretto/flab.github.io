@@ -7,5 +7,5 @@ nextposition: Postdoc at University of Helsinki
 img: assets/img/group/razane.jpeg
 redirect: https://scholar.google.com/citations?user=AyF89JgAAAAJ&hl=en
 importance: 2
-category: Former Students
+category: Visiting Students and Interns
 ---

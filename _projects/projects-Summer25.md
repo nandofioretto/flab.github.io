@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Projects Fall 24
+title: Projects Summer 25
 ---
 
-# Project Fall 24 - Raise Lab at UVa
+# Project Summer 25 - Raise Lab at UVa
 (Ferdinando Fioretto)
 
 ## Constrained Generative Diffusion Processes

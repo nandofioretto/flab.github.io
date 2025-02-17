@@ -538,6 +538,8 @@ INPUT ./section_talks.tex
 INPUT ./section_talks.tex
 INPUT ./section_projects.tex
 INPUT ./section_projects.tex
+INPUT ./section_pending-support.tex
+INPUT ./section_pending-support.tex
 INPUT ./section_service.tex
 INPUT ./section_service.tex
 INPUT ./cvFioretto.aux

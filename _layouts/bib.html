@@ -24,6 +24,12 @@
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
+          <!-- 
+          {%- if entry.award %}
+          <br>
+          <span class="badge danger-color-dark align-middle" style="min-width: 75px;">{{entry.award}}</span>
+          {%- endif %}
+          -->
         {%- endif -%}
         </div>
 
@@ -140,7 +146,7 @@
             {%- if site.data.venues[entry.alsoin] -%}
               {%- assign venue_style = site.data.venues[entry.alsoin].color | prepend: 'style="color:' | append: ', left-margin:2px"' -%}
             {%- endif -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.alsoin].url}}">{{entry.alsoin}} {{entry.alsoinyear}}</a></abbr>
+            <abbr><a href="{{site.data.venues[entry.alsoin].url}}">{{entry.alsoin}} ({{entry.alsoinyear}})</a></abbr>
           {%- endif %}
         </div>
 

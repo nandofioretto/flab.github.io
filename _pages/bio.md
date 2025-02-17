@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: bio
 permalink: /bio/
 subtitle: Short Bio

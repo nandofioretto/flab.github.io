@@ -7,5 +7,5 @@ nextposition: Postdoc at  Vrije Universiteit Brussel
 img: https://jayman91.github.io//images/jayanta.png
 redirect: https://jayantamandi.com
 importance: 4
-category: Former Students
+category: Visiting Students and Interns
 ---

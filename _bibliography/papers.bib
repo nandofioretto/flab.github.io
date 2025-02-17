@@ -20,7 +20,7 @@
 # You can implement your own buttons by editing the bib.html file.
 # conferences
 @String{AAAI  = "AAAI Conference on Artificial Intelligence" }
-@String{AISTATS = "Society for Artificial Intelligence and Statistics"}
+@String{AISTATS = "International Conference for Artificial Intelligence and Statistics"}
 @String{AAMAS = "International Conference on Autonomous Agents and Multiagent Systems" }
 @String{ADT   = "Algorithmic Decision Theory {(ADT)}" }
 @String{CP    = "International Conference on Principles and Practice of Constraint Programming" }
@@ -32,11 +32,13 @@
 @String{IAT   = "International Conference on Intelligent Agent Technology" }
 @String{ICLP  = "International Conference on Logic Programming" }
 @String{ICML  = "International Conference on Machine Learning" }
+@String{ICLR  = "International Conference on Learning Representations" }
 @String{ICMAS = "International Conference on Multi-Agent Systems" }
 @String{ICAART= "International Conference on Agents and Artificial Intelligence" }
 @String{IJCAI = "International Joint Conference on Artificial Intelligence" }
 @String{ISIAM = "International Symposium on Artificial Intelligence and Mathematics"}
 @String{NeurIPS  = "Advances in Neural Information Processing Systems" }
+@String{NAACL = "Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics"}
 @String{PRIMA = "Principles and Practice of Multi-Agent Systems" }
 @String{PAAMS = "Advances in Practical Applications of Heterogeneous Multi-Agent Systems" }
 @String{UAI = "Conference on Uncertainty in Artificial Intelligence" }
@@ -62,10 +64,40 @@
 # 2025
 #################
 
+
+@inproceedings{Fioretto:ICLR25,
+      title       = {Learning To Solve Differential Equation Constrained Optimization Problems},
+      author      = {Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+      year        = {2025},
+      booktitle   = ICLR,
+      volume      = {13},
+      doi         = {10.48550/arXiv.2410.01786},
+      arxiv       = {2410.01786},
+      abbr        = {ICLR},
+      bibtex_show = {true},
+      award       = {Spotlight},
+      abstract    = {Differential equations (DE) constrained optimization plays a critical role in numerous scientific and engineering fields, including energy systems, aerospace engineering, ecology, and finance, where optimal configurations or control strategies must be determined for systems governed by ordinary or stochastic differential equations. Despite its significance, the computational challenges associated with these problems have limited their practical use. To address these limitations, this paper introduces a learning-based approach to DE-constrained optimization that combines techniques from proxy optimization and neural differential equations. The proposed approach uses a dual-network architecture, with one approximating the control strategies, focusing on steady-state constraints, and another solving the associated DEs. This combination enables the approximation of optimal strategies while accounting for dynamic constraints in near real-time. Experiments across problems in energy optimization and finance modeling show that this method provides full compliance with dynamic constraints and it produces results up to 25 times more precise than other methods which do not explicitly model the system's dynamic equations.}
+}
+
+@article{Fioretto:NAACL,
+      title       = {Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion},
+      author      = {Jacob K Christopher and Michael Cardei and Brian R Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
+      booktitle   = NAACL,
+      year        = {2025},
+      volume      = {},
+      doi         = {10.48550/arXiv.2408.05636},
+      arxiv       = {2408.05636},
+      alsoin       = {Efficient Natural Language and Speech Processing workshop},
+      alsoinyear   = {NeurIPS 2024},
+      abbr         = {NAACL},
+      bibtex_show = {true},
+      abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
+}
+
+
 @inproceedings{Fioretto:AISTATS25,
       title       = {Differentially Private Data Release on Graphs: Inefficiencies and Unfairness},
       author      = {Ferdinando Fioretto and Diptangshu Sen and Juba Ziani},
-      year        = {2024},
       booktitle   = AISTATS,
       volume      = {28},
       doi         = {10.48550/arXiv.2408.05246},
@@ -105,16 +137,16 @@
 } % acceptance rate 53/180
 
 
-@inproceedings{Fioretto:CoLoRAI25,
+@inproceedings{Fioretto:CoLoRA25,
       title={Low-rank finetuning for LLMs: A fairness perspective},
       author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
       year        = {2025},
       volume      = {39},
-      booktitle   = {AAAI CoLoRAI Workshop},
+      booktitle   = {AAAI CoLoRA Workshop},
       volume      = {abs/2405.18572},
       doi         = {10.48550/arXiv.2405.18572},
       arxiv       = {2405.18572},
-      abbr        = {AAAI-ws},
+      abbr        = {CoLoRA},
       bibtex_show = {true},
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
@@ -125,31 +157,20 @@
       year        = {2025},
       volume      = {39},
       booktitle   = {The 6th International Workshop on Multi-Agent Path Finding, at AAAI},
-      abbr        = {AAAI-ws},
+      abbr        = {MAPF},
       bibtex_show = {true},
       arxiv       = {2412.17993},
       award       = {Oral},
+      alsoin      = {Combining AI and OR/MS for Better Trustworthy Decision Making},
+      alsoinyear  = {AAAI 2025},
       abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of feasible multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.}
 }
-
-@inproceedings{Fioretto:AIORBridge25,
-  author       = {Jinhao Liang, Jacob Christopher, Sven Koenig, Ferdinando Fioretto},
-  title        = {Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models},
-  booktitle    = {AAAI 2025 Bridge on Combining AI and OR/MS for Better Trustworthy Decision Making},
-  volume       = {1},
-  year         = {2025},
-  doi          = {},
-  abbr         = {AIORMS},
-  bibtex_show  = {true},
-  abstract     = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of \emph{feasible} multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.},
-  award       = {Oral},
-} % acceptance rate 53/180
 
   % Also appeared in the AI+ORMS 2025 Bridge program as an oral!
 
 @inproceedings{Fioretto:AIAIbridge25b,
- author       = {Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, Ferdinando Fioretto},
   title        = {OPF-Net: Real-Time Stability Constrained AC Optimal Power Flow},
+  author       = {Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
   booktitle    = {AAAI 2025 Bridge on Explainable AI, Energy and Critical Infrastructure Systems},
   volume       = {1},
   year         = {2025},
@@ -160,21 +181,50 @@
   abstract    = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF's physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
   }
   
-  
-@article{Fioretto:25a,
-      title={Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion
- Models}, 
-      author={Jinhao Liang, Jacob K. Christopher, Sven Koenig, Ferdinando Fioretto},
+
+@article{Fioretto:25b,
+      title={Training-Free Constrained Generation With Stable Diffusion Models}, 
+      author={Stefano Zampini and Jacob K Christopher and Luca Oneto and Davide Anguita and Ferdinando Fioretto},
       year        = {2025},
       journal     = {CoRR},
-      volume      = {abs/2412.17993},
-      doi         = {10.48550/arXiv.2412.17993},
-      arxiv       = {2412.17993},
+      volume      = {abs/2502.05625},
+      doi         = {10.48550/arXiv.2502.05625},
+      year        = {2025},
+      arxiv       = {2502.05625},
       abbr        = {ArXiv},
       bibtex_show = {true},
-      abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. Coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms struggle with scalability. Moreover, these algorithms often depend on discretized representations of the environment, which can be impractical in image-based or high-dimensional settings. Recently, diffusion models have shown promise in single-agent path planning, capturing complex trajectory distributions and generating smooth paths that navigate continuous, high-dimensional spaces. However, directly extending diffusion models to MAPF introduces new challenges since these models struggle to ensure constraint feasibility, such as inter-agent collision avoidance. To overcome this limitation, this work proposes a novel approach that integrates constrained optimization with diffusion models for MAPF in continuous spaces. This unique combination directly produces feasible multi-agent trajectories that respect collision avoidance and kinematic constraints. The effectiveness of our approach is demonstrated across various challenging simulated scenarios of varying dimensionality.}
+      abstract    = {Stable diffusion models represent the state-of-the-art in data synthesis across diverse domains and hold transformative potential for applications in science and engineering, e.g., by facilitating the discovery of novel solutions and simulating systems that are computationally intractable to model explicitly. However, their current utility in these fields is severely limited by an inability to enforce strict adherence to physical laws and domain-specific constraints. Without this grounding, the deployment of such models in critical applications, ranging from material science to safety-critical systems, remains impractical. This paper addresses this fundamental limitation by proposing a novel approach to integrate stable diffusion models with constrained optimization frameworks, enabling them to generate outputs that satisfy stringent physical and functional requirements. We demonstrate the effectiveness of this approach through material science experiments requiring adherence to precise morphometric properties, inverse design problems involving the generation of stress-strain responses using video generation with a simulator in the loop, and safety settings where outputs must avoid copyright infringement.}
 }
 
+
+@article{Fioretto:25b,
+      title={Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}, 
+      author={Prince Zizhuang Wang and Jinhao Liang and Shuyi Chen and Ferdinando Fioretto and Shixiang Zhu},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2502.05468},
+      doi         = {10.48550/arXiv.2502.05468},
+      year        = {2025},
+      arxiv       = {2502.05468},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.}
+}
+  
+
+@article{Fioretto:25a,
+      title={Simultaneous Multi-Robot Motion Planning with Projected Diffusion Models}, 
+      author={Jinhao Liang and Jacob K Christopher and Sven Koenig and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2502.03607},
+      doi         = {10.48550/arXiv.2502.03607},
+      year        = {2025},
+      arxiv       = {2502.03607},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Recent advances in diffusion models hold significant potential in robotics, enabling the generation of diverse and smooth trajectories directly from raw representations of the environment. Despite this promise, applying diffusion models to motion planning remains challenging due to their difficulty in enforcing critical constraints, such as collision avoidance and kinematic feasibility. These limitations become even more pronounced in Multi-Robot Motion Planning (MRMP), where multiple robots must coordinate in shared spaces. To address this challenge, this work proposes Simultaneous MRMP Diffusion (SMD), a novel approach integrating constrained optimization into the diffusion sampling process to produce collision-free, kinematically feasible trajectories. Additionally, the paper introduces a comprehensive MRMP benchmark to evaluate trajectory planning algorithms across scenarios with varying robot densities, obstacle complexities, and motion constraints. Experimental results show SMD consistently outperforms classical and learning-based motion planners, achieving higher success rates and efficiency in complex multi-robot environments.}
+}
 
 #################
 # 2024
@@ -205,25 +255,12 @@
   url         = {TBA},
   publisher   = {Curran Associates, Inc.},
   alsoin       = {Machine Learning and the Physical Sciences Workshop},
+  alsoinyear   = {NeurIPS 2024},
   arxiv        = {2402.03559},
   abbr         = {NeurIPS},
   bibtex_show  = {true},
   selected     = {true},
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
-}
-
-@article{Fioretto:24g,
-      title       = {Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion},
-      author      = {Jacob K Christopher and Michael Cardei and Brian R Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
-      journal     = {Efficient Natural Language and Speech Processing},
-      year        = {2024},
-      volume      = {abs/2408.05636},
-      doi         = {10.48550/arXiv.2408.05636},
-      year        = {2024},
-      arxiv       = {2408.05636},
-      abbr         = {NeurIPS-ws},
-      bibtex_show = {true},
-      abstract    = {Speculative decoding has emerged as a widely adopted method to accelerate large language model inference without sacrificing the quality of the model outputs. While this technique has facilitated notable speed improvements by enabling parallel sequence verification, its efficiency remains inherently limited by the reliance on incremental token generation in existing draft models. To overcome this limitation, this paper proposes an adaptation of speculative decoding which uses discrete diffusion models to generate draft sequences. This allows parallelization of both the drafting and verification steps, providing significant speed-ups to the inference process. Our proposed approach, Speculative Diffusion Decoding (SpecDiff), is validated on standard language generation benchmarks and empirically demonstrated to provide a up to 8.7x speed-up over standard generation processes and up to 2.5x speed-up over existing speculative decoding approaches.}
 }
 
 @article{Fioretto:NeurIPS24b,
@@ -235,8 +272,8 @@
   pages       = {},
   url         = {TBA},
   arxiv        = {2402.03559},
-  abbr         = {NeurIPS-ws},
-  award       = {Spotlight Presentation},
+  abbr         = {NeurIPS},
+  award       = {Spotlight},
   bibtex_show  = {true},
   selected     = {true},
   abstract    = {Generative diffusion models excel at robustly synthesizing coherent content from raw noise through a sequential process. However, their direct application in scenarios requiring outputs to adhere to specific, stringent criteria faces several severe challenges. This paper aims at overcome these challenges and introduces Projected Generative Diffusion Models (PGDM), an approach that recast traditional diffusion models sampling into a constrained-optimization problem. This enables the application of an iterative projections method to ensure that generated data faithfully adheres to specified constraints or physical principles. This paper provides theoretical support for the ability of PGDM to synthesize outputs from a feasible subdistribution under a restricted class of constraints while also providing large empirical evidence in the case of complex non-convex constraints and ordinary differential equations. These capabilities are demonstrated by physics-informed motion in video generation, trajectory optimization in path planning, and morphometric properties adherence in material science.}
@@ -247,10 +284,11 @@
   author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
   booktitle = {NeurIPS 2024 Workshop on Regulatory ML},
   year      = {2024},
-  abbr        = {NeurIPS-ws},
-  alsoin    = {Workshop on Generative AI and Law (ICML-24)},
+  abbr        = {NeurIPS},
+  alsoin      = {Workshop on Generative AI and Law},
+  alsoinyear  = {ICML 2024},
   bibtex_show = {true},
-  award       = {Oral Presentation},
+  award       = {Oral},
   abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage.
   However, despite its legal significance and endorsement by global data protection regulations,
   the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy.
@@ -320,7 +358,7 @@
   booktitle   = {ICML 2024 Workshop on Differentiable Almost Everything},
   doi         = {https://openreview.net/forum?id=NBt4ZBOFth},
   year        = {2024},
-  abbr        = {ICML-ws},
+  abbr        = {ICML},
   bibtex_show = {true},
   abstract    = {Decision processes in AI and operations research often involve parametric optimization problems, whose unknown parameters must be inferred from data. The Predict-Then-Optimize (PtO) paradigm maximizes decision quality by training parametric prediction models end-to-end with subsequent constrained optimization. This paper extends PtO to handle the optimization of nondifferentiable Ordered Weighted Averaging (OWA) objectives, known for their ability to ensure fair and robust solutions with respect to multiple objectives. By proposing efficient differentiable approximations of OWA optimization, it provides a framework for integrating fair optimization concepts with parametric prediction under uncertainty.}
 }
@@ -424,21 +462,6 @@
       bibtex_show = {true},
       abstract    = {Criminal courts across the United States handle millions of cases every year, and the scheduling of those cases must accommodate a diverse set of constraints, including the preferences and availability of courts, prosecutors, and defense teams. When criminal court schedules are formed, defendants' scheduling preferences often take the least priority, although defendants may face significant consequences (including arrest or detention) for missed court dates. Additionally, studies indicate that defendants' nonappearances impose costs on the courts and other system stakeholders. To address these issues, courts and commentators have begun to recognize that pretrial outcomes for defendants and for the system would be improved with greater attention to court processes, including \emph{court scheduling practices}. There is thus a need for fair criminal court pretrial scheduling systems that account for defendants' preferences and availability, but the collection of such data poses logistical challenges. Furthermore, optimizing schedules fairly across various parties' preferences is a complex optimization problem, even when such data is available. In an effort to construct such a fair scheduling system under data uncertainty, this paper proposes a joint optimization and learning framework that combines machine learning models trained end-to-end with efficient matching algorithms. This framework aims to produce court scheduling schedules that optimize a principled measure of fairness, balancing the availability and preferences of all parties.}
 }
-
-@article{Fioretto:24i,
-      title       = {Learning To Solve Differential Equation Constrained Optimization Problems},
-      author      = {Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
-      year        = {2024},
-      journal     = {CoRR},
-      volume      = {abs/2410.01786},
-      doi         = {10.48550/arXiv.2410.01786},
-      year        = {2024},
-      arxiv       = {2410.01786},
-      abbr        = {ArXiv},
-      bibtex_show = {true},
-      abstract    = {Differential equations (DE) constrained optimization plays a critical role in numerous scientific and engineering fields, including energy systems, aerospace engineering, ecology, and finance, where optimal configurations or control strategies must be determined for systems governed by ordinary or stochastic differential equations. Despite its significance, the computational challenges associated with these problems have limited their practical use. To address these limitations, this paper introduces a learning-based approach to DE-constrained optimization that combines techniques from proxy optimization and neural differential equations. The proposed approach uses a dual-network architecture, with one approximating the control strategies, focusing on steady-state constraints, and another solving the associated DEs. This combination enables the approximation of optimal strategies while accounting for dynamic constraints in near real-time. Experiments across problems in energy optimization and finance modeling show that this method provides full compliance with dynamic constraints and it produces results up to 25 times more precise than other methods which do not explicitly model the system's dynamic equations.}
-}
-
 
 @article{Fioretto:24e,
       title={The Data Minimization Principle in Machine Learning},
@@ -560,7 +583,7 @@
   doi          = {10.24963/ijcai.2023/57},
   abbr         = {IJCAI},
   alsoin       = {PPAI},
-  alsoinyear   = {2022},
+  alsoinyear   = {AAAI 2022},
   bibtex_show  = {true},
   arxiv        = {2109.08630},
   selected     = {true},
@@ -672,7 +695,7 @@
   bibtex_show = {true},
   abbr        = {NeurIPS},
   selected     = {true},
-  award       = {Spotlight Presentation},
+  award       = {Spotlight},
   abstract    = {Network pruning is a widely-used compression technique that is able to significantly scale down overparameterized models with minimal loss of accuracy. This paper shows that pruning may create or exacerbate disparate impacts. The paper sheds light on the factors to cause such disparities, suggesting differences in gradient norms and distance to decision boundary across groups to be responsible for this critical issue. It analyzes these factors in detail, providing both theoretical and empirical support, and proposes a simple, yet effective, solution that mitigates the disparate impacts caused by pruning.}
 }
 
@@ -886,7 +909,7 @@
   abbr         = {AAAI},
   arxiv        = {2009.12562},
   alsoin       = {PPAI},
-  alsoinyear   = {2021},
+  alsoinyear   = {AAAI 2021},
   selected     = {true},
   abstract     = {A critical concern in data-driven decision making is to build models whose outcomes do not discriminate against some demographic groups, including gender, ethnicity, or age. To ensure non-discrimination in learning tasks, knowledge of the sensitive attributes is essential, while, in practice, these attributes may not be available due to legal and ethical requirements. To address this challenge, this paper studies a model that protects the privacy of the individuals’ sensitive information while also allowing it to learn non-discriminatory predictors. The method relies on the notion of differential privacy and the use of Lagrangian duality to design neural networks that can accommodate fairness constraints while guaranteeing the privacy of sensitive attributes. The paper analyses the tension between accuracy, privacy, and fairness and the experimental evaluation illustrates the benefits of the proposed model on several prediction tasks.}
 }
@@ -920,7 +943,7 @@
   award        = {2022 Caspar Bowden PET award},
   arxiv        = {2105.07513},
   alsoin       = {TPDP},
-  alsoinyear    = {2021},
+  alsoinyear    = {NeurIPS 2021},
   selected     = {true},
   abstract     = {Agencies, such as the U.S. Census Bureau, release data sets and statistics about groups of individuals that are used as input to a number of critical decision processes. To conform to privacy and confidentiality requirements, these agencies are often required to release privacy-preserving versions of the data. This paper studies the release of differentially private data sets and analyzes their impact on some critical resource allocation tasks under a fairness perspective. {The paper shows that, when the decisions take as input differentially private data}, the noise added to achieve privacy disproportionately impacts some groups over others. The paper analyzes the reasons for these disproportionate impacts and proposes guidelines to mitigate these effects. The proposed approaches are evaluated on critical decision problems that use differentially private census data.}
 }
@@ -1817,5 +1840,5 @@ abstract  = {Gene Regulatory Network (GRN) inference is a major objective of Sys
   bibtex_show={true},
   abstract  = {Methods to predict the structure of a protein often rely on the knowledge of macro sub-structures and their exact or approximated relative positions in space. The parts connecting these sub-structures are called loops and, in general, they are characterized by a high degree of freedom. The modeling of loops is a critical problem in predicting protein conformations that are biologically realistic. This paper introduces a class of constraints that models a general multi-body system; we present a proof of NP-completeness and provide filtering techniques, inspired by inverse kinematics, that can drastically reduce the search space of potential conformations. The paper shows the application of the constraint in solving the protein loop modeling problem, based on fragments assembly.},
   alsoin    = {WCB},
-  alsoinyear = {2012}
+  alsoinyear = {CP 2012}
 }

@@ -6,6 +6,6 @@ interests: Privacy and Fairness in Generative AI
 img: assets/img/group/generic_m.png
 redirect: 
 importance: 8
-category: PhD Students
+category: rotator
 ---
  

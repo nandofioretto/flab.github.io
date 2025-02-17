@@ -1,110 +1,116 @@
 # Journals
 "AIJ":
   url: https://www.sciencedirect.com/journal/artificial-intelligence
-  color: "#B9770E"
+  color: "#004d99"
 
 "Constraints":
   url: https://www.springer.com/journal/10601
-  color: "#B9770E"
+  color: "#004d99"
 
 "JAIR":
   url: https://www.jair.org/index.php/jair
-  color: "#B9770E"
+  color: "#004d99"
 
 "EPSR":
   url: https://www.sciencedirect.com/journal/electric-power-systems-research
-  color: "#B9770E"
+  color: "#004d99"
 
 "TPWRS":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
-  color: "#B9770E"
+  color: "#004d99"
 
 "IEEE TPWRS":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
-  color: "#B9770E"
+  color: "#004d99"
 
 "TSG":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
-  color: "#B9770E"
+  color: "#004d99"
 
 "IEEE TSG":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
-  color: "#B9770E"
+  color: "#004d99"
 
 "IA":
   url: https://content.iospress.com/journals/intelligenza-artificiale/17/1
-  color: "#B9770E"
+  color: "#004d99"
 
 "TOMACS":
   url: https://dl.acm.org/journal/tomacs
-  color: "#B9770E"
+  color: "#004d99"
 
 # Conferences
 "AAMAS":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "AAAI":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "AISTATS":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "CP":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "CDC":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "CPAIOR":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "CMSB":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "ECAI":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "ECML":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "FAccT":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "ICML":
-    color: "#2874A6"
+    color: "#0073e6"
+
+"ICLR":
+    color: "#0073e6"
 
 "IJCAI":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "ISAIM":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "ISGT":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "NeurIPS":
-    color: "#2874A6"
+    color: "#0073e6"
+
+"NAACL":
+    color: "#0073e6"
 
 "PMAPS":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "PRIMA":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "PADL":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "PSCC":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "SatML":
-    color: "#2874A6"
+    color: "#0073e6"
 
 "UAI":
-  color: "#2874A6"
+  color: "#0073e6"
 
 "WWW":
-  color: "#2874A6"
+  color: "#0073e6"
 
 
 # Workshops
@@ -112,23 +118,36 @@
     color: "#808080"
 
 "WCB":
-    color: "#17A589"
+    color: "#99ccff"
 
 "PPAI":
     url: https://ppai-workshop.github.io/
-    color: "#17A589"
+    color: "#99ccff"
+
+"CoLoRA":
+    color: "#99ccff"
+
+"AIORMS":
+  color: "#99ccff"
+
+"MAPF":
+  color: "#99ccff"
 
 "TPDP":
-    color: "#17A589"
+    color: "#99ccff"
+
+"Efficient Natural Language and Speech Processing workshop, NeurIPS 2024":
+    url: https://ml4physicalsciences.github.io/2024/
+    color: "#99ccff"
 
 "Machine Learning and the Physical Sciences Workshop":
     url: https://ml4physicalsciences.github.io/2024/
-    color: "#17A589"
+    color: "#99ccff"
 
 "Efficient Natural Language and Speech Processing":
     url: https://neurips2024-enlsp.github.io/
-    color: "#17A589"
+    color: "#99ccff"
 
 "Workshop on Regulatory ML":
     url: https://regulatableml.github.io/
-    color: "#17A589"
+    color: "#99ccff"

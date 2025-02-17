@@ -29,37 +29,37 @@ This is a tentative calendar and it is subject to change.
 |------------|-----------------|------------------------------------|------------------------------|--------------|
 | Mon Jan 13 | NO CLASS        | Syllabus review and class intro    | [class slides](../raisp24_files/lec01.pdf)       | on your own  |
 | Wed Jan 15 | Intro to class  | Safety and Alignment               | [class slides](../raisp24_files/lec02.pdf)       | Fioretto     |
-| Mon Jan 20 | NO CLASS        | (MLK Holiday)                      |                              |              |        
+| Mon Jan 20 | NO CLASS        | (MLK Holiday)                      |                              |              |
 | Wed Jan 22 | Intro to class  | Privacy (settings and attacks)     | [class slides](../raisp24_files/lect-3-and-4.pdf)| Fioretto     |
 | Mon Jan 27 | Intro to class  | Privacy (cont)                     | [class slides](../raisp24_files/lect-3-and-4.pdf)| Fioretto     |
 | Wed Jan 29 | Intro to class  | Privacy and Fairness               | [class slides](../raisp24_files/lec05.pdf)       | Fioretto     |
-| Mon Feb 3  | Fairness        | Intro and bias sources             | [[1](#r1)] -- [[4](#r4)]     | Group 1      |
+| Mon Feb 3  | Intro to class  | Fairness                           |                              | Fioretto     |
 | Wed Feb 5* | NO CLASS        | (DOE meeting)                      |                              |              |
-| Mon Feb 10 | Fairness        | Statistical measures               | [[5](#r5)] -- [[8](#r8)]     | Group 2      |
-| Wed Feb 12 | Fairness        | Tradeoffs                          | [[9](#r9)] -- [[12](#r12)]   | Group 3      |
-| Mon Feb 17 | Fairness        | LLMs: Toxicy and Bias              | [[13](#r13)] -- [[16](#r16)] | Group 4      |
-| Wed Feb 20 | Fairness        | LLMs: Fairness                     | [[17](#r17)] -- [[19](#r19)] | Group 5      |
-| Mon Feb 24 | Fairness        | Policy aspects                     | [[20](#r20)] -- [[22](#r22)] | Group 6      |
-| Wed Feb 26 | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7      |
+| Mon Feb 10 | Fairness        | Intro and bias sources             | [[1](#r1)] -- [[4](#r4)]     | Group 1 [[slides](../raisp25_files/Group1_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-10.md)]     |
+| Wed Feb 12 | Fairness        | Statistical measures               | [[5](#r5)] -- [[8](#r8)]     | Group 2 [[slides](../raisp25_files/Group2_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-12.md)]     |
+| Mon Feb 17 | Fairness        | Tradeoffs                          | [[9](#r9)] -- [[12](#r12)]   | Group 3 [[slides](../raisp25_files/Group3_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-17.md)]     |
+| Wed Feb 20 | Fairness        | LLMs: Toxicy and Bias              | [[13](#r13)] -- [[16](#r16)] | Group 4      |
+| Mon Feb 24 | Fairness        | LLMs: Fairness                     | [[17](#r17)] -- [[19](#r19)] | Group 5      |
+| Wed Feb 26 | Fairness        | Policy aspects                     | [[20](#r20)] -- [[22](#r22)] | Group 6      |
 | Mon Mar 3  | No class        | (AAAI)                             |                              |              |
-| Wed Mar 5  | Safety          | Poisoning                          | [[26](#r26)] -- [[29](#r29)] | Group 1      |
+| Wed Mar 5  | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7      |
 | Wed Mar 12 | NO CLASS        | (Spring break)                     |                              |              |
 | Mon Mar 10 | NO CLASS        | (Spring break)                     |                              |              |
-| Mon Mar 17 | Safety          | Adversarial Robustness             | [[30](#r30)] -- [[34](#r34)] | Group 2      |
-| Wed Mar 19 | Safety          | Adversarial Robustness             | [[35](#r35)] -- [[39](#r39)] | Group 3      |
-| Mon Mar 24 | Safety          | LLMs: Prompt injection             | [[40](#r40)] -- [[45](#r45)] | Group 4      |
-| Wed Mar 26 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 5      |
-| Mon Mar 31 | Privacy         | Differential Privacy               | [[51](#r51)] -- [[55](#r55)] | Group 6      |
-| Wed Apr 2  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 7      |
-| Mon Apr 7  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 1      |
-| Wed Apr 9  | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 2      |
-| Mon Apr 14 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 3      |
-| Wed Apr 16 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 4      |
-| Mon Apr 21 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 5      |
-| Wed Apr 24 | Evaluation      | LLMs: evaluation                   | [[78](#r78)] -- [[82](#r82)] | Group 6      |
-| Mon Apr 28 | Unlearning      | Unlearning 1                       | [[83](#r83)] -- [[86](#r86)] | Group 7      |
-
-<!-- | ghoast day  | Unlearning      | LLMs: Targeted unlearning          | [[87](#r87)] -- [[90](#r90)] | Group 4           -->
+| Mon Mar 17 | Safety          | Poisoning                          | [[26](#r26)] -- [[29](#r29)] | Group 1      |
+| Wed Mar 19 | Safety          | Adversarial Robustness             | [[30](#r30)] -- [[34](#r34)] | Group 2      |
+| Mon Mar 24 | Safety          | Adversarial Robustness             | [[35](#r35)] -- [[39](#r39)] | Group 3      |
+| Wed Mar 26 | Safety          | LLMs: Prompt injection             | [[40](#r40)] -- [[45](#r45)] | Group 4      |
+| Mon Mar 31 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 5      |
+| Wed Apr 2  | Privacy         | Differential Privacy               | [[51](#r51)] -- [[55](#r55)] | Group 6      |
+| Mon Apr 7  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 7      |
+| Wed Apr 9  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 1      |
+| Mon Apr 14 | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 2      |
+| Wed Apr 16 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 3      |
+| Mon Apr 21 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 4      |
+| Wed Apr 24 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 5      |
+| Mon Apr 28 | Evaluation      | LLMs: evaluation                   | [[78](#r78)] -- [[82](#r82)] | Group 6      |
+| Extra 1    | Unlearning      | Unlearning 1                       | [[83](#r83)] -- [[86](#r86)] |              |
+| Extra 2    | Unlearning      | LLMs: Targeted unlearning          | [[87](#r87)] -- [[90](#r90)] |              |
 
 <br>
 ### Bibliography
@@ -221,10 +221,10 @@ Each group will be assessed through the following activities:
 
 **Expectations:**
 - Each group will reivew all paper from the provided list, and they may propose additional ones for approval.
-- Summaries should be written in Markdown format (supporting images and formulas) and committed to the course's [GitHub repository](https://github.com/uva-responsibleai/fall-24).
+- Summaries should be written in Markdown format (supporting images and formulas) and committed to the course's [GitHub repository](https://github.com/uva-responsibleai/spring25/).
 - The summary should include the following sections: Introduction and Motivations, Methods, Key Findings, and Critical Analysis.
 - The Critical Analysis section should evaluate the strengths, weaknesses, potential biases, and ethical considerations of the paper.
-- Summaries must be submitted **four days** prior to the presentation for review and potential feedback.
+- Summaries must be submitted **four days** prior to the presentation for review and potential feedback at [fioretto@virginia.edu](fioretto@virginia.edu).
 
 **Assessment Criteria:**
 - Clarity and coherence of the written summary.
@@ -242,6 +242,7 @@ Each group will be assessed through the following activities:
 - The presentation should cover the key aspects of the paper, including its contribution to responsible AI.
 - A critical evaluation of the paper is essential, including discussing its limitations and implications.
 - Preparation of thought-provoking questions to stimulate audience engagement.
+- Slides must be submitted **one week** prior to the presentation for review and potential feedback at [fioretto@virginia.edu](fioretto@virginia.edu).
 
 **Assessment Criteria:**
 - Effectiveness of communication and presentation skills.
@@ -275,7 +276,7 @@ Each group will be assessed through the following activities:
 
 ## Groups
 
-| Group     |  Members                                                                                |
+<!-- | Group     |  Members                                                                                |
 |-----------|-----------------------------------------------------------------------------------------|
 | Group 1   | Dolatpour Fathkouhi, Amirreza (PhD); Soga, Patrick (PhD); Gregoire, Jade (MCS); Nanduru, Ganesh (MCS); Bai, Cheryl (BS) | 
 | Group 2   | Gihlstorf, Caroline (PhD);  Cardei, Maria (PhD); Gyllenhoff, Anders (MS); Panguluri, Yagnik (MCS); Xie, Eric (MCS) | 
@@ -285,6 +286,19 @@ Each group will be assessed through the following activities:
 | Group 6   | Rao, Uttam (PhD); Feng, Shiyu (MCS); Lopez, Sabrina (MS); Slyepichev, Daniel (ME); Nguyen, Eric (BA) |
 | Group 7   | Shahnewaz, Shafat (PhD); Gampa, Dhriti (MCS); Miskill, Jackson (MCS); Su, Jing-Ning (MCS); Sosnkowski, Alexander (BA) |
  
+ -->
+
+
+|Group     |    Members                                                                              |
+|----------|-----------------------------------------------------------------------------------------|
+| Group 1  | Mutnuri, Srikar (PhD)   Cui, Jingyi (MCS)   Gregoire, Jade (MCS)    Nanduru, Ganesh (MCS)   Bai, Cheryl (BS)   |
+| Group 2  | Gihlstorf, Caroline (PhD)   Gyllenhoff, Anders (MS) Panguluri, Yagnik (MCS) Xie, Eric (MCS)                    |
+| Group 3  | Lei, Zhenyu (PhD)   Bacha, Leena (MCS)  Hewitt, Brooke (MCS)    Rao, Mihika (MCS)   Yan, Jett (ME)             |
+| Group 4  | Liang, Jinhao (PhD) Cheng, Szu-Yuan (ME)    Chiang, Claire (ME) Reddy, Rahul (MS)   Okeno-Storms, Joseph (MCS) |
+| Group 5  | Noshin, Kazi (PhD)  Chinnam, Nina (MCS) Liu, Yanxi (MCS)    Shahane, Chaitanya (MS) Chang, Emily (BS)          |
+| Group 6  | Rao, Uttam (PhD)    Feng, Shiyu (MCS)   Lopez, Sabrina (MS) Slyepichev, Daniel (ME) Nguyen, Eric (BA)          |
+| Group 7  | Shahnewaz, Shafat (PhD) Gampa, Dhriti (MCS) Miskill, Jackson (MCS)  Su, Jing-Ning (MCS) Sosnkowski, Alexander (BA) |
+
 
 ## Instructor
 

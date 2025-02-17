@@ -7,6 +7,8 @@ nav: true
 nav_order: 1
 ---
 
+- **Outstanding Research Faculty Award**, University of Virginia (2025). [Link](https://research.virginia.edu/initiatives/research-achievement-awards/2024-research-award-winners)
+- **Fellowship in AI Research**, LaCross Institute (2025) [link](https://www.darden.virginia.edu/lacross-ai-institute/initiatives)
 - **Notable Reviewer** at **ICLR** (2023) \| [Press](https://blog.iclr.cc/2023/04/05/announcing-notable-reviewers-and-area-chairs-at-iclr-2023/)
 - **NMSU CS Star Award** (2023) \| [Press](http://www.lascrucesbulletin.com/stories/stars-shine-as-nmsu-arts-and-sciences-honors-its-best-and-brightest,37581)
 - **Best Paper Award Nomination** at **NeurIPS** (2022) \| [Link](https://neurips.cc/Conferences/2022/ScheduleMultitrack?event=64874)\\

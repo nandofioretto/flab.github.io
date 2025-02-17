@@ -5,7 +5,7 @@ title: group
 description:
 nav: true
 nav_order: 3
-display_categories: [PhD Students, MS and BS Students]
+display_categories: [Current Students, Former Students, Visiting Students and Interns]
 horizontal: false
 ---
 
@@ -68,7 +68,7 @@ well as policy and decision making.
 </div>
 
 
-<div class="projects">
+<!-- <div class="projects">
   <h2 class="category">Former Students and Visitors</h2>
 </div>
   
@@ -79,8 +79,8 @@ well as policy and decision making.
     _Next position_: Postdoc at Vrije Universiteit Brussel
   - **[Kyle Beiter]()** BS @Syracuse (NSF REU, Summer 2021)<br>
     _Next position_: Data Scientist at Optiver
-<!--   - **[Michele Marchiani]()** Visiting MS student (Winter 2022)<br>
-    _Next position_: MS, University of Parma -->
+  - **[Michele Marchiani]()** Visiting MS student (Winter 2022)<br>
+    _Next position_: MS, University of Parma 
   - **[Pranav Putta](https://www.linkedin.com/in/pranav-putta-3512b47a/)** BS @Georgia Tech (NSF REU, Summer 2021)
   - **[Rakshit Naidu](https://rakshit-naidu.github.io)** MS @CMU (Intern, Summer 2022)<br>
     _Next position_: PhD student at Georgia Tech
@@ -91,7 +91,7 @@ well as policy and decision making.
     _Next position_: PhD student at Rice University
   - **[Zhiyan Yao]()**, BS (Intern, Summer 2021)<br>
     _Next position_: Software Engineer at Microsoft
-
+ -->
 <!-- 
   \textbf{Shujun Xia} (BS, City University of Hong Kong, Summer 2024), 
   \textbf{Zarreen Reza} (BS, OpenMined, Spring 2024), 
