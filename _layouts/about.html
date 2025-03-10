@@ -60,7 +60,22 @@ layout: default
             </div>
           {%- endif %}
 
+
+          <!-- Talks -->
+          <div class="clearfix">
+          <h2><a href="{{ '/talks/' | relative_url }}" style="color: inherit;">Selected Talks</a></h2>
+          {%- include talks.html limit=true %}
+          </div>
+
+          <!-- Sponsors -->
+          <div class="clearfix">
+          <h2><a href="{{ '/sponsors/' | relative_url }}" style="color: inherit;">Research sponsors</a></h2>
+          Our group is grateful for the generous support from our sponsors:
+          {%- include sponsors.html limit=true %}
+          </div>
+
           <!-- News -->
+          <br>
           <div>
           {% if page.news and site.announcements.enabled -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
@@ -68,17 +83,6 @@ layout: default
           {%- endif %}
           </div>
           <br>
-
-          <!-- Talks -->
-          <h2><a href="{{ '/talks/' | relative_url }}" style="color: inherit;">Selected Talks</a></h2>
-          {%- include talks.html limit=true %}
-
-          <!-- Sponsors -->
-          <br>
-          <h2><a href="{{ '/sponsors/' | relative_url }}" style="color: inherit;">Research sponsors</a></h2>
-          Our group is grateful for the generous support from our sponsors:
-          {%- include sponsors.html limit=true %}
-
           <!-- Selected papers -->
           {% if page.selected_papers -%}
           <br>

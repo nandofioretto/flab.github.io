@@ -7,6 +7,7 @@ nav: true
 nav_order: 1
 ---
 
+- **Best Paper Award**, AAAI colorai workshop (2025). [Link](https://april-tools.github.io/colorai/)
 - **Outstanding Research Faculty Award**, University of Virginia (2025). [Link](https://research.virginia.edu/initiatives/research-achievement-awards/2024-research-award-winners)
 - **Fellowship in AI Research**, LaCross Institute (2025) [link](https://www.darden.virginia.edu/lacross-ai-institute/initiatives)
 - **Notable Reviewer** at **ICLR** (2023) \| [Press](https://blog.iclr.cc/2023/04/05/announcing-notable-reviewers-and-area-chairs-at-iclr-2023/)

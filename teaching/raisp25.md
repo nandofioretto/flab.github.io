@@ -38,11 +38,11 @@ This is a tentative calendar and it is subject to change.
 | Mon Feb 10 | Fairness        | Intro and bias sources             | [[1](#r1)] -- [[4](#r4)]     | Group 1 [[slides](../raisp25_files/Group1_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-10.md)]     |
 | Wed Feb 12 | Fairness        | Statistical measures               | [[5](#r5)] -- [[8](#r8)]     | Group 2 [[slides](../raisp25_files/Group2_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-12.md)]     |
 | Mon Feb 17 | Fairness        | Tradeoffs                          | [[9](#r9)] -- [[12](#r12)]   | Group 3 [[slides](../raisp25_files/Group3_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-17.md)]     |
-| Wed Feb 20 | Fairness        | LLMs: Toxicy and Bias              | [[13](#r13)] -- [[16](#r16)] | Group 4      |
-| Mon Feb 24 | Fairness        | LLMs: Fairness                     | [[17](#r17)] -- [[19](#r19)] | Group 5      |
-| Wed Feb 26 | Fairness        | Policy aspects                     | [[20](#r20)] -- [[22](#r22)] | Group 6      |
+| Wed Feb 20 | Fairness        | LLMs: Toxicy and Bias              | [[13](#r13)] -- [[16](#r16)] | Group 4 [[slides](../raisp25_files/Group4_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-20.md)]     |
+| Mon Feb 24 | Fairness        | LLMs: Fairness                     | [[17](#r17)] -- [[19](#r19)] | Group 5 [[slides](../raisp25_files/Group5_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-24.md)]     | 
+| Wed Feb 26 | Fairness        | Policy aspects                     | [[20](#r20)] -- [[22](#r22)] | Group 6 [[slides](../raisp25_files/Group6_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-26.md)]     |
 | Mon Mar 3  | No class        | (AAAI)                             |                              |              |
-| Wed Mar 5  | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7      |
+| Wed Mar 5  | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7 [[slides](../raisp25_files/Group7_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/mar-5.md)]     |
 | Wed Mar 12 | NO CLASS        | (Spring break)                     |                              |              |
 | Mon Mar 10 | NO CLASS        | (Spring break)                     |                              |              |
 | Mon Mar 17 | Safety          | Poisoning                          | [[26](#r26)] -- [[29](#r29)] | Group 1      |
