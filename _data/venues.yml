@@ -86,7 +86,10 @@
   color: "#0073e6"
 
 "NeurIPS":
-    color: "#0073e6"
+  color: "#0073e6"
+
+"NeuS":
+  color: "#0073e6"
 
 "NAACL":
     color: "#0073e6"
@@ -124,7 +127,7 @@
     url: https://ppai-workshop.github.io/
     color: "#99ccff"
 
-"CoLoRA":
+"CoLoRAI":
     color: "#99ccff"
 
 "AIORMS":
@@ -132,9 +135,6 @@
 
 "MAPF":
   color: "#99ccff"
-
-"TPDP":
-    color: "#99ccff"
 
 "Efficient Natural Language and Speech Processing workshop, NeurIPS 2024":
     url: https://ml4physicalsciences.github.io/2024/

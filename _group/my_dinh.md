@@ -1,10 +1,11 @@
 ---
 layout: page
 title: My Dinh
-subtitle: PhD Student
+subtitle: Phd, University of Virginia (2021-2025)
 interests: Differentiable Optimization
 img: assets/img/group/my_dinh.png
 redirect: https://mdinh186.github.io
-importance: 1
-category: Current Students
+nextposition: TBA
+importance: 3
+category: Former Students
 ---

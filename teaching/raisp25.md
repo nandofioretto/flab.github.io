@@ -42,22 +42,22 @@ This is a tentative calendar and it is subject to change.
 | Mon Feb 24 | Fairness        | LLMs: Fairness                     | [[17](#r17)] -- [[19](#r19)] | Group 5 [[slides](../raisp25_files/Group5_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-24.md)]     | 
 | Wed Feb 26 | Fairness        | Policy aspects                     | [[20](#r20)] -- [[22](#r22)] | Group 6 [[slides](../raisp25_files/Group6_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/feb-26.md)]     |
 | Mon Mar 3  | No class        | (AAAI)                             |                              |              |
-| Wed Mar 5  | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7 [[slides](../raisp25_files/Group7_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/fairness/mar-5.md)]     |
+| Wed Mar 5  | Safety          | Distribution shift                 | [[23](#r23)] --  [[25](#r25)]| Group 7 [[slides](../raisp25_files/Group7_1.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-5.md)]     |
 | Wed Mar 12 | NO CLASS        | (Spring break)                     |                              |              |
 | Mon Mar 10 | NO CLASS        | (Spring break)                     |                              |              |
-| Mon Mar 17 | Safety          | Poisoning                          | [[26](#r26)] -- [[29](#r29)] | Group 1      |
-| Wed Mar 19 | Safety          | Adversarial Robustness             | [[30](#r30)] -- [[34](#r34)] | Group 2      |
-| Mon Mar 24 | Safety          | Adversarial Robustness             | [[35](#r35)] -- [[39](#r39)] | Group 3      |
-| Wed Mar 26 | Safety          | LLMs: Prompt injection             | [[40](#r40)] -- [[45](#r45)] | Group 4      |
-| Mon Mar 31 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 5      |
-| Wed Apr 2  | Privacy         | Differential Privacy               | [[51](#r51)] -- [[55](#r55)] | Group 6      |
-| Mon Apr 7  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 7      |
-| Wed Apr 9  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 1      |
-| Mon Apr 14 | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 2      |
-| Wed Apr 16 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 3      |
-| Mon Apr 21 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 4      |
-| Wed Apr 24 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 5      |
-| Mon Apr 28 | Evaluation      | LLMs: evaluation                   | [[78](#r78)] -- [[82](#r82)] | Group 6      |
+| Mon Mar 17 | Safety          | Poisoning                          | [[26](#r26)] -- [[29](#r29)] | Group 1 [[slides](../raisp25_files/Group1_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-17.md)]     |
+| Wed Mar 19 | Safety          | Adversarial Robustness             | [[30](#r30)] -- [[34](#r34)] | Group 2 [[slides](../raisp25_files/Group2_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-19.md)]     |
+| Mon Mar 24 | Safety          | Adversarial Robustness             | [[35](#r35)] -- [[39](#r39)] | Group 3 [[slides](../raisp25_files/Group3_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-24.md)]     |
+| Wed Mar 26 | Safety          | LLMs: Prompt injection             | [[40](#r40)] -- [[45](#r45)] | Group 4 [[slides](../raisp25_files/Group4_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-26.md)]     |
+| Mon Mar 31 | Safety          | LLMs: Jailbreaking                 | [[46](#r46)] -- [[50](#r50)] | Group 5 [[slides](../raisp25_files/Group5_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/safety/mar-31.md)]     |
+| Wed Apr 2  | Privacy         | Differential Privacy               | [[51](#r51)] -- [[54](#r55)] | Group 6 [[slides](../raisp25_files/Group6_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-2.md)]     |
+| Mon Apr 7  | Privacy         | Differential Privacy 2             | [[56](#r56)] -- [[58](#r58)] | Group 7  [[slides](../raisp25_files/Group7_2.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-7.md)]     |
+| Wed Apr 9  | Privacy         | Differentially Private ML          | [[59](#r59)] -- [[61](#r61)] | Group 1 [[slides](../raisp25_files/Group1_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-9.md)]     |
+| Mon Apr 14 | Privacy         | Auditing and Membership inference  | [[62](#r62)] -- [[65](#r65)] | Group 2 [[slides](../raisp25_files/Group2_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-14.md)]     |
+| Wed Apr 16 | Privacy         | Privacy and Fairness               | [[66](#r66)] -- [[69](#r69)] | Group 3 [[slides](../raisp25_files/Group3_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-16.md)]     |
+| Mon Apr 21 | Privacy         | LLMs: Privacy in LLMs              | [[70](#r70)] -- [[73](#r73)] | Group 4 [[slides](../raisp25_files/Group4_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/privacy/apr-21.md)]     |
+| Wed Apr 24 | Evaluation      | Model cards                        | [[74](#r74)] -- [[77](#r77)] | Group 5 [[slides](../raisp25_files/Group5_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/evaluation/apr-23.md)]     |      |
+| Mon Apr 28 | Evaluation      | LLMs: evaluation                   | [[78](#r78)] -- [[82](#r82)] | Group 6 [[slides](../raisp25_files/Group6_3.pdf)] [[report](https://github.com/uva-responsibleai/spring25/blob/main/evaluation/apr-28.md)]     |
 | Extra 1    | Unlearning      | Unlearning 1                       | [[83](#r83)] -- [[86](#r86)] |              |
 | Extra 2    | Unlearning      | LLMs: Targeted unlearning          | [[87](#r87)] -- [[90](#r90)] |              |
 
@@ -146,11 +146,12 @@ This is a tentative calendar and it is subject to change.
 
 
 <!-- DP -->
-- <a id="r51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath.
+<!-- - <a id="r51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath. -->
+- <a id="r51">[51].</a> <a href="https://arxiv.org/abs/2411.04710" rel="external nofollow noopener" target="_blank">Differential Privacy Overview and Fundamental Techniques</a> by Fioretto et al. 2024.
 - <a id="r52">[52].</a> <a href="https://ecommons.cornell.edu/items/046034b9-9365-436b-88aa-e8c3fae94b7c" rel="external nofollow noopener" target="_blank">Understanding Database Reconstruction Attacks on Public Data</a> by S Garfinkel, JM Abowd, C Martindale.
 - <a id="r53">[53].</a> <a href="https://www.pnas.org/doi/10.1073/pnas.2300976120" rel="external nofollow noopener" target="_blank">  Database reconstruction does compromise confidentiality</a> by SA Keller and JM Abowd.
-- <a id="r54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.
-- <a id="r55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
+<!-- - <a id="r54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth. -->
+- <a id="r55">[54].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)
 
 <!-- DP -->
 - <a id="r56">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.

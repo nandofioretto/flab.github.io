@@ -7,6 +7,9 @@ nav: true
 nav_order: 1
 ---
 
+
+- **DARPA Disruptive Idea Award** (2025). [Link](https://neus-2025.github.io)
+- **NVIDIA Academic Grant Program Award** (2025). [Link](https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/)
 - **Best Paper Award**, AAAI colorai workshop (2025). [Link](https://april-tools.github.io/colorai/)
 - **Outstanding Research Faculty Award**, University of Virginia (2025). [Link](https://research.virginia.edu/initiatives/research-achievement-awards/2024-research-award-winners)
 - **Fellowship in AI Research**, LaCross Institute (2025) [link](https://www.darden.virginia.edu/lacross-ai-institute/initiatives)

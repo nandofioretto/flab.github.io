@@ -19,7 +19,8 @@
 # award
 # You can implement your own buttons by editing the bib.html file.
 # conferences
-@String{AAAI  = "AAAI Conference on Artificial Intelligence" }
+
+@String{AAAI  = "AAAI Conference on Artificial Intelligence"}
 @String{AISTATS = "International Conference for Artificial Intelligence and Statistics"}
 @String{AAMAS = "International Conference on Autonomous Agents and Multiagent Systems" }
 @String{ADT   = "Algorithmic Decision Theory {(ADT)}" }
@@ -64,6 +65,67 @@
 # 2025
 #################
 
+@book{fioretto2025differential,
+  title={Differential Privacy in Artificial Intelligence: From Theory to Practice},
+  author={Fioretto, Ferdinando and Van Hentenryck, Pascal and others},
+  year={2025},
+  publisher={Now Publishers, Inc.}
+}
+
+@article{AlKontar25,
+   author = {Raed Al Kontar and Tianbao Yang and Ferdinando Fioretto and Farzad Yousefian and},
+   title = {Editorial: Federated Distributed Learning and Analytics},
+   journal = {IISE Transactions},
+   volume = {57},
+   number = {7},
+   pages = {741--742},
+   year = {2025},
+   publisher = {Taylor \& Francis},
+   bibtex_show = {true},
+   abbr        = {IISE},
+   doi = {10.1080/24725854.2025.2479047},
+   URL = { https://doi.org/10.1080/24725854.2025.2479047},
+   eprint = {https://doi.org/10.1080/24725854.2025.2479047}
+}
+
+
+@inproceedings{Fioretto:ICML25,
+      title       = {Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models},
+      author      = {Jinhao Liang and Jacob Christopher and Sven Koenig and Ferdinando Fioretto},
+      year        = {2025},
+      booktitle   = ICML,
+      publisher   = {},
+      abbr        = {ICML},
+      bibtex_show = {true},
+      arxiv       = {2412.17993},
+      abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of feasible multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.}
+}
+
+
+
+@inproceedings{Fioretto:NeuS25,
+      title       = {Neuro-symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation},
+      author      = {Jacob K. Christopher and Michael Cardei and Jinhao Liang and  Ferdinando Fioretto},
+      year        = {2025},
+      booktitle   = {International Conference on Neuro-symbolic Systems (NeuS)},
+      abbr        = {NeuS},
+      bibtex_show = {true}, 
+      award       = {DARPA Disruptive Ideas Award & Oral},
+      abstract    = {Despite the remarkable generative capabilities of diffusion models, their integration into safety-critical or scientifically rigorous applications remains hindered by the need to ensure compliance with stringent physical, structural, and operational constraints. To address this challenge, this paper introduces Neuro-Symbolic Diffusion (NSD), a novel framework that interleaves diffusion steps with symbolic optimization, enabling the generation of certifiably consistent samples under user-defined functional and logic constraints. This key feature is provided for both standard and discrete diffusion models, enabling, for the first time, the generation of both continuous (e.g., images and trajectories) and discrete (e.g., molecular structures and natural language) outputs that comply with constraints. This ability is demonstrated on tasks spanning three key challenges: (1) Safety, in the context of non-toxic molecular generation and collision-free trajectory optimization; (2) Data scarcity, in domains like drug discovery and materials engineering; and (3) Out-of-domain generalization, where enforcing symbolic constraints allows adaptation beyond the training distribution.}
+}
+
+@inproceedings{Fioretto:FAccT25,
+  title     = {The Data Minimization Principle in Machine Learning},
+  author    = {Ferdinando Fioretto and Prakhar Ganesh and Cuong Tran and Reza Shokri},
+  booktitle = FAccT,
+  year      = {2025},
+  abbr        = {FAccT},
+  alsoin      = {Workshop on Generative AI and Law},
+  alsoinyear  = {ICML 2024},
+  bibtex_show = {true},
+  arxiv       = {2405.19471},
+  abstract = {The principle of data minimization requires organizations to \emph{collect, process, and retain only personal data that is adequate, relevant, and limited to what is necessary for specified objectives}. It's grounded in the expectation that not  all collected data is essential for the objective and, instead, contributes to a heightened risk of information leakage. However, despite its legal significance and endorsement by global data protection regulations, the data minimization principle lacks a mathematical formalization suitable for real-world ML applications. In particular, the current discourse on data minimization practices often overlooks two crucial aspects: {\bf (1)} the individualized nature of minimization (e.g., information that is unimportant for an individual may be critical for another) and {\bf (2)} its intrinsic link to data privacy. To overcome these limitations, this paper introduces a formal framework for data minimization in ML while being faithful to its legal notion; adapts and evaluates various optimization algorithms to solve the problem of data minimization; and analyzes their compatibility with real-world privacy. In particular, we seek to answer a critical question: ``Do data minimization requirements in various regulations meet privacy expectations in legal frameworks?'' Our evaluations reveal that the answer is, unfortunately, no. While being an implicit intention, the requirements of data minimization are not necessarily aligned with risk of reconstruction and re-identification and thus may not provide the expected privacy protection. With this work, we aim to lay down a path for future research for developing ML systems that comply with the legal requirements of data minimization.}
+}
 
 @inproceedings{Fioretto:ICLR25,
       title       = {Learning To Solve Differential Equation Constrained Optimization Problems},
@@ -139,14 +201,15 @@
 
 @inproceedings{Fioretto:colorai25,
       title={Low-rank finetuning for LLMs: A fairness perspective},
-      author={Saswat Das and Marco Romanelli and Cuong Tran and Zarreen Reza and Bhavya Kailkhura and Ferdinando Fioretto},
+      author={Saswat Das and Marco Romanelli and Cuong Tran and Bhavya Kailkhura and Ferdinando Fioretto},
       year        = {2025},
       volume      = {39},
       booktitle   = {AAAI CoLoRAI Workshop},
       volume      = {abs/2405.18572},
       doi         = {10.48550/arXiv.2405.18572},
       arxiv       = {2405.18572},
-      abbr        = {CoLoRA},
+      abbr        = {CoLoRAI},
+      award       = {Best paepr award},
       bibtex_show = {true},
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
@@ -182,14 +245,59 @@
   }
   
 
-@article{Fioretto:25b,
+@article{Fioretto:25e,
+      title={Disclosure Audits for LLM Agents}, 
+      author={Saswat Das and Jameson Sandler and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2506.10171},
+      doi         = {10.48550/arXiv.2506.10171},
+      arxiv       = {2506.10171},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Large Language Model agents have begun to appear as personal assistants,
+customer service bots, and clinical aides. While these applications deliver
+substantial operational benefits, they also require continuous access to
+sensitive data, which increases the likelihood of unauthorized disclosures.
+This study proposes an auditing framework for conversational privacy that
+quantifies and audits these risks. The proposed Conversational Manipulation for
+Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to
+stress-test agents that enforce strict privacy directives. Rather than focusing
+solely on a single disclosure event, CMPL simulates realistic multi-turn
+interactions to systematically uncover latent vulnerabilities. Our evaluation
+on diverse domains, data modalities, and safety configurations demonstrate the
+auditing framework's ability to reveal privacy risks that are not deterred by
+existing single-turn defenses. In addition to introducing CMPL as a diagnostic
+tool, the paper delivers (1) an auditing procedure grounded in quantifiable
+risk metrics and (2) an open benchmark for evaluation of conversational privacy
+across agent implementations.}
+}
+
+
+
+
+
+@article{Fioretto:25d,
+      title={Constrained Language Generation with Discrete Diffusion Models}, 
+      author={Michael Cardei and Jacob K Christopher and Thomas Hartvigsen and Brian R. Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2503.09790},
+      doi         = {10.48550/arXiv.2503.09790},
+      arxiv       = {2503.09790},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Constraints are critical in text generation as LLM outputs are often unreliable when it comes to ensuring generated outputs adhere to user defined instruction or general safety guidelines. To address this gap, we present Constrained Discrete Diffusion (CDD), a novel method for enforcing constraints on natural language by integrating discrete diffusion models with differentiable optimization. Unlike conventional text generators, which often rely on post-hoc filtering or model retraining for controllable generation, we propose imposing constraints directly into the discrete diffusion sampling process. We illustrate how this technique can be applied to satisfy a variety of natural language constraints, including (i) toxicity mitigation by preventing harmful content from emerging, (ii) character and sequence level lexical constraints, and (iii) novel molecule sequence generation with specific property adherence. Experimental results show that our constraint-aware procedure achieves high fidelity in meeting these requirements while preserving fluency and semantic coherence, outperforming auto-regressive and existing discrete diffusion approaches.}
+}
+
+
+@article{Fioretto:25c,
       title={Training-Free Constrained Generation With Stable Diffusion Models}, 
       author={Stefano Zampini and Jacob K Christopher and Luca Oneto and Davide Anguita and Ferdinando Fioretto},
       year        = {2025},
       journal     = {CoRR},
       volume      = {abs/2502.05625},
       doi         = {10.48550/arXiv.2502.05625},
-      year        = {2025},
       arxiv       = {2502.05625},
       abbr        = {ArXiv},
       bibtex_show = {true},
@@ -204,7 +312,6 @@
       journal     = {CoRR},
       volume      = {abs/2502.05468},
       doi         = {10.48550/arXiv.2502.05468},
-      year        = {2025},
       arxiv       = {2502.05468},
       abbr        = {ArXiv},
       bibtex_show = {true},
@@ -252,7 +359,7 @@
   year        = {2024},
   volume      = {37},
   pages       = {},
-  url         = {TBA},
+  url         = {https://neurips.cc/virtual/2024/100112},
   publisher   = {Curran Associates, Inc.},
   alsoin       = {Machine Learning and the Physical Sciences Workshop},
   alsoinyear   = {NeurIPS 2024},
@@ -270,7 +377,7 @@
   year        = {2024},
   volume      = {37},
   pages       = {},
-  url         = {TBA},
+  url         = {https://neurips.cc/virtual/2024/100112},
   arxiv        = {2402.03559},
   abbr         = {NeurIPS},
   award       = {Spotlight},
