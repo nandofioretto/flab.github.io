@@ -67,9 +67,10 @@
 
 @book{fioretto2025differential,
   title={Differential Privacy in Artificial Intelligence: From Theory to Practice},
-  author={Fioretto, Ferdinando and Van Hentenryck, Pascal and others},
+  author={Ferdinando Fioretto and Pascal Van Hentenryck and others},
   year={2025},
-  publisher={Now Publishers, Inc.}
+  publisher={Now Publishers, Inc.},
+  abbr= {Book}
 }
 
 @article{AlKontar25,
@@ -245,6 +246,31 @@
   }
   
 
+
+@article{Fioretto:25g,
+      title       = {A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints},
+      author      = {James Kotary and Himanshu Sharma and Ethan King and Draguna Vrabie and Ferdinando Fioretto and Jan Drgona},
+      journal     = {CoRR},
+      volume      = {abs/2507.09050},
+      doi         = {10.48550/arXiv.2507.09050},
+      arxiv       = {2507.09050},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.}
+}
+
+@article{Fioretto:25f,
+      title    = {Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based},
+      author   = {Vincenzo Di Vito and Kaarthik Sundar and Ferdinando Fioretto and Deepjyoti Deka},
+      journal     = {CoRR},
+      volume      = {abs/2507.23094},
+      doi         = {10.48550/arXiv.2507.23094},
+      arxiv       = {2507.23094},
+      abbr        = {ArXiv},
+      bibtex_show = {true},
+      abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.}
+}
+
 @article{Fioretto:25e,
       title={Disclosure Audits for LLM Agents}, 
       author={Saswat Das and Jameson Sandler and Ferdinando Fioretto},
@@ -272,8 +298,6 @@ tool, the paper delivers (1) an auditing procedure grounded in quantifiable
 risk metrics and (2) an open benchmark for evaluation of conversational privacy
 across agent implementations.}
 }
-
-
 
 
 
