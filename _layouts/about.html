@@ -63,7 +63,7 @@ layout: default
 
           <!-- Sponsors -->
           <div class="clearfix">
-          <h2><a href="{{ '/sponsors/' | relative_url }}" style="color: inherit;">Research sponsors</a></h2>
+          <h2>Research sponsors</h2>
           Our group is grateful for the generous support from our sponsors:
           {%- include sponsors.html limit=true %}
           </div>
@@ -72,7 +72,7 @@ layout: default
           <br>
           <div>
           {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
+            <!-- <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2> -->
             {%- include news.html limit=true %}
           {%- endif %}
           </div>

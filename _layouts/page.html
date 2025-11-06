@@ -16,7 +16,7 @@ layout: default
           {%- if page.related_publications != null and page.related_publications.size > 0 -%}
           {% assign publications = page.related_publications | replace: ", ", "," | split: "," | join: "|" %}
           <h2>References</h2>
-          <div class="publications">
+          <div class="archive publications-archive">
             {% bibliography -f {{ site.scholar.bibliography }} -q @*[key^={{ publications }}]* %}
           </div>
           {%- endif %}

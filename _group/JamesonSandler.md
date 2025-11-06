@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Jameson Sandler
-subtitle: BS student
-interests: LLMs
+subtitle: PhD student (Fall 25)
+interests: Generative AI
 img: assets/img/group/JamesonSandler.png
-importance: 10
+importance: 6
 category: Current Students
 ---

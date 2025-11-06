@@ -22,7 +22,7 @@ I am an assistant professor of Computer Science at the [University of Virginia](
 I lead the [Responsible AI for Science and Engineering (RAISE)](/group/) group where we make advances in artificial intelligence with focus on two key themes:\\
   **Foundation Models for Science and Engineering**: We develop the foundations to blend predictive and generative models and neuro-symbolic reasoning for complex scientific and engineering problems.\\
   <!-- and  create ways to integrate knowledge, constraints, and physical principles into learning models. -->
-  **Trustworthy & Assured AI**: We analyze the assurance of AI systems in support of decision-making and learning tasks, focusing especially on privacy, safety, and fairness.
+  **Responsible AI**: We analyze the assurance of AI systems in support of decision-making and learning tasks, focusing especially on privacy, safety, and fairness.
 
 
 <!-- I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
@@ -30,8 +30,7 @@ the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, th
 _2021 ISSNAF Mario Gerla Young Investigator Award_, the _2021 ACP Early Career Researcher Award_,
 the _2017 AI*AI Best AI dissertation award_, and _several best paper awards_. 
  -->
-My research has been generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), a [Google Faculty Research Award](https://research.google/outreach/research-scholar-program/recipients/), an [Amazon Research Award](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto), a [Cohere For AI Research Grant Program](https://cohere.com/blog/c4ai-research-grants), a [NVIDIA Academic Grant Program Award](https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/), 
- the [LaCross Institute](https://www.darden.virginia.edu/lacross-ai-institute/initiatives), and the University of Virginia.
+My research has been generously supported by various projects from the [National Science Foundation](https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22Ferdinando+Fioretto%22&ActiveAwards=true&ExpiredAwards=true), a [Google Faculty Research Award](https://research.google/outreach/research-scholar-program/recipients/), an [Amazon Research Award](https://www.amazon.science/research-awards/recipients/ferdinando-fioretto), a [Cohere For AI Research Grant Program](https://cohere.com/blog/c4ai-research-grants), a [NVIDIA Academic Grant Program Award](https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/), the [LaCross Institute](https://www.darden.virginia.edu/lacross-ai-institute/initiatives), and the University of Virginia.
 
 For more details, please see my [papers](publications/) and [short bio](bio/)
 

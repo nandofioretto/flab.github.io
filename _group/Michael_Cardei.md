@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Michael Cardei
-subtitle: PhD Student
+subtitle: PhD Student (Fall 24)
 interests: Responsible Generative AI
 img: assets/img/group/michael.jpg
 redirect: https://michaelcardei.github.io

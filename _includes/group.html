@@ -6,22 +6,19 @@
     {%- else -%}
     <a href="{{ project.url | relative_url }}">
       {%- endif %}
-      <div class="hoverable">
+      <div class="hoverable group-card">
         {%- if project.img %}
         {%- include figure.html
           path=project.img
-          class="img-fluid z-depth-1 rounded-circle"
+          class="img-fluid z-depth-1 rounded-circle group-card__avatar"
           width="200" height="200"
           alt="project thumbnail" -%}
         {%- endif %}
-        <div class="card-body">
-          <h3 class="card-title">{{ project.title }}</h3>
-          <strong>{{ project.subtitle }}</strong>
-          {%- if project.interests %}
-          <p class="card-text"><strong>Research Interests</strong>: {{ project.interests }}</p>
-          {%- endif %}
+        <div class="card-body group-card__body">
+          <h3 class="card-title group-card__title">{{ project.title }}</h3>
+          <strong class="group-card__subtitle">{{ project.subtitle }}</strong>
           {%- if project.nextposition %}
-            <p class="card-text"><strong>Next known position</strong>: {{ project.nextposition }}</p>
+            <p class="card-text group-card__next"><strong>Next known position</strong>: {{ project.nextposition }}</p>
           {%- endif %}
           <div class="row ml-1 mr-1 p-0">
             {%- if project.github -%}

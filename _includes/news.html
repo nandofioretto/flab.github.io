@@ -1,29 +1,75 @@
-          <div class="news">
-            {% if site.news != blank -%}
-            {%- assign news_size = site.news | size -%}
-            <div class="table-responsive" {% if include.limit and site.announcements.scrollable and news_size > 3 %}style="max-height: 60vw"{% endif %}>
-              <table class="table table-sm table-borderless">
-              {%- assign news = site.news | reverse -%}
-              {% if include.limit and site.announcements.limit %}
-              {% assign news_limit = site.announcements.limit %}
-              {% else %}
-              {% assign news_limit = news_size %}
-              {% endif %}
-              {% for item in news limit: news_limit %}
-                <tr>
-                  <th scope="row" width="70px">{{ item.date | date: "%b-%y" }}</th>
-                  <td>
-                    {% if item.inline -%}
-                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                    {%- else -%}
-                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {%- endif %}
-                  </td>
-                </tr>
-              {%- endfor %}
-              </table>
+<!-- _includes/news.html -->
+<div class="news-compact">
+  {% if site.news != blank -%}
+    {%- assign news_size = site.news | size -%}
+    {%- assign news = site.news | reverse -%}
+    
+    <!-- Check if this is the main news page or a limited preview -->
+    {% if page.permalink == '/news/' %}
+      {%- assign display_limit = news_size -%}
+      {%- assign show_all = true -%}
+    {% else %}
+      {%- assign display_limit = 12 -%}
+      {%- assign show_all = false -%}
+    {% endif %}
+    
+    <section class="news-group">
+      <header class="news-group__header">
+        {% if show_all %}
+          <h3>All News</h3>
+          <span class="news-group__count">{{ news_size }} items</span>
+        {% else %}
+          <h3>Recent News</h3>
+          <span class="news-group__count">{{ news_size }} total</span>
+        {% endif %}
+      </header>
+      <ul class="news-stream">
+        {% for item in news limit: display_limit %}
+          {% assign item_content = item.content | remove: '<p>' | remove: '</p>' | strip %}
+          {% assign news_type = "general" %}
+          {% if item_content contains "accepted" or item_content contains "published" or item_content contains "preprint" %}
+            {% assign news_type = "publication" %}
+          {% elsif item_content contains "award" or item_content contains "Award" %}
+            {% assign news_type = "award" %}
+          {% elsif item_content contains "talk" or item_content contains "keynote" or item_content contains "invited" or item_content contains "workshop" %}
+            {% assign news_type = "talk" %}
+          {% elsif item_content contains "grant" or item_content contains "funding" or item_content contains "NSF" %}
+            {% assign news_type = "funding" %}
+          {% endif %}
+          
+          <li class="news-entry" data-category="{{ news_type }}">
+            <span class="news-entry__date">{{ item.date | date: "%b %Y" }}</span>
+            <div class="news-entry__content">
+              {% if item.inline -%}
+                <div class="news-entry__text">{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</div>
+              {%- else -%}
+                <a class="news-entry__title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {%- endif %}
             </div>
-          {%- else -%}
-            <p>No news so far...</p>
-          {%- endif %}
-          </div>
+            <span class="news-entry__badge" data-badge="{{ news_type }}">
+              {% case news_type %}
+                {% when "publication" %}Publication
+                {% when "award" %}Award
+                {% when "talk" %}Event
+                {% when "funding" %}Funding
+                {% else %}News
+              {% endcase %}
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    
+    {% unless show_all %}
+      {% if news_size > display_limit %}
+        <div class="news-more">
+          <a href="{{ '/news/' | relative_url }}" class="news-more__link">
+            View all {{ news_size }} news items →
+          </a>
+        </div>
+      {% endif %}
+    {% endunless %}
+  {%- else -%}
+    <p>No news so far...</p>
+  {%- endif %}
+</div>
