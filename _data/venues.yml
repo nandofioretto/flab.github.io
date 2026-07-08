@@ -35,6 +35,10 @@
   url: https://content.iospress.com/journals/intelligenza-artificiale/17/1
   color: "#99ccff"
 
+"SEGAN":
+  url: https://www.sciencedirect.com/journal/sustainable-energy-grids-and-networks
+  color: "#99ccff"
+
 "TOMACS":
   url: https://dl.acm.org/journal/tomacs
   color: "#99ccff"
@@ -61,6 +65,9 @@
 "CMSB":
     color: "#99ccff"
 
+"CVPR":
+    color: "#99ccff"
+
 "ECAI":
     color: "#99ccff"
 
@@ -85,6 +92,9 @@
 "ISGT":
   color: "#99ccff"
 
+"L4DC":
+  color: "#99ccff"
+
 "NeurIPS":
   color: "#99ccff"
 
@@ -93,6 +103,9 @@
 
 "NAACL":
     color: "#99ccff"
+
+"MLSys":
+  color: "#99ccff"
 
 "PMAPS":
   color: "#99ccff"
@@ -153,7 +166,7 @@
     url: https://regulatableml.github.io/
     color: "#99ccff"
 
-"AI4D3 Workshop":
+"AI4D3":
     url: https://ai4d3.github.io/2025/index.html
     color: "#99ccff"
 

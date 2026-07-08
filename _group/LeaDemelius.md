@@ -6,6 +6,6 @@ interests: Differential Privacy and Fairness
 nextposition: PhD student at the University of Graz
 img: assets/img/group/lea_demelius.jpg
 redirect: https://scholar.google.com/citations?user=m1rv9sYAAAAJ&hl=de
-importance: 1
+importance: 3
 category: Visiting Students and Interns
 ---

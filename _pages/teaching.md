@@ -12,9 +12,21 @@ nav_order: 4
   <section class="teaching-group">
     <header class="teaching-group__header">
       <h2>University of Virginia</h2>
-      <span class="teaching-group__count">2 courses</span>
+      <span class="teaching-group__count">3 courses</span>
     </header>
     <ul class="teaching-stream">
+      <li class="course-entry" data-category="graduate">
+        <span class="course-entry__title">CS6501: Constrained Generative AI for Science and Engineering</span>
+        <span class="course-entry__badge" data-badge="graduate">Graduate</span>
+        <span class="course-entry__meta">
+          <span class="course-entry__org">Computer Science Department</span>
+          <span class="course-entry__semester">Spring 2026</span>
+          <a class="course-entry__link" href="constrgenAI">course website</a>
+          <span class="course-entry__description">
+            Advanced topics in controlled generation as approximate inference under constraints. Covers diffusion models, flow matching, discrete language models, differential optimization and other control-based tools for distribution steering.
+          </span>
+        </span>
+      </li>
       <li class="course-entry" data-category="undergraduate">
         <span class="course-entry__title">CS4710: Artificial Intelligence</span>
         <span class="course-entry__badge" data-badge="undergraduate">Undergraduate</span>

@@ -13,6 +13,10 @@
 {%- elsif entry.pdf -%}
   {%- if entry.pdf contains '://' -%}
     {%- assign primary_link = entry.pdf -%}
+  {%- elsif entry.pdf | slice: 0, 7 == 'assets/' -%}
+    {%- assign primary_link = entry.pdf | prepend: '/' | relative_url -%}
+  {%- elsif entry.pdf | slice: 0, 8 == '/assets/' -%}
+    {%- assign primary_link = entry.pdf | relative_url -%}
   {%- else -%}
     {%- assign primary_link = entry.pdf | prepend: '/assets/pdf/' | relative_url -%}
   {%- endif -%}
@@ -148,6 +152,10 @@
 {%- if entry.pdf -%}
   {%- if entry.pdf contains '://' -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.pdf }}" class="pub-link">PDF</a>{%- endcapture -%}
+  {%- elsif entry.pdf | slice: 0, 7 == 'assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.pdf | prepend: '/' | relative_url }}" class="pub-link">PDF</a>{%- endcapture -%}
+  {%- elsif entry.pdf | slice: 0, 8 == '/assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.pdf | relative_url }}" class="pub-link">PDF</a>{%- endcapture -%}
   {%- else -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">PDF</a>{%- endcapture -%}
   {%- endif -%}
@@ -163,12 +171,16 @@
   {%- assign link_count = link_count | plus: 1 -%}
 {%- endif -%}
 {%- if entry.arxiv -%}
-  {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="pub-link">arXiv</a>{%- endcapture -%}
+  {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="https://arxiv.org/pdf/{{ entry.arxiv }}" class="pub-link">PDF</a>{%- endcapture -%}
   {%- assign link_count = link_count | plus: 1 -%}
 {%- endif -%}
 {%- if entry.supp -%}
   {%- if entry.supp contains '://' -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.supp }}" class="pub-link">Supp</a>{%- endcapture -%}
+  {%- elsif entry.supp | slice: 0, 7 == 'assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.supp | prepend: '/' | relative_url }}" class="pub-link">Supp</a>{%- endcapture -%}
+  {%- elsif entry.supp | slice: 0, 8 == '/assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.supp | relative_url }}" class="pub-link">Supp</a>{%- endcapture -%}
   {%- else -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">Supp</a>{%- endcapture -%}
   {%- endif -%}
@@ -185,6 +197,10 @@
 {%- if entry.poster -%}
   {%- if entry.poster contains '://' -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.poster }}" class="pub-link">Poster</a>{%- endcapture -%}
+  {%- elsif entry.poster | slice: 0, 7 == 'assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.poster | prepend: '/' | relative_url }}" class="pub-link">Poster</a>{%- endcapture -%}
+  {%- elsif entry.poster | slice: 0, 8 == '/assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.poster | relative_url }}" class="pub-link">Poster</a>{%- endcapture -%}
   {%- else -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">Poster</a>{%- endcapture -%}
   {%- endif -%}
@@ -193,6 +209,10 @@
 {%- if entry.slides -%}
   {%- if entry.slides contains '://' -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.slides }}" class="pub-link">Slides</a>{%- endcapture -%}
+  {%- elsif entry.slides | slice: 0, 7 == 'assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.slides | prepend: '/' | relative_url }}" class="pub-link">Slides</a>{%- endcapture -%}
+  {%- elsif entry.slides | slice: 0, 8 == '/assets/' -%}
+    {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.slides | relative_url }}" class="pub-link">Slides</a>{%- endcapture -%}
   {%- else -%}
     {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">Slides</a>{%- endcapture -%}
   {%- endif -%}
@@ -217,8 +237,10 @@
 
     <div class="pub-main">
       <div class="pub-header">
-        <strong class="pub-title">
-          {%- if primary_link -%}
+        <strong class="pub-title{% if entry.abstract %} has-abstract{% endif %}">
+          {%- if entry.abstract -%}
+            <span class="title-abstract-toggle">{{ entry.title }}</span>
+          {%- elsif primary_link -%}
             {%- if primary_link contains '://' or primary_link contains 'mailto:' -%}
               <a href="{{ primary_link }}">{{ entry.title }}</a>
             {%- else -%}
@@ -242,21 +264,26 @@
         {%- if entry.note -%}
           <span class="pub-note-inline">{{ entry.note }}</span>
         {%- endif -%}
+        {%- if link_items != '' -%}
+          <span class="pub-links-inline"><span class="pub-link-sep">|</span>{{ link_items }}</span>
+        {%- endif -%}
+      </div>
+
         {%- if entry.alsoin -%}
-          <span class="pub-alsoin"><span class="pub-link-sep light-sep">|</span>
+        <div class="pub-info">
+          <span class="pub-alsoin">
+            <!--  <span class="pub-link-sep light-sep"></span> -->
             {%- if site.data.venues[entry.alsoin] -%}
               {%- assign also_url = site.data.venues[entry.alsoin].url -%}
-              &nbsp; Also appeared in:
+              Also appeared in:
               <a href="{{ also_url }}">{{ entry.alsoin }}{% if entry.alsoinyear %} ({{ entry.alsoinyear }}){% endif %}</a>
             {%- else -%}
               {{ entry.alsoin }}{% if entry.alsoinyear %} ({{ entry.alsoinyear }}){% endif %}
             {%- endif -%}
           </span>
+        </div>
         {%- endif -%}
-        {%- if link_items != '' -%}
-          <span class="pub-links-inline"><span class="pub-link-sep">|</span>{{ link_items }}</span>
-        {%- endif -%}
-      </div>
+
 
       {%- if site.badges -%}
         <div class="pub-badges">

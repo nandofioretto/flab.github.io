@@ -9,17 +9,47 @@ nav_order: 1
 
 <!-- _pages/awards.md -->
 <div class="awards-compact">
+
+  <section class="awards-group">
+    <header class="awards-group__header">
+      <h2>2026</h2>
+      <span class="awards-group__count">1 honor</span>
+    </header>
+    <ul class="awards-stream">
+
+  <li class="award-entry" data-category="best-paper">
+        <span class="award-entry__title">Best Paper Award</span>
+        <span class="award-entry__badge" data-badge="best-paper">Paper Award</span>
+        <span class="award-entry__meta">
+          <span class="award-entry__org">Institute of Industrial and System Engineers (IISE DAIS)</span>
+          <a class="award-entry__link" href="https://www.iise.org/details.aspx?id=872">IISE page</a>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+
   <section class="awards-group">
     <header class="awards-group__header">
       <h2>2025</h2>
-      <span class="awards-group__count">5 honors</span>
+      <span class="awards-group__count">6 honors</span>
     </header>
     <ul class="awards-stream">
+
+  <li class="award-entry" data-category="best-paper">
+        <span class="award-entry__title">Best Student Paper Award — NeurIPS AI4D3 Workshop</span>
+        <span class="award-entry__badge" data-badge="best-paper">Paper Award</span>
+        <span class="award-entry__meta">
+          <span class="award-entry__org">NeurIPS AI4D3 workshop</span>
+          <a class="award-entry__link" href="https://ai4d3.github.io/2025/index.html">workshop site</a>
+        </span>
+      </li>
+
   <li class="award-entry" data-category="research">
         <span class="award-entry__title">DARPA Disruptive Idea Award</span>
     <span class="award-entry__badge" data-badge="research">Research Award</span>
         <span class="award-entry__meta">
-          <span class="award-entry__org">DARPA NeurIPS Neuroscience Workshop</span>
+          <span class="award-entry__org">Neuro-symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation</span>
           <a class="award-entry__link" href="https://neus-2025.github.io">details</a>
         </span>
       </li>
@@ -94,7 +124,7 @@ nav_order: 1
     <span class="award-entry__badge" data-badge="best-paper">Best Paper Nominee</span>
         <span class="award-entry__meta">
           <span class="award-entry__org">NeurIPS — <em>Pruning has a Disparate Impact on Model Accuracy</em></span>
-          <a class="award-entry__link" href="https://neurips.cc/Conferences/2022/ScheduleMultitrack?event=64874">conference page</a>
+          <a class="award-entry__link" href="https://arxiv.org/abs/2205.13574">paper</a>
         </span>
       </li>
   <li class="award-entry" data-category="research">

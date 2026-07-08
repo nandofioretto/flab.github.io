@@ -2,6 +2,16 @@
  * Content
  ******************************************************************************/
 
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -48,3 +58,36 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+
+/******************************************************************************
+ * Bio
+ ******************************************************************************/
+
+.bio-section {
+  margin-top: 1.75rem;
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--global-text-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.6rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    li {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--global-text-color);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<!-- _includes/highlighted_projects.html -->
+{%- assign highlighted_projects = site.projects | where: "highlight", true -%}
+{%- if highlighted_projects == empty -%}
+  {%- assign highlighted_projects = site.projects | sort: "importance" -%}
+{%- endif -%}
+{%- assign highlighted_projects = highlighted_projects | slice: 0, 4 -%}
+
+<section class="highlight-grid" aria-label="Highlighted projects">
+  {%- for project in highlighted_projects -%}
+    {%- if project.redirect -%}
+      {%- assign project_url = project.redirect -%}
+    {%- else -%}
+      {%- assign project_url = project.url | relative_url -%}
+    {%- endif -%}
+    <article class="highlight-card">
+      <div class="highlight-media">
+        {%- if project.img -%}
+          {% include figure.html path=project.img alt=project.title class="highlight-img" %}
+        {%- else -%}
+          <div class="highlight-placeholder" aria-hidden="true"></div>
+        {%- endif -%}
+      </div>
+      <div class="highlight-body">
+        <h3 class="highlight-title">{{ project.title }}</h3>
+        <p class="highlight-text">{{ project.description }}</p>
+        <a class="highlight-link" href="{{ project_url }}">Learn more</a>
+      </div>
+    </article>
+  {%- endfor -%}
+</section>

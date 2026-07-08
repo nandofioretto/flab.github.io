@@ -4,6 +4,6 @@ title: Connor Lewis (Spring 25)
 subtitle: BS student
 interests: Generative AI, Optimization
 img: assets/img/group/Connor_Lewis.png
-importance: 13
+importance: 31
 category: Current Students
 ---

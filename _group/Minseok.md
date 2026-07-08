@@ -5,5 +5,5 @@ subtitle: BS student
 interests: Generative AI
 img: assets/img/group/Minseok.jpg
 importance: 12
-category: Current Students
+category: Visiting Students and Interns
 ---

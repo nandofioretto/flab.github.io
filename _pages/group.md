@@ -37,11 +37,80 @@ well as policy and decision making.
     </div>
   </div>
   {%- else -%}
+  {% if category == "Former Students" -%}
+  <ul class="former-group-list">
+    {%- for project in sorted_projects -%}
+    <li class="former-group-list__item">
+      {%- if project.img -%}
+      <div class="former-group-list__media">
+        {%- if project.redirect -%}
+        <a href="{{ project.redirect }}" class="former-group-list__media-link">
+          {%- include figure.html
+            path=project.img
+            class="img-fluid z-depth-1 rounded-circle former-group-list__avatar"
+            width="84" height="84"
+            alt=project.title -%}
+        </a>
+        {%- else -%}
+          {%- include figure.html
+            path=project.img
+            class="img-fluid z-depth-1 rounded-circle former-group-list__avatar"
+            width="84" height="84"
+            alt=project.title -%}
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+      <div class="former-group-list__content">
+        <span class="former-group-list__name">
+          {%- if project.redirect -%}
+          <a href="{{ project.redirect }}">{{ project.title }}</a>
+          {%- else -%}
+          {{ project.title }}
+          {%- endif -%}
+        </span>
+        {%- if project.subtitle -%}
+        <span class="former-group-list__meta">{{ project.subtitle }}</span>
+        {%- endif -%}
+        {%- if project.interests -%}
+        <span class="former-group-list__meta"><strong>Research:</strong> {{ project.interests }}</span>
+        {%- endif -%}
+        {%- if project.nextposition -%}
+        <span class="former-group-list__meta"><strong>Next position:</strong> {{ project.nextposition }}</span>
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {% elsif category == "Visiting Students and Interns" -%}
+  <ul class="visiting-group-list">
+    {%- for project in sorted_projects -%}
+    <li class="visiting-group-list__item">
+      <span class="visiting-group-list__name">
+        {%- if project.redirect -%}
+        <a href="{{ project.redirect }}">{{ project.title }}</a>
+        {%- else -%}
+        {{ project.title }}
+        {%- endif -%}
+      </span>
+      {%- if project.subtitle -%}
+      <span class="visiting-group-list__meta">{{ project.subtitle | strip_html }}</span>
+      {%- endif -%}
+      {%- if project.interests -%}
+      <span class="visiting-group-list__meta"><strong>Research:</strong> {{ project.interests }}</span>
+      {%- endif -%}
+      {%- if project.nextposition -%}
+      <span class="visiting-group-list__meta"><strong>Next position:</strong> {{ project.nextposition }}</span>
+      {%- endif -%}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else -%}
   <div class="grid">
     {%- for project in sorted_projects -%}
       {% include group.html %}
     {%- endfor %}
   </div>
+  {%- endif -%}
   {%- endif -%}
   {% endfor %}
 

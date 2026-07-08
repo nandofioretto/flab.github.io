@@ -33,6 +33,13 @@ layout: default
               {{ page.profile.address }}
             </div>
             {%- endif %}
+            {%- if page.social %}
+            <div class="profile-social">
+              <div class="contact-icons">
+                {% include social.html %}
+              </div>
+            </div>
+            {%- endif %}
           </div>
           {%- endif %}
 
@@ -46,36 +53,30 @@ layout: default
             {%- include latest_posts.html %}
           {%- endif %}
 
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
-            </div>
-          {%- endif %}
-
-
           <!-- Sponsors -->
           <div class="clearfix">
-          <h2>Research sponsors</h2>
+          <h3 class="group__title">Research sponsors</h3>
           Our group is grateful for the generous support from our sponsors:
           {%- include sponsors.html limit=true %}
           </div>
 
+          <!-- Highlighted work -->
+          <div class="clearfix">
+            <h3 class="group__title">Highlighted work</h3>
+            A few recent projects that reflect our current directions and collaborations.
+            {%- include highlighted_projects.html -%}
+            <a href="{{ '/highlights/' | relative_url }}">View all highlighted work →</a>
+          </div>
+
           <!-- News -->
           <br>
-          <div>
+          <div class="clearfix">
           {% if page.news and site.announcements.enabled -%}
             <!-- <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2> -->
             {%- include news.html limit=true %}
           {%- endif %}
           </div>
+
           <br>
           <!-- Selected papers -->
           {% if page.selected_papers -%}

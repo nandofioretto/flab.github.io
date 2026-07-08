@@ -26,6 +26,7 @@
 @String{ADT   = "Algorithmic Decision Theory {(ADT)}" }
 @String{CP    = "International Conference on Principles and Practice of Constraint Programming" }
 @String{CPAIOR = "Integration of Constraint Programming, Artificial Intelligence, and Operations Research"}
+@String{CVPR = "Computer Vision and Pattern Recognition"}
 @String{ECAI  = "European Conference on Artificial Intelligence" }
 @String{ECML  = "European Conference on Machine Learning" }
 @String{FAccT = "ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)"}
@@ -45,6 +46,8 @@
 @String{UAI = "Conference on Uncertainty in Artificial Intelligence" }
 @String{WWW   = "The {ACM} Web Conference"}
 @String{PMAPS =  "International Conference on Probabilistic Methods Applied to Power Systems"}
+@String{SatML =  "IEEE Secure and Trustworthy Machine Learning Conference"}
+@String{MLSys =  "Conference on Machine Learning and Systems"}
 
 # journals
 @String{AIJ = "Artificial Intelligence Journal" }
@@ -61,164 +64,305 @@
 
 @string{WCB = {Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics}}
 
+
 #################
-# 2025
+# 2026
 #################
 
-@article{Fioretto:25l,
-      author      = {Sandler, Jameson  and Christopher, Jacob K and Hartvigsen, Thomas and Fioretto, Ferdinando},
-      title       = {SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2511.00606},
-      doi         = {10.48550/arXiv.2511.00606},
-      arxiv       = {2511.00606},
-      abbr        = {preprint},
-      bibtex_show = {true},
-      abstract    = {Speculative decoding has become the standard approach for accelerating Large Language Model (LLM) inference. It exploits a lossless draft-then-verify procedure to circumvent the latency of autoregressive decoding, achieving impressive speed-ups. Yet, current speculative decoding approaches remain limited by two fundamental bottlenecks: (1) the autoregressive dependency during drafting which limits parallelism, and (2) frequent rejections of draft tokens caused by misalignment between the draft and verify models. This paper proposes SpecDiff-2, a novel framework to jointly address these two bottlenecks. It leverages discrete diffusion as a non-autoregressive drafter to address bottleneck (1) and develops novel techniques to calibrate discrete diffusion drafters with autoregressive verifiers, addressing bottleneck (2). Experimental results across a comprehensive benchmark suite show that SpecDiff-2 achieves a new state-of-the-art across reasoning, coding, and mathematical benchmarks, improving tokens-per-second by up to an average of +55% over previous baselines and obtaining up to 5.5x average speed-up over standard decoding, without any loss of accuracy.}
-}
-
-
-@article{Fioretto:25k,
-      author      = {Christopher, Jacob K and Seamann, Austin and Cui, Jingyi and Khare, Sagar and Fioretto, Ferdinando},
-      title       = {Constrained Diffusion for Protein Design with Hard Structural Constraints},
-      elocation-id = {2025.10.15.682365},
-      year        = {2025},
-      doi         = {10.1101/2025.10.15.682365},
-      publisher   = {Cold Spring Harbor Laboratory},
-      abstract    = {Diffusion models offer a powerful means of capturing the manifold of realistic protein structures, enabling rapid design for protein engineering tasks. However, existing approaches observe critical failure modes when precise constraints are necessary for functional design. To this end, we present a constrained diffusion framework for structure-guided protein design, ensuring strict adherence to functional requirements while maintaining precise stereochemical and geometric feasibility. The approach integrates proximal feasibility updates with ADMM decomposition into the generative process, scaling effectively to the complex constraint sets of this domain. We evaluate on challenging protein design tasks, including motif scaffolding and vacancy-constrained pocket design, while introducing a novel curated benchmark dataset for motif scaffolding in the PDZ domain. Our approach achieves state-of-the-art, providing perfect satisfaction of bonding and geometric constraints with no degradation in structural diversity.Competing Interest StatementThe authors have declared no competing interest.},
-      abbr        = {bioRxiv},
-      arxiv       = {2510.14989},
-      URL         = {https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365},
-      eprint      = {https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365.full.pdf},
-      journal     = {bioRxiv}
-}
-
-
-@article{Fioretto:25j,
-      title       = {Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation}, 
-      author      = {Jinhao Liang and Yixuan Sun and Anirban Samaddar and Sandeep Madireddy and Ferdinando Fioretto},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2509.25157},
-      doi         = {10.48550/arXiv.2509.25157},
-      arxiv       = {2509.25157},
-      alsoin      = {FPI Workshop},
-      alsoin      = {MLxOR Workshop},
-      alsoin      = {COML Workshop},
-      alsoinyear  = {NeurIPS 2025},
-      abbr        = {preprint},
-      bibtex_show = {true},
-      abstract    = {Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.}
-}
-
-@article{Fioretto:25i,
-      title       = {Learning to Solve Optimization Problems Constrained with Partial Differential Equations}, 
-      author      = {Yusuf Guven and Vincenzo Di Vito and Ferdinando Fioretto},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2509.24573},
-      doi         = {10.48550/arXiv.2509.24573},
-      arxiv       = {2509.24573},
-      abbr        = {preprint},
-      bibtex_show = {true},
-      abstract    = {Partial differential equation (PDE)-constrained optimization arises in many scientific and engineering domains, such as energy systems, fluid dynamics and material design. In these problems, the decision variables (e.g., control inputs or design parameters) are tightly coupled with the PDE state variables, and the feasible set is implicitly defined by the governing PDE constraints. This coupling makes the problems computationally demanding, as it requires handling high dimensional discretization and dynamic constraints. To address these challenges, this paper introduces a learning-based framework that integrates a dynamic predictor with an optimization surrogate. The dynamic predictor, a novel time-discrete Neural Operator (Lu et al.), efficiently approximate system trajectories governed by PDE dynamics, while the optimization surrogate leverages proxy optimizer techniques (Kotary et al.) to approximate the associated optimal decisions. This dual-network design enables real-time approximation of optimal strategies while explicitly capturing the coupling between decisions and PDE dynamics. We validate the proposed approach on benchmark PDE-constrained optimization tasks inlacing Burgers' equation, heat equation and voltage regulation, and demonstrate that it achieves solution quality comparable to classical control-based algorithms, such as the Direct Method and Model Predictive Control (MPC), while providing up to four orders of magnitude improvement in computational speed.}
-}
-
-@article{Fioretto:25h,
-      title       = {The Disparate Impacts of Speculative Decoding}, 
-      author      = {Jameson Sandler and Ahmet Üstün and Marco Romanelli and Sara Hooker and Ferdinando Fioretto},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2510.02128},
-      doi         = {10.48550/arXiv.2510.02128},
-      arxiv       = {2510.02128},
-      abbr        = {preprint},
-      bibtex_show = {true},
-      abstract    = {The practice of speculative decoding, whereby inference is probabilistically supported by a smaller, cheaper, ``drafter'' model, has become a standard technique for systematically reducing the decoding time of large language models. This paper conducts an analysis of speculative decoding through the lens of its potential disparate speed-up rates across tasks. Crucially, the paper shows that speed-up gained from speculative decoding is not uniformly distributed across tasks, consistently diminishing for under-fit, and often underrepresented tasks. To better understand this phenomenon, we derive an analysis to quantify this observed ``unfairness'' and draw attention to the factors that motivate such disparate speed-ups to emerge. Further, guided by these insights, the paper proposes a mitigation strategy designed to reduce speed-up disparities and validates the approach across several model pairs, revealing on average a 12% improvement in our fairness metric.}
-}
-
-
-@article{Fioretto:25g,
-      title       = {Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents}, 
-      author      = {Saswat Das and Jameson Sandler and Ferdinando Fioretto},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2506.10171},
-      doi         = {10.48550/arXiv.2506.10171},
-      arxiv       = {2506.10171},
-      abbr        = {preprint},
-      alsoin      = {MTI-LLM Workshop},
-      alsoinyear  = {NeurIPS 2025},
-      bibtex_show = {true},
-      abstract    = {Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework's ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.}
-}
-
-@article{Fioretto:25f,
-      title       = {Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning},
+@article{fioretto:26h,
+      title       = {Simulation-Informed Diffusion for Decentralized Multi-robot Motion Planning},
       author      = {Jinhao Liang and Sven Koenig and Ferdinando Fioretto},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2508.20095},
-      doi         = {10.48550/arXiv.2508.20095},
-      arxiv       = {2508.20095},
+      year        = {2026},
+      volume      = {abs/2605.27697},
+      arxiv       = {2605.27697},
       abbr        = {preprint},
       bibtex_show = {true},
-      abstract    = {Multi-Robot Motion Planning (MRMP) involves generating collision-free trajectories for multiple robots operating in a shared continuous workspace. While discrete multi-agent path finding (MAPF) methods are broadly adopted due to their scalability, their coarse discretization severely limits trajectory quality. In contrast, continuous optimization-based planners offer higher-quality paths but suffer from the curse of dimensionality, resulting in poor scalability with respect to the number of robots. This paper tackles the limitations of these two approaches by introducing a novel framework that integrates discrete MAPF solvers with constrained generative diffusion models. The resulting framework, called Discrete-Guided Diffusion (DGD), has three key characteristics: (1) it decomposes the original nonconvex MRMP problem into tractable subproblems with convex configuration spaces, (2) it combines discrete MAPF solutions with constrained optimization techniques to guide diffusion models capture complex spatiotemporal dependencies among robots, and (3) it incorporates a lightweight constraint repair mechanism to ensure trajectory feasibility. The proposed method sets a new state-of-the-art performance in large-scale, complex environments, scaling to 100 robots while achieving planning efficiency and high success rates.}
+      abstract    = {Decentralized multi-robot motion planning requires each robot to generate collision-free trajectories from local observations, without global sensing or reliable communication. However, most existing planners, whether classical or learning-based, generate trajectories from a static snapshot of the local observation, which limits their ability to anticipate the future behavior of neighboring robots. This limitation is critical as the number of robots increases and the environment becomes more cluttered. To overcome this challenge, this paper introduces Simulation-Informed Diffusion (SID), a decentralized framework built on constraint-aware diffusion models (CADM). SID first uses CADM to simulate the future trajectories of neighboring robots from their currently observed states, and then uses the same CADM to plan each robot's own trajectory under safety constraints informed by these simulations. Crucially, the accurate simulation of neighbors enables a minimal communication scheme that triggers coordination only when necessary in highly congested scenarios. Experiments across diverse environments show that SID consistently outperforms baseline methods in terms of planning effectiveness and constraint satisfaction, and scales to scenarios with 108 robots and 160 obstacles.}
 }
 
-@article{Fioretto:25d,
-      title       = {SoK: Data Minimization in Machine Learning},
-      author      = {Robin Staab and Nikola Jovanović and Kimberly Mai and Prakhar Ganesh and Martin Vechev and Ferdinando Fioretto and Matthew Jagielski},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2508.10836},
-      doi         = {10.48550/arXiv.2508.10836},
-      arxiv       = {2508.10836},
+@article{fioretto:26g,
+      title       = {Drift Flow Matching},
+      author      = {Chenrui Ma and Xi Xiao and Lin Zhao and Tianyang Wang and Ferdinando Fioretto and Yanning Shen},
+      year        = {2026},
+      volume      = {abs/2605.17244},
+      arxiv       = {2605.17244},
       abbr        = {preprint},
       bibtex_show = {true},
-      abstract    = {Data minimization (DM) describes the principle of collecting only the data strictly necessary for a given task. It is a foundational principle across major data protection regulations like GDPR and CPRA. Violations of this principle have substantial real-world consequences, with regulatory actions resulting in fines reaching hundreds of millions of dollars. Notably, the relevance of data minimization is particularly pronounced in machine learning (ML) applications, which typically rely on large datasets, resulting in an emerging research area known as Data Minimization in Machine Learning (DMML). At the same time, existing work on other ML privacy and security topics often addresses concerns relevant to DMML without explicitly acknowledging the connection. This disconnect leads to confusion among practitioners, complicating their efforts to implement DM principles and interpret the terminology, metrics, and evaluation criteria used across different research communities. To address this gap, our work introduces a comprehensive framework for DMML, including a unified data pipeline, adversaries, and points of minimization. This framework allows us to systematically review the literature on data minimization and DM-adjacent methodologies, for the first time presenting a structured overview designed to help practitioners and researchers effectively apply DM principles. Our work facilitates a unified DM-centric understanding and broader adoption of data minimization strategies in AI/ML.}
+      abstract    = {Iterative generative models such as Flow Matching and Diffusion models have demonstrated strong test-time scaling behavior, where additional inference computation can improve generation quality. In contrast, Drift Models offer efficient one-step generation, but their direct generation paradigm limits such flexibility. In this work, we propose Drift Flow Matching (DFM), a framework that connects drifting generative modeling with flow-based iterative generation. DFM preserves the efficiency of direct transport maps while enabling generation to be refined through multiple inference steps when desired. This bridges the gap between one-step Drift Models and multi-step Flow Matching methods, and provides a novel generative paradigm that can adapt sampling computation to different quality--efficiency requirements. Extensive experiments across different tasks and datasets demonstrate the effectiveness and generality of the proposed framework.}
 }
 
-@article{Fioretto:25c,
-      title       = {A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints},
-      author      = {James Kotary and Himanshu Sharma and Ethan King and Draguna Vrabie and Ferdinando Fioretto and Jan Drgona},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2507.09050},
-      doi         = {10.48550/arXiv.2507.09050},
-      arxiv       = {2507.09050},
+
+@article{fioretto:26f,
+      title       = {Constrained Code Generation with Discrete Diffusion},
+      author      = {Lize Shao and Michael Cardei and Zichen Xie and Ferdinando Fioretto and Wenxi Wang},
+      year        = {2026},
+      volume      = {abs/2605.16829},
+      arxiv       = {2605.16829},
       abbr        = {preprint},
       bibtex_show = {true},
-      abstract    = {Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.}
+      abstract    = {Discrete diffusion models are a powerful, emerging paradigm for code generation. They construct programs through iterative refinement of partially corrupted token sequences and enable parallel token refinement. Importantly, this paradigm exposes a global program state at each denoising step, which provides a natural intervention point for enforcing program-level functionality and security constraints, guiding the generation before the final code is committed. Building on this observation, the paper introduces Constrained Diffusion for Code (CDC), a training-free neurosymbolic inference framework that integrates constraint satisfaction directly into the reverse denoising process. CDC augments the base discrete diffusion sampler with constraint-aware denoising operators that combine mathematical optimization with program analysis to identify constraint-relevant regions of the intermediate program state and locally adjust the denoising trajectory, steering generation toward feasible programs while remaining close to the base model. Across code generation benchmarks, CDC consistently improves constraint satisfaction in functional correctness, security, and even syntax, outperforming discrete diffusion and autoregressive baselines with less corrective computation and more localized edits.}
 }
 
-@article{Fioretto:25b,
+
+@article{fioretto:26e,
+      title       = {Constraint-Aware Flow Matching: Decision Aligned End-to-End Training for Constrained Sampling},
+      author      = {Jacob K. Christopher and James E. Warner and Ferdinando Fioretto},
+      journal     = {CoRR},
+      year        = {2026},
+      volume      = {abs/2605.12754},
+      arxiv       = {2605.12754},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Deep generative models provide state-of-the-art performance across a wide array of applications, with recent studies showing increasing applicability for science and engineering. Despite a growing corpus of literature focused on the integration of physics-based constraints into the generation process, existing approaches fail to enforce strict constraint satisfaction while maintaining sample quality. In particular, training-free constrained sampling methods, while providing per-sample feasibility guarantees, introduce a fundamental mismatch between the training objective and the constrained sampling procedure, often leading to performance degradation. Identifying this training-sampling misalignment as a central limitation of current constrained generative modeling approaches, this paper proposes Constraint-Aware Flow Matching, a novel end-to-end framework that explicitly incorporates constraint projections into the training objective. By aligning the model's learned dynamics with the constrained sampling process, the proposed method mitigates distributional shift induced by projection-based corrections, enabling high-quality constrained generation. The proposed approach is evaluated on three challenging real-world benchmarks, illustrating the generality and efficacy of the method.}
+}
+
+% BibTeX Optional fields: volume, number, pages, month, note
+@article{Fioretto:26d,
+      author = {Michael Cardei and Huu Binh Ta and Ferdinando Fioretto},
+      title = {Simple Self-Conditioning Adaptation for Masked Diffusion Models},
+      year        = {2026},
+      journal     = {CoRR},
+      volume      = {abs/2604.26985},
+      arxiv       = {2604.26985},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Masked diffusion models (MDMs) generate discrete sequences by iterative denoising under an absorbing masking process. In standard masked diffusion, if a token remains masked after a reverse update, the model discards its clean-state prediction for that position. Thus, still-masked positions must be repeatedly inferred from the mask token alone. This design choice limits cross-step refinement. To address this limitation, this paper proposes a simple, yet effective, post-training adaptation for MDMs that conditions each denoising step on the model's own previous clean-state predictions. The resulting method, called Self-Conditioned Masked Diffusion Models (SCMDM), requires minimal architectural change, does not introduce a recurrent latent-state pathway, does not rely on an auxiliary reference model, and adds no extra denoiser evaluations during sampling. This is an important departure from partial self-conditioning approaches which requires expensive model training from scratch. In particular, the paper shows that partial self-conditioning, including the commonly used 50% dropout strategy for training self-conditioned models from scratch, is suboptimal in the post-training regime. Instead, once the model's self-generated clean-state estimates become informative, the specialization to refinement is preferable to mixing conditional and unconditional objectives. SCMDM is evaluated across multiple domains, demonstrating consistent improvement over vanilla MDM baselines, achieving nearly a 50% reduction in generative perplexity on OWT-trained models (42.89 to 23.72), alongside strong improvements in discretized image synthesis quality, small molecular generation, and enhanced fidelity in genomic distribution modeling.}
+}
+
+@article{Fioretto:26c,
+      title={Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems},
+      author={Mason Nakamura and Abhinav Kumar and Saswat Das and Sahar Abdelnabi and Saaduddin Mahmud and Ferdinando Fioretto and Shlomo Zilberstein and Eugene Bagdasarian},
+      year        = {2026},
+      journal     = {CoRR},
+      volume      = {abs/2602.15198},
+      doi         = {10.48550/arXiv.2602.15198},
+      arxiv       = {2602.15198},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Multi-agent systems, where LLM agents communicate through free-form language, enable sophisticated coordination for solving complex cooperative tasks. This surfaces a unique safety problem when individual agents form a coalition and \emph{collude} to pursue secondary goals and degrade the joint objective. In this paper, we present Colosseum, a framework for auditing LLM agents' collusive behavior in multi-agent settings. We ground how agents cooperate through a Distributed Constraint Optimization Problem (DCOP) and measure collusion via regret relative to the cooperative optimum. Colosseum tests each LLM for collusion under different objectives, persuasion tactics, and network topologies. Through our audit, we show that most out-of-the-box models exhibited a propensity to collude when a secret communication channel was artificially formed. Furthermore, we discover ``collusion on paper'' when agents plan to collude in text but would often pick non-collusive actions, thus providing little effect on the joint task. Colosseum provides a new way to study collusion by measuring communications and actions in rich yet verifiable environments.}
+}
+
+@article{Fioretto:26b,
+      title={Search-Augmented Masked Diffusion Models for Constrained Generation},
+      author={Huu Binh Ta and Michael Cardei and Alvaro Velasquez and Ferdinando Fioretto},
+      year        = {2026},
+      journal     = {CoRR},
+      volume      = {abs/2602.02727},
+      doi         = {10.48550/arXiv.2602.02727},
+      arxiv       = {2602.02727},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Discrete diffusion models generate sequences by iteratively denoising samples
+      corrupted by categorical noise, offering an appealing alternative to
+      autoregressive decoding for structured and symbolic generation. However,
+      standard training targets a likelihood-based objective that primarily matches
+      the data distribution and provides no native mechanism for enforcing hard
+      constraints or optimizing non-differentiable properties at inference time. This
+      work addresses this limitation and introduces Search-Augmented Masked Diffusion
+      (SearchDiff), a training-free neurosymbolic inference framework that integrates
+      informed search directly into the reverse denoising process. At each denoising
+      step, the model predictions define a proposal set that is optimized under a
+      user-specified property satisfaction, yielding a modified reverse transition
+      that steers sampling toward probable and feasible solutions. Experiments in
+      biological design and symbolic reasoning illustrate that SearchDiff
+      substantially improves constraint satisfaction and property adherence, while
+      consistently outperforming discrete diffusion and autoregressive baselines.}
+}
+
+@article{Fioretto:26a,
+      title={NeuroFilter: Privacy Guardrails for Conversational LLM Agents},
+      author={Saswat Das and Ferdinando Fioretto},
+      year        = {2026},
+      journal     = {CoRR},
+      volume      = {abs/2601.14660},
+      doi         = {10.48550/arXiv.2601.14660},
+      arxiv       = {2601.14660},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {This work addresses the computational challenge of enforcing privacy for agentic Large Language Models (LLMs), where privacy is governed by the
+      contextual integrity framework. Indeed, existing defenses rely on LLM-mediated
+      checking stages that add substantial latency and cost, and that can be
+      undermined in multi-turn interactions through manipulation or benign-looking
+      conversational scaffolding. Contrasting this background, this paper makes a key
+      observation: internal representations associated with privacy-violating intent
+      can be separated from benign requests using linear structure. Using this
+      insight, the paper proposes NeuroFilter, a guardrail framework that
+      operationalizes contextual integrity by mapping norm violations to simple
+      directions in the model's activation space, enabling detection even when
+      semantic filters are bypassed. The proposed filter is also extended to capture
+      threats arising during long conversations using the concept of activation
+      velocity, which measures cumulative drift in internal representations across
+      turns. A comprehensive evaluation across over 150,000 interactions and covering
+      models from 7B to 70B parameters, illustrates the strong performance of
+      NeuroFilter in detecting privacy attacks while maintaining zero false positives
+      on benign prompts, all while reducing the computational inference cost by
+      several orders of magnitude when compared to LLM-based agentic privacy
+      defenses.}
+}
+
+
+@article{Fioretto:SEGAN,
       title       = {Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based},
       author      = {Vincenzo Di Vito and Kaarthik Sundar and Ferdinando Fioretto and Deepjyoti Deka},
-      year        = {2025},
-      journal     = {CoRR},
+      year        = {2026},
+      journal     = {Sustainable Energy, Grids and Networks},
       volume      = {abs/2507.23094},
       doi         = {10.48550/arXiv.2507.23094},
       arxiv       = {2507.23094},
-      abbr        = {preprint},
+      abbr        = {SEGAN},
       bibtex_show = {true},
+      funding     = {NSF-2345528, NSF-2401285, NSF-2334936},
       abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.}
 }
 
+@article{Fioretto:tsg26,
+  author       = {Shuyi Chen and Ferdinando Fioretto and Feng Qiu and Shixiang Zhu},
+  title        = {Global-Decision-Focused Neural ODEs for Proactive Grid Resilience Management},
+  journal      = TSG,
+  volume       = {},
+  number       = {},
+  pages        = {1--1},
+  year         = {2026},
+  url          = {https://ieeexplore.ieee.org/document/11297004},
+  doi          = {10.1109/TSG.2025.3642407},
+  bibtex_show  = {true},
+  abbr         = {TSG},
+  selected     = {true},
+  abstract     = {Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.}
+}
 
-@article{Fioretto:25a,
-      title={Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}, 
-      author={Prince Zizhuang Wang and Jinhao Liang and Shuyi Chen and Ferdinando Fioretto and Shixiang Zhu},
-      year        = {2025},
-      journal     = {CoRR},
-      volume      = {abs/2502.05468},
+@article{Fioretto:epsr26,
+title             = {Learning to optimize meets neural-ODE: Real-time, stability-constrained AC OPF},
+author            = {Vincenzo {Di Vito} and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+journal           = {Electric Power Systems Research},
+volume            = {258},
+pages             = {113071},
+year              = {2026},
+issn              = {0378-7796},
+doi               = {https://doi.org/10.1016/j.epsr.2026.113071},
+url               = {https://www.sciencedirect.com/science/article/pii/S0378779626003640},
+arxiv             = {2410.19157},
+abbr              = {EPSR},
+funding           = {NSF-2345528, NSF-2401285, NSF-2334936},
+bibtex_show       = {true},
+abstract          = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize (LtO) methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 118-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
+}
+
+
+@inproceedings{Fioretto:CVPR26,
+    author    = {Oh, Minseok and Park, Jihun and Gim, Jongmin and Choi, Minwoo and Lee, Kyoungmin and Fioretto, Ferdinando and Im, Sunghoon},
+    title     = {FREESTYLE: An Anchor-Free Mechanism for Training-Free Style-Aligned Image Generation},
+    booktitle   = CVPR,
+    month     = {June},
+    year      = {2026},
+    pages     = {3779-3788},
+    abbr        = {CVPR},
+    bibtex_show = {true},
+    url         = {https://openaccess.thecvf.com/content/CVPR2026F/html/Oh_FREESTYLE_An_Anchor-Free_Mechanism_for_Training-Free_Style-Aligned_Image_Generation_CVPRF_2026_paper.html},
+    funding     = {NSF 2401285, NSF 2533631, NSF 2334936, DARPA HR0011252E005},
+    abstract    = {Text-to-Image (T2I) generation models have become central to creative workflows, where producing style-consistent image sets is crucial for applications such as visual identity design, illustration, and asset creation. While recent training-free methods have enabled efficient style-aligned synthesis, they commonly rely on anchor-dependent propagation, where style features from a single reference image are shared across the batch. This dependency often leads to inconsistent results: when the anchor fails to capture the intended reference style, its unintended artifacts are propagated to all samples, and excessive feature sharing further causes content leakage and semantic distortion. To overcome these limitations, we propose FREESTYLE, a training-free and anchor-free framework for robust style alignment within a scale-wise autoregressive generation paradigm. Our method integrates three core components—Majority Voting (MV), which aggregates dominant style cues across the batch to form a representative style feature; Majority Style Injection (MSI), which adaptively injects these aggregated features to enforce global style coherence; and Set-Based Projection (SBP), which refines local object regions by projecting them onto a shared style manifold for context-aware adaptation. Extensive experiments demonstrate that, without any retraining or parameter updates, FREESTYLE achieves state-of-the-art performance in both style consistency and content preservation, while maintaining real-time inference efficiency.}
+}
+
+
+@inproceedings{Fioretto:ICLR26a,
+      author      = {Christopher, Jacob K and Seamann, Austin and Cui, Jingyi and Khare, Sagar and Fioretto, Ferdinando},
+      title       = {Constrained Diffusion for Protein Design with Hard Structural Constraints},
+      year        = {2026},
+      doi         = {10.1101/2025.10.15.682365},
+      booktitle   = ICLR,
+      volume      = {14},
+      abbr        = {ICLR},
+      arxiv       = {2510.14989},
+      bibtex_show = {true},
+      funding     = {NSF 2133169, NSF 2143706, NSF 2232054, DARPA HR0011252E005},
+      url         = {https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365},
+      abstract    = {Diffusion models offer a powerful means of capturing the manifold of realistic protein structures, enabling rapid design for protein engineering tasks. However, existing approaches observe critical failure modes when precise constraints are necessary for functional design. To this end, we present a constrained diffusion framework for structure-guided protein design, ensuring strict adherence to functional requirements while maintaining precise stereochemical and geometric feasibility. The approach integrates proximal feasibility updates with ADMM decomposition into the generative process, scaling effectively to the complex constraint sets of this domain. We evaluate on challenging protein design tasks, including motif scaffolding and vacancy-constrained pocket design, while introducing a novel curated benchmark dataset for motif scaffolding in the PDZ domain. Our approach achieves state-of-the-art, providing perfect satisfaction of bonding and geometric constraints with no degradation in structural diversity.Competing Interest StatementThe authors have declared no competing interest.}
+}
+
+@inproceedings{Fioretto:ICLR26b,
+      title       = {Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making},
+      author      = {Prince Zizhuang Wang and Jinhao Liang and Shuyi Chen and Ferdinando Fioretto and Shixiang Zhu},
+      year        = {2026},
+      booktitle   = ICLR,
+      volume      = {14},
       doi         = {10.48550/arXiv.2502.05468},
       arxiv       = {2502.05468},
-      abbr        = {preprint},
+      abbr        = {ICLR},
       bibtex_show = {true},
       abstract    = {Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.}
 }
+
+@inproceedings{Fioretto:MLSys26,
+      author      = {Sandler, Jameson  and Christopher, Jacob K and Hartvigsen, Thomas and Fioretto, Ferdinando},
+      title       = {SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding},
+      year        = {2026},
+      booktitle   = MLSys,
+      volume      = {9},
+      arxiv       = {2511.00606},
+      abbr        = {MLSys},
+      bibtex_show = {true},
+      funding     = {NVIDIA Academic Grant Program Award, NSF 2334448, NSF 2401285, NSF 2533631, DARPA HR0011252E005, UVA National Security Data & Policy Institute, ODNI 2024-24070100001},
+      award       = {oral},
+      abstract    = {Speculative decoding has become the standard approach for accelerating Large Language Model (LLM) inference. It exploits a lossless draft-then-verify procedure to circumvent the latency of autoregressive decoding, achieving impressive speed-ups. Yet, current speculative decoding approaches remain limited by two fundamental bottlenecks: (1) the autoregressive dependency during drafting which limits parallelism, and (2) frequent rejections of draft tokens caused by misalignment between the draft and verify models. This paper proposes SpecDiff-2, a novel framework to jointly address these two bottlenecks. It leverages discrete diffusion as a non-autoregressive drafter to address bottleneck (1) and develops novel techniques to calibrate discrete diffusion drafters with autoregressive verifiers, addressing bottleneck (2). Experimental results across a comprehensive benchmark suite show that SpecDiff-2 achieves a new state-of-the-art across reasoning, coding, and mathematical benchmarks, improving tokens-per-second by up to an average of +55% over previous baselines and obtaining up to 5.5x average speed-up over standard decoding, without any loss of accuracy.}
+}
+
+@inproceedings{Fioretto:L4DC26,
+      title       = {A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints},
+      author      = {James Kotary and Himanshu Sharma and Ethan King and Draguna Vrabie and Ferdinando Fioretto and Jan Drgona},
+      year        = {2026},
+      booktitle  = {Annual Learning for Dynamics and Control Conference},
+      abbr        = {L4DC},
+      volume      = {331},
+      doi         = {10.48550/arXiv.2507.09050},
+      arxiv       = {2507.09050},
+      bibtex_show = {true},
+      award       = {Oral},
+      abstract    = {Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.}
+}
+
+@inproceedings{Fioretto:SatML26,
+      title       = {SoK: Data Minimization in Machine Learning},
+      author      = {Robin Staab and Nikola Jovanović and Kimberly Mai and Prakhar Ganesh and Martin Vechev and Ferdinando Fioretto and Matthew Jagielski},
+      year        = {2026},
+      booktitle   = SatML,
+      volume      = {3},
+      doi         = {},
+      arxiv       = {2508.10836},
+      abbr        = {SatML},
+      bibtex_show = {true},
+      funding     = {NSF 2133169, NSF 2143706, NSF 2232054, Fellowship in AI Research from the LaCross Institute},
+      abstract    = {Data minimization (DM) describes the principle of collecting only the data strictly necessary for a given task. It is a foundational principle across major data protection regulations like GDPR and CPRA. Violations of this principle have substantial real-world consequences, with regulatory actions resulting in fines reaching hundreds of millions of dollars. Notably, the relevance of data minimization is particularly pronounced in machine learning (ML) applications, which typically rely on large datasets, resulting in an emerging research area known as Data Minimization in Machine Learning (DMML). At the same time, existing work on other ML privacy and security topics often addresses concerns relevant to DMML without explicitly acknowledging the connection. This disconnect leads to confusion among practitioners, complicating their efforts to implement DM principles and interpret the terminology, metrics, and evaluation criteria used across different research communities. To address this gap, our work introduces a comprehensive framework for DMML, including a unified data pipeline, adversaries, and points of minimization. This framework allows us to systematically review the literature on data minimization and DM-adjacent methodologies, for the first time presenting a structured overview designed to help practitioners and researchers effectively apply DM principles. Our work facilitates a unified DM-centric understanding and broader adoption of data minimization strategies in AI/ML.}
+}
+
+@inproceedings{Fioretto:AAAI26,
+      title       = {Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning},
+      author      = {Jinhao Liang and Sven Koenig and Ferdinando Fioretto},
+      year        = {2026},
+      booktitle   = AAAI,
+      volume      = {40},
+      doi         = {10.48550/arXiv.2508.20095},
+      abbr        = {AAAI},
+      arxiv       = {2508.20095},
+      bibtex_show = {true},
+      funding     = {NSF 2533631, NSF 2401285, NSF 2334936, DARPA HR0011252E005},
+      abstract    = {Multi-Robot Motion Planning (MRMP) involves generating collision-free trajectories for multiple robots operating in a shared continuous workspace. While discrete multi-agent path finding (MAPF) methods are broadly adopted due to their scalability, their coarse discretization severely limits trajectory quality. In contrast, continuous optimization-based planners offer higher-quality paths but suffer from the curse of dimensionality, resulting in poor scalability with respect to the number of robots. This paper tackles the limitations of these two approaches by introducing a novel framework that integrates discrete MAPF solvers with constrained generative diffusion models. The resulting framework, called Discrete-Guided Diffusion (DGD), has three key characteristics: (1) it decomposes the original nonconvex MRMP problem into tractable subproblems with convex configuration spaces, (2) it combines discrete MAPF solutions with constrained optimization techniques to guide diffusion models capture complex spatiotemporal dependencies among robots, and (3) it incorporates a lightweight constraint repair mechanism to ensure trajectory feasibility. The proposed method sets a new state-of-the-art performance in large-scale, complex environments, scaling to 100 robots while achieving planning efficiency and high success rates.}
+}
+
+@inproceedings{Fioretto:PerFM26,
+      title       = {A Unified Framework for Prompt Privacy is Elusive and Misleading},
+      author      = {Prakhar Ganesh and Yash More and Marco Romanelli and Ferdinando Fioretto and Golnoosh Farnadi},
+      year        = {2026},
+      booktitle   = {PerFM Workshop - at AAAI},
+      volume      = {1},
+      abbr        = {AAAI},
+      bibtex_show = {true},
+      funding     = {},
+      abstract    = {As large language models (LLMs) become increasingly integrated into daily life, privacy concerns are on the rise. Driven by the appeal of convenient, universal solutions, current practices reflect a drift toward a one-size-fits-all approach to privacy. Unfortunately, we argue that a unified framework for prompt privacy is elusive and can instead mislead, creating even greater risk due to a false sense of safety. We identify five desirable properties of an effective privacy framework for prompts, namely protection guarantees, performance, efficiency, domain adaptability, and user accessibility, and highlight that existing frameworks, such as sanitization, differential privacy, cryptography, and contextual integrity, only satisfy a subset of these properties. Beyond individual frameworks, we find underlying tensions between these properties that preclude the development of a unified framework. We recommend two critical paths forward: emphasizing context-specific and application-specific evaluation of privacy frameworks, and fostering user awareness and privacy literacy.}
+}
+
+#################
+# 2025
+#################
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,13 +370,13 @@
   title={Differential Privacy in Artificial Intelligence: From Theory to Practice},
   author={Ferdinando Fioretto and Pascal Van Hentenryck and others},
   year={2025},
-  editora = {Ferdinando Fioretto}, 
+  editora = {Ferdinando Fioretto},
   editorb = {Pascal Van Hentenryck},
   publisher={Now Publishers, Inc.},
   journal={Now Publishers, Inc.},
   abbr= {Book},
   bibtex_show = {true},
-  URL = {https://www.nowpublishers.com/article/BookDetails/9781638284765},
+  url = {https://www.nowpublishers.com/article/BookDetails/9781638284765},
   abstract = {Differential Privacy in Artificial Intelligence: From Theory to Practice is a comprehensive resource designed to review the principles and applications of differential privacy in a world increasingly driven by data. This book delves into the theoretical underpinnings of differential privacy, its use in machine learning systems, practical implementation details, and its broader social and legal ramifications. Intended as a primer and a deep dive, it lays a solid foundation by introducing essential concepts and mechanisms critical to understanding differential privacy.
 
   From theoretical foundations to practical application, the book is organized into five distinct parts. Part I reviews the foundational notions of differential privacy in the central and local models, delving into composition and privacy amplification. The discussion extends to practical strategies for data release and the creation of synthetic data, which is essential for real-world applications. Part II focuses on the application of differential privacy in optimization and learning, examining the integration of privacy measures in machine learning, including private optimization methods and private federated learning.
@@ -244,7 +388,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @incollection{Fioretto:DP_book_ch1,
-      title       = {Differential Privacy: Overview and Fundamental Techniques}, 
+      title       = {Differential Privacy: Overview and Fundamental Techniques},
       author      = {Ferdinando Fioretto and Pascal Van Hentenryck and Juba Ziani},
       booktitle   = {Differential Privacy in Artificial Intelligence: From Theory to Practice},
       editor      = {Ferdinando Fioretto and Pascal Van Hentenryck},
@@ -255,7 +399,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
       chapter     = {1},
       abbr        = {Book-Ch},
       bibtex_show = {true},
-      URL         = {https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1},
+      url         = {https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1},
       abstract    = {This chapter is meant to be part of the book "Differential Privacy in Artificial Intelligence: From Theory to Practice" and provides an introduction to Differential Privacy. It starts by illustrating various attempts to protect data privacy, emphasizing where and why they failed, and providing the key desiderata of a robust privacy definition. It then defines the key actors, tasks, and scopes that make up the domain of privacy-preserving data analysis. Following that, it formalizes the definition of Differential Privacy and its inherent properties, including composition, post-processing immunity, and group privacy. The chapter also reviews the basic techniques and mechanisms commonly used to implement Differential Privacy in its pure and approximate forms.}
 }
 
@@ -271,19 +415,18 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
    bibtex_show = {true},
    abbr        = {IISE},
    doi = {10.1080/24725854.2025.2479047},
-   URL = { https://doi.org/10.1080/24725854.2025.2479047},
+   url = {https://doi.org/10.1080/24725854.2025.2479047},
    eprint = {https://doi.org/10.1080/24725854.2025.2479047}
 }
 
 @inproceedings{Fioretto:NeurIPS25a,
-      title={Training-Free Constrained Generation With Stable Diffusion Models}, 
+      title={Training-Free Constrained Generation With Stable Diffusion Models},
       author={Stefano Zampini and Jacob K Christopher and Luca Oneto and Davide Anguita and Ferdinando Fioretto},
-      year        = {2025},
       booktitle   = NeurIPS,
       year        = {2025},
       volume      = {38},
       pages       = {},
-      url         = {https://neurips.cc/virtual/2025/xxx},
+      url         = {https://openreview.net/pdf/fe2309484ca87adfc6434f42e5b2fb59b6eaf125.pdf},
       publisher   = {Curran Associates, Inc.},
       arxiv       = {2502.05625},
       abbr        = {NeurIPS},
@@ -294,16 +437,15 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 
 
 @inproceedings{Fioretto:NeurIPS25b,
-      title       = {Constrained Language Generation with Discrete Diffusion Models}, 
-      author      = {Michael Cardei and Jacob K Christopher and Thomas Hartvigsen and Brian R. Bartoldson and Bhavya Kailkhura and Ferdinando Fioretto},
+      title       = {Constrained Discrete Diffusion},
+      author      = {Michael Cardei and Jacob K Christopher and Thomas Hartvigsen and Bhavya Kailkhura and Ferdinando Fioretto},
       booktitle   = NeurIPS,
       year        = {2025},
       volume      = {38},
       pages       = {},
-      alsoin      = {AI4D3 Workshop},
+      alsoin      = {BioSafe GenAI Workshop},
       alsoinyear  = {NeurIPS 2025},
-      award       = {Oral at AI4D3},
-      url         = {https://neurips.cc/virtual/2025/xxx},
+      url         = {https://openreview.net/pdf/eb98757a94d8cafb436dc1e9329097a01d9c490b.pdf},
       publisher   = {Curran Associates, Inc.},
       arxiv       = {2503.09790},
       abbr         = {NeurIPS},
@@ -319,6 +461,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
       year        = {2025},
       booktitle   = {IEEE Conference on Decision and Control (CDC)},
       publisher   = {},
+      url         = {https://arxiv.org/abs/2209.14152},
       abbr        = {CDC},
       bibtex_show = {true},
       arxiv       = {2209.14152},
@@ -326,15 +469,15 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @inproceedings{Fioretto:ICML25,
-      title       = {Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models},
+      title       = {Simultaneous Multi-Robot Motion Planning with Projected Diffusion Models},
       author      = {Jinhao Liang and Jacob Christopher and Sven Koenig and Ferdinando Fioretto},
       year        = {2025},
       booktitle   = ICML,
       publisher   = {},
       abbr        = {ICML},
       bibtex_show = {true},
-      arxiv       = {2412.17993},
-      abstract    = {Multi-Agent Path Finding (MAPF) is a fundamental problem in robotics, requiring the computation of collision-free paths for multiple agents moving from their respective start to goal positions. The complexity of coordinating multiple agents in a shared environment poses significant challenges, especially in continuous spaces where traditional optimization algorithms fall short with scalability. Recently, diffusion models have been successfully applied to single-agent contexts, offering advantages such as modeling complex trajectory distributions and generating smooth paths that navigate high-dimensional spaces effectively. However, such models have struggled to ensure constraints feasibility, such as non-collision. Additionally, extending diffusion models to MAPF brings an additional level of complexity due to the necessity to satisfy inter-agent constraints. In this work, we propose a novel combination of constrained optimization with diffusion models for MAPF in continuous spaces. Such a unique combination enables the direct generation of feasible multi-agent trajectories, considering collision avoidance and kinematic feasibility. Additionally, the paper proposes an augmented Lagrangian method that reduces complexity and enhances practicality for real-time applications. The effectiveness of our approach is demonstrated across various simulated scenarios.}
+      arxiv       = {2502.03607},
+      abstract    = {Recent advances in diffusion models hold significant potential in robotics, enabling the generation of diverse and smooth trajectories directly from raw representations of the environment. Despite this promise, applying diffusion models to motion planning remains challenging due to their difficulty in enforcing critical constraints, such as collision avoidance and kinematic feasibility. These limitations become even more pronounced in Multi-Robot Motion Planning (MRMP), where multiple robots must coordinate in shared spaces. To address these challenges, this work proposes Simultaneous MRMP Diffusion (SMD), a novel approach integrating constrained optimization into the diffusion sampling process to produce collision-free, kinematically feasible trajectories. Additionally, the paper introduces a comprehensive MRMP benchmark to evaluate trajectory planning algorithms across scenarios with varying robot densities, obstacle complexities, and motion constraints. Experimental results show SMD consistently outperforms classical and other learning-based motion planners, achieving higher success rates and efficiency in complex multi-robot environments.}
 }
 
 
@@ -344,7 +487,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
       year        = {2025},
       booktitle   = {International Conference on Neuro-symbolic Systems (NeuS)},
       abbr        = {NeuS},
-      bibtex_show = {true}, 
+      bibtex_show = {true},
       arxiv       = {2506.01121},
       award       = {DARPA Disruptive Idea},
       abstract    = {Despite the remarkable generative capabilities of diffusion models, their integration into safety-critical or scientifically rigorous applications remains hindered by the need to ensure compliance with stringent physical, structural, and operational constraints. To address this challenge, this paper introduces Neuro-Symbolic Diffusion (NSD), a novel framework that interleaves diffusion steps with symbolic optimization, enabling the generation of certifiably consistent samples under user-defined functional and logic constraints. This key feature is provided for both standard and discrete diffusion models, enabling, for the first time, the generation of both continuous (e.g., images and trajectories) and discrete (e.g., molecular structures and natural language) outputs that comply with constraints. This ability is demonstrated on tasks spanning three key challenges: (1) Safety, in the context of non-toxic molecular generation and collision-free trajectory optimization; (2) Data scarcity, in domains like drug discovery and materials engineering; and (3) Out-of-domain generalization, where enforcing symbolic constraints allows adaptation beyond the training distribution.}
@@ -406,7 +549,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
       abstract    = {Networks are crucial components of many sectors, including telecommunications, healthcare, finance, energy, and transportation.The information carried in such networks often contains sensitive user data, like location data for commuters and packet data for online users. Therefore, when considering data release for networks, one must ensure that data release mechanisms do not leak information about individuals, quantified in a precise mathematical sense. Differential Privacy (DP) is the widely accepted, formal, state-of-the-art technique, which has found use in a variety of real-life settings including the 2020 U.S. Census, Apple users' device data, or Google's location data. Yet, the use of DP comes with new challenges, as the noise added for privacy introduces inaccuracies or biases and further, DP techniques can also distribute these biases disproportionately across different populations, inducing fairness issues. The goal of this paper is to characterize the impact of DP on bias and unfairness in the context of releasing information about networks, taking a departure from previous work which has studied these effects in the context of private population counts release (such as in the U.S. Census). To this end, we consider a network release problem where the network structure is known to all, but the weights on edges must be released privately. We consider the impact of this private release on a simple downstream decision-making task run by a third-party, which is to find the shortest path between any two pairs of nodes and recommend the best route to users. This setting is of highly practical relevance, mirroring scenarios in transportation networks, where preserving privacy while providing accurate routing information is crucial. Our work provides theoretical foundations and empirical evidence into the bias and unfairness arising due to privacy in these networked decision problems.}
 }
 
-
 @inproceedings{Fioretto:AAAI25,
       title       = {Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes},
       author      = {Joonhyuk Ko and Juba Ziani and Saswat Das and Matt Williams and Ferdinando Fioretto},
@@ -434,6 +576,22 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
 } % acceptance rate 53/180
 
+@inproceedings{Fioretto:AI4D3,
+      title       = {Constrained Molecular Generation with Discrete Diffusion for Drug Discovery},
+      author      = {Michael Cardei and Jacob K Christopher and Thomas Hartvigsen and Bhavya Kailkhura and Ferdinando Fioretto},
+      booktitle   = {NeurIPS 2025 Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development},
+      year        = {2025},
+      volume      = {38},
+      pages       = {},
+      award       = {Best Paper Award},
+      url         = {https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf},
+      abbr         = {AI4D3},
+      bibtex_show  = {true},
+      selected     = {true},
+      abstract    = {Discrete diffusion models are a class of generative models that construct sequences by progressively denoising samples from a categorical noise distribution. In life science setting, such as molecular strings (SMILES) and other biological sequence design settings, these models have emerged as a promising alternative to autoregressive architectures, presenting an opportunity to enforce sequence-level constraints, a capability that existing left-to-right sequence design cannot natively provide. This paper capitalizes on this opportunity by introducing  (CDD), a novel integration of differentiable constraint optimization within the diffusion process to maintain policy, safety, and design-property adherence throughout generation. Unlike conventional generators that often rely on post-hoc filtering or model retraining for controllable generation, CDD directly imposes constraints into the discrete diffusion sampling process, resulting in a training-free and effective virtual-instrument approach. Experiments in property adherence molecular design, toxicity-bounded generation, and novelty enforcement demonstrate that CDD achieves  in a diverse array of tasks outperforming auto-regressive and existing discrete diffusion approaches. CDD is a practical virtual instrument for molecular design and lays the groundwork for discrete-diffusion-based virtual-cell workflows in drug discovery and development.}
+}
+
+
 @inproceedings{Fioretto:AI4Mat25,
   title        = {Constrained Diffusion for Accelerated Structure Relaxation of Inorganic Solids with Point Defects},
   author       = {Jingyi Cui and Jacob K Christopher and Ankita Biswas and Prasanna V. Balachandran and Ferdinando Fioretto},
@@ -441,22 +599,21 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   volume       = {1},
   year         = {2025},
   doi          = {},
+  url          = {https://openreview.net/pdf?id=L3LYjJJoL5},
   abbr         = {AI4Mat},
   bibtex_show  = {true},
-  abstract    = {Point defects affect material properties by altering electronic states and modifying local bonding environments. However, high-throughput first-principles simulations of point defects are costly due to large simulation cells and complex energy landscapes. To this end, we propose a generative framework for simulating point defects, overcoming the limits of costly first-principles simulators. By leveraging a primal-dual algorithm, we introduce a constraint-aware diffusion model which outperforms existing constrained diffusion approaches in this domain. Across six defect configuration settings for $Bi_2\,Te_3$, the proposed approach provides state-of-the-art performance generating physically grounded structures.}
+  abstract     = {Point defects affect material properties by altering electronic states and modifying local bonding environments. However, high-throughput first-principles simulations of point defects are costly due to large simulation cells and complex energy landscapes. To this end, we propose a generative framework for simulating point defects, overcoming the limits of costly first-principles simulators. By leveraging a primal-dual algorithm, we introduce a constraint-aware diffusion model which outperforms existing constrained diffusion approaches in this domain. Across six defect configuration settings for $Bi_2\,Te_3$, the proposed approach provides state-of-the-art performance generating physically grounded structures.}
 }
 
 @inproceedings{Fioretto:colorai25,
       title={Low-rank finetuning for LLMs: A fairness perspective},
       author={Saswat Das and Marco Romanelli and Cuong Tran and Bhavya Kailkhura and Ferdinando Fioretto},
       year        = {2025},
-      volume      = {39},
       booktitle   = {AAAI CoLoRAI Workshop},
-      volume      = {abs/2405.18572},
       doi         = {10.48550/arXiv.2405.18572},
       arxiv       = {2405.18572},
       abbr        = {CoLoRAI},
-      award       = {Best paepr award},
+      award       = {Best paper award},
       bibtex_show = {true},
       abstract    = {Low-rank approximation techniques have become the de facto standard for fine-tuning Large Language Models (LLMs) due to their reduced computational and memory requirements. This paper investigates the effectiveness of these methods in capturing the shift of fine-tuning datasets from the initial pre-trained data distribution. Our findings reveal that there are cases in which low-rank fine-tuning falls short in learning such shifts. This, in turn, produces non-negligible side effects, especially when fine-tuning is adopted for toxicity mitigation in pre-trained models, or in scenarios where it is important to provide fair models. Through comprehensive empirical evidence on several models, datasets, and tasks, we show that low-rank fine-tuning inadvertently preserves undesirable biases and toxic behaviors. We also show that this extends to sequential decision-making tasks, emphasizing the need for careful evaluation to promote responsible LLMs development.}
 }
@@ -490,31 +647,73 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   arxiv   =     {2410.19157},
   abstract    = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF's physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
 }
-  
+
+
+@article{Fioretto:25j,
+      title       = {Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation},
+      author      = {Jinhao Liang and Yixuan Sun and Anirban Samaddar and Sandeep Madireddy and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2509.25157},
+      doi         = {10.48550/arXiv.2509.25157},
+      arxiv       = {2509.25157},
+      alsoin      = {FPI Workshop, MLxOR Workshop, and COML Workshop},
+      alsoinyear  = {NeurIPS 2025},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.}
+}
+
+@article{Fioretto:25i,
+      title       = {Learning to Solve Optimization Problems Constrained with Partial Differential Equations},
+      author      = {Yusuf Guven and Vincenzo Di Vito and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2509.24573},
+      doi         = {10.48550/arXiv.2509.24573},
+      arxiv       = {2509.24573},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Partial differential equation (PDE)-constrained optimization arises in many scientific and engineering domains, such as energy systems, fluid dynamics and material design. In these problems, the decision variables (e.g., control inputs or design parameters) are tightly coupled with the PDE state variables, and the feasible set is implicitly defined by the governing PDE constraints. This coupling makes the problems computationally demanding, as it requires handling high dimensional discretization and dynamic constraints. To address these challenges, this paper introduces a learning-based framework that integrates a dynamic predictor with an optimization surrogate. The dynamic predictor, a novel time-discrete Neural Operator (Lu et al.), efficiently approximate system trajectories governed by PDE dynamics, while the optimization surrogate leverages proxy optimizer techniques (Kotary et al.) to approximate the associated optimal decisions. This dual-network design enables real-time approximation of optimal strategies while explicitly capturing the coupling between decisions and PDE dynamics. We validate the proposed approach on benchmark PDE-constrained optimization tasks inlacing Burgers' equation, heat equation and voltage regulation, and demonstrate that it achieves solution quality comparable to classical control-based algorithms, such as the Direct Method and Model Predictive Control (MPC), while providing up to four orders of magnitude improvement in computational speed.}
+}
+
+@article{Fioretto:25h,
+      title       = {The Disparate Impacts of Speculative Decoding},
+      author      = {Jameson Sandler and Ahmet Üstün and Marco Romanelli and Sara Hooker and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2510.02128},
+      doi         = {10.48550/arXiv.2510.02128},
+      arxiv       = {2510.02128},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {The practice of speculative decoding, whereby inference is probabilistically supported by a smaller, cheaper, ``drafter'' model, has become a standard technique for systematically reducing the decoding time of large language models. This paper conducts an analysis of speculative decoding through the lens of its potential disparate speed-up rates across tasks. Crucially, the paper shows that speed-up gained from speculative decoding is not uniformly distributed across tasks, consistently diminishing for under-fit, and often underrepresented tasks. To better understand this phenomenon, we derive an analysis to quantify this observed ``unfairness'' and draw attention to the factors that motivate such disparate speed-ups to emerge. Further, guided by these insights, the paper proposes a mitigation strategy designed to reduce speed-up disparities and validates the approach across several model pairs, revealing on average a 12% improvement in our fairness metric.}
+}
+
+
+@article{Fioretto:25g,
+      title       = {Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents},
+      author      = {Saswat Das and Jameson Sandler and Ferdinando Fioretto},
+      year        = {2025},
+      journal     = {CoRR},
+      volume      = {abs/2506.10171},
+      doi         = {10.48550/arXiv.2506.10171},
+      arxiv       = {2506.10171},
+      abbr        = {preprint},
+      alsoin      = {MTI-LLM Workshop},
+      alsoinyear  = {NeurIPS 2025},
+      bibtex_show = {true},
+      abstract    = {Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework's ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.}
+}
 
 
 #################
 # 2024
 #################
 
-@article{Fioretto:24k,
-      title={Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF}, 
-      author={Vincenzo Di Vito and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
-      year={2024},
-      journal     = {CoRR},
-      volume      = {abs/2410.19157},
-      doi         = {10.48550/arXiv.2410.19157},
-      year        = {2024},
-      arxiv       = {2410.19157},
-      abbr        = {preprint},
-      bibtex_show = {true},
-      abstract    = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF's physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
-}
-
 @article{Fioretto:24j,
       title       = {End-to-End Optimization and Learning of Fair Court Schedules},
       author      = {My H. Dinh and James Kotary and Lauryn P. Gouldin and William Yeoh and Ferdinando Fioretto},
-      year        = {2024},
       journal     = {CoRR},
       volume      = {abs/2410.17415},
       doi         = {10.48550/arXiv.2410.17415},
@@ -573,7 +772,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   year        = {2024},
   volume      = {37},
   pages       = {},
-  url         = {https://neurips.cc/virtual/2024/100112},
+  url         = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/a28af221f2f70be183afc16797a56b91-Abstract-Conference.html},
   publisher   = {Curran Associates, Inc.},
   alsoin       = {Machine Learning and the Physical Sciences Workshop},
   alsoinyear   = {NeurIPS 2024},
@@ -662,7 +861,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 @inproceedings{Fioretto:icml24b,
   title       = {Disparate Impact on Group Accuracy of Linearization for Private Inference},
   author      = {Saswat Das and Marco Romanelli and Ferdinando Fioretto},
-  year        = {2024},
   booktitle   = ICML,
   publisher   =   {},
   doi         = {10.48550/arXiv.2402.03629},
@@ -677,7 +875,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   title       = {Differentiable Approximations of Fair OWA Optimization},
   author      = {My H. Dinh and James Kotary and Ferdinando Fioretto},
   booktitle   = {ICML 2024 Workshop on Differentiable Almost Everything},
-  doi         = {https://openreview.net/forum?id=NBt4ZBOFth},
+  url         = {https://openreview.net/forum?id=NBt4ZBOFth},
   year        = {2024},
   abbr        = {ICML},
   bibtex_show = {true},
@@ -735,7 +933,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   booktitle   = FAccT,
   year        = {2024},
   pages       = {2508--2517},
-  url         = {doi.acm.org?doi=3630106.3661932},
+  url         = {https://facctconference.org/static/papers24/facct24-167.pdf},
+  doi         = {10.1145/3630106.3661932},
   arxiv       = {2402.05252},
   abbr        = {FAccT},
   bibtex_show = {true},
@@ -756,8 +955,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages = {109551},
   year = {2023},
   issn = {0378-7796},
-  doi = {https://doi.org/10.1016/j.epsr.2023.109551},
-  url = {https://www.sciencedirect.com/science/article/pii/S0378779623004406},
+  doi = {10.1016/j.epsr.2023.109551},
+  url = {https://doi.org/10.1016/j.epsr.2023.109551},
   abstract = {The application of deep learning methods to speed up the challenging power system problems has recently shown very encouraging results. However, power system dynamics are not snapshot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical constraints to avoid frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real-time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system and a three-bus power network for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications. The model exhibited high accuracy in predicting the variables, achieving a range of 0.533–4.092 and an average L2 relative error improvement of up to 13.30× compared to the PINN model. The computational performance of the proposed gPINN model was compared to a conventional solver, revealing a remarkable speed-up of 31 to 171 times faster in solving differential–algebraic systems of equations in power systems.},
   bibtex_show={true},
   abbr = {EPSR},
@@ -866,8 +1065,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   publisher    = {{ACM}},
   pages        = {2613--2615},
   year         = {2023},
-  url          = {https://dl.acm.org/doi/10.5555/3545946.3599019},
-  doi          = {10.5555/3545946.3599019},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p2613.pdf},
   abbr         = {AAMAS},
   bibtex_show  = {true},
   arxiv        = {2211.00251},
@@ -1210,7 +1408,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {1605--1606},
   year         = {2021},
   url          = {https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1605.pdf},
-  doi          = {10.5555/3463952.3464174},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   arxiv        = {2106.01242},
@@ -1379,8 +1576,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {118--135},
   publisher    = {Springer},
   year         = {2020},
-  url          = {https://doi.org/10.1007/978-3-030-67670-4\_8},
-  doi          = {10.1007/978-3-030-67670-4\_8},
+  url          = {https://doi.org/10.1007/978-3-030-67670-4_8},
+  doi          = {10.1007/978-3-030-67670-4_8},
   bibtex_show  = {true},
   abbr         = {ECML},
   arxiv        = {2001.09394},
@@ -1395,7 +1592,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages =       {106718},
   year =        {2020},
   issn =        {0378-7796},
-  doi =         {https://doi.org/10.1016/j.epsr.2020.106718},
+  doi =         {10.1016/j.epsr.2020.106718},
   abbr    =     {PSCC},
   bibtex_show = {true},
   arxiv       = {1910.04250},
@@ -1413,7 +1610,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   publisher    = {Springer},
   year         = {2020},
   url          = {https://link.springer.com/chapter/10.1007/978-3-030-69322-0_7},
-  doi          = {10.1007/978-3-030-69322-0\_7},
+  doi          = {10.1007/978-3-030-69322-0_7},
   bibtex_show  = {true},
   abbr         = {PRIMA},
   abstract     = {Daily energy demand peaks induce high greenhouse gas emissions and are deleterious to the power grid operations. The autonomous and coordinated control of smart appliances in residential buildings represents an effective solution to reduce peak demands. This coordination problem is challenging as it involves, not only, scheduling devices to minimize energy peaks, but also to comply with user’ preferences. Prior work assumed these preferences to be fully specified and known a priori, which is, however, unrealistic. To remedy this limitation, this paper introduces a Bayesian optimization approach for smart appliance scheduling when the users’ satisfaction with a schedule must be elicited, and thus considered expensive to evaluate. The paper presents a set of ad-hoc energy-cost based acquisition functions to drive the Bayesian optimization problem to find schedules that maximize the user’s satisfaction. The experimental results demonstrate the effectiveness of the proposed energy-cost based acquisition functions which improve the algorithm’s performance up to 26%.}
@@ -1471,12 +1668,13 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 @article{FDP:ia19,
   title       = {Distributed multi-agent optimization for smart grids and home automation},
   author      = {Fioretto, Ferdinando and Dovier, Agostino and Pontelli, Enrico},
-  journal     = {Intelligenza Artificial},
-  doi         = {10.3233/IA-18003},
+  journal     = {Intelligenza Artificiale},
+  doi         = {10.3233/IA-180037},
   volume      = {12},
   number      = {2},
   pages       = {67--87},
-  year        = {2019},
+  year        = {2018},
+  url         = {https://hdl.handle.net/11390/1144942},
   bibtex_show = {true},
   abbr        = {IA},
   award       = {Best AI*IA Dissertation in AI},
@@ -1491,7 +1689,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {638--646},
   publisher    = {International Foundation for Autonomous Agents and Multiagent Systems},
   year         = {2019},
-  url          = {http://dl.acm.org/citation.cfm?id=3331750},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p638.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Consider a set of agents with sensitive datasets who are interested in the same prediction task and would like to share their datasets without revealing private information. For instance, the agents may be medical centers with their own historical databases and the task may be the diagnosis of a rare form of a disease. This paper investigates whether sharing privacy-preserving versions of these datasets may improve the agent predictions. It proposes a Privacy-preserving Federated Data Sharing (PFDS) protocol that each agent can run locally to produce a privacy-preserving version of its original dataset. The PFDS protocol is evaluated on several standard prediction tasks and experimental results demonstrate the potential of sharing privacy- preserving datasets to produce accurate predictors.}
@@ -1506,8 +1704,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {639--655},
   publisher    = {Springer},
   year         = {2019},
-  url          = {https://doi.org/10.1007/978-3-030-30048-7\_37},
-  doi          = {10.1007/978-3-030-30048-7\_37},
+  url          = {https://doi.org/10.1007/978-3-030-30048-7_37},
+  doi          = {10.1007/978-3-030-30048-7_37},
   bibtex_show  = {true},
   abbr         = {CP},
   award        = {Invited to Constraint journal - selected paper},
@@ -1603,7 +1801,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {1405--1413},
   publisher    = {International Foundation for Autonomous Agents and Multiagent Systems Richland, SC, {USA} / {ACM}},
   year         = {2018},
-  url          = {http://dl.acm.org/citation.cfm?id=3237910},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2018/pdfs/p1405.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Ubiquitous mobile and wireless communication systems have the potential to revolutionize transportation systems, making accurate mobility traces and activity-based patterns available to optimize their design and operations. It also poses significant privacy risks, potentially revealing highly sensitive personal information. This paper studies the use of differential privacy to release mobility data that can be used for smart transportation systems. It shows that existing approaches do not provide the desired fidelity for practical uses. To remedy this critical limitation, the paper proposes the idea of optimization-based differential privacy that casts the production of a private dataset as an optimization problem that minimizes the impact of added Laplacian noise on the algorithmic task at hand. When applied to a city-level multi-modal transit system, experimental results show that the design and operations of the transportation system have similar performance measures when optimized over the real and private datasets. The results also indicate that optimization-based differential privacy may improve the accuracy of state-of-art privacy methods by an order of magnitude.}
@@ -1618,8 +1816,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {688--706},
   publisher    = {Springer},
   year         = {2018},
-  url          = {https://doi.org/10.1007/978-3-319-98334-9\_44},
-  doi          = {10.1007/978-3-319-98334-9\_44},
+  url          = {https://doi.org/10.1007/978-3-319-98334-9_44},
+  doi          = {10.1007/978-3-319-98334-9_44},
   bibtex_show  = {true},
   arxiv        = {1702.06915},
   abbr         = {CP},
@@ -1636,8 +1834,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {215--231},
   publisher    = {Springer},
   year         = {2018},
-  url          = {https://doi.org/10.1007/978-3-319-93031-2\_15},
-  doi          = {10.1007/978-3-319-93031-2\_15},
+  url          = {https://doi.org/10.1007/978-3-319-93031-2_15},
+  doi          = {10.1007/978-3-319-93031-2_15},
   bibtex_show  = {true},
   abbr         = {CPAIOR},
   abstract     = {This paper considers the problem of releasing optimal power flow benchmarks that maintain the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential-privacy mechanisms are not accurate enough: The dded noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solution. To remedy this limitation, the paper introduces the framework of Constraint-Based Differential Privacy (CBDP) that leverages the post-processing immunity of differential privacy to improve the accuracy of traditional mechanisms. More precisely, CBDP solves an optimization problem to satisfies the problem-specific constraints by redistributing the noise. The paper shows that CBDP enjoys desirable theoretical properties and produces orders of magnitude improvements on the largest set of test cases available.}
@@ -1651,7 +1849,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   booktitle    = {International Symposium on Artificial Intelligence and Mathematics,
                   {ISAIM} 2018, Fort Lauderdale, Florida, USA, January 3-5, 2018},
   year         = {2018},
-  url          = {http://isaim2018.cs.virginia.edu/papers/ISAIM2018\_Fioretto\_etal.pdf},
+  url          = {https://files.hong.me/papers/fioretto2018.pdf},
   bibtex_show  = {true},
   abbr         = {ISAIM},
   abstract     = { The Distributed Constraint Optimization Problem (DCOP) offers a powerful approach for the description and resolution of cooperative multi-agent problems. In this model, a group of agents coordinates their actions to optimize a global objective function, taking into account their local preferences. In the majority of DCOP algorithms, agents operate on three main graphical representations of the problem: (a) the constraint graph, (b) the pseudo-tree, or (c) the factor graph. In this paper, we introduce the Constraint Composite Graph (CCG) for DCOPs, an alternative graphical representation on which agents can coordinate their assignments to solve the distributed problem suboptimally. By leveraging this repre- sentation, agents are able to reduce the size of the problem. We propose a novel variant of Max-Sum–a popular DCOP incomplete algorithm–called CCG-Max-Sum, which is applied to CCGs. We also demonstrate the efficiency and effective- ness of CCG-Max-Sum on DCOP benchmarks based on several network topologies.}
@@ -1666,8 +1864,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {106--122},
   publisher    = {Springer},
   year         = {2018},
-  url          = {https://doi.org/10.1007/978-3-030-03098-8\_7},
-  doi          = {10.1007/978-3-030-03098-8\_7},
+  url          = {https://doi.org/10.1007/978-3-030-03098-8_7},
+  doi          = {10.1007/978-3-030-03098-8_7},
   bibtex_show  = {true},
   abbr         = {PRIMA},
   abstract     = {We introduce the Constraint Composite Graph (CCG) for Distributed Constraint Optimization Problems (DCOPs), a popular paradigm used for the description and resolution of cooperative multi-agent problems. The CCG is a novel graphical representation of DCOPs on which agents can coordinate their assignments to solve the distributed problem suboptimally. By leveraging this representation, agents are able to reduce the size of the problem. We propose a novel variant of Max- Sum—a popular DCOP incomplete algorithm—called CCG-Max-Sum, which is applied to CCGs, and demonstrate its efficiency and effectiveness on DCOP benchmarks based on several network topologies.}
@@ -1699,8 +1897,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {125--142},
   publisher    = {Springer},
   year         = {2017},
-  url          = {https://doi.org/10.1007/978-3-319-71679-4\_9},
-  doi          = {10.1007/978-3-319-71679-4\_9},
+  url          = {https://doi.org/10.1007/978-3-319-71679-4_9},
+  doi          = {10.1007/978-3-319-71679-4_9},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   award        = {Visionary Workshop Paper Award},
@@ -1714,7 +1912,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {212--220},
   publisher    = {{ACM}},
   year         = {2017},
-  url          = {http://dl.acm.org/citation.cfm?id=3091160},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p212.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful tool for modeling multi-agent coordination problems. Researchers have recently extended this model to Proactive Dynamic DCOPs (PD-DCOPs) to capture the inherent dynamism present in many coordination problems. The PD-DCOP formulation is a finite-horizon model that assumes a finite horizon is known a priori. It ignores changes to the problem after the horizon and is thus not guaranteed to find optimal solutions for infinite-horizon problems, which often occur in the real world. Therefore, we (i) propose the Infinite-Horizon PD-DCOP (IPD- DCOP) model, which extends PD-DCOPs to handle infinite horizons; (ii) exploit the convergence properties of Markov chains to determine the optimal solution to the problem after it has converged; (iii) propose three distributed greedy algorithms to solve IPD-DCOPs; (iv) provide theoretical quality guarantees on the new model; and (v) empirically evaluate both proactive and reactive algorithms to determine the tradeoffs between the two classes. The final contribution is important as, thus far, researchers have exclusively evaluated the two classes of algorithms in isolation. As a result, it is difficult to identify the characteristics of problems that they excel in. Our results are the first in this important direction.}
@@ -1727,7 +1925,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {981--989},
   publisher    = {{ACM}},
   year         = {2017},
-  url          = {http://dl.acm.org/citation.cfm?id=3091265},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p981.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Demand-side management (DSM) in the smart grid allows customers to make autonomous decisions on their energy consumption, helping energy providers to reduce the energy peaks in load demand. The automated scheduling of smart devices in residential and commercial buildings plays a key role in DSM. Due to data privacy and user autonomy, such an approach is best implemented through distributed multi-agent systems. This paper makes the following contributions: (i) It introduces the Smart Home Device Scheduling (SHDS) problem, which formalizes the device scheduling and coordination problem across multiple smart homes as a multi-agent system; (ii) It describes a mapping of this problem to a distributed constraint optimization problem; (iii) It proposes a distributed algorithm for the SHDS problem; and (iv) It presents empirical results from a physically distributed system of Raspberry Pis, each capable of controlling smart devices through hardware interfaces, as well as larger scale synthetic experiments.}
@@ -1740,7 +1938,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {999--1007},
   publisher    = {{ACM}},
   year         = {2017},
-  url          = {http://dl.acm.org/citation.cfm?id=3091267},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p999.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = { With the growing complexity of the current power grid, there is an increasing need for intelligent operations coordinating energy supply and demand. A key feature of the smart grid vision is that intelligent mechanisms will coordinate the production, transmission, and consumption of energy in a distributed and reliable way. Economic Dispatch (ED) and Demand Response (DR) are two key problems that need to be solved to achieve this vision. In traditional operations, ED and DR are implemented separately, despite the strong inter-dependencies between these two problems. Therefore, we propose an integrated approach to solve the ED and DR problems that simultaneously maximizes the benefits of customers and minimizes the generation costs, and introduce an effective multi-agent-based algorithm, based on Distributed Constraint Optimization Problems (DCOPs), acting on direct control of both generators and dispatchable loads. To cope with the high complexity of the problem, our solution employs General Purpose Graphical Processing Units (GPGPUs) to speed up the computational runtime. We empirically evaluate the proposed algorithms on standard IEEE bus systems and test the stability of the proposed solution with a state-of-the-art power system simulator on the IEEE 30-bus system.}
@@ -1755,8 +1953,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {278--296},
   publisher    = {Springer},
   year         = {2017},
-  url          = {https://doi.org/10.1007/978-3-319-66158-2\_18},
-  doi          = {10.1007/978-3-319-66158-2\_18},
+  url          = {https://doi.org/10.1007/978-3-319-66158-2_18},
+  doi          = {10.1007/978-3-319-66158-2_18},
   bibtex_show  = {true},
   abbr         = {CP},
   abstract     = {Distributed Constraint Optimization Problems (DCOPs) offer a powerful approach for the description and resolution of cooperative multi-agent problems. In this model, a group of agents coordinate their actions to optimize a global objective function, taking into account their preferences or constraints. A core limitation of this model is the assumption that the preferences of all agents or the costs of all constraints are specified a priori. Unfortunately, this assumption does not hold in a number of application domains where preferences or constraints must be elicited from the users. One of such domains is the Smart Home Device Scheduling (SHDS) problem. Motivated by this limitation, we make the following contributions in this paper: (1) We propose a general model for preference elicitation in DCOPs; (2) We propose several heuristics to elicit preferences in DCOPs; and (3) We empirically evaluate the effect of these heuristics on random binary DCOPs as well as SHDS problems.}
@@ -1771,7 +1969,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   title        = {Exploiting the Structure of Distributed Constraint Optimization Problems},
   school       = {University of Udine, Italy},
   year         = {2016},
-  url          = {https://opac.bncf.firenze.sbn.it/bncf-prod/resource?uri=TD16020931},
+  url          = {https://hdl.handle.net/11390/1132725},
   bibtex_show  = {true},
   abbr         = {PhD Thesis}
 }
@@ -1787,8 +1985,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {96--111},
   publisher    = {Springer},
   year         = {2016},
-  url          = {https://doi.org/10.1007/978-3-319-54229-4\_7},
-  doi          = {10.1007/978-3-319-54229-4\_7},
+  url          = {https://doi.org/10.1007/978-3-319-54229-4_7},
+  doi          = {10.1007/978-3-319-54229-4_7},
   bibtex_show  = {true},
   abbr         = {AMEC/TADA}
 }
@@ -1813,7 +2011,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {597--605},
   publisher    = {{ACM}},
   year         = {2016},
-  url          = {http://dl.acm.org/citation.cfm?id=2937013},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p597.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Current approaches that model dynamism in DCOPs solve a sequence of static problems, reacting to changes in the environment as the agents observe them. Such approaches thus ignore possible predictions on future changes. To overcome this limitation, we introduce Proactive Dynamic DCOPs (PD-DCOPs), a novel formalism to model dynamic DCOPs in the presence of exogenous uncertainty. In contrast to reactive approaches, PD-DCOPs are able to explicitly model the possible changes to the problem, and take such information into account proactively, when solving the dynamically changing problem. The additional expressivity of this formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and practical contributions that advance current dynamic DCOP models: (i) we introduce the PD-DCOP model, which explicitly captures dynamic changes of the DCOP over time; (ii) we discuss the complexity of this new class of DCOPs; and (iii) we develop both exact and approximation algorithms with quality guarantees to solve PD-DCOPs proactively.}
@@ -1826,7 +2024,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {606--614},
   publisher    = {{ACM}},
   year         = {2016},
-  url          = {http://dl.acm.org/citation.cfm?id=2937014},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p606.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Distributed Constraint Optimization Problems (DCOPs) have been used to model a number of multi-agent coordination problems. In DCOPs, agents are assumed to have complete information about the utility of their possible actions. However, in many real-world applications, such utilities are stochastic due to the presence of exogenous events that are beyond the direct control of the agents. This paper addresses this issue by extending the standard DCOP model to Expected Regret DCOP (ER-DCOP) for DCOP applications with uncertainty in constraint utilities. Different from other approaches, ER-DCOPs aim at minimizing the overall expected regret of the problem. The paper proposes the ER-DPOP algorithm for solving ER-DCOPs, which is complete and requires a linear number of messages with respect to the number of agents in the problem. We further present two implementations of ER-DPOP---GPU- and ASP-based implementations---that orthogonally exploit the problem structure and present their evaluations on random networks and power network problems.}
@@ -1841,8 +2039,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {813--831},
   publisher    = {Springer},
   year         = {2016},
-  url          = {https://doi.org/10.1007/978-3-319-44953-1\_51},
-  doi          = {10.1007/978-3-319-44953-1\_51},
+  url          = {https://doi.org/10.1007/978-3-319-44953-1_51},
+  doi          = {10.1007/978-3-319-44953-1_51},
   bibtex_show  = {true},
   abbr         = {CP},
   abstract     = {The field of Distributed Constraint Optimization (DCOP) has gained momentum in recent years, thanks to its ability to address various applications related to multi-agent coordination. Nevertheless, solving DCOPs is computationally challenging. Thus, in large scale, complex applications, incomplete DCOP algorithms are necessary. Recently, researchers have introduced a promising class of incomplete DCOP algorithms, based on sampling. However, this paradigm requires a multitude of samples to ensure convergence. This paper exploits the property that sampling is amenable to parallelization, and introduces a general framework, called Distributed MCMC (DMCMC), that is based on a dynamic programming procedure and uses Markov Chain Monte Carlo (MCMC) sampling algorithms to solve DCOPs. Additionally, DMCMC harnesses the parallel computing power of Graphical Processing Units (GPUs) to speed-up the sampling process. The experimental results show that DMCMC can find good solutions up to two order of magnitude faster than other incomplete DCOP algorithms.}
@@ -1857,7 +2055,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   volume       = {{WS-16-04}},
   publisher    = {{AAAI} Press},
   year         = {2016},
-  url          = {http://www.aaai.org/ocs/index.php/WS/AAAIW16/paper/view/12593},
+  url          = {https://auld.aaai.org/Library/Workshops/ws16-04.php},
   bibtex_show  = {true},
   abbr         = {AISGSB}
 }
@@ -1902,7 +2100,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {1823--1824},
   publisher    = {{ACM}},
   year         = {2015},
-  url          = {http://dl.acm.org/citation.cfm?id=2773455},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1823.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Current DCOP algorithms suffer from a major limiting assumption---each agent can handle only a single variable of the problem---which limits their scalability. This paper proposes a novel Multi-Variable Agent (MVA) DCOP decomposition, which: (i) Exploits co-locality of an agent's variables, allowing us to adopt efficient centralized techniques; (ii) Enables the use of hierarchical parallel models, such us those based on GPGPUs; and (iii) Empirically reduces the amount of communication required in several classes of DCOP algorithms. Experimental results show that our MVA decomposition outperforms non-decomposed DCOP algorithms, in terms of network load and scalability.}
@@ -1915,7 +2113,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {1835--1836},
   publisher    = {{ACM}},
   year         = {2015},
-  url          = {http://dl.acm.org/citation.cfm?id=2773461},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1835.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {This paper proposes Distributed Large Neighborhood Search (D-LNS), an incomplete DCOP algorithm that builds on the strengths of centralized LNS. D-LNS: (i) is anytime; (ii) provides guarantees on solution quality (upper and lower bounds); and (iii) can learn online the best neighborhood to explore. Experimental results show that D-LNS outperforms other incomplete DCOP algorithms in random and scale-free network instances.}
@@ -1928,7 +2126,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {2007--2008},
   publisher    = {{ACM}},
   year         = {2015},
-  url          = {http://dl.acm.org/citation.cfm?id=2773549},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2015/aamas/p2007.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {In the proposed thesis, we study Distributed Constraint Optimization Problems (DCOPs), which are problems where several agents coordinate with each other to optimize a global cost function. The use of DCOPs has gained momentum, due to their capability of addressing complex and naturally distributed problems. A majority of the work in DCOP addresses the resolution problem by detaching the model from the resolution process, where they assume that each agent controls exclusively one variable of the problem (Burke et al. 2006). This assumption often is not reflected in the model specifications, and may lead to inefficient communication requirements. Another limitation of current DCOP resolution methods is their inability to capitalize on the presence of structural information, which may allow incoherent/unnecessary data to reticulate among the agents (Yokoo 2001). The purpose of the proposed dissertation is to study how to adapt and integrate insights gained from centralized solving techniques in order to enhance DCOP performance and scalability, enabling their use for the resolution of real-world complex problems. To do so, we hypothesize that one can exploit the DCOP structure in both problem modeling and problem resolution phases.}
@@ -1944,8 +2142,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {121--139},
   publisher    = {Springer},
   year         = {2015},
-  url          = {https://doi.org/10.1007/978-3-319-23219-5\_9},
-  doi          = {10.1007/978-3-319-23219-5\_9},
+  url          = {https://doi.org/10.1007/978-3-319-23219-5_9},
+  doi          = {10.1007/978-3-319-23219-5_9},
   bibtex_show  = {true},
   abbr         = {CP},
   abstract     = {This paper proposes the design and implementation of a dynamic programming based algorithm for (distributed) constraint optimization, which exploits modern massively parallel architectures, such as those found in modern Graphical Processing Units (GPUs). The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The experimental analysis, performed on unstructured and structured graphs, shows the advantages of employing GPUs, resulting in enhanced performances and scalability.}
@@ -1962,7 +2160,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {1339--1340},
   publisher    = {{IFAAMAS/ACM}},
   year         = {2014},
-  url          = {http://dl.acm.org/citation.cfm?id=2617462},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2014/aamas/p1339.pdf},
   bibtex_show  = {true},
   abbr         = {AAMAS},
   abstract     = {Researchers have recently introduced a promising new class of Distributed Constraint Optimization Problem (DCOP) algorithms that is based on sampling. This paradigm is very amenable to parallelization since sampling algorithms require a lot of samples to ensure convergence, and the sampling process can be designed to be executed in parallel. This paper presents GPU-based D-Gibbs (GD-Gibbs), which extends the Distributed Gibbs (D-Gibbs) sampling algorithm and harnesses the power of parallel computation of GPUs to solve DCOPs. Experimental results show that GD-Gibbs is faster than several other benchmark algorithms on a distributed meeting scheduling problem.}
@@ -1977,8 +2175,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {307--323},
   publisher    = {Springer},
   year         = {2014},
-  url          = {https://doi.org/10.1007/978-3-319-10428-7\_24},
-  doi          = {10.1007/978-3-319-10428-7\_24},
+  url          = {https://doi.org/10.1007/978-3-319-10428-7_24},
+  doi          = {10.1007/978-3-319-10428-7_24},
   bibtex_show  = {true},
   abbr         = {CP},
   abstract     = {The DCOP model has gained momentum in recent years thanks to its ability to capture problems that are naturally distributed and cannot be realistically addressed in a centralized manner. Dynamic programming based techniques have been recognized to be among the most effective techniques for building complete DCOP solvers (e.g., DPOP). Unfortunately, they also suffer from a widely recognized drawback: their messages are exponential in size. Another limitation is that most current DCOP algorithms do not actively exploit hard constraints, which are common in many real problems. This paper addresses these two limitations by introducing an algorithm, called BrC-DPOP, that exploits arc consistency and a form of consistency that applies to paths in pseudo-trees to reduce the size of the messages. Experimental results shows that BrC-DPOP uses messages that are up to one order of magnitude smaller than DPOP, and that it can scale up well, being able to solve problems that its counterpart can not.}
@@ -2009,8 +2207,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   pages        = {152--167},
   publisher    = {Springer},
   year         = {2014},
-  url          = {https://doi.org/10.1007/978-3-319-04132-2\_11},
-  doi          = {10.1007/978-3-319-04132-2\_11},
+  url          = {https://doi.org/10.1007/978-3-319-04132-2_11},
+  doi          = {10.1007/978-3-319-04132-2_11},
   bibtex_show  = {true},
   abbr         = {PADL},
   abstract     = {This paper presents an experimental study aimed at assessing the feasibility of parallelizing constraint propagation—with particular focus on arc-consistency—using Graphical Processing Units (GPUs). GPUs support a form of data parallelism that appears to be suitable to the type of processing required to cycle through constraints and domain values during consistency checking and propagation. The paper illustrates an implementation of a constraint solver capable of hybrid propagations (i.e., alternating CPU and GPU), and demonstrates the potential for competitiveness against sequential implementations.}
@@ -2040,8 +2238,8 @@ title     = {Constraint Programming in Community-Based Gene Regulatory Network I
 booktitle = {Computational Methods in Systems Biology},
 pages     = {135--149},
 year      = {2013},
-url       = {https://doi.org/10.1007/978-3-642-40708-6\_11},
-doi       = {10.1007/978-3-642-40708-6\_11},
+url       = {https://doi.org/10.1007/978-3-642-40708-6_11},
+doi       = {10.1007/978-3-642-40708-6_11},
 abbr      = {CMSB},
 award     = {Best Paper Award},
 abstract  = {Gene Regulatory Network (GRN) inference is a major objective of Systems Biology. The complexity of biological systems and the lack of adequate data have posed many challenges to the inference problem. Community networks integrate predictions from individual methods in a “meta predictor”, in order to compose the advantages of different methods and soften individual limitations. This paper proposes a novel methodology to integrate prediction ensembles using Constraint Programming, a declarative modeling paradigm, which allows the formulation of dependencies among components of the problem, enabling the integration of diverse forms of knowledge. The paper experimentally shows the potential of this method: the addition of biological constraints can offer improvements in the prediction accuracy, and the method shows promising results in assessing biological hypothesis using constraints.}

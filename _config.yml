@@ -7,10 +7,10 @@ first_name: Ferdinando (Nando)
 middle_name: 
 last_name: Fioretto
 email: fioretto@virginia.edu
-description: # the ">" symbol means to ignore newlines until "footer_text:"
+description: Ferdinando Fioretto leads the RAISE group at the University of Virginia, developing foundational machine learning and generative AI methods that make models obey control objectives, hard constraints, safety requirements, and physical laws for science and engineering.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia  # add your own keywords or leave empty
+keywords: Ferdinando Fioretto, foundational machine learning, generative AI, foundation models, controllable generative models, constrained AI, physics-informed machine learning, AI for science, AI for engineering, optimization, control, responsible AI, trustworthy AI, differential privacy, fairness, University of Virginia  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -18,7 +18,7 @@ icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name
 domain: nandofioretto.github.io
 url: https://nandofioretto.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
-last_updated: December 2024 # set to true if you want to display last updated in the footer
+last_updated: April 2026 # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
@@ -53,7 +53,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 1060px
+max_width: 1140px
 
 # TODO: add layout settings (single page vs. multi-page)
 
