@@ -1,109 +1,218 @@
 ---
-layout: page
+layout: research_area_project
 title: Constrained Discrete Diffusion for Language, Chemistry, and Code
 description: Enforcing hard constraints on tokens, molecules, and programs — training-free, inside the denoising loop.
-img: assets/img/projects/discrete-diffusion/highlight-discrete-diffusion.png
+img: assets/img/projects/discrete-diffusion/highlight-discrete-diffusion-v2.png
 importance: 3
 highlight: true
 category: work
 giscus_comments: true
 ---
 
-<div class="discrete-diffusion-page" markdown="1">
+<section class="research-section research-section--lead" id="start-here" markdown="1">
 
-## Problem Statement and Motivation
+<div class="section-label">01 · Start here</div>
 
-Discrete sequences — tokens in natural language, SMILES strings in chemistry, source code in programming — hold immense potential for scientific and engineering discovery. Yet deploying large language models and discrete generative models in these high-stakes domains exposes a fundamental gap: **the outputs of these models routinely violate critical constraints**, whether toxicity guidelines, chemical validity rules, functional correctness requirements, or security properties.
+## From tokens to masks—and back again
 
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/dllm_architecture.png" title="Discrete diffusion language models: forward masking and backward denoising" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 1</strong>: Discrete diffusion language models define a forward <em>masking</em> process that progressively corrupts a token sequence into noise, and a learned backward <em>denoising</em> process that reconstructs it. Unlike autoregressive models, the entire sequence is available at each denoising step — creating a natural intervention point for constraint enforcement. (Architecture following <a href="https://arxiv.org/abs/2406.07524" target="_blank">Sahoo et al., 2024</a>.)
-</div>
-</div>
+<p class="section-standfirst">Discrete diffusion generates text, molecular strings, and code by repeatedly refining an entire sequence. That global, editable state is what makes constraint enforcement possible before the output is final.</p>
 
-Autoregressive models generate text left-to-right and are structurally constrained by this causal factorization: it is impossible to verify non-local properties (e.g., "does this molecule contain an aldehyde fragment?" or "does this code compile?") until generation is complete, when corrections are expensive or impossible. Discrete diffusion models break this bottleneck. Because they expose the **full, partially denoised sequence** at every reverse step, they offer something autoregressive models cannot: a global program or sequence state that can be inspected, scored, and corrected *before* committing to any final token.
+Let $$x_0=(x_0^1,\ldots,x_0^L)$$ be a sequence of $$L$$ tokens drawn from a vocabulary $$\mathcal{V}$$. A masked diffusion model defines a **forward process** that progressively replaces clean tokens with a special `[MASK]` symbol. At noise level $$t$$, each position is retained with probability $$\alpha_t$$ and masked otherwise:
 
-Our work turns this structural advantage into a rigorous constraint-enforcement machinery — **without retraining the underlying model**.
+$$q(x_t^\ell\mid x_0^\ell)=\operatorname{Cat}\!\left(\alpha_t x_0^\ell+(1-\alpha_t)m\right),$$
 
-### Key Takeaways
+where $$m$$ denotes the one-hot representation of `[MASK]`. As $$t$$ increases, more of the sequence disappears. The learned reverse process starts from a fully masked state and predicts clean-token distributions until a complete sequence is recovered.
 
-<div class="takeaways-grid">
-    <div class="takeaway-card">Discrete diffusion exposes the full token sequence at every denoising step — a natural intervention point for enforcing non-local constraints that autoregressive models cannot natively handle.</div>
-    <div class="takeaway-card">Constraints are enforced via a KL-minimizing proximal projection on the probability simplex — a training-free operation that steers token logits toward feasibility at each reverse step.</div>
-    <div class="takeaway-card">The framework handles heterogeneous constraint types: toxicity filters, chemical valency rules, novelty requirements, syntactic correctness, and program-level security properties.</div>
-    <div class="takeaway-card">Applications span natural language safety, drug-discovery molecular generation, symbolic reasoning, and secure code synthesis — consistently outperforming both autoregressive and unconstrained discrete diffusion baselines.</div>
+<div class="diffusion-steps" aria-label="Forward masking and reverse denoising for discrete diffusion">
+  <div><span>Forward process</span><strong>Tokens → masks</strong><small>A fixed corruption schedule progressively removes information.</small></div>
+  <div class="diffusion-steps__arrow">⇄</div>
+  <div><span>Learned reverse process</span><strong>Masks → sequence</strong><small>A transformer repeatedly predicts the clean token at every position.</small></div>
 </div>
 
+### What the denoiser learns
 
-## The Framework: Projecting Token Distributions onto the Feasible Set
+Given a partially masked sequence $$x_t$$, the denoiser predicts a distribution over the vocabulary for **every position**:
 
-Standard masked diffusion models (MDMs) operate over sequences of $$L$$ tokens drawn from a vocabulary $$\mathcal{V}$$. Each position $$\ell$$ in the sequence $$x_t \in \mathbb{R}^{L \times \lvert\mathcal{V}\rvert}$$ holds a probability distribution over vocabulary items. The forward process corrupts tokens by progressively replacing them with a special `[MASK]` token. The learned reverse process — a transformer network — predicts clean-state logits and iteratively unmasks the sequence.
+$$x_\theta(x_t,t)\in\Delta^{L\times|\mathcal{V}|}.$$
 
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/cdd_framework.png" title="Constrained-aware discrete diffusion: KL proximal projection on token logits" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 2</strong>: At each reverse step, the model's predicted token distribution <em>x<sub>t</sub></em> is projected onto the constraint-feasible region by solving a KL-minimization problem over the probability simplex. The constraint is enforced at the <em>argmax</em> level — on the most likely token at each position — ensuring that the final decoded sequence satisfies the user-specified rules. Toxic or invalid tokens are gated out before they can be committed.
-</div>
-</div>
+Unlike a left-to-right model, it does not commit permanently to one next token. It exposes a global proposal for the entire clean sequence at each reverse step. Tokens that remain uncertain can be reconsidered as information elsewhere in the sequence becomes available.
 
-**Constrained Discrete Diffusion (CDD)** ([Cardei et al., NeurIPS 2025](https://arxiv.org/abs/2503.09790)) adapts the constrained diffusion principle to this discrete setting. At each reverse step $$t$$, instead of directly sampling from the unconstrained model prediction, CDD solves a local proximal problem over the probability simplex:
-
-$$\text{prox}_{\mathcal{C}}(x_t) = \min_{y} \; \mathrm{KL}(y \,\|\, x_t) \quad \text{s.t.} \quad \arg\max(y) \to \mathcal{C}$$
-
-Here $$y \in \Delta^{\lvert\mathcal{V}\rvert}$$ is the projected distribution and $$\mathcal{C}$$ encodes the constraint on the most-likely decoded token. This ensures two things simultaneously: **(1)** the projection stays close to the model's intended distribution (preserving fluency), and **(2)** the sequence that would result from greedily decoding the projected logits satisfies the constraint — **at the sequence level, not just position by position**.
-
-Because the KL proximal step requires no gradient through model weights and no retraining, CDD is a **training-free, plug-and-play wrapper** for any masked diffusion backbone.
-
-### Handling Non-Differentiable Constraints: Neuro-Symbolic Diffusion
-
-Many real-world constraints involve non-differentiable checkers — SMARTS substructure filters in chemistry, compiler parse trees in code, or formal logic evaluators in reasoning. Our **Neuro-Symbolic Diffusion (NSD)** framework ([Christopher et al., NeuS 2025](https://arxiv.org/abs/2506.01121), **DARPA Disruptive Idea Award**) extends this principle by interleaving diffusion steps with symbolic optimization, enabling certifiably consistent generation under arbitrary functional and logic constraints — for both continuous and discrete domains.
-
-**Search-Augmented Masked Diffusion (SearchDiff)** ([Ta et al., 2026](https://arxiv.org/abs/2602.02727)) takes a complementary approach: rather than projecting logits, it introduces a **tree search at each denoising step** that optimizes over the model's predicted proposal set under user-specified property satisfaction, yielding a modified reverse transition that steers sampling toward probable and feasible solutions.
-
-
-## Application 1: Natural Language Safety — Toxicity Mitigation and Lexical Constraints
-
-The most direct application is enforcing content-safety constraints on text generation. Large language models trained on internet-scale data can generate harmful, toxic, or factually incorrect content. CDD addresses this by treating toxicity and lexical rules as hard constraints on the token sequence.
-
-At each reverse step, the KL-proximal projection gates out tokens whose presence would increase the probability of toxic continuations (evaluated by a classifier) or violate counting/lexical rules (e.g., "do not include the word 'kill' in the output"). Key results from ([Cardei et al., 2025](https://arxiv.org/abs/2503.09790)):
-
-- **Zero constraint violations** on toxicity mitigation across all threshold levels (ω = 0.25, 0.50, 0.75), versus **33.2%, 21.6%, and 13.1%** violation rates for GPT-2 — and **17–32%** for MDLM and UDLM discrete diffusion baselines.
-- **Zero violations** on character-level and sequence-level lexical constraints, versus **54.5%** and **97.5%** for MDLM without constraint enforcement.
-- **Minimal computational overhead** compared to post-hoc alternatives: PPLM incurs an **85× slowdown**, FUDGE a **134–143× slowdown**; CDD adds negligible cost over standard discrete diffusion sampling.
-
-Crucially, constraint satisfaction is achieved while **preserving semantic coherence and fluency** — perplexity remains competitive with unconstrained generation, as CDD only departs from the model's intent by the minimum required to satisfy constraints.
-
-
-## Application 2: Molecular Generation for Drug Discovery
-
-<div class="project-figure project-figure--float-right">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/molgen_task.png" title="Molecular generation with novelty and toxicity constraints on SMILES" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 3</strong>: Generating molecules in SMILES format requires simultaneously enforcing novelty (the molecule must not appear in the training set) and toxicity-avoidance (BRENK substructure filters for aldehyde flags, three-membered heterocycles, and other reactive fragments). CDD enforces these constraints directly on the denoising trajectory rather than via post-hoc filtering.
-</div>
+<div class="plain-language">
+  <div class="plain-language__mark">What the model sees</div>
+  <p>A draft of the whole output—not merely its prefix. That draft can be inspected for a distant word, a forbidden molecular substructure, a failed test, or another sequence-level requirement while there is still time to revise it.</p>
 </div>
 
-Chemical molecule generation is a natural discrete-diffusion application: SMILES strings are sequential, token-based representations of molecular structure. Generating valid drug candidates requires satisfying multiple simultaneous constraints — novelty (the molecule must not be in the training set), toxicity avoidance (substructure filters from medicinal chemistry), and chemical validity (SMILES grammar rules).
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/dllm_architecture.png" title="Discrete diffusion language models: forward masking and backward denoising" class="research-figure__img" %}
+  <figcaption><span>Figure 1</span> The forward process masks a token sequence; the learned reverse process reconstructs all positions through iterative refinement.</figcaption>
+</figure>
 
-Our **CDD for Molecular Generation** ([Cardei et al., AI4D3 NeurIPS 2025](https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf), **Best Paper Award**) applies the KL proximal projection to enforce five BRENK substructure filters — ruling out aldehydes, three-membered heterocycles, and other toxicity-linked fragments — jointly with novelty constraints, all within a single training-free inference procedure.
+<p class="paper-link">Mathematical foundation · <a href="https://arxiv.org/abs/2406.07524">Sahoo et al., NeurIPS 2024 →</a></p>
 
-<div style="clear:both"></div>
+### Why a coherent sequence is not necessarily a valid one
 
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/molecular_design.png" title="Molecular design results: valid, novel, and non-toxic molecule generation" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 4</strong>: Molecule generation results comparing autoregressive (AR), unconstrained masked diffusion (MDLM, UDLM), and CDD with BRENK filters. CDD-based methods produce drastically more novel and non-toxic candidates while reducing constraint violations to zero — without any model retraining.
+Discrete sequences—tokens in natural language, SMILES strings in chemistry, and source code in programming—carry rules that likelihood alone does not guarantee. A fluent sentence may violate a lexical instruction. A plausible molecular string may contain an unwanted structural alert. A program can look natural while failing its tests or introducing a vulnerability.
+
+Autoregressive models generate left to right, so many non-local properties cannot be evaluated until the sequence is complete. Post-hoc filtering can catch failures, but only after the generation cost has been paid. Discrete diffusion offers a different intervention point: inspect and correct the global draft throughout denoising.
+
+<div class="research-compare" aria-label="Three approaches to constraints in sequence generation">
+  <div>
+    <span class="research-compare__index">A</span>
+    <h3>Prompt and hope</h3>
+    <p>Ask the model for a rule, but receive no per-sample assurance that it will be followed.</p>
+  </div>
+  <div>
+    <span class="research-compare__index">B</span>
+    <h3>Generate, then filter</h3>
+    <p>Reject invalid outputs after completion, which becomes inefficient when feasible sequences are rare.</p>
+  </div>
+  <div class="research-compare__active">
+    <span class="research-compare__index">C</span>
+    <h3>Constrain while denoising</h3>
+    <p>Evaluate the full draft and minimally redirect token probabilities before the output is committed.</p>
+  </div>
 </div>
+
+<div class="research-callout research-callout--thesis">
+  <span class="research-callout__eyebrow">The thesis</span>
+  <strong>The global token state in discrete diffusion is more than a modeling choice—it is an interface for enforcing non-local rules during generation.</strong>
+  <p>Our work turns that interface into training-free projection, symbolic feedback, and search mechanisms for language, molecules, reasoning, and code.</p>
 </div>
 
-Quantitative results from the molecule generation benchmark:
+</section>
+
+<section class="research-section" id="core-idea" markdown="1">
+
+<div class="section-label">02 · Core idea</div>
+
+## Project token distributions onto the feasible set
+
+<p class="section-standfirst">In continuous diffusion, a projection moves a point in Euclidean space. In discrete diffusion, the object being corrected is a probability distribution over possible tokens.</p>
+
+The continuous constraint-aware foundation views reverse diffusion as a sequence of optimization steps and augments each one with a feasibility correction. **Constrained Discrete Diffusion (CDD)** carries that idea to the probability simplex. At each reverse step, instead of sampling directly from the unconstrained prediction $$x_t$$, CDD solves a local proximal problem:
+
+$$\operatorname{prox}_{\mathcal{C}}(x_t)
+= \arg\min_y\;D_{\mathrm{KL}}(y\,\|\,x_t)
+\quad\text{subject to}\quad \arg\max(y)\in\mathcal{C}.$$
+
+Here $$y\in\Delta^{L\times|\mathcal{V}|}$$ is the corrected token distribution and $$\mathcal{C}$$ is the feasible set. The KL objective changes the model's proposal only as much as needed, while the constraint acts on the sequence that would be obtained by decoding the corrected probabilities.
+
+<p class="paper-link">Constraint-aware foundation · <a href="https://arxiv.org/abs/2402.03559">Christopher, Baek &amp; Fioretto, NeurIPS 2024 →</a></p>
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/cdd_framework.png" title="Constraint-aware discrete diffusion: KL proximal projection on token logits" class="research-figure__img" %}
+  <figcaption><span>Figure 2</span> At every reverse step, CDD finds a nearby token distribution whose most likely decoded sequence satisfies the specified rule.</figcaption>
+</figure>
+
+<div class="plain-language">
+  <div class="plain-language__mark">What projection changes</div>
+  <p>The denoiser still decides which sequences are plausible. The projection only redistributes enough probability mass to prevent the current draft from violating the encoded requirement.</p>
+</div>
+
+Because the proximal step does not update model weights, CDD is a **training-free wrapper** for a pretrained masked-diffusion backbone. The same sampler can support different constraints by changing the evaluator and projection rather than retraining the generator.
+
+<p class="paper-link">Discrete constraint framework · <a href="https://arxiv.org/abs/2503.09790">Cardei et al., NeurIPS 2025 →</a></p>
+
+### Beyond differentiable constraints
+
+Many important checks are black boxes: SMARTS or BRENK substructure filters in chemistry, compilers and static analyzers in code, protein structure predictors, or formal logic solvers. **Neuro-Symbolic Diffusion (NSD)** interleaves denoising with symbolic optimization, while **Search-Augmented Masked Diffusion (SearchDiff)** explores the model's high-probability token proposals with tree search when a local projection is insufficient.
+
+<div class="current-work-grid">
+  <div>
+    <span>Symbolic feedback</span>
+    <h3>Neuro-Symbolic Diffusion</h3>
+    <p>External logic and functional evaluators critique intermediate samples, allowing the sampler to enforce rules that are not naturally differentiable.</p>
+    <a href="https://arxiv.org/abs/2506.01121">Christopher et al., NeuS 2025 →</a>
+  </div>
+  <div>
+    <span>Search-based correction</span>
+    <h3>SearchDiff</h3>
+    <p>Tree search evaluates alternative high-probability tokens and selects transitions that improve global property satisfaction.</p>
+    <a href="https://arxiv.org/abs/2602.02727">Ta et al., 2026 →</a>
+  </div>
+</div>
+
+</section>
+
+<section class="research-section" id="research-landscape" markdown="1">
+
+<div class="section-label">03 · Research landscape</div>
+
+## One sampling principle, several kinds of rules
+
+<p class="section-standfirst">The evaluator changes from one domain to another, but the recurring loop remains the same: propose a full sequence, evaluate it, and correct the token distribution before denoising continues.</p>
+
+<div class="landscape-grid">
+  <a href="#language"><span>Application 01</span><strong>Language safety</strong><small>Toxicity thresholds, counting, and lexical placement</small></a>
+  <a href="#molecules"><span>Application 02</span><strong>Molecular generation</strong><small>Novelty, structural alerts, and chemical validity</small></a>
+  <a href="#searchdiff"><span>Method extension</span><strong>Black-box search</strong><small>Protein properties, logic, and arbitrary evaluators</small></a>
+  <a href="#code"><span>Application 03</span><strong>Code generation</strong><small>Functionality, syntax, and security</small></a>
+</div>
+
+<div class="result-strip" aria-label="Selected headline results">
+  <div><strong>0%</strong><span>toxicity-rule violations</span></div>
+  <div><strong>392</strong><span>novel BRENK-screened molecules</span></div>
+  <div><strong>65.2%</strong><span>HumanEval-X functionality with CDC</span></div>
+  <div><strong>~50%</strong><span>backbone perplexity reduction</span></div>
+</div>
+
+</section>
+
+<section class="research-section research-domain" id="language" markdown="1">
+
+<div class="domain-heading"><span>Application 01</span><div class="domain-heading__dot domain-heading__dot--language"></div></div>
+
+## Natural-language safety and exact lexical rules
+
+<p class="section-standfirst">Language constraints range from learned safety scores to exact symbolic instructions. CDD treats both as requirements on the complete token sequence rather than preferences attached to individual next-token choices.</p>
+
+For toxicity mitigation, the current draft is evaluated by a classifier and the token distribution is projected toward a specified threshold. For counting and lexical tasks, the feasible set encodes exact requirements such as how many times a character occurs or which word must appear at a particular position.
+
+Across all evaluated toxicity thresholds ($$\omega=0.25,0.50,0.75$$), CDD produced **zero constraint violations**, compared with violation rates of 33.2%, 21.6%, and 13.1% for GPT-2 and 17–32% for the evaluated discrete-diffusion baselines. It also reached **zero violations** on counting and positional lexical constraints, versus 54.5% and 97.5% for unconstrained MDLM.
+
+<div class="evidence-grid">
+  <div><span>Toxicity thresholds</span><strong>0%</strong><small>violations across all evaluated settings</small></div>
+  <div><span>Counting rules</span><strong>0%</strong><small>vs. 54.5% violations for MDLM</small></div>
+  <div><span>Lexical placement</span><strong>0%</strong><small>vs. 97.5% violations for MDLM</small></div>
+</div>
+
+<div class="research-callout">
+  <span class="research-callout__eyebrow">What these results show</span>
+  <strong>Exact sequence-level control can be added to a masked diffusion model without retraining it for every new instruction.</strong>
+  <p>The guarantee is tied to the supplied rule or classifier, so it should be interpreted as reliable benchmark compliance rather than a complete definition of safe language. Fluency and perplexity remain competitive, although constraint enforcement introduces task-dependent tradeoffs.</p>
+</div>
+
+<p class="paper-link">Language constraints · <a href="https://arxiv.org/abs/2503.09790">Cardei et al., NeurIPS 2025 →</a></p>
+
+</section>
+
+<section class="research-section research-domain" id="molecules" markdown="1">
+
+<div class="domain-heading"><span>Application 02</span><div class="domain-heading__dot domain-heading__dot--molecules"></div></div>
+
+## Molecular generation for drug discovery
+
+<p class="section-standfirst">A SMILES string is a discrete sequence, but its value depends on the chemical structure it represents. Useful generation therefore requires sequence validity, novelty, and domain filters to hold together.</p>
+
+Chemical molecule generation is a natural discrete-diffusion application: SMILES strings are token-based representations of molecular structure. The benchmark combines novelty constraints with five BRENK substructure filters, ruling out selected aldehydes, three-membered heterocycles, and other reactive or undesirable fragments during generation rather than after it.
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/molgen_task.png" title="Molecular generation with novelty and toxicity constraints on SMILES" class="research-figure__img" %}
+  <figcaption><span>Figure 3</span> CDD evaluates novelty and selected medicinal-chemistry structural alerts throughout the SMILES denoising trajectory.</figcaption>
+</figure>
+
+Our **CDD for Molecular Generation** applies KL-proximal corrections for novelty and BRENK constraints within a single training-free inference procedure. The generated sequence remains close to the model's proposal while being redirected away from encoded violations.
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/molecular_design.png" title="Molecular design results: valid, novel, and non-toxic molecule generation" class="research-figure__img" %}
+  <figcaption><span>Figure 4</span> CDD produces more novel candidates that pass the selected BRENK screens than the evaluated autoregressive and unconstrained diffusion baselines.</figcaption>
+</figure>
 
 <div class="project-table-card">
   <div class="project-table-card__header">
     <div>
       <span class="project-table-eyebrow">Molecule generation benchmark</span>
-      <h4>Novel and non-toxic molecule discovery</h4>
+      <h4>Novel and BRENK-screened molecule discovery</h4>
     </div>
     <span class="project-table-legend">Higher is better for discovery; lower is better for violations.</span>
   </div>
@@ -113,7 +222,7 @@ Quantitative results from the molecule generation benchmark:
         <tr>
           <th scope="col">Model</th>
           <th scope="col">Novel <span class="metric-direction metric-direction--up">↑</span></th>
-          <th scope="col">Novel &amp; non-toxic <span class="metric-direction metric-direction--up">↑</span></th>
+          <th scope="col">Novel &amp; screened <span class="metric-direction metric-direction--up">↑</span></th>
           <th scope="col">Novelty violations <span class="metric-direction metric-direction--down">↓</span></th>
           <th scope="col">BRENK violations <span class="metric-direction metric-direction--down">↓</span></th>
         </tr>
@@ -122,28 +231,28 @@ Quantitative results from the molecule generation benchmark:
         <tr>
           <th scope="row" data-label="Model">AR</th>
           <td data-label="Novel">10.3 ± 2.3</td>
-          <td data-label="Novel & non-toxic">5.3 ± 1.4</td>
+          <td data-label="Novel & screened">5.3 ± 1.4</td>
           <td data-label="Novelty violations">99.0%</td>
           <td data-label="BRENK violations">40.2%</td>
         </tr>
         <tr>
           <th scope="row" data-label="Model">MDLM</th>
           <td data-label="Novel">260.7 ± 16.4</td>
-          <td data-label="Novel & non-toxic">108.0 ± 9.7</td>
+          <td data-label="Novel & screened">108.0 ± 9.7</td>
           <td data-label="Novelty violations">53.9%</td>
           <td data-label="BRENK violations">35.3%</td>
         </tr>
         <tr>
           <th scope="row" data-label="Model">UDLM</th>
           <td data-label="Novel">279.7 ± 22.7</td>
-          <td data-label="Novel & non-toxic">132.3 ± 3.7</td>
+          <td data-label="Novel & screened">132.3 ± 3.7</td>
           <td data-label="Novelty violations">70.8%</td>
           <td data-label="BRENK violations">38.1%</td>
         </tr>
         <tr class="project-table__highlight">
           <th scope="row" data-label="Model">CDD + BRENK <span class="table-note">ours</span></th>
           <td data-label="Novel"><strong>451.7 ± 19.5</strong></td>
-          <td data-label="Novel & non-toxic"><strong>392.0 ± 16.7</strong></td>
+          <td data-label="Novel & screened"><strong>392.0 ± 16.7</strong></td>
           <td data-label="Novelty violations">51.2%</td>
           <td data-label="BRENK violations"><strong>0.0%</strong></td>
         </tr>
@@ -152,74 +261,120 @@ Quantitative results from the molecule generation benchmark:
   </div>
 </div>
 
-By combining novelty enforcement with BRENK filters, our method produces **392 novel non-toxic molecules** per evaluation run — versus **108 for MDLM** and **5 for autoregressive generation** — while reducing BRENK violations to exactly zero.
-
-
-## Search-Augmented Discrete Diffusion
-
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/search_augmented.png" title="SearchDiff: tree search augments the denoising process for constrained generation" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 5</strong>: SearchDiff integrates informed tree search into the reverse denoising process. At each step, the model's predicted token distribution defines a proposal set; search optimizes over this set under user-defined property constraints, yielding a modified reverse transition that steers sampling toward probable <em>and</em> feasible completions.
-</div>
+<div class="evidence-grid">
+  <div><span>Novel &amp; screened</span><strong>392</strong><small>vs. 108 for MDLM and 5 for AR</small></div>
+  <div><span>BRENK violations</span><strong>0%</strong><small>for the encoded structural alerts</small></div>
+  <div><span>Model retraining</span><strong>None</strong><small>constraints are imposed at inference</small></div>
 </div>
 
-Projection-based methods like CDD work well when constraint satisfaction can be efficiently evaluated and projected locally. But some constraints require evaluating global sequence properties — protein secondary structure, symbolic logic satisfiability, or pass/fail test suite execution — where local projections are insufficient.
-
-**SearchDiff** ([Ta et al., 2026](https://arxiv.org/abs/2602.02727)) addresses this by replacing the projection step with a **search procedure**: at each denoising step, the model's prediction defines a proposal set of high-probability candidate tokens, and a search algorithm (informed by the constraint evaluator) selects the candidate that best satisfies the target property while remaining within the model's distribution. This yields a modified reverse transition that **steers sampling toward probable and feasible solutions**.
-
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/blackbox_evaluators.png" title="Discrete diffusion enables blackbox constraint evaluators at every step" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 6</strong>: A key advantage of discrete diffusion over autoregressive generation: because the <em>full</em> candidate sequence is available at every reverse step, any blackbox evaluator — a protein structure predictor, a logic solver, a test harness — can score the entire sequence and return a constraint signal, which SearchDiff uses to guide the next denoising step.
-</div>
+<div class="research-callout">
+  <span class="research-callout__eyebrow">What these results show</span>
+  <strong>Constraint-aware denoising can focus molecular exploration on novel candidates that pass specified structural screens.</strong>
+  <p>BRENK filters are useful early screens, not a complete assessment of toxicity, synthesizability, stability, or biological activity. The outputs remain computational candidates that require broader cheminformatics and experimental validation.</p>
 </div>
 
-A key structural advantage exploited by SearchDiff is that discrete diffusion makes the **full candidate sequence accessible at every step**, even early in generation. This allows arbitrary blackbox evaluators — protein structure predictors, formal logic solvers, test suite harnesses, financial risk models — to score and critique a draft output at intermediate steps, enabling much earlier constraint correction than is possible with autoregressive decoding.
+<p class="paper-link">Molecular constraints · <a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf">Cardei et al., AI4D3 at NeurIPS 2025 — Best Paper →</a></p>
 
-Across biological design (protein sequence) and symbolic reasoning benchmarks, SearchDiff **substantially improves constraint satisfaction and property adherence**, consistently outperforming both unconstrained discrete diffusion and autoregressive baselines.
+</section>
 
+<section class="research-section research-domain" id="searchdiff" markdown="1">
 
-## Application 3: Constrained Code Generation
+<div class="domain-heading"><span>Method extension</span><div class="domain-heading__dot domain-heading__dot--search"></div></div>
 
-<div class="project-figure">
-    {% include figure.html path="assets/img/projects/discrete-diffusion/code_gen_results.png" title="Constrained code generation results: functional correctness, security, and syntax" class="img-fluid rounded z-depth-1 project-figure__img" %}
-<div class="caption">
-    <strong>Figure 7</strong>: Results for constrained code generation across functional correctness, security, and syntax benchmarks. CDC (Constrained Diffusion for Code) consistently improves constraint satisfaction over both discrete diffusion and autoregressive baselines, using <em>less</em> corrective computation and more localized edits to the token sequence.
+## Search-augmented discrete diffusion
+
+<p class="section-standfirst">Projection works well when feasibility can be evaluated and corrected locally. SearchDiff addresses global black-box objectives for which the useful correction is not available as a gradient.</p>
+
+At each denoising step, the model's token distribution defines a proposal set. Search explores high-probability alternatives, evaluates them with a user-provided property function, and selects a transition that balances likelihood and constraint satisfaction.
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/search_augmented.png" title="SearchDiff: tree search augments the denoising process for constrained generation" class="research-figure__img" %}
+  <figcaption><span>Figure 5</span> SearchDiff uses the denoiser to propose likely tokens and tree search to identify transitions that better satisfy a global property.</figcaption>
+</figure>
+
+The key architectural advantage is that the **full candidate sequence is accessible at every reverse step**. A protein structure predictor, logic solver, test harness, or other black-box evaluator can score the current draft and return feedback long before generation is complete.
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/blackbox_evaluators.png" title="Discrete diffusion enables blackbox constraint evaluators at every step" class="research-figure__img" %}
+  <figcaption><span>Figure 6</span> Global intermediate states allow arbitrary evaluators to critique a sequence and guide subsequent denoising.</figcaption>
+</figure>
+
+Across biological design and symbolic-reasoning benchmarks, SearchDiff substantially improves property adherence over unconstrained discrete diffusion and the evaluated autoregressive baselines.
+
+<p class="paper-link">Search-based constraints · <a href="https://arxiv.org/abs/2602.02727">Ta et al., 2026 →</a></p>
+
+</section>
+
+<section class="research-section research-domain" id="code" markdown="1">
+
+<div class="domain-heading"><span>Application 03</span><div class="domain-heading__dot domain-heading__dot--code"></div></div>
+
+## Constrained code generation
+
+<p class="section-standfirst">Programs must satisfy syntax, functionality, and security requirements simultaneously. Diffusion's editable global state provides a place to localize a failure and revise only the responsible region.</p>
+
+**Constrained Diffusion for Code (CDC)** combines mathematical optimization with program analysis. At each denoising step, it decodes an intermediate program, evaluates the relevant requirement, identifies the tokens most responsible for a violation, and locally adjusts or remasks that region while keeping the remainder close to the base model's proposal.
+
+For functional correctness, CDC uses differentiable surrogate execution feedback to guide generations toward programs that pass unit tests. For security, static analysis identifies vulnerability paths and supplies targeted symbolic feedback. The same localized corrections also improve syntactic validity.
+
+<figure class="research-figure research-figure--bleed">
+  {% include figure.html path="assets/img/projects/discrete-diffusion/code_gen_results.png" title="Constrained code generation results: functional correctness, security, and syntax" class="research-figure__img" %}
+  <figcaption><span>Figure 7</span> CDC improves benchmark pass rates for functionality, syntax, and security across DiffuCoder 7B and Dream-Coder 7B.</figcaption>
+</figure>
+
+With Dream-Coder 7B, CDC raises HumanEval-X C++ functionality from **34.1% to 65.2%** and MBPP-C++ functionality from **27.7% to 59.2%**. Syntax correctness rises from 67.1% to 79.2% and from 41.1% to 72.0%, respectively. On CWEval, joint functionality-and-security success increases from **12.04% to 34.26%**.
+
+<div class="evidence-grid">
+  <div><span>HumanEval-X function</span><strong>65.2%</strong><small>vs. 34.1% for the base model</small></div>
+  <div><span>HumanEval-X syntax</span><strong>79.2%</strong><small>vs. 67.1% for the base model</small></div>
+  <div><span>CWEval joint success</span><strong>34.26%</strong><small>vs. 12.04% for the baseline</small></div>
 </div>
+
+<div class="research-callout">
+  <span class="research-callout__eyebrow">What these results show</span>
+  <strong>Program-level feedback can be integrated during denoising to improve correctness and security with focused edits rather than whole-program regeneration.</strong>
+  <p>The result is only as complete as the tests, surrogate, and static analyzer used to evaluate the program. Passing these benchmarks does not rule out untested behavior or unknown vulnerabilities, so consequential code still requires review and execution in an appropriate validation environment.</p>
 </div>
 
-Code generation imposes among the most demanding constraint combinations: programs must be syntactically valid, functionally correct with respect to a specification, and free of security vulnerabilities — simultaneously. Autoregressive code models (e.g., Codex, DeepSeek-Coder) frequently produce outputs that pass one criterion while failing another, because left-to-right generation cannot "look ahead" and globally reason about program structure.
+<p class="paper-link">Program constraints · <a href="https://arxiv.org/abs/2605.16829">Shao et al., 2026 →</a></p>
 
-**Constrained Diffusion for Code (CDC)** ([Shao et al., 2026](https://arxiv.org/abs/2605.16829)) applies the discrete diffusion constraint-enforcement principle to this domain. At each denoising step, CDC combines **mathematical optimization with static program analysis** to identify constraint-relevant regions of the intermediate program state — the specific tokens that, if modified, would most improve constraint satisfaction — and locally adjusts the denoising trajectory toward feasible programs.
+</section>
 
-CDC provides:
+<section class="research-section" id="current-work" markdown="1">
 
-- **Functional correctness**: Enforcing that programs pass unit tests by guiding generation toward syntactically and semantically consistent completions.
-- **Security constraints**: Ruling out code patterns (e.g., unsafe buffer operations, SQL injection vulnerabilities) via rule-based program analysis applied at each step.
-- **Syntax validity**: Grounding token predictions in parse-tree structure, eliminating syntactically invalid intermediate states before they propagate.
+<div class="section-label">04 · Current and ongoing work</div>
 
-Across all three constraint categories, CDC **consistently outperforms both discrete diffusion and autoregressive baselines** — with **less corrective computation** (more localized edits) than post-hoc repair methods.
+## Improving the masked-diffusion backbone
 
+Constraint enforcement depends on the quality of the base model's clean-token predictions. Standard masked diffusion models infer still-masked positions largely from scratch at every step, discarding useful information from earlier predictions.
 
-## Improving the Backbone: Self-Conditioned Masked Diffusion
+**Simple Self-Conditioning Adaptation for Masked Diffusion Models (SCMDM)** conditions each denoising step on the model's previous clean-state prediction. This allows uncertain positions to accumulate information across steps without introducing an additional recurrent latent state or increasing the number of denoiser evaluations at inference.
 
-Constraint enforcement quality depends directly on the quality of the underlying discrete diffusion backbone — how accurately the model predicts clean-state logits from partially masked inputs. A key limitation of standard MDMs is that masked positions are inferred from scratch at each step, discarding useful intermediate predictions.
+SCMDM reduces generative perplexity on OpenWebText from **42.89 to 23.72**, alongside improvements in molecular generation and genomic distribution modeling. Better clean-state predictions also give constraint projections a stronger proposal from which to start.
 
-**Simple Self-Conditioning Adaptation for Masked Diffusion Models (SCMDM)** ([Cardei et al., 2026](https://arxiv.org/abs/2604.26985)) addresses this with a simple but effective **post-training adaptation**: each denoising step is conditioned on the model's own previous clean-state predictions. This allows still-masked positions to accumulate refinement signal across steps, without introducing a recurrent latent pathway or requiring retraining from scratch.
+<div class="evidence-grid">
+  <div><span>OWT perplexity</span><strong>23.72</strong><small>down from 42.89</small></div>
+  <div><span>Reduction</span><strong>~50%</strong><small>in generative perplexity</small></div>
+  <div><span>Extra denoiser calls</span><strong>0</strong><small>at inference time</small></div>
+</div>
 
-SCMDM achieves **nearly a 50% reduction in generative perplexity** on language modeling benchmarks (42.89 → 23.72 on OWT), alongside strong improvements in molecular generation and genomic distribution modeling — with no additional denoiser evaluations at inference time. Better backbone predictions translate directly into higher-quality starting points for CDD's constraint projection steps.
+<p class="paper-link">Backbone adaptation · <a href="https://arxiv.org/abs/2604.26985">Cardei, Ta &amp; Fioretto, 2026 →</a></p>
 
+</section>
 
-## Key Results
+<section class="research-section" id="key-results" markdown="1">
+
+<div class="section-label">05 · Results overview</div>
+
+## Where constrained discrete diffusion helps
 
 <div class="project-table-card project-table-card--results">
   <div class="project-table-card__header">
     <div>
       <span class="project-table-eyebrow">Summary across domains</span>
-      <h4>Where constrained discrete diffusion helps</h4>
+      <h4>Selected results from the research program</h4>
     </div>
-    <span class="project-table-legend">Use this as the fast-reading map for the page.</span>
+    <span class="project-table-legend">A fast-reading map of methods, domains, and reported outcomes.</span>
   </div>
   <div class="project-table-scroll">
     <table class="project-table project-table--results">
@@ -244,44 +399,55 @@ SCMDM achieves **nearly a 50% reduction in generative perplexity** on language m
         <tr>
           <th scope="row" data-label="Domain"><span class="domain-pill">Molecular generation</span></th>
           <td data-label="Method">CDD + BRENK <a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf">AI4D3 2025</a></td>
-          <td data-label="Result">392 novel non-toxic molecules vs. 108 for MDLM, with 0% BRENK violations.</td>
+          <td data-label="Result">392 novel BRENK-screened molecules vs. 108 for MDLM, with 0% BRENK violations.</td>
         </tr>
         <tr>
           <th scope="row" data-label="Domain"><span class="domain-pill">Symbolic reasoning</span></th>
           <td data-label="Method">SearchDiff <a href="https://arxiv.org/abs/2602.02727">2026</a></td>
-          <td data-label="Result">Substantially improves satisfaction and outperforms autoregressive and discrete diffusion baselines.</td>
+          <td data-label="Result">Improves property satisfaction over autoregressive and discrete-diffusion baselines.</td>
         </tr>
         <tr>
           <th scope="row" data-label="Domain"><span class="domain-pill">Code generation</span></th>
           <td data-label="Method">CDC <a href="https://arxiv.org/abs/2605.16829">2026</a></td>
-          <td data-label="Result">Improves correctness, security, and syntax with less computation than post-hoc repair.</td>
+          <td data-label="Result">Improves functionality, security, and syntax through localized denoising-time edits.</td>
         </tr>
         <tr>
           <th scope="row" data-label="Domain"><span class="domain-pill">MDM backbone</span></th>
           <td data-label="Method">SCMDM <a href="https://arxiv.org/abs/2604.26985">2026</a></td>
-          <td data-label="Result">About 50% perplexity reduction, from 42.89 to 23.72, with no extra inference cost.</td>
+          <td data-label="Result">About 50% perplexity reduction, from 42.89 to 23.72, with no extra inference calls.</td>
         </tr>
         <tr>
           <th scope="row" data-label="Domain"><span class="domain-pill">Neuro-symbolic</span></th>
           <td data-label="Method">NSD <a href="https://arxiv.org/abs/2506.01121">NeuS 2025</a></td>
-          <td data-label="Result">Certifiable constraint satisfaction across continuous and discrete domains; DARPA Disruptive Idea.</td>
+          <td data-label="Result">Symbolic constraint feedback across continuous and discrete domains.</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-This body of work establishes a general principle: **discrete diffusion is the right architecture for constrained sequence generation**. The global token state at each step is not just a modeling choice — it is the mechanism that makes training-free, non-local constraint enforcement tractable. Autoregressive models, by design, cannot offer this.
-
-
-## Relevant Citations
-
-- Cardei, M., Christopher, J. K., Hartvigsen, T., Kailkhura, B., Fioretto, F. (2025). Constrained Discrete Diffusion. *NeurIPS 2025*. [arXiv:2503.09790](https://arxiv.org/abs/2503.09790)
-- Cardei, M., Christopher, J. K., Hartvigsen, T., Kailkhura, B., Fioretto, F. (2025). Constrained Molecular Generation with Discrete Diffusion for Drug Discovery. *AI4D3 Workshop, NeurIPS 2025*. **Best Paper Award**. [PDF](https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf)
-- Ta, H. B., Cardei, M., Velasquez, A., Fioretto, F. (2026). Search-Augmented Masked Diffusion Models for Constrained Generation. [arXiv:2602.02727](https://arxiv.org/abs/2602.02727)
-- Shao, L., Cardei, M., Xie, Z., Fioretto, F., Wang, W. (2026). Constrained Code Generation with Discrete Diffusion. [arXiv:2605.16829](https://arxiv.org/abs/2605.16829)
-- Cardei, M., Ta, H. B., Fioretto, F. (2026). Simple Self-Conditioning Adaptation for Masked Diffusion Models. [arXiv:2604.26985](https://arxiv.org/abs/2604.26985)
-- Christopher, J. K., Cardei, M., Liang, J., Fioretto, F. (2025). Neuro-Symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation. *NeuS 2025*. **DARPA Disruptive Idea Award**. [arXiv:2506.01121](https://arxiv.org/abs/2506.01121)
-- Sahoo, S., et al. (2024). Simple and Effective Masked Diffusion Language Models. *NeurIPS 2024*. [arXiv:2406.07524](https://arxiv.org/abs/2406.07524)
-
+<div class="research-callout research-callout--thesis">
+  <span class="research-callout__eyebrow">The broader principle</span>
+  <strong>Discrete diffusion turns sequence generation into an editable process in which global requirements can be checked before the final output is committed.</strong>
+  <p>Projection is one implementation of that idea. Symbolic feedback, search, and self-conditioned backbones extend it to constraints and domains that require richer evaluators.</p>
 </div>
+
+</section>
+
+<section class="research-section research-section--papers" id="papers" markdown="1">
+
+<div class="section-label">06 · Papers in this guide</div>
+
+## Follow the research program
+
+<div class="paper-list">
+  <a href="https://arxiv.org/abs/2503.09790"><span>NeurIPS 2025</span><strong>Constrained Discrete Diffusion</strong><small>Cardei, Christopher, Hartvigsen, Kailkhura &amp; Fioretto</small></a>
+  <a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf"><span>AI4D3 2025 · Best Paper</span><strong>Constrained Molecular Generation with Discrete Diffusion for Drug Discovery</strong><small>Cardei, Christopher, Hartvigsen, Kailkhura &amp; Fioretto</small></a>
+  <a href="https://arxiv.org/abs/2602.02727"><span>2026</span><strong>Search-Augmented Masked Diffusion Models for Constrained Generation</strong><small>Ta, Cardei, Velasquez &amp; Fioretto</small></a>
+  <a href="https://arxiv.org/abs/2605.16829"><span>2026</span><strong>Constrained Code Generation with Discrete Diffusion</strong><small>Shao, Cardei, Xie, Fioretto &amp; Wang</small></a>
+  <a href="https://arxiv.org/abs/2604.26985"><span>2026</span><strong>Simple Self-Conditioning Adaptation for Masked Diffusion Models</strong><small>Cardei, Ta &amp; Fioretto</small></a>
+  <a href="https://arxiv.org/abs/2506.01121"><span>NeuS 2025</span><strong>Neuro-Symbolic Generative Diffusion Models</strong><small>Christopher, Cardei, Liang &amp; Fioretto</small></a>
+  <a href="https://arxiv.org/abs/2406.07524"><span>NeurIPS 2024</span><strong>Simple and Effective Masked Diffusion Language Models</strong><small>Sahoo et al.</small></a>
+</div>
+
+</section>

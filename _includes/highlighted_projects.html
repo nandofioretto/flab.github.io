@@ -4,9 +4,15 @@
   {%- assign highlighted_projects = site.projects | sort: "importance" -%}
 {%- endif -%}
 {%- assign highlighted_projects = highlighted_projects | slice: 0, 4 -%}
+{%- assign displayed_projects = highlighted_projects -%}
+{%- if include.home -%}
+  {%- assign first_two_projects = highlighted_projects | slice: 0, 2 -%}
+  {%- assign fourth_project = highlighted_projects | slice: 3, 1 -%}
+  {%- assign displayed_projects = first_two_projects | concat: fourth_project -%}
+{%- endif -%}
 
-<section class="highlight-grid" aria-label="Highlighted projects">
-  {%- for project in highlighted_projects -%}
+<section class="highlight-grid{% if include.home %} highlight-grid--home{% endif %}" aria-label="Highlighted projects">
+  {%- for project in displayed_projects -%}
     {%- if project.redirect -%}
       {%- assign project_url = project.redirect -%}
     {%- else -%}

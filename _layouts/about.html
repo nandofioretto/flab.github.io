@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- about.html -->
-      <div class="post">
+      <div class="post home-page">
         <header class="post-header">
           <h1 class="post-title">
            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
@@ -54,30 +54,33 @@ layout: default
           {%- endif %}
 
           <!-- Sponsors -->
-          <div class="clearfix">
-          <h3 class="group__title">Research sponsors</h3>
-          Our group is grateful for the generous support from our sponsors:
-          {%- include sponsors.html limit=true %}
+          <div class="clearfix home-section home-sponsors">
+            <div class="home-section__header">
+              <div>
+                <h2 class="group__title">Research Sponsors</h2>
+              </div>
+              <p>Our group is grateful for the generous support of our sponsors.</p>
+            </div>
+            {%- include sponsors.html limit=true %}
           </div>
 
           <!-- Highlighted work -->
-          <div class="clearfix">
-            <h3 class="group__title">Highlighted work</h3>
-            A few recent projects that reflect our current directions and collaborations.
-            {%- include highlighted_projects.html -%}
-            <a href="{{ '/highlights/' | relative_url }}">View all highlighted work →</a>
+          <div class="clearfix home-section home-highlights">
+            <div class="home-section__header">
+              <div>
+                <h2 class="group__title">Highlighted Work</h2>
+              </div>
+              <a class="home-section__link" href="{{ '/highlights/' | relative_url }}">View all <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            {%- include highlighted_projects.html home=true -%}
           </div>
 
           <!-- News -->
-          <br>
-          <div class="clearfix">
+          <div class="clearfix home-section home-news">
           {% if page.news and site.announcements.enabled -%}
-            <!-- <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2> -->
             {%- include news.html limit=true %}
           {%- endif %}
           </div>
-
-          <br>
           <!-- Selected papers -->
           {% if page.selected_papers -%}
           <br>

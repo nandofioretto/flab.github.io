@@ -7,7 +7,7 @@
 {%- elsif entry.url -%}
   {%- assign primary_link = entry.url -%}
 {%- elsif entry.arxiv -%}
-  {%- assign primary_link = 'https://arxiv.org/abs/' | append: entry.arxiv -%}
+  {%- assign primary_link = 'https://www.alphaxiv.org/abs/' | append: entry.arxiv -%}
 {%- elsif entry.doi -%}
   {%- assign primary_link = 'https://doi.org/' | append: entry.doi -%}
 {%- elsif entry.pdf -%}
@@ -171,7 +171,7 @@
   {%- assign link_count = link_count | plus: 1 -%}
 {%- endif -%}
 {%- if entry.arxiv -%}
-  {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="https://arxiv.org/pdf/{{ entry.arxiv }}" class="pub-link">PDF</a>{%- endcapture -%}
+  {%- capture link_items -%}{{ link_items }}{% if link_count > 0 %}<span class="pub-link-sep">|</span>{% endif %}<a href="https://www.alphaxiv.org/abs/{{ entry.arxiv }}" class="pub-link">AlphaXiv</a>{%- endcapture -%}
   {%- assign link_count = link_count | plus: 1 -%}
 {%- endif -%}
 {%- if entry.supp -%}

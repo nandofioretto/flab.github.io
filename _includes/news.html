@@ -8,6 +8,9 @@
     {% if page.permalink == '/news/' %}
       {%- assign display_limit = news_size -%}
       {%- assign show_all = true -%}
+    {% elsif page.permalink == '/' %}
+      {%- assign display_limit = 10 -%}
+      {%- assign show_all = false -%}
     {% else %}
       {%- assign display_limit = 12 -%}
       {%- assign show_all = false -%}
