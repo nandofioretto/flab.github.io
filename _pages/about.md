@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Associate Professor of Computer Science, University of Virginia
+subtitle:  Copenhaver Fellow and Associate Professor of Computer Science, University of Virginia
 
 profile:
   align: left
@@ -18,9 +18,9 @@ news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
 
-I am an associate professor of Computer Science at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).
+I am a Copenhaver Fellow and Associate Professor of Computer Science at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).
 I lead the [Responsible AI for Science and Engineering (RAISE)](/group/) group, where we develop foundational machine learning and generative AI methods that make models obey control objectives, hard constraints, safety requirements, and physical laws.
-Our work studies how to build controllable foundation models and constraint-aware generative models by connecting learning with optimization, control, and neuro-symbolic reasoning. My research has received several honors, including best paper awards at leading journals and AI/ML conferences, industry research awards, fellowships, and young investigator awards. See the **[awards page](/awards/)** for more details.
+We achieve these goals by connecting learning with optimization, control, and neuro-symbolic reasoning. My research has received a number of honors and accolades, including best paper awards at leading journals and AI/ML conferences, industry research awards, fellowships, career awards, and young investigator awards. See the **[awards page](/awards/)** for more details.
 
 <section class="home-research-focus" aria-labelledby="research-focus-title">
   <h2 id="research-focus-title">Research Focus</h2>

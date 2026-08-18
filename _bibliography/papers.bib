@@ -69,6 +69,18 @@
 # 2026
 #################
 
+@article{fioretto:26i,
+      title       = {Learning Discrete Decisions for MIPs with Constraint-Aware Diffusion},
+      author      = {Di Vito, Vincenzo and Taghizadeh, Mehdi and Deka, Deepjyoti and Sundar, Kaarthik and Fioretto, Ferdinando},
+      year        = {2026},
+      volume      = {abs/2608.13079},
+      arxiv       = {2608.13079},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {This paper proposes a novel learning-based approach to approximately solve instances of mixed-integer optimization problems. These problems are computationally challenging, as they require jointly determining discrete and continuous decisions while satisfying complex combinatorial constraints. The proposed method relies on a graph-based generative diffusion model that learns the discrete component of mixed-integer optimization problems while integrating a training-free feasibility projection operator directly into the reverse diffusion process to steer intermediate samples toward the feasible set throughout generation. Once the discrete decisions are generated, the remaining optimization reduces to a continuous problem that can be solved efficiently (relative to the original problem) using existing numerical methods. The resulting framework named Constrained Graph Diffusion (CGD), is problem-agnostic and can accommodate a broad class of mixed-integer optimization problems through suitable projection operators. We evaluate CGD on optimal transmission switching for ACOPF and discrete portfolio optimization, demonstrating substantial improvements in feasibility and solution quality over learning-based baselines while achieving speedups of up to 425× over state-of-the-art numerical solvers for MINLPs.}
+}
+
+
 @article{fioretto:26h,
       title       = {Simulation-Informed Diffusion for Decentralized Multi-robot Motion Planning},
       author      = {Jinhao Liang and Sven Koenig and Ferdinando Fioretto},
