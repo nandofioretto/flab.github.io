@@ -35,3 +35,5 @@ We achieve these goals by connecting learning with optimization, control, and ne
   </ul>
   <a class="home-research-link" href="{{ '/research/' | relative_url }}">Explore our research <span aria-hidden="true">&#8594;</span></a>
 </section>
+
+{% include recruitment.html %}

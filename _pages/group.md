@@ -16,7 +16,7 @@ We work on foundational topics relating to machine learning and optimization, pr
 We often ground our research in applications at the intersection of physical sciences and energy, as
 well as policy and decision making.
 
-
+{% include recruitment.html %}
 
 <!-- pages/projects.md -->
 <div class="projects">

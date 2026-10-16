@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<!-- Shared long-form layout for existing RAISE Lab research-area articles. -->
+<main class="research-area-preview">
+  <div class="research-area-page research-area-page--discrete">
+    <header class="research-hero research-hero--project">
+      <div class="research-hero__copy">
+        <div class="research-lab-brand">
+          <img src="{{ '/assets/img/projects/constrained-diffusion/raise-lab-logo.png' | relative_url }}" alt="RAISE Lab — Responsible AI for Science and Engineering">
+          <div><strong>RAISE Lab</strong><span>Responsible AI for Science &amp; Engineering</span></div>
+        </div>
+        <div class="research-kicker">Research area guide <span>·</span> University of Virginia</div>
+        <h1>{{ page.title }}</h1>
+        <p class="research-deck">{{ page.description }}</p>
+        <div class="research-actions">
+          <a class="research-button research-button--primary" href="#start-here">Start with the intuition</a>
+          <a class="research-button" href="#key-results">Jump to the results</a>
+        </div>
+      </div>
+      <div class="research-hero__visual">
+        <figure class="research-hero__figure">
+          <img src="{{ page.img | relative_url }}" alt="Overview of constrained discrete diffusion across tokens, molecules, and programs">
+        </figure>
+      </div>
+    </header>
+
+    <div class="research-shell">
+      <aside class="research-toc" aria-label="On this page">
+        <div class="research-toc__title">On this page</div>
+        <a href="#start-here">Discrete primer</a>
+        <a href="#core-idea">Core idea</a>
+        <a href="#research-landscape">Research landscape</a>
+        <a href="#language">Language safety</a>
+        <a href="#molecules">Molecular generation</a>
+        <a href="#searchdiff">SearchDiff</a>
+        <a href="#code">Code generation</a>
+        <a href="#current-work">Current work</a>
+        <a href="#key-results">Key results</a>
+        <a href="#papers">Papers</a>
+      </aside>
+
+      <article class="research-article research-article--legacy">
+        {{ content }}
+      </article>
+    </div>
+  </div>
+
+  {%- if site.giscus.repo and page.giscus_comments -%}
+    <section class="research-comments" aria-label="Reactions and comments">
+      {% include giscus.html %}
+    </section>
+  {%- endif -%}
+</main>

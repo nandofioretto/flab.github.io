@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<!-- Long-form layout for RAISE Lab research-area explainers. -->
+<main class="research-area-preview">
+  {{ content }}
+
+  {%- if site.giscus.repo and page.giscus_comments -%}
+    <section class="research-comments" aria-label="Reactions and comments">
+      {% include giscus.html %}
+    </section>
+  {%- endif -%}
+</main>

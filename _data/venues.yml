@@ -1,47 +1,47 @@
 # Journals
 "AIJ":
   url: https://www.sciencedirect.com/journal/artificial-intelligence
-  color: "#99ccff"
+  color: "#FFD700"
 
 "Constraints":
   url: https://www.springer.com/journal/10601
-  color: "#99ccff"
+  color: "#FFD700"
 
 "JAIR":
   url: https://www.jair.org/index.php/jair
-  color: "#99ccff"
+  color: "#FFD700"
 
 "EPSR":
   url: https://www.sciencedirect.com/journal/electric-power-systems-research
-  color: "#99ccff"
+  color: "#FFD700"
 
 "TPWRS":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
-  color: "#99ccff"
+  color: "#FFD700"
 
 "IEEE TPWRS":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
-  color: "#99ccff"
+  color: "#FFD700"
 
 "TSG":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
-  color: "#99ccff"
+  color: "#FFD700"
 
 "IEEE TSG":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
-  color: "#99ccff"
+  color: "#FFD700"
 
 "IA":
   url: https://content.iospress.com/journals/intelligenza-artificiale/17/1
-  color: "#99ccff"
+  color: "#FFD700"
 
 "SEGAN":
   url: https://www.sciencedirect.com/journal/sustainable-energy-grids-and-networks
-  color: "#99ccff"
+  color: "#FFD700"
 
 "TOMACS":
   url: https://dl.acm.org/journal/tomacs
-  color: "#99ccff"
+  color: "#FFD700"
 
 # Conferences
 "AAMAS":

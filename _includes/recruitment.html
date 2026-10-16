@@ -1,0 +1,10 @@
+<section class="recruitment-callout" aria-labelledby="recruitment-title">
+  <h2 id="recruitment-title">I am looking for self-motivated PhD students, postdocs, and interns!</h2>
+  <p>Students should have a strong background in generative models and optimization and a strong interest in at least one of the following research areas:</p>
+  <ul class="recruitment-callout__areas">
+    {% for area in site.data.recruitment.areas %}
+    <li>{{ area }}</li>
+    {% endfor %}
+  </ul>
+  <p>If you are interested in working with me, please <a href="{{ site.data.recruitment.form_url }}">fill out this interest form</a>. After completing the form, you are welcome to <a href="mailto:{{ site.email }}">reach out by email</a>. I will read all submissions and emails, though I may not be able to reply to each individually.</p>
+</section>
