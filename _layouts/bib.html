@@ -126,6 +126,8 @@
 {%- else -%}
   {%- capture entrytype -%}{%- endcapture -%}
 {%- endif -%}
+{%- assign entrymonth = nil -%}
+{%- assign entryyear = nil -%}
 {%- if entry.month -%}
   {%- capture entrymonth -%} {{ entry.month | capitalize }}{%- endcapture -%}
 {%- endif -%}
