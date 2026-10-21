@@ -70,6 +70,88 @@
 # 2026
 #################
 
+@techreport{Fioretto:CAPS26,
+      title        = {Open and Emergent Problems in Agentic Privacy and Security: A Contextual Angle},
+      year         = {2026},
+      institution  = {Google},
+      url          = {https://research.google/pubs/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/},
+      pdf          = {https://storage.googleapis.com/gweb-research2023-media/pubtools/1047874.pdf},
+      abstract     = {The vision of an ecosystem of general and highly capable autonomous agents challenges accepted principles of secure and privacy-preserving system engineering. Inspired by the theory of Contextual Integrity, we argue that in order for agents to act appropriately, their behaviors should comply with societal norms and expectations. This manuscript explores contextual approaches to engineering agentic systems that embody an understanding of societal norms and uphold the appropriateness of actions by design. It presents a list of key open research problems in this area to create awareness among the broader research community across academia, government, and industry.},
+      author       = {Bagdasarian, Eugene and Tsai, Lillian and Abdelnabi, Sahar and Balashankar, Ananth and {de Balle Pigem}, Borja and Benthall, Sebastian and Bilogrevic, Igor and Birrell, Eleanor and Bursztein, Elie and Chaudhuri, Kamalika and Choksi, Madiha Zahrah and Christodorescu, Mihai and Cummings, Rachel and Davies, Adam and Dvijotham, Dj and El-Sayed, Seliem and Fioretto, Ferdinando and Franchi, Matt and Freudiger, Julien and Gascon, Adria and Geambasu, Roxana and Ghalebikesabi, Sahra and Haddadi, Hamed and Hayes, Jamie and Hooda, Ashish and Houmansadr, Amir and Jha, Somesh and Kairouz, Peter and Kiddon, Chloé and Kohno, Tadayoshi and Köksal, Abdullatif and Lentz, Alison and Li, Haoran and Li, Tianshi and Malkin, Nathan and Meiklejohn, Sarah and Mireshghallah, Niloofar and Oh, Sewoong and Ortiz, Katherine and Petrov, Ivan and Pinto, Francesco and Ramage, Daniel and Raykova, Mariana and Roesner, Franziska and Roth, Edo and Rowe, Jacqueline and Shams, Khawaja and Shokri, Reza and Shumailov, Ilia and Shvartzshnaider, Yan and Song, Dawn and Such, Jose and Suciu, Octavian and Tholoniat, Pierre and Tierney, Matt and Tiwari, Trishita and Triedman, Hal and Yi, Ren and Zhang, Wen and Zhou, Xuhui and Fawaz, Kassem and Mellem, Stefan and Nissenbaum, Helen and Taft, Nina and {de Haas}, Sarah and Gruteser, Marco},
+      abbr         = {Tech. report},
+      bibtex_show  = {true},
+      note         = {Google technical report}
+}
+
+@article{Fioretto:PFM26,
+      title        = {Posterior Flow Matching},
+      year         = {2026},
+      journal      = {CoRR},
+      url          = {https://arxiv.org/abs/2610.13994},
+      pdf          = {https://arxiv.org/pdf/2610.13994},
+      arxiv        = {2610.13994},
+      doi          = {10.48550/arXiv.2610.13994},
+      abstract     = {Flow matching learns how to transport noise toward data, but its mean prediction does not directly report the endpoint uncertainty remaining at an intermediate state. This paper introduces Posterior Flow Matching (PFM), a general generative modeling framework that learns conditional velocity means and componentwise variances with a Gaussian posterior model. The same model evaluation supplies both a transport prediction and endpoint uncertainty, making posterior diagnostics available throughout generation. These learned moments support a mean-driven ordinary differential equation (ODE) and a posterior-driven stochastic differential equation (SDE), whose local noise scales adapt to the predicted uncertainty. Across image, point-cloud, molecular, and action generation, PFM improves generation quality and provides endpoint-posterior readouts throughout generation.},
+      code         = {https://github.com/merry7cherry/posterior-flow-matching},
+      website      = {https://merry7cherry.github.io/posterior-flow-matching/},
+      author       = {Ma, Chenrui and Xiao, Xi and Zhao, Lin and Jiang, Xinru and Wang, Tianyang and Shen, Yanning and Fioretto, Ferdinando},
+      abbr         = {preprint},
+      bibtex_show  = {true},
+      volume       = {abs/2610.13994}
+}
+
+@inproceedings{Fioretto:LHMP26,
+      title        = {Plausible and Feasible Long-Term Human Trajectory Prediction via Motion Field-Regularized Flow Matching},
+      year         = {2026},
+      url          = {https://motionpredictionicra2026.github.io/},
+      pdf          = {https://motionpredictionicra2026.github.io/assets/proceedings/papers/LHMP26_Paper_7.pdf},
+      author       = {Zhu, Yufei and Liang, Jinhao and Koenig, Sven and Fioretto, Ferdinando and Magnusson, Martin},
+      bibtex_show  = {true},
+      booktitle    = {8th Workshop on Long-term Human Motion Prediction at ICRA},
+      abbr         = {LHMP}
+}
+
+@article{Fioretto:SurveyDesign26,
+      title        = {Survey Design for Fair Resource Allocation},
+      author       = {Aznag, Abdellah and Biggs, Max and Fioretto, Ferdinando and Ko, Joonhyuk},
+      year         = {2026},
+      doi          = {10.2139/ssrn.7555080},
+      url          = {https://ssrn.com/abstract=7555080},
+      abbr         = {preprint},
+      bibtex_show  = {true},
+      abstract     = {Many large-scale public-funding programs allocate resources to groups based on the collective needs of individuals within the group, yet these needs are generally unknown in advance and must be estimated, often using costly surveys. We study a survey-design problem: with a fixed survey budget, how should samples be allocated across groups so that the eventual resource allocation maximizes social welfare? We show that several commonly used allocation rules, ranging from winner-take-all, to proportional to needs, to equal split, all correspond to the class of alpha–fair, or isoelastic, social welfare functions. Under this objective, the regret of a plug-in allocation based on estimated needs corresponds to a scaled power divergence on allocation shares, containing the squared-Hellinger distance (alpha=1/2) and, as alpha goes to 1, the Kullback–Leibler divergence. A second-order expansion of this regret yields an explicit decision-aware sampling rule that tilts classical Neyman sampling by a share-correction factor, routing more samples to small-share groups whose score misestimation is most costly. For count-valued needs, such as eligible-population counts, under proportional allocation (alpha=1/2) and common low-eligibility, small-share conditions, the rule reduces to sampling proportional to the square root of the known group population size, independent of the unknown positive-need counts. To make the rule operational without prior knowledge of group scores, we propose a two-stage adaptive design and derive, through a second-order analysis, a universal C^{2/3} rate at which the pilot budget should grow relative to the total sampling budget C. Experiments on the Low Income Home Energy Assistance Program and on Title I funding using the U.S. Census SAIPE data demonstrate substantial reductions in misallocation regret relative to uniform and Neyman benchmarks},
+      pdf          = {https://papers.ssrn.com/sol3/Delivery.cfm/7555080.pdf?abstractid=7555080&mirid=1},
+      journal      = {SSRN},
+      volume       = {7555080}
+}
+
+@inproceedings{Fioretto:AI4ChipDesign26,
+      title       = {Constrained Diffusion for Inverse Design of Fabricable Multi-Layer RF Passives from Partial S-Parameter Specifications},
+      author      = {Dreossi, Tommaso and Bryant, Christopher M. and Liu, Hao and Mirman, Nathan and Kessler, Noah and Frei, Michael and Pabba, Kaustubh and Krishnaswamy, Harish and Christopher, Jacob K. and Fioretto, Ferdinando},
+      booktitle   = {AI for Chip Design Workshop at NeurIPS},
+      year        = {2026},
+      abbr        = {AI4ChipDesign},
+      note        = {Accepted; oral presentation},
+      url         = {https://openreview.net/forum?id=kDIc133oYt},
+      pdf         = {https://openreview.net/pdf?id=kDIc133oYt},
+      bibtex_show = {true}
+}
+
+@article{fioretto:26p,
+      title       = {Simulator-Refined Diffusion for Radio-Frequency Inverse Design},
+      author      = {Liang, Jinhao and Christopher, Jacob K. and Frei, Michael and Dreossi, Tommaso and Fioretto, Ferdinando},
+      journal     = {CoRR},
+      year        = {2026},
+      volume      = {abs/2609.38363},
+      doi         = {10.48550/arXiv.2609.38363},
+      arxiv       = {2609.38363},
+      url         = {https://arxiv.org/abs/2609.38363},
+      pdf         = {https://arxiv.org/pdf/2609.38363},
+      abbr        = {preprint},
+      bibtex_show = {true},
+      abstract    = {Diffusion models have shown potential in inverse design of printed circuit boards (PCBs), enabling the generation of layouts conditioned on target S-parameters. Despite this promise, applying diffusion models to PCB layout generation remains challenging due to their difficulty in meeting the quantitative electromagnetic specifications. A common approach is gradient-based guidance, which biases the diffusion sampling process with the gradient of an objective used for evaluation. However, full-wave electromagnetic simulators are accurate but expensive and typically non-differentiable, whereas differentiable surrogates are informative but not always reliable. To address these limitations, this paper proposes Simulator-Refined Diffusion (SRD), a novel combination of a low-fidelity differentiable surrogate and a high-fidelity non-differentiable simulator within the diffusion sampling process. Unlike standard zeroth-order optimization, which requires a great number of random perturbations, our approach uses the surrogate's gradient to propose the perturbation direction while the simulator then searches based on this direction to identify an effective design update. Experimental results across different settings show that this method consistently outperforms current state-of-the-art methods, producing layouts whose simulated S-parameters match the target specifications up to 21.2% closer for in-distribution targets and up to 19.8% for out-of-distribution targets.}
+}
+
 @article{fioretto:26o,
       title       = {Only What You've Signed up For: Secure Workflows with Constrained Diffusion Agents},
       author      = {Cardei, Michael and Hu, Anjun and Ma, Chenrui and Pinto, Francesco and Sitawarin, Chawin and Xie, Chulin and Fioretto, Ferdinando},
@@ -112,14 +194,21 @@
 }
 
 @article{fioretto:26i,
-      title       = {Learning Discrete Decisions for MIPs with Constraint-Aware Diffusion},
-      author      = {Di Vito, Vincenzo and Taghizadeh, Mehdi and Deka, Deepjyoti and Sundar, Kaarthik and Fioretto, Ferdinando},
+
+      title        = {Constrained Graph Diffusion for Mixed Integer Optimization},
+
+      author       = {Di Vito, Vincenzo and Guven, Yusuf and Badnava, Babak and Deka, Deepjyoti and Sundar, Kaarthik and Fioretto, Ferdinando},
       year        = {2026},
       volume      = {abs/2608.13079},
       arxiv       = {2608.13079},
       abbr        = {preprint},
       bibtex_show = {true},
-      abstract    = {This paper proposes a novel learning-based approach to approximately solve instances of mixed-integer optimization problems. These problems are computationally challenging, as they require jointly determining discrete and continuous decisions while satisfying complex combinatorial constraints. The proposed method relies on a graph-based generative diffusion model that learns the discrete component of mixed-integer optimization problems while integrating a training-free feasibility projection operator directly into the reverse diffusion process to steer intermediate samples toward the feasible set throughout generation. Once the discrete decisions are generated, the remaining optimization reduces to a continuous problem that can be solved efficiently (relative to the original problem) using existing numerical methods. The resulting framework named Constrained Graph Diffusion (CGD), is problem-agnostic and can accommodate a broad class of mixed-integer optimization problems through suitable projection operators. We evaluate CGD on optimal transmission switching for ACOPF and discrete portfolio optimization, demonstrating substantial improvements in feasibility and solution quality over learning-based baselines while achieving speedups of up to 425× over state-of-the-art numerical solvers for MINLPs.}
+
+      abstract     = {This paper proposes a novel learning-based approach to approximately solve instances of mixed-integer optimization problems. These problems are computationally challenging, as they require jointly determining discrete and continuous decisions while satisfying complex combinatorial constraints. We introduce Constrained Graph Diffusion (CGD), a learning-based framework that approximately solves recurring instances of such problems by learning a conditional distribution over their discrete decisions. CGD uses a graph-based diffusion model and incorporates constraint information directly into the reverse diffusion process, steering intermediate predictions toward the feasible region throughout generation. By operating on continuous relaxations of the discrete variables, CGD defines a differentiable constrained generation pathway up to terminal discrete recovery. Once the discrete decision is recovered and fixed, a numerical optimizer solves the remaining continuous problem, avoiding online combinatorial search over the binary variables while retaining numerical optimization for continuous completion. We evaluate CGD on AC-OPF with branch switching and discrete portfolio optimization, demonstrating substantial improvements in feasibility and solution quality over learning-based baselines while achieving speedups of up to $543\times$ over state-of-the-art MIP solvers on large instances.},
+      journal      = {CoRR},
+      url          = {https://arxiv.org/abs/2608.13079},
+      pdf          = {https://arxiv.org/pdf/2608.13079},
+      doi          = {10.48550/arXiv.2608.13079}
 }
 
 
@@ -149,7 +238,8 @@
 }
 
 @article{Fioretto:26a,
-      title={NeuroFilter: Privacy Guardrails for Conversational LLM Agents},
+
+      title        = {NeuroFilter: Activation-Based Guardrails for Privacy-Conscious LLM Agents},
       author={Saswat Das and Ferdinando Fioretto},
       year        = {2026},
       journal     = {CoRR},
@@ -158,25 +248,8 @@
       arxiv       = {2601.14660},
       abbr        = {preprint},
       bibtex_show = {true},
-      abstract    = {This work addresses the computational challenge of enforcing privacy for agentic Large Language Models (LLMs), where privacy is governed by the
-      contextual integrity framework. Indeed, existing defenses rely on LLM-mediated
-      checking stages that add substantial latency and cost, and that can be
-      undermined in multi-turn interactions through manipulation or benign-looking
-      conversational scaffolding. Contrasting this background, this paper makes a key
-      observation: internal representations associated with privacy-violating intent
-      can be separated from benign requests using linear structure. Using this
-      insight, the paper proposes NeuroFilter, a guardrail framework that
-      operationalizes contextual integrity by mapping norm violations to simple
-      directions in the model's activation space, enabling detection even when
-      semantic filters are bypassed. The proposed filter is also extended to capture
-      threats arising during long conversations using the concept of activation
-      velocity, which measures cumulative drift in internal representations across
-      turns. A comprehensive evaluation across over 150,000 interactions and covering
-      models from 7B to 70B parameters, illustrates the strong performance of
-      NeuroFilter in detecting privacy attacks while maintaining zero false positives
-      on benign prompts, all while reducing the computational inference cost by
-      several orders of magnitude when compared to LLM-based agentic privacy
-      defenses.}
+
+      abstract     = {Agentic Large Language Models (LLMs) are models able to reason, plan, and execute tools over unstructured data. These abilities enable transformative applications in domains spanning personal assistants, financial, and legal domains, etc. While these systems can substantially improve productivity and service quality, effective agency typically requires access to sensitive personal or organizational information. However, this access introduces critical inference-time privacy risks, specifically regarding contextually appropriate information disclosure. While recent studies highlight the inability of agentic LLMs to consistently adhere to privacy norms, existing defenses often rely on auxiliary LLM-based monitors. However, these defenses are expensive and offer limited protection against attacks that are robust to semantic censorship. To contrast this background, this paper proposes a notion of privacy filters based on activation probing. We show that these filters are both computationally efficient and effective for both single-turn and multi-turn conversational settings. Furthermore, this work provides the first systematic investigation into probing model internals across a conversation trajectory, moving beyond static, single-prompt analysis to capture the evolving state of privacy-sensitive interactions, illustrating their applicability across contexts, attack styles, multiple base models, and challenging settings such as mosaic attacks, while providing nuanced insights into the nature of the discovered concepts and modular construction of probes.},
 }
 
 
@@ -291,17 +364,27 @@
 }
 
 @article{Fioretto:SEGAN,
-      title       = {Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based},
-      author      = {Vincenzo Di Vito and Kaarthik Sundar and Ferdinando Fioretto and Deepjyoti Deka},
-      year        = {2026},
-      journal     = {Sustainable Energy, Grids and Networks},
-      volume      = {abs/2507.23094},
-      doi         = {10.48550/arXiv.2507.23094},
-      arxiv       = {2507.23094},
+
+      title        = {Stability-constrained AC optimal power flow--A Gaussian process-based approach},
+
+      author       = {Di Vito, Vincenzo and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti},
+
+      year         = {2026},
+
+      journal      = {Sustainable Energy, Grids and Networks},
+
+      volume       = {46},
+
+      doi          = {10.1016/j.segan.2026.102300},
+
+      arxiv        = {2507.23094},
       abbr        = {SEGAN},
       bibtex_show = {true},
       funding     = {NSF-2345528, NSF-2401285, NSF-2334936},
-      abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.}
+      abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.},
+      month        = {jun},
+      pages        = {102300},
+      url          = {https://doi.org/10.1016/j.segan.2026.102300}
 }
 
 @article{Fioretto:tsg26,
@@ -317,7 +400,8 @@
   bibtex_show  = {true},
   abbr         = {TSG},
   selected     = {true},
-  abstract     = {Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.}
+  abstract     = {Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.},
+      arxiv        = {2502.18321}
 }
 
 @article{Fioretto:epsr26,
@@ -396,17 +480,28 @@ abstract          = {Recent developments in applying machine learning to address
 }
 
 @inproceedings{Fioretto:L4DC26,
-      title       = {A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints},
-      author      = {James Kotary and Himanshu Sharma and Ethan King and Draguna Vrabie and Ferdinando Fioretto and Jan Drgona},
-      year        = {2026},
-      booktitle  = {Annual Learning for Dynamics and Control Conference},
+
+      title        = {Learning to Solve Constrained Bilevel Control Co-Design Problems},
+
+      author       = {Kotary, James and Sharma, Himanshu and King, Ethan and Vrabie, Draguna L and Fioretto, Ferdinando and Drgona, Jan},
+
+      year         = {2026},
+
+      booktitle    = {Proceedings of The 8th Annual Learning for Dynamics and Control Conference},
       abbr        = {L4DC},
-      volume      = {331},
+
+      volume       = {331},
       doi         = {10.48550/arXiv.2507.09050},
-      arxiv       = {2507.09050},
+
+      arxiv        = {2507.09050},
       bibtex_show = {true},
       award       = {Oral},
-      abstract    = {Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.}
+      abstract    = {Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.},
+      pages        = {222--241},
+      series       = {Proceedings of Machine Learning Research},
+      publisher    = {PMLR},
+      url          = {https://proceedings.mlr.press/v331/kotary26a.html},
+      pdf          = {https://raw.githubusercontent.com/mlresearch/v331/main/assets/kotary26a/kotary26a.pdf}
 }
 
 @inproceedings{Fioretto:SatML26,
@@ -455,6 +550,63 @@ abstract          = {Recent developments in applying machine learning to address
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{Fioretto:AFME25,
+      title        = {Algorithmic Fairness Through the Lens of Metrics and Evaluation (AFME) 2024},
+      author       = {Rateike, Miriam and Dieng, Awa and Watson-Daniels, Jamelle and Fioretto, Ferdinando and Farnadi, Golnoosh},
+      booktitle    = {Proceedings of the Algorithmic Fairness Through the Lens of Metrics and Evaluation},
+      pages        = {1--7},
+      year         = {2025},
+      volume       = {279},
+      series       = {Proceedings of Machine Learning Research},
+      publisher    = {PMLR},
+      url          = {https://proceedings.mlr.press/v279/rateike25a.html},
+      pdf          = {https://raw.githubusercontent.com/mlresearch/v279/main/assets/rateike25a/rateike25a.pdf},
+      abbr         = {AFME},
+      bibtex_show  = {true},
+      note         = {Workshop report}
+}
+
+@techreport{Fioretto:LLNL25,
+      title        = {How can we ground Frontiers Models for Biological Research to Domain Knowledge, First Principles, and Constraints?},
+      author       = {Fioretto, Ferdinando and Kailkhura, Bhavya},
+      institution  = {Lawrence Livermore National Laboratory},
+      number       = {LLNL-CONF-871579},
+      year         = {2025},
+      url          = {https://www.osti.gov/biblio/2511362},
+      pdf          = {https://www.osti.gov/servlets/purl/2511362},
+      abbr         = {Tech. report},
+      bibtex_show  = {true},
+      note         = {Lawrence Livermore National Laboratory white paper, LLNL-CONF-871579; 2025 Workshop on Envisioning Frontiers in AI and Computing for Biological Research}
+}
+
+@inproceedings{Fioretto:PESGM25,
+      title        = {Robust Bidding Strategies in Local Energy Markets},
+      author       = {Liang, Jinhao and Fioretto, Ferdinando and Wu, Chenye},
+      year         = {2025},
+      booktitle    = {2025 IEEE Power \& Energy Society General Meeting (PESGM)},
+      publisher    = {IEEE},
+      pages        = {1--5},
+      doi          = {10.1109/PESGM52009.2025.11225045},
+      url          = {https://ieeexplore.ieee.org/document/11225045},
+      abbr         = {PESGM},
+      bibtex_show  = {true}
+}
+
+@article{Fioretto:PrivacyBudget25,
+      title        = {Optimal Allocation of Privacy Budget on Hierarchical Data Release},
+      author       = {Ko, Joonhyuk and Ziani, Juba and Fioretto, Ferdinando},
+      year         = {2025},
+      doi          = {10.48550/arXiv.2505.10871},
+      url          = {https://arxiv.org/abs/2505.10871},
+      abbr         = {preprint},
+      bibtex_show  = {true},
+      abstract     = {Releasing useful information from datasets with hierarchical structures while preserving individual privacy presents a significant challenge. Standard privacy-preserving mechanisms, and in particular Differential Privacy, often require careful allocation of a finite privacy budget across different levels and components of the hierarchy. Sub-optimal allocation can lead to either excessive noise, rendering the data useless, or to insufficient protections for sensitive information. This paper addresses the critical problem of optimal privacy budget allocation for hierarchical data release. It formulates this challenge as a constrained optimization problem, aiming to maximize data utility subject to a total privacy budget while considering the inherent trade-offs between data granularity and privacy loss. The proposed approach is supported by theoretical analysis and validated through comprehensive experiments on real hierarchical datasets. These experiments demonstrate that optimal privacy budget allocation significantly enhances the utility of the released data and improves the performance of downstream tasks.},
+      arxiv        = {2505.10871},
+      pdf          = {https://arxiv.org/pdf/2505.10871},
+      journal      = {CoRR},
+      volume       = {abs/2505.10871}
+}
+
 @article{Fioretto:25i,
       title       = {Learning to Solve Optimization Problems Constrained with Partial Differential Equations},
       author      = {Yusuf Guven and Vincenzo Di Vito and Ferdinando Fioretto},
@@ -537,7 +689,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 
 
 @article{AlKontar25,
-   author = {Raed Al Kontar and Tianbao Yang and Ferdinando Fioretto and Farzad Yousefian and},
+
+      author       = {Al Kontar, Raed and Yang, Tianbao and Fioretto, Ferdinando and Yousefian, Farzad},
    title = {Editorial: Federated Distributed Learning and Analytics},
    journal = {IISE Transactions},
    volume = {57},
@@ -695,16 +848,24 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @inproceedings{TFKTP:SatML25,
-  author       = {Khang Tran and Ferdinando Fioretto and Issa Khalil and My T. Thai and NhatHai Phan},
-  title        = {FairDP: Certified Fairness with Differential Privacy},
-  booktitle    = {IEEE Secure and Trustworthy Machine Learning Conference (SaTML 2025)},
-  volume       = {3},
-  year         = {2025},
-  doi          = {10.48550/arXiv.2305.16474},
-  arxiv       = {2305.16474},
+
+      author       = {Tran, Khang and Fioretto, Ferdinando and Khalil, Issa and Thai, My T. and Phan, Linh Thi Xuan and Phan, NhatHai},
+
+      title        = {FairDP: Achieving Fairness Certification with Differential Privacy},
+
+      booktitle    = {IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)},
+
+      year         = {2025},
+
+      doi          = {10.1109/SaTML64287.2025.00058},
+
+      arxiv        = {2305.16474},
   abbr         = {SatML},
   bibtex_show  = {true},
-  abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
+  abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.},
+      pages        = {956--976},
+      url          = {https://doi.org/10.1109/SaTML64287.2025.00058},
+      pdf          = {https://www.cis.upenn.edu/%7Elinhphan/papers/tran-fairdp25.pdf}
 }
 
 @inproceedings{Fioretto:AI4D3,
@@ -734,7 +895,8 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   url          = {https://openreview.net/pdf?id=L3LYjJJoL5},
   abbr         = {AI4Mat},
   bibtex_show  = {true},
-  abstract     = {Point defects affect material properties by altering electronic states and modifying local bonding environments. However, high-throughput first-principles simulations of point defects are costly due to large simulation cells and complex energy landscapes. To this end, we propose a generative framework for simulating point defects, overcoming the limits of costly first-principles simulators. By leveraging a primal-dual algorithm, we introduce a constraint-aware diffusion model which outperforms existing constrained diffusion approaches in this domain. Across six defect configuration settings for $Bi_2\,Te_3$, the proposed approach provides state-of-the-art performance generating physically grounded structures.}
+  abstract     = {Point defects affect material properties by altering electronic states and modifying local bonding environments. However, high-throughput first-principles simulations of point defects are costly due to large simulation cells and complex energy landscapes. To this end, we propose a generative framework for simulating point defects, overcoming the limits of costly first-principles simulators. By leveraging a primal-dual algorithm, we introduce a constraint-aware diffusion model which outperforms existing constrained diffusion approaches in this domain. Across six defect configuration settings for $Bi_2\,Te_3$, the proposed approach provides state-of-the-art performance generating physically grounded structures.},
+      arxiv        = {2602.19153}
 }
 
 
@@ -906,17 +1068,26 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @inproceedings{Fioretto:ecai24,
-  title        = {Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization},
-  author       = {James Kotary and Vincenzo Di Vito and Jacob Christopher and Pascal Van Hentenryck and Ferdinando Fioretto},
+
+      title        = {Learning Joint Models of Prediction and Optimization},
+
+      author       = {Kotary, James and {Di Vito}, Vincenzo and Christopher, Jacob and {Van Hentenryck}, Pascal and Fioretto, Ferdinando},
   booktitle    = ECAI,
-  publisher    = {},
-  pages        = {},
-  year         = {2024},
-  doi          = {10.48550/arXiv.2311.13087},
-  arxiv        = {2311.13087},
+
+      publisher    = {IOS Press},
+
+      pages        = {2476--2483},
+
+      year         = {2024},
+
+      doi          = {10.3233/FAIA240775},
+
+      arxiv        = {2409.04898},
   abbr         = {ECAI},
   bibtex_show  = {true},
-  abstract     = {The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. While this traditional setting is common to many real-world decision processes, recently it has been shown that decision quality can be substantially improved by solving and differentiating the optimization problem in the training loop. However, this approach requires solving optimization in the loop along with handcrafted, problem-specific rules for backpropagation through the optimization step, challenging its applicability to a broad class of optimization problems. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by joint predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient and accurate solutions to an array of challenging Predict-Then-Optimize problems}
+  abstract     = {The Predict-Then-Optimize framework uses machine learning models to predict unknown parameters of an optimization problem from features before solving. While this traditional setting is common to many real-world decision processes, recently it has been shown that decision quality can be substantially improved by solving and differentiating the optimization problem in the training loop. However, this approach requires solving optimization in the loop along with handcrafted, problem-specific rules for backpropagation through the optimization step, challenging its applicability to a broad class of optimization problems. This paper proposes an alternative method, in which optimal solutions are learned directly from the observable features by joint predictive models. The approach is generic, and based on an adaptation of the Learning-to-Optimize paradigm, from which a rich variety of existing techniques can be employed. Experimental evaluations show the ability of several Learning-to-Optimize methods to provide efficient and accurate solutions to an array of challenging Predict-Then-Optimize problems},
+      url          = {https://doi.org/10.3233/FAIA240775},
+      pdf          = {https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA240775}
 }
 
 @inproceedings{Fioretto:icml24a,
@@ -970,24 +1141,33 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @inproceedings{Fioretto:ijcai24,
-  author       = {Cuong Tran and Keyu Zhu and Pascal Van Hentenryck and Ferdinando Fioretto},
-  title        = {Fairness Increases Adversarial Vulnerability},
+
+      author       = {Tran, Cuong and Zhu, Keyu and {Van Hentenryck}, Pascal and Fioretto, Ferdinando},
+
+      title        = {On the Effects of Fairness to Adversarial Vulnerability},
   booktitle    = IJCAI,
   publisher    = {ijcai.org},
-  pages        = {TBA},
-  year         = {2024},
+
+      pages        = {521--529},
+
+      year         = {2024},
   abbr         = {IJCAI},
-  doi          = {10.48550/arXiv.2211.11835},
+
+      doi          = {10.24963/ijcai.2024/58},
   arxiv       = {2211.11835},
   bibtex_show = {true},
   selected     = {false},
   abstract     = {The remarkable performance of deep learning models and their applications in consequential domains (e.g., facial recognition) introduces important challenges at the intersection of equity and security. Fairness and robustness are two desired notions often required in learning models. Fairness ensures that models do not disproportionately harm (or benefit) some groups over others, while robustness measures the models' resilience against small input perturbations.
-  This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.}
+  This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.},
+      url          = {https://www.ijcai.org/proceedings/2024/58},
+      pdf          = {https://www.ijcai.org/proceedings/2024/0058.pdf}
 }
 
 @inproceedings{Fioretto:aaai24,
-  author       = {Ferdinando Fioretto and Keyu Zhu and Pascal Van Hentenryck and Saswat Das and Christine Task},
-  title        = {Finding epsilon and delta of Traditional Disclosure Control Systems},
+
+      author       = {Das, Saswat and Zhu, Keyu and Task, Christine and Van Hentenryck, Pascal and Fioretto, Ferdinando},
+
+      title        = {Finding epsilon and delta of Traditional Disclosure Control Systems},
   booktitle    = AAAI,
   publisher    = {{AAAI} Press},
   volume       = {38},
@@ -997,7 +1177,9 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   arxiv        = {2301.12204},
   abbr         = {AAAI},
   bibtex_show  = {true},
-  abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.}
+  abstract     = {This paper analyzes the privacy of traditional Statistical Disclosure Control (SDC) systems under a differential privacy interpretation. SDCs, such as cell suppression and swapping promise to safeguard the confidentiality of data and are routinely adopted in data analyses with profound societal and economic impacts. Through a formal analysis and empirical evaluation on US Census data, the paper shows that widely adopted SDC systems not only induce vastly larger privacy losses than classical differential privacy mechanisms, but, they may also come at a cost of larger accuracy and fairness.},
+      doi          = {10.1609/aaai.v38i20.30204},
+      number       = {20}
 }
 
 @inproceedings{Fioretto:facct24a,
@@ -1019,6 +1201,22 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 # 2023
 #################
 
+
+@inproceedings{Fioretto:AFCP23,
+      title        = {Algorithmic Fairness through the Lens of Causality and Privacy (AFCP) 2022},
+      author       = {Dieng, Awa and Rateike, Miriam and Farnadi, Golnoosh and Fioretto, Ferdinando and Kusner, Matt and Schrouff, Jessica},
+      booktitle    = {Proceedings of the Workshop on Algorithmic Fairness through the Lens of Causality and Privacy},
+      pages        = {1--6},
+      year         = {2023},
+      volume       = {214},
+      series       = {Proceedings of Machine Learning Research},
+      publisher    = {PMLR},
+      url          = {https://proceedings.mlr.press/v214/dieng23a.html},
+      pdf          = {https://proceedings.mlr.press/v214/dieng23a/dieng23a.pdf},
+      abbr         = {AFCP},
+      bibtex_show  = {true},
+      note         = {Workshop report}
+}
 
 @article{DF:23,
   author       = {My H. Dinh and Ferdinando Fioretto},
@@ -1145,15 +1343,25 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 }
 
 @inproceedings{Fioretto:PES23,
-  author       = {Terrence W. K. Mak and Ferdinando Fioretto and Pascal {Van Hentenryck}},
-  title        = {Load Embeddings for Scalable {AC-OPF} Learning},
-  booktitle    = {IEEE Power \& Energy Society (PES) General Meeting},
-  year         = {2021},
-  abbr         = {ArXiv},
-  eprint       = {2101.03973},
-  arxiv        = {2101.03973},
+
+      author       = {Mak, Terrence W. K. and Fioretto, Ferdinando and {Van Hentenryck}, Pascal},
+
+      title        = {Load Encoding for Learning {AC-OPF}},
+
+      booktitle    = {IEEE Power \& Energy Society General Meeting (PESGM)},
+
+      year         = {2023},
+
+      abbr         = {PESGM},
+
+      eprint       = {2101.03973},
+
+      arxiv        = {2101.03973},
   bibtex_show  = {true},
-  abstract     = {The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.}
+  abstract     = {The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.},
+      publisher    = {IEEE},
+      url          = {https://arxiv.org/abs/2101.03973},
+      pdf          = {https://arxiv.org/pdf/2101.03973}
 }
 
 @inproceedings{KVF:aamas23,
@@ -1506,6 +1714,20 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 # 2020
 #################
 
+@article{Fioretto:BilevelDP20,
+      title        = {Bilevel Optimization for Differentially Private Optimization in Energy Systems},
+      year         = {2020},
+      url          = {https://arxiv.org/abs/2001.09508},
+      pdf          = {https://arxiv.org/pdf/2001.09508},
+      doi          = {10.48550/arXiv.2001.09508},
+      arxiv        = {2001.09508},
+      author       = {Mak, Terrence W. K. and Fioretto, Ferdinando and Van Hentenryck, Pascal},
+      bibtex_show  = {true},
+      journal      = {CoRR},
+      volume       = {abs/2001.09508},
+      abbr         = {preprint}
+}
+
 @article{DFvHKP:20b,
   author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
   title        = {Differentially Private Convex Optimization with Feasibility Guarantees},
@@ -1612,9 +1834,9 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   doi 			= {10.1109/TPWRS.2019.2945069},
   abbr      = {TPWRS},
   award     = {2021 TPWRS Best Paper Award},
-  arxiv        = {2001.09508},
   selected     = {true},
-  abstract  = {This paper considers the problem of releasing optimal power flow (OPF) test cases that preserve the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential privacy algorithms are not suitable for releasing privacy preserving OPF test cases: The added noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solutions. To remedy this limitation, the paper introduces the OPF Load Indistinguishability (OLI) problem, which guarantees load privacy while satisfying the OPF constraints and remaining close to the optimal dispatch cost. The paper introduces an exact mechanism, based on bilevel optimization, as well as three mechanisms that approximate the OLI problem accurately. These mechanisms enjoy desirable theoretical properties, and the computational experiments show that they produce orders of magnitude improvements over standard approaches on an extensive collection of test cases.}
+  abstract  = {This paper considers the problem of releasing optimal power flow (OPF) test cases that preserve the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential privacy algorithms are not suitable for releasing privacy preserving OPF test cases: The added noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solutions. To remedy this limitation, the paper introduces the OPF Load Indistinguishability (OLI) problem, which guarantees load privacy while satisfying the OPF constraints and remaining close to the optimal dispatch cost. The paper introduces an exact mechanism, based on bilevel optimization, as well as three mechanisms that approximate the OLI problem accurately. These mechanisms enjoy desirable theoretical properties, and the computational experiments show that they produce orders of magnitude improvements over standard approaches on an extensive collection of test cases.},
+      pdf          = {https://tmak.info/papers/TPS19.pdf}
 }
 
 @inproceedings{FMH:aaai20,
@@ -1733,6 +1955,18 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   abbr         = {JAIR},
   selected     = {true},
   abstract     = {Many applications of machine learning and optimization operate on data streams. While these datasets are fundamental to fuel decision-making algorithms, often they contain sensitive information about individuals, and their usage poses significant privacy risks. Motivated by an application in energy systems, this paper presents OptStream, a novel algorithm for releasing differentially private data streams under the w-event model of privacy. OptStream is a 4-step procedure consisting of sampling, perturbation, reconstruction, and post-processing modules. First, the sampling module selects a small set of points to access in each period of interest. Then, the perturbation module adds noise to the sampled data points to guarantee privacy. Next, the reconstruction module re-assembles non-sampled data points from the perturbed sample points. Finally, the post-processing module uses convex optimization over the privacy-preserving output of the previous modules, as well as the privacy-preserving answers of additional queries on the data stream, to improve accuracy by redistributing the added noise. OptStream is evaluated on a test case involving the release of a real data stream from the largest European transmission operator. Experimental results show that OptStream may not only improve the accuracy of state-of-the-art methods by at least one order of magnitude but also supports accurate load forecasting on the privacy-preserving data.}
+}
+
+@techreport{Fioretto:GRG18,
+      title        = {GRG-Schema v4.0},
+      year         = {2018},
+      url          = {https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/3/865/files/2018/08/schemav4.0.pdf?bid=865},
+      pdf          = {https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/3/865/files/2018/08/schemav4.0.pdf?bid=865},
+      author       = {Bent, Russell and Coffrin, Carleton and Fioretto, Ferdinando and Mak, Terrence W. K. and Panciatici, Patrick and Van Hentenryck, Pascal},
+      bibtex_show  = {true},
+      institution  = {Grid Research for Good (GRG)},
+      abbr         = {Documentation},
+      note         = {Grid Research for Good (GRG) schema documentation, version 4.0}
 }
 
 @article{FDP:ia19,
@@ -2135,6 +2369,21 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 # 2015
 #################
 
+@inproceedings{Fioretto:UTEP15,
+      title        = {Dynamic Distributed Constraint Optimization},
+      author       = {Dai, Khoi Hoang and Fioretto, Ferdinando and Hou, Ping and Yeoh, William},
+      booktitle    = {17th Joint UTEP/NMSU Workshop on Mathematics, Computer Science, and Computational Sciences},
+      year         = {2015},
+      month        = {nov},
+      pages        = {1},
+      address      = {El Paso, Texas},
+      url          = {https://www.cs.utep.edu/vladik/utepnmsu15.html},
+      pdf          = {https://www.cs.utep.edu/vladik/utepnmsu15dai.pdf},
+      note         = {One-page workshop abstract},
+      abbr         = {UTEP/NMSU},
+      bibtex_show  = {true}
+}
+
 @article{FDP:tomacs15,
   author       = {Ferdinando Fioretto and Agostino Dovier and Enrico Pontelli},
   title        = {Constrained Community-Based Gene Regulatory Network Inference},
@@ -2222,6 +2471,26 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 #################
 # 2014
 #################
+
+@inproceedings{Fioretto:WCB14,
+      title        = {Experimenting with FIASCO for Protein Structure Prediction},
+      year         = {2014},
+      url          = {https://bioinf.dimi.uniud.it/publication/11390-1024950/},
+      author       = {Campeotto, Federico and Dal Palù, Alessandro and Dovier, Agostino and Fioretto, Ferdinando and Pontelli, Enrico},
+      bibtex_show  = {true},
+      booktitle    = {10th Workshop on Constraint-Based Methods for Bioinformatics (WCB)},
+      abbr         = {WCB}
+}
+
+@inproceedings{Fioretto:ParSearchOpt14,
+      title        = {Towards a Complete Constraint Solver on GPU},
+      year         = {2014},
+      url          = {https://bioinf.dimi.uniud.it/publication/11390-1024946/},
+      author       = {Campeotto, Federico and Dal Palù, Alessandro and Dovier, Agostino and Fioretto, Ferdinando and Pontelli, Enrico},
+      bibtex_show  = {true},
+      booktitle    = {Workshop on Parallel Methods for Search and Optimization (ParSearchOpt)},
+      abbr         = {ParSearchOpt}
+}
 
 @inproceedings{FCF0P:aamas14,
   author       = {Ferdinando Fioretto and Federico Campeotto and Luca Da Rin Fioretto and William Yeoh and Enrico Pontelli},
@@ -2333,4 +2602,32 @@ abstract  = {Gene Regulatory Network (GRN) inference is a major objective of Sys
   abstract  = {Methods to predict the structure of a protein often rely on the knowledge of macro sub-structures and their exact or approximated relative positions in space. The parts connecting these sub-structures are called loops and, in general, they are characterized by a high degree of freedom. The modeling of loops is a critical problem in predicting protein conformations that are biologically realistic. This paper introduces a class of constraints that models a general multi-body system; we present a proof of NP-completeness and provide filtering techniques, inspired by inverse kinematics, that can drastically reduce the search space of potential conformations. The paper shows the application of the constraint in solving the protein loop modeling problem, based on fragments assembly.},
   alsoin    = {WCB},
   alsoinyear = {CP 2012}
+}
+
+#################
+# 2011
+#################
+
+@mastersthesis{Fioretto:MSc11,
+      title        = {A Constraint Programming Approach for the Analysis of Proteins Conformations Via Fragment Assembly},
+      year         = {2011},
+      url          = {https://www.cs.nmsu.edu/%7Egradrep/research/msthesis/fioretto-master-thesis.pdf},
+      pdf          = {https://www.cs.nmsu.edu/%7Egradrep/research/msthesis/fioretto-master-thesis.pdf},
+      author       = {Fioretto, Ferdinando},
+      bibtex_show  = {true},
+      school       = {New Mexico State University},
+      abbr         = {Thesis},
+      note         = {Master's thesis}
+}
+
+@inproceedings{Fioretto:WCB11,
+      title        = {Introducing FIASCO: Fragment-based Interactive Assembly for Protein Structure Prediction with Constraints},
+      year         = {2011},
+      pages        = {27--36},
+      url          = {https://air.unipr.it/handle/11381/2396968},
+      pdf          = {https://citeseerx.ist.psu.edu/document?doi=f6191af624db81ffe44752cd31cdff06b61b780b&repid=rep1&type=pdf},
+      author       = {Best, Michael R. and Bhattarai, Kabi and Campeotto, Federico and Dal Palù, Alessandro and Dang, Hung and Dovier, Agostino and Fioretto, Ferdinando and Fogolari, Federico and Le, Tiep and Pontelli, Enrico},
+      bibtex_show  = {true},
+      booktitle    = {Workshop on Constraint Based Methods for Bioinformatics (WCB)},
+      abbr         = {WCB}
 }
