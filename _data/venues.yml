@@ -130,6 +130,10 @@
 
 
 # Workshops
+"AI4ChipDesign":
+  url: https://neurips-ai-for-chip-design-2026.github.io/
+  color: "#99ccff"
+
 "ArXiv":
   color: "#d1d5db"
   text_color: "#1f2937"
@@ -199,3 +203,25 @@
 
 "Book-Ch":
   color: "#FFD700"
+
+
+"AFME":
+  url: https://proceedings.mlr.press/v279/
+  color: "#99ccff"
+
+"AFCP":
+  url: https://proceedings.mlr.press/v214/
+  color: "#99ccff"
+
+"LHMP":
+  url: https://motionpredictionicra2026.github.io/
+  color: "#99ccff"
+
+"ParSearchOpt":
+  color: "#99ccff"
+
+"PESGM":
+  color: "#99ccff"
+
+"UTEP/NMSU":
+  color: "#99ccff"
