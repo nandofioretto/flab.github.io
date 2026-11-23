@@ -70,6 +70,8 @@
 # 2026
 #################
 
+# Unpublished papers and technical reports
+
 @techreport{Fioretto:CAPS26,
       title        = {Open and Emergent Problems in Agentic Privacy and Security: A Contextual Angle},
       year         = {2026},
@@ -100,17 +102,6 @@
       volume       = {abs/2610.13994}
 }
 
-@inproceedings{Fioretto:LHMP26,
-      title        = {Plausible and Feasible Long-Term Human Trajectory Prediction via Motion Field-Regularized Flow Matching},
-      year         = {2026},
-      url          = {https://motionpredictionicra2026.github.io/},
-      pdf          = {https://motionpredictionicra2026.github.io/assets/proceedings/papers/LHMP26_Paper_7.pdf},
-      author       = {Zhu, Yufei and Liang, Jinhao and Koenig, Sven and Fioretto, Ferdinando and Magnusson, Martin},
-      bibtex_show  = {true},
-      booktitle    = {8th Workshop on Long-term Human Motion Prediction at ICRA},
-      abbr         = {LHMP}
-}
-
 @article{Fioretto:SurveyDesign26,
       title        = {Survey Design for Fair Resource Allocation},
       author       = {Aznag, Abdellah and Biggs, Max and Fioretto, Ferdinando and Ko, Joonhyuk},
@@ -123,18 +114,6 @@
       pdf          = {https://papers.ssrn.com/sol3/Delivery.cfm/7555080.pdf?abstractid=7555080&mirid=1},
       journal      = {SSRN},
       volume       = {7555080}
-}
-
-@inproceedings{Fioretto:AI4ChipDesign26,
-      title       = {Constrained Diffusion for Inverse Design of Fabricable Multi-Layer RF Passives from Partial S-Parameter Specifications},
-      author      = {Dreossi, Tommaso and Bryant, Christopher M. and Liu, Hao and Mirman, Nathan and Kessler, Noah and Frei, Michael and Pabba, Kaustubh and Krishnaswamy, Harish and Christopher, Jacob K. and Fioretto, Ferdinando},
-      booktitle   = {AI for Chip Design Workshop at NeurIPS},
-      year        = {2026},
-      abbr        = {AI4ChipDesign},
-      note        = {Accepted; oral presentation},
-      url         = {https://openreview.net/forum?id=kDIc133oYt},
-      pdf         = {https://openreview.net/pdf?id=kDIc133oYt},
-      bibtex_show = {true}
 }
 
 @article{fioretto:26p,
@@ -211,7 +190,6 @@
       doi          = {10.48550/arXiv.2608.13079}
 }
 
-
 @article{fioretto:26e,
       title       = {Constraint-Aware Flow Matching: Decision Aligned End-to-End Training for Constrained Sampling},
       author      = {Jacob K. Christopher and James E. Warner and Ferdinando Fioretto},
@@ -223,7 +201,6 @@
       bibtex_show = {true},
       abstract    = {Deep generative models provide state-of-the-art performance across a wide array of applications, with recent studies showing increasing applicability for science and engineering. Despite a growing corpus of literature focused on the integration of physics-based constraints into the generation process, existing approaches fail to enforce strict constraint satisfaction while maintaining sample quality. In particular, training-free constrained sampling methods, while providing per-sample feasibility guarantees, introduce a fundamental mismatch between the training objective and the constrained sampling procedure, often leading to performance degradation. Identifying this training-sampling misalignment as a central limitation of current constrained generative modeling approaches, this paper proposes Constraint-Aware Flow Matching, a novel end-to-end framework that explicitly incorporates constraint projections into the training objective. By aligning the model's learned dynamics with the constrained sampling process, the proposed method mitigates distributional shift induced by projection-based corrections, enabling high-quality constrained generation. The proposed approach is evaluated on three challenging real-world benchmarks, illustrating the generality and efficacy of the method.}
 }
-
 
 @article{Fioretto:26d,
       author = {Michael Cardei and Huu Binh Ta and Ferdinando Fioretto},
@@ -252,6 +229,104 @@
       abstract     = {Agentic Large Language Models (LLMs) are models able to reason, plan, and execute tools over unstructured data. These abilities enable transformative applications in domains spanning personal assistants, financial, and legal domains, etc. While these systems can substantially improve productivity and service quality, effective agency typically requires access to sensitive personal or organizational information. However, this access introduces critical inference-time privacy risks, specifically regarding contextually appropriate information disclosure. While recent studies highlight the inability of agentic LLMs to consistently adhere to privacy norms, existing defenses often rely on auxiliary LLM-based monitors. However, these defenses are expensive and offer limited protection against attacks that are robust to semantic censorship. To contrast this background, this paper proposes a notion of privacy filters based on activation probing. We show that these filters are both computationally efficient and effective for both single-turn and multi-turn conversational settings. Furthermore, this work provides the first systematic investigation into probing model internals across a conversation trajectory, moving beyond static, single-prompt analysis to capture the evolving state of privacy-sensitive interactions, illustrating their applicability across contexts, attack styles, multiple base models, and challenging settings such as mosaic attacks, while providing nuanced insights into the nature of the discovered concepts and modular construction of probes.},
 }
 
+# Journal articles
+
+@article{Fioretto:SEGAN,
+
+      title        = {Stability-constrained AC optimal power flow--A Gaussian process-based approach},
+
+      author       = {Di Vito, Vincenzo and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti},
+
+      year         = {2026},
+
+      journal      = {Sustainable Energy, Grids and Networks},
+
+      volume       = {46},
+
+      doi          = {10.1016/j.segan.2026.102300},
+
+      arxiv        = {2507.23094},
+      abbr        = {SEGAN},
+      bibtex_show = {true},
+      funding     = {NSF-2345528, NSF-2401285, NSF-2334936},
+      abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.},
+      month        = {jun},
+      pages        = {102300},
+      url          = {https://doi.org/10.1016/j.segan.2026.102300}
+}
+
+@article{Fioretto:tsg26,
+  author       = {Shuyi Chen and Ferdinando Fioretto and Feng Qiu and Shixiang Zhu},
+  title        = {Global-Decision-Focused Neural ODEs for Proactive Grid Resilience Management},
+  journal      = TSG,
+  volume       = {},
+  number       = {},
+  pages        = {1--1},
+  year         = {2026},
+  url          = {https://ieeexplore.ieee.org/document/11297004},
+  doi          = {10.1109/TSG.2025.3642407},
+  bibtex_show  = {true},
+  abbr         = {TSG},
+  selected     = {true},
+  abstract     = {Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.},
+      arxiv        = {2502.18321}
+}
+
+@article{Fioretto:epsr26,
+title             = {Learning to optimize meets neural-ODE: Real-time, stability-constrained AC OPF},
+author            = {Vincenzo {Di Vito} and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+journal           = {Electric Power Systems Research},
+volume            = {258},
+pages             = {113071},
+year              = {2026},
+issn              = {0378-7796},
+doi               = {https://doi.org/10.1016/j.epsr.2026.113071},
+url               = {https://www.sciencedirect.com/science/article/pii/S0378779626003640},
+arxiv             = {2410.19157},
+abbr              = {EPSR},
+funding           = {NSF-2345528, NSF-2401285, NSF-2334936},
+bibtex_show       = {true},
+abstract          = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize (LtO) methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 118-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
+}
+
+# Conference and workshop papers
+
+@inproceedings{Fioretto:AI4Mat26,
+      title       = {Choosing the Right Representations: Task-Aware Fusion for Multimodal Materials Language Models},
+      author      = {Ta, Huu Binh and Morehead, Alex and Erichson, N. Benjamin and Fioretto, Ferdinando and Madireddy, Sandeep},
+      booktitle   = {AI for Accelerated Materials Design (AI4Mat) Workshop at NeurIPS},
+      year        = {2026},
+      doi         = {10.48550/arXiv.2611.24641},
+      arxiv       = {2611.24641},
+      url         = {https://arxiv.org/abs/2611.24641},
+      pdf         = {https://arxiv.org/pdf/2611.24641},
+      abbr        = {AI4Mat},
+      note        = {Accepted},
+      bibtex_show = {true}
+}
+
+@inproceedings{Fioretto:LHMP26,
+      title        = {Plausible and Feasible Long-Term Human Trajectory Prediction via Motion Field-Regularized Flow Matching},
+      year         = {2026},
+      url          = {https://motionpredictionicra2026.github.io/},
+      pdf          = {https://motionpredictionicra2026.github.io/assets/proceedings/papers/LHMP26_Paper_7.pdf},
+      author       = {Zhu, Yufei and Liang, Jinhao and Koenig, Sven and Fioretto, Ferdinando and Magnusson, Martin},
+      bibtex_show  = {true},
+      booktitle    = {8th Workshop on Long-term Human Motion Prediction at ICRA},
+      abbr         = {LHMP}
+}
+
+@inproceedings{Fioretto:AI4ChipDesign26,
+      title       = {Constrained Diffusion for Inverse Design of Fabricable Multi-Layer RF Passives from Partial S-Parameter Specifications},
+      author      = {Dreossi, Tommaso and Bryant, Christopher M. and Liu, Hao and Mirman, Nathan and Kessler, Noah and Frei, Michael and Pabba, Kaustubh and Krishnaswamy, Harish and Christopher, Jacob K. and Fioretto, Ferdinando},
+      booktitle   = {AI for Chip Design Workshop at NeurIPS},
+      year        = {2026},
+      abbr        = {AI4ChipDesign},
+      note        = {Accepted; oral presentation},
+      url         = {https://openreview.net/forum?id=kDIc133oYt},
+      pdf         = {https://openreview.net/pdf?id=kDIc133oYt},
+      bibtex_show = {true}
+}
 
 @inproceedings{Fioretto:NeurIPS26f,
       title       = {Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation},
@@ -269,7 +344,6 @@
       abstract    = {Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.}
 }
 
-
 @inproceedings{fioretto:NeurIPS26e,
       title       = {Simulation-Informed Diffusion for Decentralized Multi-robot Motion Planning},
       author      = {Jinhao Liang and Sven Koenig and Ferdinando Fioretto},
@@ -284,6 +358,7 @@
 }
 
 % BibTeX Optional fields: volume, number, pages, month, note
+
 @inproceedings{fioretto:NeurIPS26d,
       title       = {Drift Flow Matching},
       author      = {Chenrui Ma and Xi Xiao and Lin Zhao and Tianyang Wang and Ferdinando Fioretto and Yanning Shen},
@@ -363,65 +438,6 @@
       abstract    = {Speculative decoding is a leading technique to reduce the cost of autoregressive generation by using a small drafter to propose several tokens, which are then verified in parallel by a larger target model. Speculative diffusion decoding (SDD) further removes sequential drafting by generating every position in a draft block in parallel with a discrete diffusion model. However, SDD still invokes the target on every block, leaving verification as a potential bottleneck. This paper recognizes that this creates a new control handle: whether to invoke the verifier at all. Thus, we study verifier skipping, a lossy policy that commits a selected draft prefix directly, and ask which confidence signal should schedule it. Interestingly, our study finds that better token predictors need not yield better schedulers: skips require contiguous high-confidence prefixes, while short skips can induce additional drafting rounds. To study this mismatch, we compare raw confidence with learned marginal and conditional survival scores under the same policy, using Strict SDD, lenience, and top-k acceptance as baselines. On HumanEval with DiffuCoder-7B-Instruct and Qwen3-32B, all three confidence signals save 9.6% to 13.5% of verifier calls at the same observed pass@1 as Strict SDD. Surprisingly, raw confidence saves the most; marginal survival has higher positionwise AUROC than raw confidence at most positions, yet neither learned signal dominates online. Our analysis shows that verifier skipping is a useful new lossy axis and, surprisingly, its key challenge is prefix scheduling rather than token prediction alone.}
 }
 
-@article{Fioretto:SEGAN,
-
-      title        = {Stability-constrained AC optimal power flow--A Gaussian process-based approach},
-
-      author       = {Di Vito, Vincenzo and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti},
-
-      year         = {2026},
-
-      journal      = {Sustainable Energy, Grids and Networks},
-
-      volume       = {46},
-
-      doi          = {10.1016/j.segan.2026.102300},
-
-      arxiv        = {2507.23094},
-      abbr        = {SEGAN},
-      bibtex_show = {true},
-      funding     = {NSF-2345528, NSF-2401285, NSF-2334936},
-      abstract    = {The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.},
-      month        = {jun},
-      pages        = {102300},
-      url          = {https://doi.org/10.1016/j.segan.2026.102300}
-}
-
-@article{Fioretto:tsg26,
-  author       = {Shuyi Chen and Ferdinando Fioretto and Feng Qiu and Shixiang Zhu},
-  title        = {Global-Decision-Focused Neural ODEs for Proactive Grid Resilience Management},
-  journal      = TSG,
-  volume       = {},
-  number       = {},
-  pages        = {1--1},
-  year         = {2026},
-  url          = {https://ieeexplore.ieee.org/document/11297004},
-  doi          = {10.1109/TSG.2025.3642407},
-  bibtex_show  = {true},
-  abbr         = {TSG},
-  selected     = {true},
-  abstract     = {Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.},
-      arxiv        = {2502.18321}
-}
-
-@article{Fioretto:epsr26,
-title             = {Learning to optimize meets neural-ODE: Real-time, stability-constrained AC OPF},
-author            = {Vincenzo {Di Vito} and Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
-journal           = {Electric Power Systems Research},
-volume            = {258},
-pages             = {113071},
-year              = {2026},
-issn              = {0378-7796},
-doi               = {https://doi.org/10.1016/j.epsr.2026.113071},
-url               = {https://www.sciencedirect.com/science/article/pii/S0378779626003640},
-arxiv             = {2410.19157},
-abbr              = {EPSR},
-funding           = {NSF-2345528, NSF-2401285, NSF-2334936},
-bibtex_show       = {true},
-abstract          = {Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize (LtO) methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 118-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.}
-}
-
-
 @inproceedings{Fioretto:CVPR26,
     author    = {Oh, Minseok and Park, Jihun and Gim, Jongmin and Choi, Minwoo and Lee, Kyoungmin and Fioretto, Ferdinando and Im, Sunghoon},
     title     = {FREESTYLE: An Anchor-Free Mechanism for Training-Free Style-Aligned Image Generation},
@@ -435,7 +451,6 @@ abstract          = {Recent developments in applying machine learning to address
     funding     = {NSF 2401285, NSF 2533631, NSF 2334936, DARPA HR0011252E005},
     abstract    = {Text-to-Image (T2I) generation models have become central to creative workflows, where producing style-consistent image sets is crucial for applications such as visual identity design, illustration, and asset creation. While recent training-free methods have enabled efficient style-aligned synthesis, they commonly rely on anchor-dependent propagation, where style features from a single reference image are shared across the batch. This dependency often leads to inconsistent results: when the anchor fails to capture the intended reference style, its unintended artifacts are propagated to all samples, and excessive feature sharing further causes content leakage and semantic distortion. To overcome these limitations, we propose FREESTYLE, a training-free and anchor-free framework for robust style alignment within a scale-wise autoregressive generation paradigm. Our method integrates three core components—Majority Voting (MV), which aggregates dominant style cues across the batch to form a representative style feature; Majority Style Injection (MSI), which adaptively injects these aggregated features to enforce global style coherence; and Set-Based Projection (SBP), which refines local object regions by projecting them onto a shared style manifold for context-aware adaptation. Extensive experiments demonstrate that, without any retraining or parameter updates, FREESTYLE achieves state-of-the-art performance in both style consistency and content preservation, while maintaining real-time inference efficiency.}
 }
-
 
 @inproceedings{Fioretto:ICLR26a,
       author      = {Christopher, Jacob K and Seamann, Austin and Cui, Jingyi and Khare, Sagar and Fioretto, Ferdinando},

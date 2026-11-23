@@ -13,7 +13,17 @@ nav_order: 1
   <section class="awards-group">
     <ul class="awards-stream">
 
-      <li class="award-entry" data-category="research">
+  <li class="award-entry" data-category="service">
+        <span class="award-entry__title">Top Area Chair</span>
+        <span class="award-entry__badge" data-badge="service">Service Award</span>
+        <span class="award-entry__meta">
+          <span class="award-entry__year">2026</span>
+          <span class="award-entry__org">Conference on Neural Information Processing Systems (NeurIPS)</span>
+          <!-- <a class="award-entry__link" href="https://blog.iclr.cc/2023/04/05/announcing-notable-reviewers-and-area-chairs-at-iclr-2023/">press</a> -->
+        </span>
+      </li>
+
+  <li class="award-entry" data-category="research">
         <span class="award-entry__title">Copenhaver Fellowship</span>
         <span class="award-entry__badge" data-badge="research">Endowed Fellowship</span>
         <span class="award-entry__meta">
